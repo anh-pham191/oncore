@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% block seocontent %}
+    {# SEO FIELDS - DEFAULT BELOW #}
+    <title>Oncore</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    {% endblock seocontent %}
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,500,600,700' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" />
+    <!--need update from here-->
+    <link href="images/favicon-96x96.png" rel="shortcut icon" type="image/x-icon"/>
+    <!--<link href="images/favicon.png" rel="apple-touch-icon" type="image/png"/>-->
+    <!--to here-->
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" media="all">
+    <link rel="stylesheet" href="css/normalize.min.css" media="all">
+    <!---->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129576409-1"></script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 776863757 -->
+    <script> window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-129576409-1');
+    gtag('config', 'AW-776863757'); </script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+<!--<a href="#" id="back-to-top" title="Back to top">-->
+<!--<div class="icon-top"></div>-->
+<!--</a>-->
+<nav role="navigation" id="topnav">
+    <div id="sitebanner" class="clearfix">
+        <!--<div class="row mobile-nav">-->
+        <!--<div class="col-xs-1"></div>-->
+        <!--<p class="fleft col-xs-5 col-sm-5"><a href="/"><img src="images/Oncore-logo.png"-->
+        <!--alt="Oncore"/></a></p>-->
+        <!---->
+        <!--<div class="col-xs-2"></div>-->
+        <!--</div>-->
+        <div id="mobile-menu-link" class="col-xs-2 col-sm-2 "></div>
+        <div class="fleft logo"><a href="/"><img src="images/Oncore-logo.png"
+                                                 alt="Zones Landscape Design and Maintenance"/></a></div>
+
+
+        <ul id="site-main" class="fleft notmobile notipad">
+            <li class="dropdown">
+                <a href="{site_url}what-is-zones/" class="dropbtn">What We Do </a>
+                <div class="dropdown-btn"></div>
+                <div class="dropdown-content">
+                    <a class="dropdown-links" href="{site_url}what-is-zones/landscape-design-and-garden-maintenance/">Types
+                        of
+                        Landscaping Services</a>
+                    <a class="dropdown-links" href="{site_url}what-is-zones/project-management/">Our Unique Process</a>
+                    <a class="dropdown-links" href="{site_url}what-is-zones/landscape-design/">How We Work With You</a>
+                    <a class="dropdown-links" href="{site_url}what-is-zones/landscape-cost-and-services/">Competitive
+                        Costs</a>
+                </div>
+            </li>
+
+
+            <!--<li class="dropdown">-->
+            <!--<a href="{site_url}photo-gallery/" class="dropbtn">Work We’ve Done</a>-->
+            <!--<div class="dropdown-btn workwedone"></div>-->
+            <!--<div class="dropdown-content">-->
+            <!--<a class="dropdown-links" href="{site_url}case-studies/">Our Projects</a>-->
+            <!--<a class="dropdown-links" href="{site_url}customer-testimonials/">Testimonials</a>-->
+            <!--</div>-->
+            <!--</li>-->
+
+            <li class="dropdown"><a href="{site_url}landscape-designers/locations/" class="dropbtn">Our
+                Locations</a></li>
+
+            <li class="dropdown"><a href="{site_url}landscape-designers/locations/" class="dropbtn">Franchise</a></li>
+
+            <li class="dropdown">
+                <a href="{site_url}contact-us/enquire-about-landscaping-services/" class="dropbtn">Get In Touch</a>
+                <div class="dropdown-btn"></div>
+                <div class="dropdown-content">
+                    <a class="dropdown-links" href="{site_url}contact-us/enquire-about-landscaping-services/">Landscape
+                        Enquiry</a>
+                    <a class="dropdown-links" href="{site_url}contact-us/franchise-opportunities/">Business
+                        Opportunities</a>
+                    <a class="dropdown-links" href="{site_url}contact-us/trade-jobs/">Career Opportunity</a>
+                </div>
+            </li>
+        </ul>
+        <div class="phone-top">
+            <a class="notmobile" href="#" type="tel"><span>0800 33 66 55</span></a>
+            <a class="justmobile"><img src="svg/baseline-phone.svg"></a>
+        </div>
+
+    </div>
+
+</nav>
+<div id="wrapper" class="clearfix">
+    {% block content %}
+
+    {% endblock content%}
+
+</div>
+<!--</div>-->
+
+
+<footer id="footer" class="clearfix">
+    <div class="clearfix">
+        <section id="firstchild">
+            <div class="nav-top">
+                <h2><a href="/what-is-zones/landscape-design-and-garden-maintenance/">What We Do</a></h2>
+                <ul>
+                    <li><a href="{link}">Types Of Jobs</a></li>
+                    <li><a href="{link}">How We Work With You</a></li>
+                </ul>
+            </div>
+            <h2><a href="/contact-us/">Get In Touch</a></h2>
+            <ul>
+                <li><a href="{link}">Project Enquiry</a></li>
+                <li><a href="{link}">Franchising Enquiry</a></li>
+                <li><a href="{link}">Career Enquiry</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="nav-top">
+
+                <h2><a href="/case-studies/">Work We’ve Done</a></h2>
+                <ul>
+                    <li><a href="{link}">Our Projects</a></li>
+                </ul>
+            </div>
+            <h2><a href="/landscape-designers/">About us</a></h2>
+            <ul>
+                <li><a href="{link}">Our People</a></li>
+                <li><a href="{link}">Our Partner</a></li>
+                <li><a href="{link}">Our History</a></li>
+            </ul>
+        </section>
+
+        <section class="notmobile">
+            <div class="nav-top">
+
+                <h2><a href="/landscaping-ideas/">Blog</a></h2>
+                <ul>
+                    <li><a href="{link}">Advice Articles</a></li>
+                    <li><a href="{link}">News Articles</a></li>
+                </ul>
+            </div>
+            <h2><a href="/">Competitions</a></h2>
+            <ul>
+                <li><a href="{link}">Competitions</a></li>
+            </ul>
+        </section>
+
+        <section class="justmobile">
+            <h2><a href="/landscaping-ideas/">Blog</a></h2>
+            <ul>
+                <li><a href="{link}">Advice Articles</a></li>
+                <li><a href="{link}">News Articles</a></li>
+            </ul>
+        </section>
+        <section class="justmobile">
+            <h2><a href="/">Competitions</a></h2>
+            <ul>
+                <li><a href="{link}">Competitions</a></li>
+            </ul>
+        </section>
+
+        <section class="form">
+            <div class="nav-top">
+                <h2>Sign up to our newsletter</h2>
+                <p>Join our mailing list to receive inspirational ideas and advice for your home renovation.</p>
+                <a class="subscribe" onclick="ga('send', 'event', 'Open Newsletter Subscribe popup', 'Click to Newsletter Subscribe popup', 'Newsletter Subscribe popup button');" href="/forms/subscribe/?layout=enquiry&amp;ajax=true&amp;width=680&amp;height=500" rel="prettyPhoto[ajax] nofollow">Sign Up</a>
+                <!--add script for modal form please-->
+                <div id="desktop-share"></div>
+                <!--add script to add share later please-->
+            </div>
+
+        </section>
+        <div class="adwordstracking-footer"></div>
+    </div>
+
+    <section id="footer-tools">
+        <div class="wrapper">
+            <!-- <div id="choose-country">
+            <label for="choose-site">Select your region: </label><select id="choose-site" aria-label="Region">
+            <option value="{site_url_global}">Global</option>
+            <option value="{site_url_au}">Australia</option>
+            <option value="{site_url_uk}">United Kingdom</option>
+            <option value="" selected="selected">New Zealand</option>
+            </select>
+            </div> -->
+            <p class="fleft"><span class="f-copyright">&copy; 2019 Oncore Services</span> <span class="notmobile">| </span><span class="f-links"><a href="/privacy-statement/">Privacy Statement</a></span><br />
+                <span class="f-by">Website strategy and design by <a href="http://www.traffic.net.nz/" target="_blank">Traffic New Zealand Ltd.</a></span></p>
+        </div>
+    </section>
+</footer>
+
+<script src="js/modernizr.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
+
+<script>
+    var imgs = document.querySelectorAll('img');
+    var lazyload = function () {
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        var winTop = window.innerHeight;
+        for (var i = 0; i < imgs.length; i++) {
+            if (imgs[i].offsetTop < scrollTop + winTop && imgs[i].src == "") {
+                imgs[i].src = imgs[i].getAttribute('data-src');
+                imgs[i].classList.remove("lazy-load");
+            }
+        }
+    }
+
+    function throttle(method, delay) {
+        var timer = null;
+        return function () {
+            var context = this, args = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                method.apply(context, args);
+            }, delay);
+        }
+    }
+
+    window.onload = throttle(lazyload, 200);
+    window.onscroll = throttle(lazyload, 200);
+
+    $(document).ready(function () {
+
+        $(".mobile-boxes").slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+
+        $(".enquiry-button").click(function () {
+            // if($(this).data("prefix") != ""){
+            //    // $("#formf-region").val($(this).data("prefix"));
+            //     $("#field_1Country_Interested_In").val($(this).data("prefix"));
+            //     alert($("#field_1Country_Interested_In").val());
+            // }
+            //$('html, body').animate({ scrollTop: $(".formholder").offset().top}, 1000);
+            $('html, body').animate({scrollTop: $("#enquiry-form").offset().top}, 1000);
+        });
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+
+    });
+    $(".arrow-down").click(function () {
+        $('html, body').animate({scrollTop: $("#services-box").offset().top - 130}, 1000);
+    });
+    $(document).click(function (event) {
+        var _con = $('#country-box');
+        if (!_con.is(event.target) && _con.has(event.target).length === 0 && event.target != $("#country-top").get(0) && event.target != $("#country-top div").get(0) && event.target != $("#country-top .country-arrow").get(0)) {
+            $("#country-box").hide(500);
+        }
+    });
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+dateModified: 1553032866
+email:
+  fromEmail: anhpt@traffic.net.nz
+  fromName: oncore.local
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  53322e45-35bc-4dad-bc73-46115871d0d1:
+    name: Common
+sections:
+  8e569ab1-035b-4100-86f9-d7ddcd4e1b89:
+    name: Homepage
+    handle: homepage
+    type: single
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      f21dbc88-f9a1-45c1-84fd-b4304df3f081:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: __home__
+        template: home.html
+    entryTypes:
+      ffa87fb8-311b-49f4-aeac-08ee26bd40e0:
+        name: Homepage
+        handle: homepage
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+siteGroups:
+  0f7118c6-8590-4355-a9d3-a77cae18f287:
+    name: oncore.local
+sites:
+  f21dbc88-f9a1-45c1-84fd-b4304df3f081:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: oncore.local
+    primary: true
+    siteGroup: 0f7118c6-8590-4355-a9d3-a77cae18f287
+    sortOrder: 1
+system:
+  edition: solo
+  name: oncore.local
+  live: true
+  schemaVersion: 3.1.25
+  timeZone: America/Los_Angeles
+users:
+  requireEmailVerification: true
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoVolumeUid: null
+  photoSubpath: ''
