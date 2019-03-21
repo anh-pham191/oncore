@@ -244,7 +244,14 @@
         }else{
             $('html, body').animate({scrollTop: $(".home-process").offset().top-100}, 1000);
         }
+    });
 
+    $( ".cta-button, .subscribe" ).click(function() {
+        if ( jWindow <= 768 ) {
+            $('html, body').animate({scrollTop: $(".form-banner").offset().top}, 1000);
+        }else{
+            $('html, body').animate({scrollTop: $(".form-banner").offset().top-100}, 1000);
+        }
     });
 </script>
 <script>
