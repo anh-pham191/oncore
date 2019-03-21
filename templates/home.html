@@ -4,6 +4,8 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 {% endblock seocontent %}
+
+
 {% block content %}
 <div style="position: relative">
     <div id="wideslideshow" class="overlay white">
@@ -228,17 +230,8 @@
             <span>See more type of work <img style="width: 16px" src="svg/arrow.svg"></span></div>
     </div>
 </div>
+{% include 'includes/footer-banner.html' %}
 
-<div id="wideslideshow" class="overlay white banner">
-    <img src="images/Bitmap.jpg" alt="Oncore - The key to faster, smoother jobs"/>
-    <div class="overlay-container white">
-        <h1>Ready to start a project?</h1>
-        <div class="intro-bottom">Oncore specialises in doing everything related to taking care of your home, building
-            or office. Get in touch today!
-        </div>
-        <button class="cta-button">Get in touch</button>
-    </div>
-</div>
 {% endblock %}
 {% block scripts %}
 <script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>
