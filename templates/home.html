@@ -240,10 +240,20 @@
     </div>
 </div>
 {% endblock %}
-
-
 {% block scripts %}
 <script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>
+
+<script>
+    var jWindow = $(window).width();
+    $( ".learn-more" ).click(function() {
+        if ( jWindow <= 768 ) {
+            $('html, body').animate({scrollTop: $(".home-process").offset().top}, 1000);
+        }else{
+            $('html, body').animate({scrollTop: $(".home-process").offset().top-100}, 1000);
+        }
+
+    });
+</script>
 <script>
     grecaptcha.ready(function () {
         grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {

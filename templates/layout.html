@@ -92,8 +92,8 @@
             </li>
         </ul>
         <div class="phone-top">
-            <a class="notmobile" href="#" type="tel"><span>0800 33 66 55</span></a>
-            <a class="justmobile"><img src="svg/baseline-phone.svg"></a>
+            <a class="notmobile" href="tel:0800 33 66 55" type="tel"><span>0800 33 66 55</span></a>
+            <a href="tel:0800 33 66 55"  class="justmobile"><img src="svg/baseline-phone.svg"></a>
         </div>
 
     </div>
@@ -195,8 +195,10 @@
             <option value="" selected="selected">New Zealand</option>
             </select>
             </div> -->
+            <div class="clearfix">
             <p class="fleft"><span class="f-copyright">&copy; 2019 Oncore Services</span> <span class="notmobile">| </span><span class="f-links"><a href="/privacy-statement/">Privacy Statement</a></span><br />
                 <span class="f-by">Website strategy and design by <a href="http://www.traffic.net.nz/" target="_blank">Traffic New Zealand Ltd.</a></span></p>
+            </div>
         </div>
     </section>
 </footer>
@@ -288,6 +290,41 @@
             $("#country-box").hide(500);
         }
     });
+    function sharePage(socialMedia){
+
+        if(socialMedia === "facebook"){
+            var url = "http://www.facebook.com/sharer.php?u=";
+        }else if(socialMedia === "twitter"){
+            var url = "https://twitter.com/share?url=";
+        }else if(socialMedia === "googleplus"){
+            var url = "https://plus.google.com/share?url=";
+        }else if(socialMedia === "linkedin"){
+            var url = "http://www.linkedin.com/shareArticle?mini=true&amp;url=";
+        }else if(socialMedia === "pinterest"){
+            var e=document.createElement('script');
+            e.setAttribute('type','text/javascript');
+            e.setAttribute('charset','UTF-8');
+            e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+            document.body.appendChild(e);
+        }
+
+
+        if($('#count').val() != null && $('#count').val() % 1 === 0){
+            var newcount = Number($('#count').val())+1;
+            $('#count').val(newcount);
+
+            $.ajax({
+                type: $('#sharingcount').attr('method'),
+                url: $('#sharingcount').attr('action'),
+                data: $('#sharingcount').serialize()
+            });
+
+            $("#shared-count").text(newcount);
+        }
+        if(socialMedia != "pinterest"){
+            window.open(url+window.location.href, '_blank', 'toolbar=0,location=0,menubar=0');
+        }
+    }
 
 
 </script>
