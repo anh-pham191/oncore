@@ -1,4 +1,4 @@
-dateModified: 1553032866
+dateModified: 1553200113
 email:
   fromEmail: anhpt@traffic.net.nz
   fromName: oncore.local
@@ -41,7 +41,7 @@ sites:
     siteGroup: 0f7118c6-8590-4355-a9d3-a77cae18f287
     sortOrder: 1
 system:
-  edition: solo
+  edition: pro
   name: oncore.local
   live: true
   schemaVersion: 3.1.25
