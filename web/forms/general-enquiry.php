@@ -68,6 +68,7 @@ if (isset($_COOKIE['fromcreative'])) {
     $creative = "N/A";
 };
 
+echo "done step 1";
 if(isset($_POST['g-recaptcha-response'])){
     $captcha=$_POST['g-recaptcha-response'];
 }
@@ -85,6 +86,7 @@ if(intval($responseKeys["success"]) !== 1) {
     exit;
 }
 
+echo "done captcha";
 
 // Check if fields that shouldn't do contain a URL
 $testString = $firstname . $lastname . $phone;
