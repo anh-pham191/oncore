@@ -2962,9 +2962,23 @@ ul {
         margin-top: 90px;
         min-width: 992px;
     }
+    #footer section.form li {
+        margin: 0 15px 8px 0;
+    }
 }
 
 @media only all and (min-width: 48em) {
+    #footer section.form li {
+        margin: 0 8px 6px 0
+    }
+
+    #footer section.form li img {
+        width: 23.75px;
+        height: 22.98px
+    }
+    #footer section.form {
+        width: 250px;
+    }
     #wrapper {
         margin-top: 85px;
         min-width: 768px;
@@ -3356,6 +3370,7 @@ ul {
 }
 
 @media only all and (min-width: 48em) {
+
     #footer {
         min-width: 760px;
     }
@@ -3770,6 +3785,10 @@ li.help {
         padding: 28px 12px 12px;
     }
 
+    #footer .form #desktop-share .clearfix {
+        padding: 0;
+    }
+
     #topnav #sitebanner .phone-top span {
         font-family: 'Open Sans';
         font-size: 20px;
@@ -3782,6 +3801,12 @@ li.help {
 }
 
 @media only all and (max-width: 47.99em) {
+    #desktop-share, #footer .form .nav-top a.subscribe {
+        margin-top: .6em;
+    }
+    #footer #desktop-share ul li {
+        margin: 0px 8% 0 0;
+    }
     .middle-size {
         display: none;
     }
@@ -3986,7 +4011,7 @@ li.help {
     font-size: 1.6rem;
     line-height: 1.65;
     text-align: center;
-    margin: 0 10px 0 9px;
+    margin: -3px 10px 0 8px;
     color: #1a1a1a
 }
 
