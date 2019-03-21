@@ -19,61 +19,63 @@
     </div>
     <div class="form-banner">
         <h1>Get in touch</h1>
-        <div class="row">
-            <div class="col-md-12 input-label-wrapper">
-                <input type="text" class="form-control home-form" placeholder="First name"
-                       aria-label="First name" name="p-car-firstname" id="c-car-firstname"
-                       data-prefix="c-car"/>
+        <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
+            <div class="row">
+                <div class="col-md-12 input-label-wrapper">
+                    <input type="text" class="form-control home-form" placeholder="First name"
+                           aria-label="First name" name="firstname" id="formf-firstname"
+                           data-prefix="formf"/>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 input-label-wrapper">
-                <input type="text" class="form-control home-form" placeholder="Last name"
-                       aria-label="Last name" name="p-car-lastname" data-prefix="c-car"/>
+            <div class="row">
+                <div class="col-md-12 input-label-wrapper">
+                    <input type="text" class="form-control home-form"
+                           aria-label="Last name" name="lastname" placeholder="Last Name"
+                           id="formf-lastname" data-prefix="formf"/>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 input-label-wrapper">
-                <input type="text" name="p-car-email" class="form-control home-form"
-                       placeholder="Email address" aria-label="Email address" id="c-car-email"
-                       data-prefix="c-car"/>
+            <div class="row">
+                <div class="col-md-12 input-label-wrapper">
+                    <input type="text" class="form-control home-form"
+                           name="email" placeholder="Email Address"
+                           id="formf-email" data-prefix="formf"/>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 input-label-wrapper">
-                <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
-                <!--placeholder="Enter phone number" aria-label="Phone number"-->
-                <!--data-prefix="c-car"/>-->
+            <div class="row">
+                <div class="col-md-12 input-label-wrapper">
+                    <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
+                    <!--placeholder="Enter phone number" aria-label="Phone number"-->
+                    <!--data-prefix="c-car"/>-->
 
-                <input type="tel" class="form-control home-form phone-input" placeholder="Phone number"
-                       aria-label="Phone number" name="p-car-tel" id="mobile-s1" data-prefix="s1"
-                       data-phoneformat="yes">
+                    <input type="tel" class="form-control home-form phone-input" placeholder="Phone Number"
+                           name="tel"  id="formf-tel"
+                           data-prefix="formf" data-phoneformat="yes">
+                </div>
             </div>
-        </div>
 
-        <div class="row tick">
-            <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                <input type="checkbox" class="uniform-styles" name="p-car-privacy"
-                       id="c-car-privacy" aria-label="Privacy"
-                       checked data-prefix="c-car"/>
-                <label for="c-car-privacy"> I have read, understood and accepted the <a
-                        href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+            <div class="row tick">
+                <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                    <input type="checkbox" class="uniform-styles" name="privacy"
+                           id="formf-privacy" checked="checked" data-prefix="formf"/>
+                    <label for="formf-privacy"> I have read, understood and accepted the <a
+                            href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                </div>
             </div>
-        </div>
-        <div class="row tick">
-            <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                <input type="checkbox" class="uniform-styles" name="p-car-subscribe"
-                       id="c-car-subscribe" aria-label="Subscribe" checked/>
-                <label for="c-car-subscribe"> I consent to receiving marketing emails.</label>
+            <div class="row tick">
+                <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                    <input type="checkbox" class="uniform-styles" name="subscribe"  id="formf-subscribe"
+                           checked="checked"/>
+                    <label for="formf-subscribe"> I consent to receiving marketing emails.</label>
+                </div>
             </div>
-        </div>
 
-        <div class="row tick">
-            <div class="col-md-6 col-xs-12 input-label-wrapper">
-                <button type="submit" class="btn btn-primary btn-block" id="home-form-submit">Get in touch
-                </button>
+            <div class="row tick">
+                <div class="col-md-6 col-xs-12 input-label-wrapper">
+                    <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit" value="Get in touch"/>
+
+                </div>
             </div>
-        </div>
+        </form>
     </div>
     <div class="full-width-text-left">
         <p><strong>The Oncore process ensures your project is delivered to a high standard, on time and within your
@@ -244,7 +246,7 @@
 <script>
     grecaptcha.ready(function () {
         grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
-        });
+        }); // this one when form submit please
     });
 </script>
 {% endblock scripts%}
