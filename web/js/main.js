@@ -4461,6 +4461,23 @@ $(document).ready(function () {
 });
 
 $(function () {
+    var j = '<h2>Share this page</h2><ul class="clearfix"><li><a class="facebook" href="javascript:sharePage(\'facebook\')" onclick="ga(\'send\', \'event\', \'Footer share option clicked\', \'Share on Facebook\');"><i class="fa fa-facebook-official"></i></a></li><li><a class="google-plus" href="javascript:sharePage(\'googleplus\')" onclick="ga(\'send\', \'event\', \'Footer share option clicked\', \'Share on Google Plus\');"><i class="fa fa-google-plus"></i></a></li><li><a class="pinterest" href="javascript:sharePage(\'pinterest\')" onclick="ga(\'send\', \'event\', \'Footer share option clicked\', \'Share on Pinterest\');"><i class="fa fa-pinterest"></i></a></li><li><a class="twitter" href="javascript:sharePage(\'twitter\')" onclick="ga(\'send\', \'event\', \'Footer share option clicked\', \'Tweet\');"><i class="fa fa-twitter"></i></a></li><li><a class="linkedin" href="javascript:sharePage(\'linkedin\')" onclick="ga(\'send\', \'event\', \'Footer share option clicked\', \'Share on LinkedIn\');"><i class="fa fa-linkedin"></i></a></li><li id="shared-count"></li></ul>';
+    $(j).appendTo("#desktop-share");
+    $("#link-share").click(function (p) {
+        p.preventDefault();
+        $("body").toggleClass("mobile-share");
+        $("body").removeClass("mobile-search");
+        $("body").removeClass("mobile-contact");
+        ga("send", "event", "Mobile navigation", "Open/close top Share link")
+    });
+    $("#mobile-share-instantly a.close").click(function (p) {
+        $("body").removeClass("mobile-share");
+        p.preventDefault()
+    });
+    $("#mobile-share-instantly div div").click(function (p) {
+        $("body").removeClass("mobile-share");
+        p.preventDefault()
+    });
     $("#general-enquiry").validate({
         submitHandler: function (form) {
             $('#general-enquiry').append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
