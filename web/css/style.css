@@ -4052,7 +4052,7 @@ a:hover {
 }
 
 @media only all and (max-width: 91em) and (min-width: 64.0625em) {
-    div#wideslideshow.overlay img {
+    div#wideslideshow.overlay.banner img {
         width: 100%;
         position: relative;
         top: 0;
