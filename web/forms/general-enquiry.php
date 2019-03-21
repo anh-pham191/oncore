@@ -68,7 +68,6 @@ if (isset($_COOKIE['fromcreative'])) {
     $creative = "N/A";
 };
 
-echo "done step 1";
 if(isset($_POST['g-recaptcha-response'])){
     $captcha=$_POST['g-recaptcha-response'];
 }
@@ -86,7 +85,6 @@ if(intval($responseKeys["success"]) !== 1) {
     exit;
 }
 
-echo "done captcha";
 
 // Check if fields that shouldn't do contain a URL
 $testString = $firstname . $lastname . $phone;
@@ -138,7 +136,7 @@ if ($probSpam != "yes") {
             $subscribe = "True";
         }
 
-//        $url = "https://api.ubiquity.co.nz/forms/jJLy6C19Z0aQsAjWTu9vMg/submit?apiToken=vaxIncJDcdcyEaK6KaIUV8uAtJOKR5uCB2HJhWtd4LGbeh7KORxzeqQNjPIaOREIrsK7he-3zjY8zoG4OJwIQk7ORyCuHgQA4BwqSK2V-2IH3mwvH0rMzrqQscjMLW5rOXUQXgksMjs";
+        $url = "https://api.ubiquity.co.nz/forms/jJLy6C19Z0aQsAjWTu9vMg/submit?apiToken=vaxIncJDcdcyEaK6KaIUV8uAtJOKR5uCB2HJhWtd4LGbeh7KORxzeqQNjPIaOREIrsK7he-3zjY8zoG4OJwIQk7ORyCuHgQA4BwqSK2V-2IH3mwvH0rMzrqQscjMLW5rOXUQXgksMjs";
 
         $jsonData = "{
 	  \"data\": [
