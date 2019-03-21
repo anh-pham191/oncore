@@ -58,16 +58,11 @@
 
         <ul id="site-main" class="fleft notmobile notipad">
             <li class="dropdown">
-                <a href="{site_url}what-is-zones/" class="dropbtn">What We Do </a>
+                <a href="/types-of-jobs" class="dropbtn">What We Do </a>
                 <div class="dropdown-btn"></div>
                 <div class="dropdown-content">
-                    <a class="dropdown-links" href="{site_url}what-is-zones/landscape-design-and-garden-maintenance/">Types
-                        of
-                        Landscaping Services</a>
-                    <a class="dropdown-links" href="{site_url}what-is-zones/project-management/">Our Unique Process</a>
-                    <a class="dropdown-links" href="{site_url}what-is-zones/landscape-design/">How We Work With You</a>
-                    <a class="dropdown-links" href="{site_url}what-is-zones/landscape-cost-and-services/">Competitive
-                        Costs</a>
+                    <a class="dropdown-links" href="/types-of-jobs">Types of Jobs</a>
+                    <a class="dropdown-links" href="/how-we-work">How We Work With You</a>
                 </div>
             </li>
 
@@ -84,17 +79,16 @@
             <li class="dropdown"><a href="{site_url}landscape-designers/locations/" class="dropbtn">Our
                 Locations</a></li>
 
-            <li class="dropdown"><a href="{site_url}landscape-designers/locations/" class="dropbtn">Franchise</a></li>
 
             <li class="dropdown">
-                <a href="{site_url}contact-us/enquire-about-landscaping-services/" class="dropbtn">Get In Touch</a>
+                <a href="/contact-us/enquire-about-landscaping-services/" class="dropbtn">Get In Touch</a>
                 <div class="dropdown-btn"></div>
                 <div class="dropdown-content">
-                    <a class="dropdown-links" href="{site_url}contact-us/enquire-about-landscaping-services/">Landscape
+                    <a class="dropdown-links" href="/contact-us/enquire-about-landscaping-services/">Landscape
                         Enquiry</a>
-                    <a class="dropdown-links" href="{site_url}contact-us/franchise-opportunities/">Business
+                    <a class="dropdown-links" href="/contact-us/franchise-opportunities/">Business
                         Opportunities</a>
-                    <a class="dropdown-links" href="{site_url}contact-us/trade-jobs/">Career Opportunity</a>
+                    <a class="dropdown-links" href="/contact-us/trade-jobs/">Career Opportunity</a>
                 </div>
             </li>
         </ul>
@@ -212,6 +206,9 @@
 <script src="js/main.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 
+{% block scripts %}
+
+{% endblock scripts%}
 
 <script>
     var imgs = document.querySelectorAll('img');

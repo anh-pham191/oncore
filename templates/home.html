@@ -13,7 +13,8 @@
             <div class="intro-bottom">Oncore is New Zealand's leading team for residential and commercial repairs,
                 maintenance, insurance work, and installations.
             </div>
-            <p class="learn-more">Learn more <img style="width: 12px" src="svg/baseline-keyboard_arrow_down-24px.svg"></p>
+            <p class="learn-more">Learn more <img style="width: 12px" src="svg/baseline-keyboard_arrow_down-24px.svg">
+            </p>
         </div>
     </div>
     <div class="form-banner">
@@ -54,7 +55,7 @@
             <div class="col-sm-12 col-xs-12 input-label-wrapper">
                 <input type="checkbox" class="uniform-styles" name="p-car-privacy"
                        id="c-car-privacy" aria-label="Privacy"
-                checked data-prefix="c-car" />
+                       checked data-prefix="c-car"/>
                 <label for="c-car-privacy"> I have read, understood and accepted the <a
                         href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
             </div>
@@ -62,7 +63,7 @@
         <div class="row tick">
             <div class="col-sm-12 col-xs-12 input-label-wrapper">
                 <input type="checkbox" class="uniform-styles" name="p-car-subscribe"
-                       id="c-car-subscribe" aria-label="Subscribe"  checked />
+                       id="c-car-subscribe" aria-label="Subscribe" checked/>
                 <label for="c-car-subscribe"> I consent to receiving marketing emails.</label>
             </div>
         </div>
@@ -116,7 +117,8 @@
     <div class="inner">
         <div class="full-width-text">
             <div class="title">Our maintenance and repair services</div>
-            <p>Oncore provides both commercial and residential maintenance and repair services. Whatever the job, we can get it done.</p>
+            <p>Oncore provides both commercial and residential maintenance and repair services. Whatever the job, we can
+                get it done.</p>
         </div>
         <div class="row justmobile">
             <div class="col-sm-12 col-xs-12">
@@ -228,9 +230,21 @@
     <img src="images/Bitmap.jpg" alt="Oncore - The key to faster, smoother jobs"/>
     <div class="overlay-container white">
         <h1>Ready to start a project?</h1>
-        <div class="intro-bottom">Oncore specialises in doing everything related to taking care of your home, building or office. Get in touch today!
+        <div class="intro-bottom">Oncore specialises in doing everything related to taking care of your home, building
+            or office. Get in touch today!
         </div>
         <button class="cta-button">Get in touch</button>
     </div>
 </div>
 {% endblock %}
+
+
+{% block scripts %}
+<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
+        });
+    });
+</script>
+{% endblock scripts%}
