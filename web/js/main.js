@@ -4465,7 +4465,8 @@ $(function () {
         submitHandler: function (form) {
             $('#general-enquiry').append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
             $('.pageform #prog1').fadeIn(100);
-
+            grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
+            }); // this one when form submit please
             var valifirstname = submitValidation('formf-firstname', 'required', 'firstname');
             var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
             var valiemail = submitValidation('formf-email', 'email');
@@ -4484,6 +4485,7 @@ $(function () {
                 type: "POST",
                 data: $(form).serialize(),
                 success: function (response) {
+
                     if (response.match(/ContainsLink/i)) {
                         //Display error message above form
                         $('.pageform #prog1').fadeOut(200);
