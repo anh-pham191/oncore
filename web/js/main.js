@@ -4691,72 +4691,583 @@ function submitValidation(id, type, para) {
 
 }
 
-function formValidation(id) {
-
-    if (id != "") {
-        var firstnameid = id + "-firstname";
-        var lastnameid = id + "-lastname";
-        var emailid = id + "-email";
-        var telid = id + "-tel";
-        var privacyid = id + "-privacy";
-    } else {
-        var firstnameid = "firstname";
-        var lastnameid = "lastname";
-        var emailid = "email";
-        var telid = "tel";
-        var privacyid = "privacy";
-    }
-    if ($("#" + firstnameid).val() === "") {
-        if (!$("#invalid-" + firstnameid).length) {
-            $("#" + firstnameid).after("<div class='invalid-tooltip' id='invalid-" + firstnameid + "'>First name is required.</div>");
-        }
-        $("#invalid-" + firstnameid).css({display: "block"});
-        $("#" + firstnameid).addClass("error-msg");
-    } else {
-        if ($("#invalid-" + firstnameid).length) {
-            $("#invalid-" + firstnameid).css({display: "none"});
-        }
-        $("#" + firstnameid).removeClass("error-msg");
-    }
-
-    if ($("#" + telid).val() === "") {
-        if (!$("#invalid-" + telid).length) {
-            $("#" + telid).after("<div class='invalid-tooltip' id='invalid-" + telid + "'>Phone number is required.</div>");
-        }
-        $("#invalid-" + telid).css({display: "block"});
-        $("#" + telid).addClass("error-msg");
-    } else {
-        if ($("#invalid-" + telid).length) {
-            $("#invalid-" + telid).css({display: "none"});
-        }
-        $("#" + telid).removeClass("error-msg");
-    }
-
-    if (!$("#" + emailid).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-        if (!$("#invalid-" + emailid).length) {
-            $("#" + emailid).after("<div class='invalid-tooltip' id='invalid-" + emailid + "'>Valid email address is required.</div>")
-        }
-        $("#invalid-" + emailid).css({display: "block"});
-        $("#" + emailid).addClass("error-msg");
-    } else {
-        if ($("#invalid-" + emailid).length) {
-            $("#invalid-" + emailid).css({display: "none"});
-        }
-        $("#" + emailid).removeClass("error-msg");
-    }
-    if ($("#" + privacyid).length) {
-        if ($("#" + privacyid).prop("checked") == false) {
-            if (!$("#invalid-" + privacyid).length) {
-                $("#" + privacyid).parent().parent().next().append("<div class='invalid-tooltip' id='invalid-" + privacyid + "'>Please read and accept the Privacy Policy.</div>");
+// function formValidation(id) {
+//
+//     if (id != "") {
+//         var firstnameid = id + "-firstname";
+//         var lastnameid = id + "-lastname";
+//         var emailid = id + "-email";
+//         var telid = id + "-tel";
+//         var privacyid = id + "-privacy";
+//     } else {
+//         var firstnameid = "firstname";
+//         var lastnameid = "lastname";
+//         var emailid = "email";
+//         var telid = "tel";
+//         var privacyid = "privacy";
+//     }
+//     if ($("#" + firstnameid).val() === "") {
+//         if (!$("#invalid-" + firstnameid).length) {
+//             $("#" + firstnameid).after("<div class='invalid-tooltip' id='invalid-" + firstnameid + "'>First name is required.</div>");
+//         }
+//         $("#invalid-" + firstnameid).css({display: "block"});
+//         $("#" + firstnameid).addClass("error-msg");
+//     } else {
+//         if ($("#invalid-" + firstnameid).length) {
+//             $("#invalid-" + firstnameid).css({display: "none"});
+//         }
+//         $("#" + firstnameid).removeClass("error-msg");
+//     }
+//
+//     if ($("#" + telid).val() === "") {
+//         if (!$("#invalid-" + telid).length) {
+//             $("#" + telid).after("<div class='invalid-tooltip' id='invalid-" + telid + "'>Phone number is required.</div>");
+//         }
+//         $("#invalid-" + telid).css({display: "block"});
+//         $("#" + telid).addClass("error-msg");
+//     } else {
+//         if ($("#invalid-" + telid).length) {
+//             $("#invalid-" + telid).css({display: "none"});
+//         }
+//         $("#" + telid).removeClass("error-msg");
+//     }
+//
+//     if (!$("#" + emailid).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+//         if (!$("#invalid-" + emailid).length) {
+//             $("#" + emailid).after("<div class='invalid-tooltip' id='invalid-" + emailid + "'>Valid email address is required.</div>")
+//         }
+//         $("#invalid-" + emailid).css({display: "block"});
+//         $("#" + emailid).addClass("error-msg");
+//     } else {
+//         if ($("#invalid-" + emailid).length) {
+//             $("#invalid-" + emailid).css({display: "none"});
+//         }
+//         $("#" + emailid).removeClass("error-msg");
+//     }
+//     if ($("#" + privacyid).length) {
+//         if ($("#" + privacyid).prop("checked") == false) {
+//             if (!$("#invalid-" + privacyid).length) {
+//                 $("#" + privacyid).parent().parent().next().append("<div class='invalid-tooltip' id='invalid-" + privacyid + "'>Please read and accept the Privacy Policy.</div>");
+//             }
+//             $("#invalid-" + privacyid).css({display: "block"});
+//             $("#" + privacyid).parent().parent().addClass("error-msg");
+//         } else {
+//             $("#invalid-" + privacyid).css({display: "none"});
+//             $("#" + privacyid).parent().parent().removeClass("error-msg");
+//         }
+//     }
+//
+//
+// }
+function formValidation(id,field){
+    if(field == "mobile-s1"){
+        var mobile = "mobile-s1";
+        if ($("#mobile-s1").val() === ""){
+            if(!$("#invalid-"+mobile).length){
+                $("#"+mobile).after( "<div class='invalid-tooltip' id='invalid-"+mobile+"'>Phone number is required.</div>" );
             }
-            $("#invalid-" + privacyid).css({display: "block"});
-            $("#" + privacyid).parent().parent().addClass("error-msg");
-        } else {
-            $("#invalid-" + privacyid).css({display: "none"});
-            $("#" + privacyid).parent().parent().removeClass("error-msg");
+            $("#invalid-"+mobile).css({display: "block" });
+            $("#"+mobile).addClass("error-msg");
+            if($("#"+mobile).prev().attr("class")=="labelname"){
+                $("#"+mobile).prev().addClass("error");
+            }
+            $("#"+mobile).siblings('.labelname').addClass('label-red')
+        }else{
+            if($("#invalid-"+mobile).length){
+                $("#invalid-"+mobile).css({display: "none" });
+            }
+            $("#"+mobile).removeClass("error-msg");
+            $("#"+mobile).prev().removeClass("error").removeClass('label-red');
+            $("#"+mobile).siblings('.labelname').removeClass('label-red')
+        }
+    }
+    if(id === "s1" || id === "s2" || id === "sidey" || id === "ce" || id === "pop" || id === "rh" || id === "comp"){
+        var firstnameid = "firstName-"+id;
+        var lastnameid = "lastName-"+id;
+        var telid = "tel-"+id;
+        var emailid = "email-"+id;
+        if(id === "s2" || id === "comp"){
+            var cityid = "city-"+id;
+            var stateprovinceid = "stateprovince-"+id;
+        }else{
+            var privacyid = "privacy-"+id;
+        }
+
+    }else{
+        var firstnameid = id+"-firstname";
+        var lastnameid = id+"-lastname";
+        var telid = id+"-tel";
+        var emailid = id+"-email";
+        var privacyid = id+"-privacy";
+        var locationid = id+"-location";
+    }
+
+    if(field==firstnameid){
+        if ($("#"+firstnameid).val() === ""){
+            if(!$("#invalid-"+firstnameid).length){
+                $("#"+firstnameid).after( "<div class='invalid-tooltip' id='invalid-"+firstnameid+"'>First name is required.</div>" );
+            }
+            $("#invalid-"+firstnameid).css({display: "block" });
+            $("#"+firstnameid).addClass("error-msg");
+            if($("#"+firstnameid).prev().attr("class")=="labelname"){
+                $("#"+firstnameid).prev().addClass("error");
+            }
+            $("#"+firstnameid).siblings('.labelname').addClass('label-red')
+        }else{
+            if($("#invalid-"+firstnameid).length){
+                $("#invalid-"+firstnameid).css({display: "none" });
+            }
+            $("#"+firstnameid).removeClass("error-msg");
+            $("#"+firstnameid).prev().removeClass("error").removeClass('label-red');
+            $("#"+firstnameid).siblings('.labelname').removeClass('label-red')
+        }
+    }
+    else if(field==lastnameid){
+        if ($("#"+lastnameid).val() === ""){
+            if(!$("#invalid-"+lastnameid).length){
+                $("#"+lastnameid).after( "<div class='invalid-tooltip' id='invalid-"+lastnameid+"'>Last name is required.</div>" );
+            }
+            $("#invalid-"+lastnameid).css({display: "block" });
+            $("#"+lastnameid).addClass("error-msg");
+            if($("#"+lastnameid).prev().attr("class")=="labelname"){
+                $("#"+lastnameid).prev().addClass("error");
+            }
+            $("#"+lastnameid).siblings('.labelname').addClass('label-red')
+        }else{
+            if($("#invalid-"+lastnameid).length){
+                $("#invalid-"+lastnameid).css({display: "none" });
+            }
+            $("#"+lastnameid).removeClass("error-msg");
+            $("#"+lastnameid).prev().removeClass("error").removeClass('label-red');
+            $("#"+lastnameid).siblings('.labelname').removeClass('label-red')
+        }
+    }
+    else if(field==telid){
+        if ($("#"+telid).val() === ""){
+            if(!$("#invalid-"+telid).length){
+                $("#"+telid).after( "<div class='invalid-tooltip' id='invalid-"+telid+"'>Phone number is required.</div>" );
+            }
+            $("#invalid-"+telid).css({display: "block" });
+            $("#"+telid).addClass("error-msg");
+            if($("#"+telid).prev().attr("class")=="labelname"){
+                $("#"+telid).prev().addClass("error");
+            }
+            $("#"+telid).siblings('.labelname').addClass('label-red')
+        }else{
+            if($("#invalid-"+telid).length){
+                $("#invalid-"+telid).css({display: "none" });
+            }
+            $("#"+telid).removeClass("error-msg");
+            $("#"+telid).prev().removeClass("error").removeClass('label-red');
+            $("#"+telid).siblings('.labelname').removeClass('label-red')
+        }
+    }
+    else if(field==emailid){
+        if (!$("#"+emailid).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+            if(!$("#invalid-"+emailid).length){
+                $("#"+emailid).after( "<div class='invalid-tooltip' id='invalid-"+emailid+"'>Please enter a valid email address.</div>" )
+            }
+            $("#invalid-"+emailid).css({display: "block" });
+            $("#"+emailid).addClass( "error-msg" );
+            if($("#"+emailid).prev().attr("class")=="labelname"){
+                $("#"+emailid).prev().addClass("error");
+            }
+            $("#"+emailid).siblings('.labelname').addClass('label-red')
+        }else{
+            if($("#invalid-"+emailid).length){
+                $("#invalid-"+emailid).css({display: "none" });
+            }
+            $("#"+emailid).removeClass( "error-msg" );
+            $("#"+emailid).prev().removeClass("error");
+            $("#"+emailid).siblings('.labelname').removeClass('label-red')
+        }
+    }
+    if(id != "s2"){
+        if(field==privacyid){
+            if($("#"+privacyid).length){
+                if($("#"+privacyid).prop("checked") == false){
+                    if(!$("#invalid-"+privacyid).length){
+                        $("#"+privacyid).parent().parent().next().append( "<div class='invalid-tooltip' id='invalid-"+privacyid+"'>Please read and accept the Privacy Policy.</div>" );
+                    }
+                    $("#invalid-"+privacyid).css({display: "block" });
+                    $("#"+privacyid).parent().parent().addClass( "error-msg" );
+                }else{
+                    $("#invalid-"+privacyid).css({display: "none" });
+                    $("#"+privacyid).parent().parent().removeClass( "error-msg" );
+                }
+            }
+        }
+        // if(cookieDomain=="refreshrenovations.co.uk"){
+        //     if(field==locationid){
+        //         if($("#"+locationid).length){
+        //             if ($("#"+locationid).val() === ""){
+        //                 if(!$("#invalid-"+locationid).length){
+        //                     $("#"+locationid).after( "<div class='invalid-tooltip' id='invalid-"+locationid+"'>Location is required.</div>" );
+        //                 }
+        //                 $("#invalid-"+locationid).css({display: "block" });
+        //                 $("#"+locationid).addClass( "error-msg" );
+        //                 if($("#"+locationid).prev().attr("class")=="labelname"){
+        //                     $("#"+locationid).prev().addClass("error");
+        //                 }
+        //             }else{
+        //                 if($("#invalid-"+locationid).length){
+        //                     $("#invalid-"+locationid).css({display: "none" });
+        //                 }
+        //                 $("#"+locationid).removeClass( "error-msg" );
+        //                 $("#"+locationid).prev().removeClass("error");
+        //             }
+        //         }
+        //     }
+        // }
+        if(id === "comp"){
+
+            if($("#googleaddress").css("display") === "block"){
+                if(field=="googleaddress"){
+                    if($("#geocomplete-comp").length){
+                        if ($("#geocomplete-comp").val() === ""){
+                            if(!$("#invalid-geocomplete-comp").length){
+                                $("#geocomplete-comp").after( "<div class='invalid-tooltip' id='invalid-geocomplete-comp'>Address is required.</div>" );
+                            }
+                            $("#geocomplete-comp").css({display: "block" });
+                            $("#geocomplete-comp").addClass( "error-msg" );
+                            if($("#geocomplete-comp").prev().attr("class")=="labelname"){
+                                $("#geocomplete-comp").prev().addClass("error");
+                            }
+                        }else{
+                            if($("#invalid-geocomplete-comp").length){
+                                $("#invalid-geocomplete-comp").css({display: "none" });
+                            }
+                            $("#geocomplete-comp").removeClass( "error-msg" );
+                            $("#geocomplete-comp").prev().removeClass("error");
+                        }
+                    }
+                }
+
+            }else{
+                if(field=="streetaddress-comp"){
+                    if($("#streetaddress-comp").length){
+                        if ($("#streetaddress-comp").val() === ""){
+                            if(!$("#invalid-streetaddress-comp").length){
+                                $("#streetaddress-comp").after( "<div class='invalid-tooltip' id='invalid-streetaddress-comp'>Street address is required.</div>" );
+                            }
+                            $("#streetaddress-comp").css({display: "block" });
+                            $("#streetaddress-comp").addClass( "error-msg" );
+                            if($("#streetaddress-comp").prev().attr("class")=="labelname"){
+                                $("#streetaddress-comp").prev().addClass("error");
+                            }
+                        }else{
+                            if($("#invalid-streetaddress-comp").length){
+                                $("#invalid-streetaddress-comp").css({display: "none" });
+                            }
+                            $("#streetaddress-comp").removeClass( "error-msg" );
+                            $("#streetaddress-comp").prev().removeClass("error");
+                        }
+                    }
+                }
+                if(field=="city-comp"){
+                    if($("#city-comp").length){
+                        if ($("#city-comp").val() === ""){
+                            if(!$("#invalid-city-comp").length){
+                                $("#city-comp").after( "<div class='invalid-tooltip' id='invalid-city-comp'>City is required.</div>" );
+                            }
+                            $("#city-comp").css({display: "block" });
+                            $("#city-comp").addClass( "error-msg" );
+                            if($("#city-comp").prev().attr("class")=="labelname"){
+                                $("#city-comp").prev().addClass("error");
+                            }
+                        }else{
+                            if($("#invalid-city-comp").length){
+                                $("#invalid-city-comp").css({display: "none" });
+                            }
+                            $("#city-comp").removeClass( "error-msg" );
+                            $("#city-comp").prev().removeClass("error");
+                        }
+                    }
+                }
+                if(field=="stateprovince-comp"){
+                    if($("#stateprovince-comp").length){
+                        if ($("#stateprovince-comp").val() === ""){
+                            if(!$("#invalid-stateprovince-comp").length){
+                                $("#stateprovince-comp").after( "<div class='invalid-tooltip' id='invalid-stateprovince-comp'>State / Province is required.</div>" );
+                            }
+                            $("#stateprovince-comp").css({display: "block" });
+                            $("#stateprovince-comp").addClass( "error-msg" );
+                            if($("#stateprovince-comp").prev().attr("class")=="labelname"){
+                                $("#stateprovince-comp").prev().addClass("error");
+                            }
+                        }else{
+                            if($("#invalid-stateprovince-comp").length){
+                                $("#invalid-stateprovince-comp").css({display: "none" });
+                            }
+                            $("#stateprovince-comp").removeClass( "error-msg" );
+                            $("#stateprovince-comp").prev().removeClass("error");
+                        }
+                    }
+                }
+            }
+            if(field=="age-comp"){
+                if($("#age-comp").length){
+                    if ($("#age-comp").val() === ""){
+                        if(!$("#invalid-age-comp").length){
+                            $("#age-comp").after( "<div class='invalid-tooltip' id='invalid-age-comp'>Age is required.</div>" );
+                        }
+                        $("#age-comp").css({display: "block" });
+                        $("#age-comp").addClass( "error-msg" );
+                        if($("#age-comp").prev().attr("class")=="labelname"){
+                            $("#age-comp").prev().addClass("error");
+                        }
+                    }else{
+                        if($("#invalid-age-comp").length){
+                            $("#invalid-age-comp").css({display: "none" });
+                        }
+                        $("#age-comp").removeClass( "error-msg" );
+                        $("#age-comp").prev().removeClass("error");
+                    }
+                }
+            }
+
+        }
+    }else{
+        var mobile=$("#mobile-s2").val();
+        var countrycode = $("#countrycode-s2").val();
+        if (mobile!= "" && field=="countrycode-s2"){
+            if (countrycode != '1') {
+                var reg = new RegExp(/^([0-9-]+)$/);
+                var nzMobileRegex = /^(((\+64|64)|0)2[0-9]{1})[\s|-]{0,1}(([0-9]{6,8})|(([0-9]{3,5}[\s|-][0-9]{3})|([0-9]{3}[\s|-][0-9]{3,5})|([0-9]{3,4}[\s|-][0-9]{3,4})))$/;
+                var mobileE164Regex = /^\+[1-9]\d{1,14}$/;
+                if(!reg.test(mobile)){
+                    if(!$("#invalid-mobile-s2").length){
+                        $("#mobile-s2").after( "<div class='invalid-tooltip' id='invalid-mobile-s2'>Sorry, mobile number should be only numbers.</div>" );
+                    }else{
+                        $("#invalid-mobile-s2").html("Sorry, mobile number should be only numbers.").css({display: "block" });
+                    }
+                    $("#mobile-s2").addClass( "error-msg" );
+                    if($("#mobile-s2").prev().attr("class")=="labelname"){
+                        $("#mobile-s2").prev().addClass("error");
+                    }
+                }else{
+                    if($("#invalid-mobile-s2").length){
+                        $("#invalid-mobile-s2").css({display: "none" });
+                    }
+                    $("#mobile-s2").removeClass( "error-msg" );
+                    $("#mobile-s2").prev().addClass("error");
+                }
+
+                mobile = mobile.replace(/\D/g, '');
+
+                if (countrycode === '64') {
+                    mobile = mobile.replace(/^2/, '02');
+                    $("#mobile-s2").val(mobile);
+                }
+
+                if( mobile.length > 12){
+                    if(!$("#invalid-mobile-s2").length){
+                        $("#mobile-s2").after( "<div class='invalid-tooltip' id='invalid-mobile-s2'>Sorry, mobile number should not exceed 12 digits.</div>" );
+                    }else{
+                        $("#invalid-mobile-s2").html("Sorry, mobile number should not exceed 12 digits.").css({display: "block" });
+                    }
+                    $("#mobile-s2").addClass( "error-msg" );
+                    if($("#mobile-s2").prev().attr("class")=="labelname"){
+                        $("#mobile-s2").prev().addClass("error");
+                    }
+                }else{
+                    if($("#invalid-mobile-s2").length){
+                        $("#invalid-mobile-s2").css({display: "none" });
+                    }
+                    $("#mobile-s2").removeClass( "error-msg" );
+                    $("#mobile-s2").prev().removeClass("error");
+                }
+
+                if (countrycode === '64' && !new RegExp(/^02/).test(mobile)) {
+                    if(!$("#invalid-mobile-s2").length){
+                        $("#mobile-s2").after( "<div class='invalid-tooltip' id='invalid-mobile-s2'>Sorry, NZ mobile number should start with '02'.</div>" );
+                    }else{
+                        $("#invalid-mobile-s2").html("Sorry, NZ mobile number should start with '02'.").css({display: "block" });
+                    }
+                    $("#mobile-s2").addClass( "error-msg" );
+                    if($("#mobile-s2").prev().attr("class")=="labelname"){
+                        $("#mobile-s2").prev().addClass("error");
+                    }
+                }else{
+                    if($("#invalid-mobile-s2").length){
+                        $("#invalid-mobile-s2").css({display: "none" });
+                    }
+                    $("#mobile-s2").removeClass( "error-msg" );
+                    $("#mobile-s2").prev().removeClass("error");
+                }
+
+                // If the number starts with 02 or the country code is 64, it should be followed by 7 to 10 digits
+                if (countrycode === '64' || new RegExp(/^02/).test(mobile)) {
+                    var nzTest = mobile.replace(/^02/, '');
+
+                    if (nzTest.length < 7 || nzTest.length > 10) {
+                        if(!$("#invalid-mobile-s2").length){
+                            $("#mobile-s2").after( "<div class='invalid-tooltip' id='invalid-mobile-s2'>Sorry, NZ mobile number should be 7 to 10 digits.</div>" );
+                        }else{
+                            $("#invalid-mobile-s2").html("Sorry, NZ mobile number should be 7 to 10 digits.").css({display: "block" });
+                        }
+                        $("#mobile-s2").addClass( "error-msg" );
+                        if($("#mobile-s2").prev().attr("class")=="labelname"){
+                            $("#mobile-s2").prev().addClass("error");
+                        }
+                    }else{
+                        if($("#invalid-mobile-s2").length){
+                            $("#invalid-mobile-s2").css({display: "none" });
+                        }
+                        $("#mobile-s2").removeClass( "error-msg" );
+                        $("#mobile-s2").prev().removeClass("error");
+                    }
+                }
+
+                if (countrycode === '64') {
+                    var nzTest = '+' + countrycode + mobile.replace(/^02/, '2');
+                    if (!nzMobileRegex.test(nzTest)) {
+                        if (nzTest.length < 7 || nzTest.length > 10) {
+                            if(!$("#invalid-mobile-s2").length){
+                                $("#mobile-s2").after( "<div class='invalid-tooltip' id='invalid-mobile-s2'>Sorry, NZ mobile number format is invalid.</div>" );
+                            }else{
+                                $("#invalid-mobile-s2").html("Sorry, NZ mobile number format is invalid.").css({display: "block" });
+                            }
+                            $("#mobile-s2").addClass( "error-msg" );
+                            if($("#mobile-s2").prev().attr("class")=="labelname"){
+                                $("#mobile-s2").prev().addClass("error");
+                            }
+                        }else{
+                            if($("#invalid-mobile-s2").length){
+                                $("#invalid-mobile-s2").css({display: "none" });
+                            }
+                            $("#mobile-s2").removeClass( "error-msg" );
+                            $("#mobile-s2").prev().removeClass("error");
+                        }
+                    }else{
+                        if($("#invalid-mobile-s2").length){
+                            $("#invalid-mobile-s2").css({display: "none" });
+                        }
+                        $("#mobile-s2").removeClass( "error-msg" );
+                        $("#mobile-s2").prev().removeClass("error");
+                    }
+                }else{
+                    var concatNumber = '+' + countrycode + mobile;
+                    if (!mobileE164Regex.test(concatNumber)) {
+                        if(!$("#invalid-mobile-s2").length){
+                            $("#mobile-s2").after( "<div class='invalid-tooltip' id='invalid-mobile-s2'>Sorry, mobile number format is invalid.</div>" );
+                        }else{
+                            $("#invalid-mobile-s2").html("Sorry, mobile number format is invalid.").css({display: "block" });
+                        }
+                        $("#mobile-s2").addClass( "error-msg" );
+                        if($("#mobile-s2").prev().attr("class")=="labelname"){
+                            $("#mobile-s2").prev().addClass("error");
+                        }
+                    }else{
+                        if($("#invalid-mobile-s2").length){
+                            $("#invalid-mobile-s2").css({display: "none" });
+                        }
+                        $("#mobile-s2").removeClass( "error-msg" );
+                        $("#mobile-s2").prev().removeClass("error");
+                    }
+
+                }
+
+            }else{
+                //var regUS = /^(1\s?)?(\(\d{3}\)|\d{3})\s?-?\d{3}-?\s?\d{4}$/;
+                var reg = new RegExp(/^[\d()\-\s]*$/);
+                if(!reg.test(mobile)){
+                    if(!$("#invalid-mobile-s2").length){
+                        $("#mobile-s2").after( "<div class='invalid-tooltip' id='invalid-mobile-s2'>Sorry, US mobile number format is invalid.</div>" );
+                    }else{
+                        $("#invalid-mobile-s2").html("Sorry, US mobile number format is invalid.").css({display: "block" });
+                    }
+                    $("#mobile-s2").addClass( "error-msg" );
+                    if($("#mobile-s2").prev().attr("class")=="labelname"){
+                        $("#mobile-s2").prev().addClass("error");
+                    }
+                }else{
+                    if($("#invalid-mobile-s2").length){
+                        $("#invalid-mobile-s2").css({display: "none" });
+                    }
+                    $("#mobile-s2").removeClass( "error-msg" );
+                }
+            }
+        }
+
+        if(cookieDomain=="refreshrenovations.co.uk"){
+            if(field=="streetaddress-s2"){
+                if ($("#streetaddress-s2").val() === ""){
+                    if(!$("#invalid-streetaddress-s2").length){
+                        $("#streetaddress-s2").after( "<div class='invalid-tooltip' id='invalid-"+id+"'>This field is required.</div>" );
+                    }
+                    $("#streetaddress-s2").addClass( "error-msg" );
+                    if($("#streetaddress-s2").prev().attr("class")=="labelname"){
+                        $("#streetaddress-s2").prev().addClass("error");
+                    }
+                }else{
+                    $("#invalid-streetaddress-s2").css({display: "none" });
+                    $("#streetaddress-s2").removeClass( "error-msg" );
+                    $("#streetaddress-s2").prev().removeClass("error");
+                }
+            }
+            if(field=="city-s2"){
+                if ($("#city-s2").val() === ""){
+                    if(!$("#invalid-city-s2").length){
+                        $("#city-s2").after( "<div class='invalid-tooltip' id='invalid-"+id+"'>This field is required.</div>" );
+                    }
+                    $("#city-s2").addClass( "error-msg" );
+                    if($("#city-s2").prev().attr("class")=="labelname"){
+                        $("#city-s2").prev().addClass("error");
+                    }
+                }else{
+                    $("#invalid-city-s2").css({display: "none" });
+                    $("#city-s2").removeClass( "error-msg" );
+                    $("#city-s2").prev().removeClass("error");
+                }
+            }
+            if(field=="stateprovince-s2"){
+                if ($("#stateprovince-s2").val() === ""){
+                    if(!$("#invalid-stateprovince-s2").length){
+                        $("#stateprovince-s2").after( "<div class='invalid-tooltip' id='invalid-"+id+"'>This field is required.</div>" );
+                    }
+                    $("#stateprovince-s2").addClass( "error-msg" );
+                    if($("#stateprovince-s2").prev().attr("class")=="labelname"){
+                        $("#stateprovince-s2").prev().addClass("error");
+                    }
+                }else{
+                    $("#invalid-stateprovince-s2").css({display: "none" });
+                    $("#stateprovince-s2").removeClass( "error-msg" );
+                    $("#stateprovince-s2").prev().removeClass("error");
+                }
+            }
         }
     }
 
 
 }
+
+$(document).ready(function () {
+
+    $(":input").on('input propertychange', function () {
+        if (this.dataset.prefix != undefined && this.dataset.prefix != null) {
+            formValidation(this.dataset.prefix,this.id);
+        }
+    });
+    $(":input").focusout(function(){
+        if (this.dataset.prefix != undefined && this.dataset.prefix != null) {
+            formValidation(this.dataset.prefix,this.id);
+        }
+    });
+
+    $("#mobile-menu-link").click(function () {
+        $("#menu-mobile").show(500);
+    });
+
+    $("#mobile-menu-close").click(function () {
+        $("#menu-mobile").hide(500);
+    });
+
+    $("#sitebanner #menu-mobile #menu-main h2").click(function (q) {
+        $(this).toggleClass("open");
+        $(this).siblings().toggleClass("open");
+        var p = $(this).text();
+    });
+
+});
 

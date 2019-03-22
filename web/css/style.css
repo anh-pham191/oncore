@@ -2,6 +2,15 @@
     padding: 0;
     margin: 0;
 }
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.0;
+    font-style: normal;
+    background-color: #fff;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; }
 
 * {
@@ -3268,13 +3277,17 @@ div#wideslideshow.overlay.banner .intro-bottom {
 .form-control.home-form {
     width: 276px;
     height: 48px;
-    border-radius: 4px;
+    border-radius: 10px;
     border: solid 1px #979797;
 }
 
 .form-banner .row {
     height: 48px;
-    margin: 15px 33px;
+    margin-left: 33px;
+    margin-right: 33px;
+}
+.form-banner .row .input-label-wrapper {
+    margin-top: 15px;
 }
 .form-banner .row.tick {
     height: 48px;
@@ -3956,7 +3969,7 @@ li.help {
 }
 
 .checker {
-    width: 10%;
+    width: 20px;
     float: left;
 }
 
@@ -4062,18 +4075,381 @@ a:hover {
 }
 
 .error-msg {
-    border: solid 1px red !important;
+    border: solid 1.5px #b00321 !important;
 }
 
 .invalid-tooltip {
+    /*z-index: 5;*/
+    /*max-width: 100%;*/
+    /*padding: .5rem;*/
+    /*margin-top: 0.1rem;*/
+    /*font-size: 0.875rem;*/
+    /*font-style: italic;*/
+    /*line-height: 1;*/
+    /*color: #b00220;*/
+    /*padding-bottom: 0em;*/
     position: absolute;
-    z-index: 5;
-    max-width: 100%;
-    padding: .5rem;
-    margin-top: .1rem;
-    font-size: .875rem;
-    line-height: 1;
-    color: #fff;
-    background-color: rgba(220, 53, 69, .8);
-    border-radius: .2rem;
+     top: 100%;
+     z-index: 5;
+     max-width: 100%;
+     padding: .5rem;
+     margin-top: .1rem;
+     font-size: .875rem;
+     line-height: 1;
+     color: #fff;
+     background-color: rgba(220, 53, 69, .8);
+     border-radius: .2rem;
+}
+
+
+#wrapper .form-banner #general-enquiry .row input:focus {
+    border: solid 1px #4fae47;
+}
+@media only all and (max-width: 1024px){
+    #menu-mobile ul#menu-main h2, #menu-mobile ul#menu-main .dropdown-btn {
+        margin-left: 12%;
+    }
+}
+@media only all and (max-width: 47.937em){
+    #menu-mobile {
+        left: 0;
+        z-index: 999;
+        background: #fff;
+        overflow: auto;
+        opacity: 1;
+    }
+    #menu-mobile, #sitebanner ul#country-box {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    #menu-mobile #menu-footer h2, #menu-mobile #menu-footer p {
+        font-family: Montserrat, sans-serif;
+        color: #fff
+    }
+    #menu-mobile #mobile-menu-close, #sitebanner ul#country-box li #country-box-close {
+        width: 30px;
+        height: 30px;
+        background: url(sprites2.svg) -211px -525px no-repeat
+    }
+    #menu-mobile #mobile-menu-close {
+        width: 100%;
+        height: 50px;
+        font-size: 29px;
+    }
+    #menu-mobile div#menu-footer, #menu-mobile ul#menu-additional, #menu-mobile ul#menu-main {
+        /*padding: 10px 0 10px 12%*/
+    }
+
+    #menu-mobile ul#menu-main {
+        background-color: #fff;
+        /*padding-top: 35px*/
+    }
+
+    #menu-mobile ul#menu-main li#mobile-menu-title {
+        height: auto;
+        margin-bottom: 20px
+    }
+
+    #menu-mobile ul#menu-main li:last-of-type {
+        padding-bottom: 11px;
+    }
+
+    #menu-mobile ul#menu-main li {
+        width: 100%;
+        padding: 21px 0px 11px 0;
+    }
+    #menu-mobile ul#menu-main .phone-mobile {
+        padding-top: 30px;
+    }
+
+    #menu-mobile ul#menu-additional li {
+        width: 95%;
+        margin-bottom: 15px;
+        padding: 10px 0
+    }
+
+    #menu-mobile ul#menu-additional li a, #menu-mobile ul#menu-additional li span, #menu-mobile ul#menu-main li a, #menu-mobile ul#menu-main li span {
+        color: #333;
+        width: 100%;
+        height: 100%;
+        font-family: Montserrat, sans-serif;
+        font-size: 1.2em
+    }
+
+    #menu-mobile ul#menu-main li span#mark {
+        font-size: .96em;
+        border: 1px solid #fff;
+        width: 120px;
+        padding: 5px;
+        line-height: 1.8
+    }
+
+    #menu-mobile #menu-footer h2 {
+        font-size: 1em;
+        font-style: italic
+    }
+
+    #menu-mobile #menu-footer ul#menu-footer-share {
+        width: 85%;
+        clear: both;
+        border-bottom: 1px solid #fff;
+        padding: 15px 0;
+        margin-bottom: 10px
+    }
+
+    #menu-mobile #menu-footer ul#menu-footer-share li {
+        color: #fff;
+        float: left;
+        margin-right: 7.1%
+    }
+
+    #menu-mobile #menu-footer ul#menu-footer-share li a {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        color: #333;
+        background-color: #CCC
+    }
+
+    #menu-mobile #menu-footer ul#menu-footer-share li a i {
+        margin-top: 22%;
+        margin-left: 24%
+    }
+
+    #menu-mobile #menu-footer p {
+        width: 100%;
+        margin: 0;
+        padding: 5px 0;
+        font-style: italic
+    }
+
+    #menu-mobile #menu-footer p a {
+        color: #fff;
+        font-style: italic
+    }
+
+    #menu-mobile ul#menu-additional li .back-icon {
+        float: left;
+        width: 25px;
+        height: 30px;
+        margin-top: -8px;
+        margin-right: 5px;
+        background: url(sprites2.svg) -193px -525px no-repeat;
+        background-size: 792px 612px
+    }
+
+    #menu-mobile #menu-footer {
+        position: absolute;
+        width: 100%;
+        bottom: 15px
+    }
+
+    #menu-mobile .hideitem {
+        display: none
+    }
+
+    #topnav #sitebanner #menu-mobile #mobile-menu-close span{
+        position: relative;
+        top: 31%;
+        left: 88%;
+    }
+    #topnav #sitebanner #menu-mobile .dropdown-btn {
+        background: url(/svg/drop-down.svg) no-repeat;
+        width: 10px;
+        height: 5px;
+        position: relative;
+        bottom: 11px;
+        left: 128px;
+    }
+
+    #topnav #sitebanner #menu-mobile .dropdown-btn.workwedone {
+        left: 175px;
+    }
+
+    #sitebanner #menu-mobile #menu-main li h2 a {
+        font-size: 1.142856rem;
+        font-weight: 500;
+    }
+
+    #sitebanner #menu-mobile #menu-main li h2 a.current {
+        font-weight: 600;
+    }
+
+    #sitebanner #menu-mobile #menu-main li h2 a[type='tel'] {
+        color: #4fae47;;
+        font-weight: 600;
+    }
+
+    #sitebanner #menu-mobile #menu-main #search-top {
+        background: url("/design/sprites2.svg") 3px -473px no-repeat;
+        height: 20px;
+        background-size: 700px 550px;
+        width: 24px;
+        cursor: pointer;
+    }
+
+    #sitebanner #menu-mobile #menu-main ul li a {
+        font-size: 1rem;
+        width: 80%;
+        padding: 10px 0 10px 20%;
+        font-weight: 500;
+    }
+
+    #sitebanner #menu-mobile #menu-main ul li a.current {
+        font-weight: 600;
+    }
+}
+
+#sitebanner #menu-mobile #menu-main ul {
+    display: none;
+}
+#sitebanner #menu-mobile #menu-main ul.open {
+    display: block;
+    background-color: #fafafa;
+    padding: 15px 0 15px 0;
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #sitebanner #menu-mobile #menu-main li h2 a.current, #sitebanner #menu-mobile #menu-main ul li a.current {
+        font-weight: 600;
+    }
+    #sitebanner #menu-mobile form {
+        width: 50%;
+    }
+    #topnav p img {
+        width: 129px !important;
+        height: 50px !important;
+        margin: 19px 19px;
+    }
+    #topnav #sitebanner .dropdown-btn{
+        background: url("/svg/drop-down.svg") no-repeat;
+        width: 10px;
+        height: 5px;
+        position: relative;
+        top: -11.5px;
+        left: 125px;
+    }
+    #topnav #menu-mobile form fieldset.border {
+        border: 1px solid #949494;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    #topnav #sitebanner .dropdown-btn.workwedone{
+        left: 172px;
+    }
+
+    #topnav form.notmobile {
+        right: 33%;
+    }
+
+    .notipad {
+        display: none !important;
+    }
+    #topnav form {
+        margin-top: 0px;
+    }
+    #menu-mobile {
+        left: 0;
+        z-index: 999;
+        background: #fff;
+        overflow: auto;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    #menu-mobile #mobile-menu-close {
+        width: 100%;
+        height: 50px;
+    }
+    #topnav #sitebanner #menu-mobile #mobile-menu-close span {
+        position: relative;
+        top: 15%;
+        left: 95%;
+    }
+    #menu-mobile ul#menu-main {
+        background-color: #fff;
+    }
+    #menu-mobile ul#menu-main li {
+        width: 100%;
+        margin-bottom: 0px;
+        padding: 10px 0;
+    }
+    #sitebanner #menu-mobile #menu-main li h2 a {
+        font-size: 1.142856rem;
+        font-weight: 500;
+        color: #333;
+        width: 100%;
+        height: 100%;
+        font-family: Montserrat, sans-serif;
+    }
+    #sitebanner #menu-mobile #menu-main li h2 a[type='tel'] {
+        color: #016330;
+        font-weight: 600;
+    }
+
+    #topnav #menu-mobile form fieldset {
+        background-color: #ffffff;
+        margin: 0px 50px 10px 30%;
+    }
+
+    #topnav #menu-mobile form button {
+        margin: 1px;
+        float: left;
+        width: 35px;
+        height: 33px;
+        background-color: #fff;
+        border: none;
+    }
+    #topnav form label input {
+        padding: 11px 8px 2px !important;
+    }
+
+    #sitebanner #menu-mobile #menu-main #search-top {
+        background: url(/design/sprites2.svg) 3px -473px no-repeat;
+        height: 20px;
+        background-size: 700px 550px;
+        width: 24px;
+        cursor: pointer;
+    }
+
+    #topnav #menu-mobile form label input {
+        border: 0;
+        background: 0 0;
+        width: 129px;
+        padding-top: 9px;
+        padding-right: 8px;
+        color: #333;
+        -webkit-appearance: none;
+    }
+
+    #sitebanner #menu-mobile #menu-main ul.open {
+        display: block;
+        background-color: #fafafa;
+        padding: 15px 0 15px 0;
+        margin-top: 20px;
+    }
+
+    #menu-mobile ul#menu-main li {
+        width: 100%;
+        margin-bottom: 17px;
+        padding: 10px 0;
+    }
+
+    #sitebanner #menu-mobile #menu-main ul li a {
+        font-size: 1rem;
+        width: 80%;
+        padding: 10px 0 10px 20%;
+        font-weight: 500;
+        color: #333;
+        font-family: Montserrat, sans-serif;
+
+    }
+
 }
