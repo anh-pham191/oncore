@@ -3595,6 +3595,11 @@ ul {
     margin: 0 2.2%;
 }
 
+.home-process .light-arrow {
+    vertical-align: top;
+    padding-top: 20px;
+}
+
 .home-process .image-process {
     display: block;
     width: 80px;
@@ -4638,4 +4643,12 @@ a:hover {
 
 #topnav #sitebanner .fleft.logo {
     margin-left: 20px;
+}
+
+.full-width-text-left p:first-of-type {
+    padding-bottom: 21px;
+}
+
+#wrapper .inner .notmiddle-size {
+    padding-top: 30px
 }
