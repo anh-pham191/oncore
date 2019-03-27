@@ -4771,14 +4771,14 @@ function formValidation(id,field){
             if($("#"+mobile).prev().attr("class")=="labelname"){
                 $("#"+mobile).prev().addClass("error");
             }
-            $("#"+mobile).siblings('.labelname').addClass('label-red')
+            $("#"+mobile).siblings('label').addClass('label-red')
         }else{
             if($("#invalid-"+mobile).length){
                 $("#invalid-"+mobile).css({display: "none" });
             }
             $("#"+mobile).removeClass("error-msg");
             $("#"+mobile).prev().removeClass("error").removeClass('label-red');
-            $("#"+mobile).siblings('.labelname').removeClass('label-red')
+            $("#"+mobile).siblings('label').removeClass('label-red')
         }
     }
     if(id === "s1" || id === "s2" || id === "sidey" || id === "ce" || id === "pop" || id === "rh" || id === "comp"){
@@ -4812,14 +4812,14 @@ function formValidation(id,field){
             if($("#"+firstnameid).prev().attr("class")=="labelname"){
                 $("#"+firstnameid).prev().addClass("error");
             }
-            $("#"+firstnameid).siblings('.labelname').addClass('label-red')
+            $("#"+firstnameid).siblings('label').addClass('label-red')
         }else{
             if($("#invalid-"+firstnameid).length){
                 $("#invalid-"+firstnameid).css({display: "none" });
             }
             $("#"+firstnameid).removeClass("error-msg");
             $("#"+firstnameid).prev().removeClass("error").removeClass('label-red');
-            $("#"+firstnameid).siblings('.labelname').removeClass('label-red')
+            $("#"+firstnameid).siblings('label').removeClass('label-red')
         }
     }
     else if(field==lastnameid){
@@ -4832,14 +4832,14 @@ function formValidation(id,field){
             if($("#"+lastnameid).prev().attr("class")=="labelname"){
                 $("#"+lastnameid).prev().addClass("error");
             }
-            $("#"+lastnameid).siblings('.labelname').addClass('label-red')
+            $("#"+lastnameid).siblings('label').addClass('label-red')
         }else{
             if($("#invalid-"+lastnameid).length){
                 $("#invalid-"+lastnameid).css({display: "none" });
             }
             $("#"+lastnameid).removeClass("error-msg");
             $("#"+lastnameid).prev().removeClass("error").removeClass('label-red');
-            $("#"+lastnameid).siblings('.labelname').removeClass('label-red')
+            $("#"+lastnameid).siblings('label').removeClass('label-red')
         }
     }
     else if(field==telid){
@@ -4852,14 +4852,14 @@ function formValidation(id,field){
             if($("#"+telid).prev().attr("class")=="labelname"){
                 $("#"+telid).prev().addClass("error");
             }
-            $("#"+telid).siblings('.labelname').addClass('label-red')
+            $("#"+telid).siblings('label').addClass('label-red')
         }else{
             if($("#invalid-"+telid).length){
                 $("#invalid-"+telid).css({display: "none" });
             }
             $("#"+telid).removeClass("error-msg");
             $("#"+telid).prev().removeClass("error").removeClass('label-red');
-            $("#"+telid).siblings('.labelname').removeClass('label-red')
+            $("#"+telid).siblings('label').removeClass('label-red')
         }
     }
     else if(field==emailid){
@@ -4872,14 +4872,14 @@ function formValidation(id,field){
             if($("#"+emailid).prev().attr("class")=="labelname"){
                 $("#"+emailid).prev().addClass("error");
             }
-            $("#"+emailid).siblings('.labelname').addClass('label-red')
+            $("#"+emailid).siblings('label').addClass('label-red')
         }else{
             if($("#invalid-"+emailid).length){
                 $("#invalid-"+emailid).css({display: "none" });
             }
             $("#"+emailid).removeClass( "error-msg" );
             $("#"+emailid).prev().removeClass("error");
-            $("#"+emailid).siblings('.labelname').removeClass('label-red')
+            $("#"+emailid).siblings('label').removeClass('label-red')
         }
     }
     if(id != "s2"){
