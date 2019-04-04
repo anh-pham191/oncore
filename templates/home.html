@@ -242,22 +242,9 @@
 <script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>
 
 <script>
-    var jWindow = $(window).width();
-    $( ".learn-more" ).click(function() {
-        if ( jWindow <= 768 ) {
-            $('html, body').animate({scrollTop: $(".home-process").offset().top}, 1000);
-        }else{
-            $('html, body').animate({scrollTop: $(".home-process").offset().top-100}, 1000);
-        }
-    });
-
-    $( ".cta-button, .subscribe" ).click(function() {
-        if ( jWindow <= 768 ) {
-            $('html, body').animate({scrollTop: $(".form-banner").offset().top}, 1000);
-        }else{
-            $('html, body').animate({scrollTop: $(".form-banner").offset().top-100}, 1000);
-        }
-    });
+    scrollDown($( ".learn-more" ),  $(".home-process"));
+    scrollDown($(".arrow-down"), $("#services-box"));
+    scrollDown($(".enquiry-button"), $("#enquiry-form"));
 </script>
 <script>
     grecaptcha.ready(function () {
