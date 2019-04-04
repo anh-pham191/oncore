@@ -39,6 +39,19 @@
     gtag('js', new Date());
     gtag('config', 'UA-129576409-1');
     gtag('config', 'AW-776863757'); </script>
+    <script type="text/javascript">
+        var _ss = _ss || [];
+        _ss.push(['_setDomain', 'https://koi-3QNH83TKIO.marketingautomation.services/net']);
+        _ss.push(['_setAccount', 'KOI-42KWHN6X54']);
+        _ss.push(['_trackPageView']);
+        (function() {
+            var ss = document.createElement('script');
+            ss.type = 'text/javascript'; ss.async = true;
+            ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNH83TKIO.marketingautomation.services/client/ss.js?ver=1.1.1';
+            var scr = document.getElementsByTagName('script')[0];
+            scr.parentNode.insertBefore(ss, scr);
+        })();
+    </script>
 
 </head>
 
@@ -66,9 +79,7 @@
 <script src="{{ siteUrl}}js/main.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 
-{% block scripts %}
 
-{% endblock scripts%}
 
 <script>
     var imgs = document.querySelectorAll('img');
@@ -108,15 +119,7 @@
         });
 
 
-        $(".enquiry-button").click(function () {
-            // if($(this).data("prefix") != ""){
-            //    // $("#formf-region").val($(this).data("prefix"));
-            //     $("#field_1Country_Interested_In").val($(this).data("prefix"));
-            //     alert($("#field_1Country_Interested_In").val());
-            // }
-            //$('html, body').animate({ scrollTop: $(".formholder").offset().top}, 1000);
-            $('html, body').animate({scrollTop: $("#enquiry-form").offset().top}, 1000);
-        });
+
         if ($('#back-to-top').length) {
             var scrollTrigger = 100, // px
                 backToTop = function () {
@@ -140,9 +143,8 @@
         }
 
     });
-    $(".arrow-down").click(function () {
-        $('html, body').animate({scrollTop: $("#services-box").offset().top - 130}, 1000);
-    });
+
+
     $(document).click(function (event) {
         var _con = $('#country-box');
         if (!_con.is(event.target) && _con.has(event.target).length === 0 && event.target != $("#country-top").get(0) && event.target != $("#country-top div").get(0) && event.target != $("#country-top .country-arrow").get(0)) {
@@ -185,8 +187,19 @@
         }
     }
 
+    function scrollDown(button, destination) {
+        button.click(function () {
+            $('html, body').animate({scrollTop: destination.offset().top - 130}, 1000);
+        });
+    }
+    scrollDown($( ".cta-button, .subscribe" ),  $(".form-banner"));
+
+
 
 </script>
+{% block scripts %}
+
+{% endblock scripts%}
 </body>
 
 </html>

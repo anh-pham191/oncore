@@ -2,7 +2,10 @@
     padding: 0;
     margin: 0;
 }
-
+a {
+    color: #00b234;
+    cursor: pointer;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
@@ -1180,8 +1183,9 @@ button, input, select, textarea {
     line-height: inherit
 }
 
-a:focus, a:hover {
-    color: #23527c
+a:focus, a:hover, a:visited {
+    /*color: #23527c*/
+    color: #007722
 }
 
 a:focus {
@@ -5369,4 +5373,14 @@ a:hover {
 
 .franchise-form {
     background-color: #eaf5e9;
+}
+
+.block-franchise .services-image-block .content-box .meet-director {
+    font-family: "Poppins";
+    font-size: 0.875em;
+    font-weight: 600;
+    letter-spacing: 3.9px;
+    color: #4fae47;
+    cursor:pointer;
+    padding-top: 20px;
 }

@@ -10,7 +10,8 @@
 
 <div style="position: relative">
     <div id="wideslideshow" class="overlay white franchise">
-        <img class="notmobile" src="{{ siteUrl}}images/Oncore-Handypeople.jpg" alt="Oncore - The key to faster, smoother jobs"/>
+        <img class="notmobile" src="{{ siteUrl}}images/Oncore-Handypeople.jpg"
+             alt="Oncore - The key to faster, smoother jobs"/>
         <div class="overlay-container white">
             <div class="inner">
                 <h1>Looking for a business opportunity that offers freedom and security?</h1>
@@ -130,7 +131,8 @@
         <div class="fleft">
             <div class="content-box">
                 <div class="title">Part of the Refresh group</div>
-                <div class="content"><p>Oncore is owned by Traffic, New Zealand’s specialist group in business
+                <div class="content"><p>Oncore is owned by <a href="https://www.traffic.net.nz/">Traffic</a>, New
+                    Zealand’s specialist group in business
                     strategy and marketing.
                     In 2011 Traffic launched Refresh Renovations, followed by Zones Landscaping in 2014. Both
                     companies have completed
@@ -138,6 +140,9 @@
                     is designed to
                     compliment the services offered by Refresh and Zones, leaving customers with an all round
                     positive experience.</p></div>
+                <p class="meet-director">MEET THE DIRECTORS <img width="16px" height="auto"
+                                                                 src="{{siteUrl}}svg/baseline-keyboard_arrow_down-24px-green.svg"/>
+                </p>
             </div>
         </div>
     </div>
@@ -199,20 +204,24 @@
     <div class="inner spacing">
         <h2>We have a <strong>proven</strong> track record</h2>
         <p class="spacing">Traffic has an International track record in market development and business growth. Meet the
-            people behind Oncore and our other success stories</p>
+            people behind Oncore and our other success stories - <a href="https://www.refreshrenovations.co.nz/">Refresh
+                Renovations</a> and
+            <a href="https://www.zones.co.nz/">Zones Landscaping</a></p>
     </div>
 
     <div class="inner">
         <div class="row-director">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <img class="spacing-bottom" src="" width="266px" height="266px"/>
+                <img class="spacing-bottom" src="{{siteUrl}}images/Traffic-Staff-2012-Chris-Caiger.jpg" width="266px"
+                     height="266px"/>
                 <h3 class="name">Chris Caiger</h3>
                 <span class="description">Traffic founder Chris Caiger holds over 30 years experience in marketing and business development. A Marketer of the Year award winner,
                 Chris has directed and founded marketing projects within New Zealand and the UK. Refresh Renovations was one of these projects, which has quickly become a global success. </span>
 
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <img class="spacing-bottom" src="" width="266px" height="266px"/>
+                <img class="spacing-bottom" src="{{siteUrl}}images/Traffic-Staff-2012-Jon-Bridge.jpg" width="266px"
+                     height="266px"/>
                 <h3 class="name">Jon Bridge</h3>
                 <span class="description">Jon has helped numerous businesses grow through his marketing, IT and business consulting skills.
                 e holds a Masters Degree in Marketing with first class honours and has helped businesses of all sizes thrive, including his own. </span>
@@ -221,7 +230,8 @@
         </div>
         <div class="row-director">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <img class="spacing-bottom" src="" width="266px" height="266px"/>
+                <img class="spacing-bottom" src="{{siteUrl}}images/Traffic-Staff-2012-Barry-Bloomfield.jpg"
+                     width="266px" height="266px"/>
                 <h3 class="name">Barry Bloomfield</h3>
                 <span class="description">Barry is Traffic’s Director of Design. He moved to New Zealand from the UK in 1998 after building an impressive portfolio in design and branding.
                 Barry holds a Masters Degree in Design from the Royal College of Art in London and he has worked for many of the world’s most famous brands. </span>
@@ -375,3 +385,13 @@
 
 </div>
 {% endblock content %}
+
+{% block scripts %}
+<script>
+    scrollDown($(".meet-director"), $(".track-record"));
+    scrollDown($(".find-out-more"), $(".services-three-cols"));
+    scrollDown($(".cta-button"), $(".form-banner"));
+</script>
+
+
+{% endblock scripts%}
