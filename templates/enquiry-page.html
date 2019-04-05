@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+{% block seocontent %}
+<title>{{entry.h1heading}}</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+{% endblock seocontent %}
+
+
+{% block content %}
+
+{% include 'includes/header-banner.html'  with { 'image' : entry.bannerimage.first().Filename, 'h1': entry.h1heading, 'breadcrumb': entry.bannerbreadcrumb } %}
+
+<div class="inner">
+    <section id="content" class="panorama contact" role="main">
+        <div class="clearfix">
+            <div id="content-body" class="form">
+                <div class="content-left">
+                    <!--<div class="intro clearfix">-->
+                    <!--<h1>{contactus_bus_h1_heading}</h1>-->
+                    <!--</div>-->
+                    <div class="pagecopy">{{entry.pageIntroduction}}</div>
+                    <br><br>
+
+                    <div class="notmobile contact-us-desktop">
+                        {{entry.contactDetail}}
+                        <div>
+
+                            <h2>Other Enquiries Types</h2> <br>
+                            <ul>
+                                <li><a href="/contact-us/project-enquiry">Project Enquiry</a></li>
+                                <li><a href="/contact-us/franchise-opportunities/">Franchise Enquiry</a></li>
+                                <li><a href="/contact-us/trade-jobs">Career Enquiry</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-right">
+                <div class="theformarea-c formholder">
+                    <p class="enquiry-title">Project enquiry</p>
+                    <p class="instructions-c" style="display: none;"></p>
+                    <form action="/forms/builder-job.php" method="post" id="myform-builder-job"
+                          name="myform-builder-job" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname" for="c-car-firstname">First Name</label>
+                                <input type="text" class="form-control"
+                                       aria-label="First name" name="p-car-firstname" id="c-car-firstname"
+                                       data-prefix="c-car"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Last Name</label>
+                                <input type="text" class="form-control"
+                                       aria-label="Last name" name="p-car-lastname" id="c-car-lastname" data-prefix="c-car"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Email Address</label>
+                                <input type="text" name="p-car-email" class="form-control" aria-label="Email address" id="c-car-email"
+                                       data-prefix="c-car"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Phone</label>
+                                <!--<input type="tel" name="p-car-tel" class="form-control"-->
+                                <!--placeholder="Enter phone number" aria-label="Phone number"-->
+                                <!--data-prefix="c-car"/>-->
+                                <div class="input-group" style="display: inline">
+                                    <div aria-label="Country code" class="phone-code"> <span>+64</span></div>
+                                    <input type="tel" class="form-control phone-input" aria-label="Phone number" name="p-car-tel" id="mobile-s1" data-prefix="s1" data-phoneformat="yes">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                <label class="labelname">Message (Optional)</label>
+                                <textarea rows="8" name='p-car-enquiry' class="form-control col-xs-12" aria-label="Message"></textarea>
+                            </div>
+                        </div>
+                        <fieldset class="clearfix testinput">
+                            <legend></legend>
+                            <label id="c-enq-website" class="input fullwidth"><span>Prove you are human by leaving this field blank</span>
+                                <input type="text" name="website" autocomplete="off"/></label>
+                        </fieldset>
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                <input type="checkbox" class="uniform-styles" name="p-car-privacy"
+                                       id="c-car-privacy" aria-label="Privacy" {if "{site_version}" != "version-uk"}
+                                checked{/if} data-prefix="c-car" />
+                                <label for="c-car-privacy"> I have read, understood and accepted the <a
+                                        href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                <input type="checkbox" class="uniform-styles" name="p-car-subscribe"
+                                       id="c-car-subscribe" aria-label="Subscribe" {if "{site_version}" !=
+                                "version-uk"} checked{/if} />
+                                <label for="c-car-subscribe"> I consent to receiving advice and information relating
+                                    to home improvements.</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12 input-label-wrapper">
+                                <button type="submit" class="btn btn-primary btn-block" id="c-car-submit">Submit Enquiry
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                    <div id="prog1" class="progress" style="display: none;"></div>
+                </div>
+                <div class="adwordstracking"></div>
+            </div>
+
+            <div class="contact-us-mobile ">
+                {{entry.contactDetail}}
+                <div>
+
+                    <h2>Other Enquiries Types</h2><br>
+                    <ul>
+                        <li><a href="/contact-us/project-enquiry">Project Enquiry</a></li>
+                        <li><a href="/contact-us/franchise-opportunities/">Franchise Enquiry</a></li>
+                        <li><a href="/contact-us/trade-jobs">Career Enquiry</a></li>
+                    </ul>
+                </div>
+            </div>
+
+    </section>
+    <div class="sep footersep"></div>
+
+</div><!-- end .inner -->
+
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    scrollDown($(".meet-director"), $(".track-record"));
+    scrollDown($(".find-out-more"), $(".services-three-cols"));
+    scrollDown($(".cta-button"), $(".form-banner"));
+    $("fieldset.testinput").css("display", "none");
+</script>
+
+
+{% endblock scripts%}
