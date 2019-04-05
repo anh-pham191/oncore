@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block seocontent %}
-<title>{{entry.h1heading}}</title>
+<title>Contact Us - {{entry.h1heading}}</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 {% endblock seocontent %}
@@ -91,7 +91,7 @@
                         </fieldset>
                         <div class="row">
                             <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                                <input type="checkbox" class="uniform-styles" name="p-car-privacy"
+                                <input type="checkbox" class="uniform-styles" name="p-car-privacy" checked
                                        id="c-car-privacy" aria-label="Privacy" {if "{site_version}" != "version-uk"}
                                 checked{/if} data-prefix="c-car" />
                                 <label for="c-car-privacy"> I have read, understood and accepted the <a
@@ -100,7 +100,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                                <input type="checkbox" class="uniform-styles" name="p-car-subscribe"
+                                <input type="checkbox" class="uniform-styles" name="p-car-subscribe" checked
                                        id="c-car-subscribe" aria-label="Subscribe" {if "{site_version}" !=
                                 "version-uk"} checked{/if} />
                                 <label for="c-car-subscribe"> I consent to receiving advice and information relating
