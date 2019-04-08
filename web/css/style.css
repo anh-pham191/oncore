@@ -5514,7 +5514,6 @@ a:hover {
 @media only all and (min-width: 64em) and (max-width: 78em) {
     #topnav #sitebanner .phone-top {
         margin-left: -20px;
-        margin-top: 30px;
     }
     #sitebanner ul.links-top {
         margin-top: -23px;
