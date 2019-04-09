@@ -3290,6 +3290,9 @@ div#wideslideshow.overlay .overlay-container h2#arrow .arrow-down {
 .clearfix {
     min-height: 1%;
 }
+div#wideslideshow.overlay.banner .overlay-container div.inner {
+    margin-top: 6vh;
+}
 div#wideslideshow.overlay .overlay-container div.inner {
     margin-top: 12vh;
 }
