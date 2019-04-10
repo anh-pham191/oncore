@@ -2,7 +2,6 @@
 
 // Ubiquity form: 0001 Refresh Contact - Business Opportunity - used for Franchise Enquiry
 // Uses UTM Campaign field to say the submission was from the Franchise site
-die;
 include '../includes/email.php';
 
 function cleanData($input) {
