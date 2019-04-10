@@ -6298,18 +6298,34 @@ form .tips {
     cursor: pointer;
 }
 
-#myModal h1 {
+#myModal h1, #new-step2 h1 {
     margin: 16px auto;
     margin-top: 0;
 }
-#myModal .form-control.home-form {
+#myModal .form-control.home-form, #new-step2 .form-control.home-form {
     width: 100%;
 }
 
-#myModal .row {
+#myModal .row, #new-step2 .row {
     margin: 20px -15px;
 }
 
-#myModal #home-form-submit {
+#myModal #news-form-submit, #new-step2 #news2-form-submit {
     width: 100%;
+}
+#new-step2 .modal-content {
+    width: 458px;
+    height: 530px;
+}
+.modal-content p {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 500;
+    color: #333333;
+}
+@media only screen and (max-width: 48em) {
+    .modal-content {
+        width: 90%;
+        height: auto;
+    }
 }

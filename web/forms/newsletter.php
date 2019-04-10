@@ -1,18 +1,23 @@
 <?php
 // Ubiquity form: 0002 Zones Newsletter - Footer - Subscribe to newsletter
-
 include '../includes/email.php';
 if(isset($_POST['firstname'])){
     $firstname = trim(addslashes($_POST['firstname']));
 } else {
     $firstname = '';
 }
+
+if(isset($_POST['lastname'])){
+    $lastname = trim(addslashes($_POST['lastname']));
+} else {
+    $lastname = '';
+}
 if(isset($_POST['email'])){
     $email = trim($_POST['email']);
 }
 
-if(isset($_POST['phone'])){
-    $email = trim($_POST['phone']);
+if(isset($_POST['tel'])){
+    $phone = trim($_POST['tel']);
 }
 else {
     $phone = '';
@@ -33,6 +38,10 @@ $jsonData = "{
     {
       \"fieldID\": \"PflaaGlELU2CnQjWvY7bmQ\",
       \"value\": \"$firstname\"
+    },
+    {
+       \"fieldID\": \"WZbRLLRMhkGgdwjWvY8BWg\",
+       \"value\": \"$lastname\"
     },
     {
       \"fieldID\": \"oq0Peq20_0a6XQjWvY8NEw\",

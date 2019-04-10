@@ -82,7 +82,6 @@
         <div class="">
             <h1>Newsletter sign up</h1>
             <form action="/forms/newsletter.php" method="post" id="newsletter-form">
-                <input type="hidden" name="g-recaptcha-response" id="captcha"/>
                 <div class="row">
                     <div class="col-md-12 input-label-wrapper">
                         <input type="text" class="form-control home-form"
@@ -110,7 +109,56 @@
 
                 <div class="row tick">
                     <div class="col-md-12 col-xs-12 input-label-wrapper">
-                        <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit" value="Sign Up"/>
+                        <input type="submit" class="btn btn-primary btn-block submitbutton" id="news-form-submit" value="Sign Up"/>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div id="new-step2" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="">
+            <h1>Thanks for signing up.</h1>
+            <p>Would you like to provide more details?</p>
+            <form action="/forms/newsletter.php" method="post" id="newsletter2-form">
+                <div class="row">
+                    <div class="col-md-12 input-label-wrapper">
+                        <input type="text" class="form-control home-form" placeholder="First name"
+                               aria-label="First name" name="firstname" id="newf2-firstname"
+                               data-prefix="newf2"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 input-label-wrapper">
+                        <input type="text" class="form-control home-form"
+                               aria-label="Last name" name="lastname" placeholder="Last Name"
+                               id="newf2-lastname" data-prefix="newf2"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 input-label-wrapper">
+                        <input type="text" class="form-control home-form"
+                               name="email" placeholder="Email"
+                               id="newf2-email" data-prefix="newf2"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 input-label-wrapper">
+                        <input type="tel" class="form-control home-form phone-input" placeholder="Phone Number"
+                               name="tel" id="newf2-tel"
+                               data-prefix="newf2" data-phoneformat="yes">
+                    </div>
+                </div>
+
+                <div class="row tick">
+                    <div class="col-md-12 col-xs-12 input-label-wrapper">
+                        <input type="submit" class="btn btn-primary btn-block submitbutton" id="news2-form-submit" value="Send extra details"/>
 
                     </div>
                 </div>
@@ -251,6 +299,9 @@
             } else {
                 if (e.target.id == 'myModal') {
                     $("#myModal").css("display", "none");
+                }
+                if (e.target.id == 'new-step2') {
+                    $("#new-step2").css("display", "none");
                 }
             }
 
