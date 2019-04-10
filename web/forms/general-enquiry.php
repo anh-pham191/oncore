@@ -1,5 +1,4 @@
 <?php
-
 // Ubiquity form: Oncore Contact - General Enquiry - used for Consumer Enquiry
 
 include '../includes/email.php';
