@@ -40,13 +40,15 @@
                 <div class="theformarea-c formholder">
                     <p class="enquiry-title">Project enquiry</p>
                     <p class="instructions-c" style="display: none;"></p>
-                    <form action="/forms/builder-job.php" method="post" id="myform-builder-job"
+                    <form action="/forms/general-enquiry.php" method="post" id="project-job"
                           name="myform-builder-job" enctype="multipart/form-data">
+                        <input type="hidden" name="g-recaptcha-response" id="captcha"/>
+
                         <div class="row">
                             <div class="col-md-12 input-label-wrapper">
-                                <label class="labelname" for="c-car-firstname">First Name</label>
+                                <label class="labelname" for="formf-firstname">First Name</label>
                                 <input type="text" class="form-control"
-                                       aria-label="First name" name="p-car-firstname" id="c-car-firstname"
+                                       aria-label="First name" name="firstname" id="formf-firstname"
                                        data-prefix="c-car"/>
                             </div>
                         </div>
@@ -54,13 +56,13 @@
                             <div class="col-md-12 input-label-wrapper">
                                 <label class="labelname">Last Name</label>
                                 <input type="text" class="form-control"
-                                       aria-label="Last name" name="p-car-lastname" id="c-car-lastname" data-prefix="c-car"/>
+                                       aria-label="Last name" name="lastname" id="formf-lastname" data-prefix="c-car"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 input-label-wrapper">
                                 <label class="labelname">Email Address</label>
-                                <input type="text" name="p-car-email" class="form-control" aria-label="Email address" id="c-car-email"
+                                <input type="text" name="email" class="form-control" aria-label="Email address" id="formf-email"
                                        data-prefix="c-car"/>
                             </div>
                         </div>
@@ -72,7 +74,7 @@
                                 <!--data-prefix="c-car"/>-->
                                 <div class="input-group" style="display: inline">
                                     <div aria-label="Country code" class="phone-code"> <span>+64</span></div>
-                                    <input type="tel" class="form-control phone-input" aria-label="Phone number" name="p-car-tel" id="mobile-s1" data-prefix="s1" data-phoneformat="yes">
+                                    <input type="tel" class="form-control phone-input" aria-label="Phone number" name="tel" id="formf-tel" data-prefix="s1" data-phoneformat="yes">
                                 </div>
                             </div>
                         </div>
@@ -81,7 +83,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-xs-12 input-label-wrapper">
                                 <label class="labelname">Message (Optional)</label>
-                                <textarea rows="8" name='p-car-enquiry' class="form-control col-xs-12" aria-label="Message"></textarea>
+                                <textarea rows="8" name='enquiry' class="form-control col-xs-12" aria-label="Message"></textarea>
                             </div>
                         </div>
                         <fieldset class="clearfix testinput">
@@ -91,19 +93,19 @@
                         </fieldset>
                         <div class="row">
                             <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                                <input type="checkbox" class="uniform-styles" name="p-car-privacy" checked
-                                       id="c-car-privacy" aria-label="Privacy" {if "{site_version}" != "version-uk"}
+                                <input type="checkbox" class="uniform-styles" name="privacy" checked
+                                       id="formf-privacy" aria-label="Privacy" {if "{site_version}" != "version-uk"}
                                 checked{/if} data-prefix="c-car" />
-                                <label for="c-car-privacy"> I have read, understood and accepted the <a
+                                <label for="formf-privacy"> I have read, understood and accepted the <a
                                         href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                                <input type="checkbox" class="uniform-styles" name="p-car-subscribe" checked
-                                       id="c-car-subscribe" aria-label="Subscribe" {if "{site_version}" !=
+                                <input type="checkbox" class="uniform-styles" name="subscribe" checked
+                                       id="formf-subscribe" aria-label="Subscribe" {if "{site_version}" !=
                                 "version-uk"} checked{/if} />
-                                <label for="c-car-subscribe"> I consent to receiving advice and information relating
+                                <label for="formf-subscribe"> I consent to receiving advice and information relating
                                     to home improvements.</label>
                             </div>
                         </div>
@@ -142,6 +144,8 @@
 {% endblock content %}
 
 {% block scripts %}
+<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>
+
 <script>
     scrollDown($(".meet-director"), $(".track-record"));
     scrollDown($(".find-out-more"), $(".services-three-cols"));
@@ -149,5 +153,11 @@
     $("fieldset.testinput").css("display", "none");
 </script>
 
-
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
+            $('#captcha').val(token);
+        }); // this one when form submit please
+    });
+</script>
 {% endblock scripts%}

@@ -15,7 +15,7 @@ $firstname = cleanData($_POST['firstname']);
 $lastname = cleanData($_POST['lastname']);
 $email = cleanData($_POST['email']);
 $phone = cleanData($_POST['tel']);
-$country = cleanData($_POST['country']);
+$country = "New Zealand";
 if (isset($_POST['privacy'])) {
     $privacy = cleanData($_POST['privacy']);
 } else {
@@ -26,7 +26,11 @@ if (isset($_POST['subscribe'])) {
 } else {
     $subscribe = "";
 };
-$subject = cleanData($_POST['subject']);
+if (isset($_POST['subject'])) {
+    $subject = cleanData($_POST['subject']);
+} else {
+    $subject = "";
+}
 $enquiry = cleanData($_POST['enquiry']);
 if (isset($_COOKIE['viewedopp'])) {
     $opportunity = cleanData($_COOKIE['viewedopp']);
@@ -34,8 +38,11 @@ if (isset($_COOKIE['viewedopp'])) {
     $opportunity = "";
 };
 $honeypot = cleanData($_POST['website']);
-$frompage = cleanData($_POST['frompage']);
-
+if (isset($_POST['frompage'])) {
+    $frompage = cleanData($_POST['frompage']);
+} else {
+    $frompage = "";
+}
 if (isset($_COOKIE['fromcampaign'])) {
     $campaign = cleanData($_COOKIE['fromcampaign']);
 } else {

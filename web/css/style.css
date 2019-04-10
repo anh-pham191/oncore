@@ -5465,7 +5465,7 @@ a:hover {
 }
 
 
-#content.contact #content-right #myform-builder-job .phone-code {
+#content.contact #content-right #project-job .phone-code {
     display: inline;
     float: left;
     width: 16%;
@@ -5478,16 +5478,16 @@ a:hover {
     height: 47px;
 }
 
-#content.contact #content-right #myform-builder-job .phone-code span{
+#content.contact #content-right #project-job .phone-code span{
     line-height: 47px;
 }
 
-#content.contact #content-right #myform-builder-job .phone-input {
+#content.contact #content-right #project-job .phone-input {
     width: 37%;
 }
 
 
-#content.contact #content-right #myform-builder-job #mobile-s1 {
+#content.contact #content-right #project-job #formf-tel {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -5527,11 +5527,11 @@ a:hover {
         right: -15px;
     }
 }
-#content #content-right #myform-builder-job input[type=file] {
+#content #content-right #project-job input[type=file] {
     width: 100%;
 }
 
-#content.contact #content-right #myform-builder-job #c-car-submit {
+#content.contact #content-right #project-job #c-car-submit {
     width: 269px;
     height: 48px;
     border-radius: 3px;
@@ -5557,7 +5557,7 @@ a:hover {
         padding: 8px 20px 30px 20px;
     }
 
-    #content.panorama.contact #content-right .formholder #myform-builder-job .row .input-label-wrapper.col-md-12, #content.panorama.contact #content-right .formholder #myform-builder-job .row .input-label-wrapper.col-sm-12 {
+    #content.panorama.contact #content-right .formholder #project-job .row .input-label-wrapper.col-md-12, #content.panorama.contact #content-right .formholder #project-job .row .input-label-wrapper.col-sm-12 {
         width: 88%;
     }
 
