@@ -57,7 +57,6 @@ $jsonData = "{
   ],
   \"source\": \"0002 Oncore Newsletter - Footer - Subscribe to newsletter\"
 }";
-return $jsonData;
 
 // perform the curl transaction
 if(!preg_match('/\d+/',$firstname)){
