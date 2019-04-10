@@ -6281,6 +6281,7 @@ form .tips {
     border-radius: 20px;
     box-shadow: 0 2px 50px 0 rgba(76, 76, 76, 0.3);
     background-color: #ffffff;
+    position: relative;
 }
 
 /* The Close Button */
@@ -6289,6 +6290,9 @@ form .tips {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    top: 0%;
+    right: 3%;
 }
 
 .close:hover,
@@ -6327,5 +6331,6 @@ form .tips {
     .modal-content {
         width: 90%;
         height: auto;
+        margin:40% auto;
     }
 }
