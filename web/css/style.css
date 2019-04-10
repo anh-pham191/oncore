@@ -5164,8 +5164,8 @@ a:hover {
         position: relative;
     }
     .services-image-block .content-box {
-        width: 80%;
-        margin: 0px 26px 30px;
+        width: 70%;
+        margin: 5% auto 30px;
         padding: 20px;
         font-family: Open Sans, sans-serif;
     }
