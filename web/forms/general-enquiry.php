@@ -2,7 +2,7 @@
 
 // Ubiquity form: Oncore Contact - General Enquiry - used for Consumer Enquiry
 
-include '../includes/emails.php';
+include '../includes/email.php';
 
 function cleanData($input) {
     $output = trim($input);

@@ -2,9 +2,8 @@
 
 // Ubiquity form: 0001 Refresh Contact - Business Opportunity - used for Franchise Enquiry
 // Uses UTM Campaign field to say the submission was from the Franchise site
-
-include '../includes/emails.php';
-include '../includes/locale.php';
+die;
+include '../includes/email.php';
 
 function cleanData($input) {
     $output = trim($input);
@@ -13,42 +12,23 @@ function cleanData($input) {
     return $output;
 }
 
-$firstname = cleanData($_POST['form-firstname']);
-$lastname = cleanData($_POST['form-lastname']);
-$email = cleanData($_POST['form-email']);
-$phone = cleanData($_POST['form-tel']);
-$country = cleanData($_POST['form-country']);
-if (isset($_POST['form-privacy'])) {
-    $privacy = cleanData($_POST['form-privacy']);
+$firstname = cleanData($_POST['firstname']);
+$lastname = cleanData($_POST['lastname']);
+$email = cleanData($_POST['email']);
+$phone = cleanData($_POST['tel']);
+if (isset($_POST['privacy'])) {
+    $privacy = cleanData($_POST['privacy']);
 } else {
     $privacy = "";
 };
-if (isset($_POST['form-subscribe'])) {
-    $subscribe = cleanData($_POST['form-subscribe']);
+if (isset($_POST['subscribe'])) {
+    $subscribe = cleanData($_POST['subscribe']);
 } else {
     $subscribe = "";
 };
-$subject = cleanData($_POST['form-subject']);
-if (isset($_POST['form-country-filled'])) {
-    $countryFilled = cleanData($_POST['form-country-filled']);
-    $enquiry = "Interested country: ". $countryFilled . ". Message: ".cleanData($_POST['form-enquiry']);
-} else {
-    $countryFilled = "";
-    $enquiry = cleanData($_POST['form-enquiry']);
-};
-if (isset($_COOKIE['viewedopp'])) {
-    $opportunity = cleanData($_COOKIE['viewedopp']);
-} else {
-    $opportunity = "";
-};
+
 $honeypot = cleanData($_POST['form-website']);
-$frompage = cleanData($_POST['frompage']);
-$region = cleanData($_POST['form-region']);
-if (isset($_COOKIE['fromcampaign'])) {
-    $campaign = cleanData($_COOKIE['fromcampaign']);
-} else {
-    $campaign = "N/A";
-};
+
 if (isset($_COOKIE['fromsource'])&& $_COOKIE['fromsource']=="google") {
     $source = "Google AdWords";
 } else if (isset($_COOKIE['fromsource'])&& $_COOKIE['fromsource']=="bing") {
@@ -64,7 +44,7 @@ if (isset($_COOKIE['fromsource'])&& $_COOKIE['fromsource']=="google") {
 } else if (isset($_COOKIE['fromsource']) && $_COOKIE['fromsource'] == "Franchise Magazine") {
     $source = "Franchise Magazine";
 } else {
-    $source = "Refresh Franchise ".$country." Website";
+    $source = "Oncore Consumer ".$country." Website";
 };
 if (isset($_COOKIE['frommedium'])) {
     $medium = cleanData($_COOKIE['frommedium']);
@@ -72,7 +52,7 @@ if (isset($_COOKIE['frommedium'])) {
 
 $businessunit = "Oncore NZ Franchise Lead";
 
-include '../includes/reCAPTCHA.php';
+
 if(isset($_POST['g-recaptcha-response'])){
     $captcha=$_POST['g-recaptcha-response'];
 }
@@ -81,6 +61,7 @@ if(!$captcha){
     echo 'NoCaptcha';
     exit;
 }
+$secretKey = '6LdbAZkUAAAAABmmDIBGZb2BOV8RGODvtwzXN8Po';
 $ip = $_SERVER['REMOTE_ADDR'];
 $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
 $responseKeys = json_decode($response,true);
@@ -88,6 +69,23 @@ if(intval($responseKeys["success"]) !== 1) {
     echo 'EnquirySent';
     exit;
 }
+//
+//include '../includes/reCAPTCHA.php';
+//if(isset($_POST['g-recaptcha-response'])){
+//    $captcha=$_POST['g-recaptcha-response'];
+//}
+//
+//if(!$captcha){
+//    echo 'NoCaptcha';
+//    exit;
+//}
+//$ip = $_SERVER['REMOTE_ADDR'];
+//$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+//$responseKeys = json_decode($response,true);
+//if(intval($responseKeys["success"]) !== 1) {
+//    echo 'EnquirySent';
+//    exit;
+//}
 
 
 // Check if fields that shouldn't do contain a URL
@@ -119,7 +117,7 @@ if ($probSpam != "yes") {
         $frompage = substr($frompage, 0, 100);
         $region = substr($region, 0, 100);
 
-        $spamsubject = "SPAM from Refresh Franchise website - Franchise Enquiry";
+        $spamsubject = "SPAM from Oncore Consumer website - Franchise Enquiry";
         $spammessage = "First name: " . $firstname . "\n\n" . "Last name: " . $lastname . "\n\n" . "Email: " . $email . "\n\n" . "Phone: " . $phone . "\n\n" . "Country: " . $country . "\n\n" . "Read and accepted Privacy Policy : " . $privacy . "\n\n" . "Opted out setting: " . $subscribe . "\n\n" . "Message subject: " . $subject . "\n\n" . "Enquiry: " . $enquiry . "\n\n". "Page Enquiry Made On: " . $frompage . "\n\n". "Region Interested In(UK website): " . $region . "\n\n" . "Spam field contents: " . $honeypot;
         mail($emailtoaddress, $spamsubject, $spammessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
         $goodtogo = "no"; // Do not post to Ubiquity
@@ -285,7 +283,7 @@ if ($probSpam != "yes") {
                 include '../includes/log.php';
             } else {
                 // Info was not sent to Ubiquity - send the info in an email to be manually entered
-                $emailsubject = "Submission from Refresh Franchise website - Franchise Enquiry - Sharpspring down";
+                $emailsubject = "Submission from Oncore Consumer website - Franchise Enquiry - Sharpspring down";
                 $emailmessage = "First name: " . $firstname . "\n\n" . "Last name: " . $lastname . "\n\n" . "Email: " . $email . "\n\n" . "Phone: " . $phone . "\n\n" . "Country: " . $country . "\n\n" . "Read and accepted Privacy Policy : " . $privacy . "\n\n" . "Opted out setting: " . $subscribe . "\n\n" . "Message subject: " . $subject . "\n\n" . "Enquiry: " . $enquiry . "\n\n" . "Page Enquiry Made On: " . $frompage . "\n\n". "Region Interested In(UK website): " . $region;
                 mail($emailtoaddress, $emailsubject, $emailmessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
                 echo "Successful mailout"; // So that user sees their info has been collected.

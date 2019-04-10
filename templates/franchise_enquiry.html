@@ -387,11 +387,19 @@
 {% endblock content %}
 
 {% block scripts %}
+<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>
+
 <script>
     scrollDown($(".meet-director"), $(".track-record"));
     scrollDown($(".find-out-more"), $(".services-three-cols"));
     scrollDown($(".cta-button"), $(".form-banner"));
 </script>
-
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
+            $('#captcha').val(token);
+        }); // this one when form submit please
+    });
+</script>
 
 {% endblock scripts%}
