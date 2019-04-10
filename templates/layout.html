@@ -74,7 +74,51 @@
 {% include 'includes/footer.html' %}
 {% endblock footer %}
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="">
+            <h1>Newsletter sign up</h1>
+            <form action="/forms/newsletter.php" method="post" id="newsletter-form">
+                <input type="hidden" name="g-recaptcha-response" id="captcha"/>
+                <div class="row">
+                    <div class="col-md-12 input-label-wrapper">
+                        <input type="text" class="form-control home-form"
+                               name="email" placeholder="Email"
+                               id="newf-email" data-prefix="newf"/>
+                    </div>
+                </div>
+
+
+                <div class="row tick">
+                    <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                        <input type="checkbox" class="uniform-styles" name="privacy"
+                               id="newf-privacy" checked="checked" data-prefix="newf"/>
+                        <label for="newf-privacy"> I have read, understood and accepted the <a
+                                href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                    </div>
+                </div>
+                <div class="row tick">
+                    <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                        <input type="checkbox" class="uniform-styles" name="subscribe"  id="newf-subscribe"
+                               checked="checked"/>
+                        <label for="newf-subscribe"> I consent to receiving marketing emails.</label>
+                    </div>
+                </div>
+
+                <div class="row tick">
+                    <div class="col-md-12 col-xs-12 input-label-wrapper">
+                        <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit" value="Sign Up"/>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
 <script src="{{ siteUrl}}js/modernizr.js"></script>
 <script src="{{ siteUrl}}js/main.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
@@ -192,8 +236,27 @@
             $('html, body').animate({scrollTop: destination.offset().top - 130}, 1000);
         });
     }
-    scrollDown($( ".cta-button, .subscribe" ),  $(".form-banner"));
+    scrollDown($( ".cta-button" ),  $(".form-banner"));
 
+    $(function () {
+        // $('.subscribe').click(function () {
+        //     $("#myModal").css("display", "block");
+        // })
+        $('#myModal .close').click(function () {
+            $("#myModal").css("display", "none");
+        })
+        $(document).on('click', function(e) {
+            if(e.target.className == "subscribe"){
+                $("#myModal").css("display", "block");
+            } else {
+                if (e.target.id == 'myModal') {
+                    $("#myModal").css("display", "none");
+                }
+            }
+
+        })
+
+    })
 
 
 </script>

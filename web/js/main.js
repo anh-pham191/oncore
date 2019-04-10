@@ -4568,6 +4568,89 @@ $(function () {
         }
     }); // end form
 
+
+    $("#newsletter-form").validate({
+        submitHandler: function (form) {
+            $('#newsletter-form').append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
+            var valiemail = submitValidation('newf-email', 'email');
+            var valiprivacy = submitValidation('newf-privacy', 'privacy');
+            if (valiemail === "invalid" || valiprivacy === "invalid") {
+                $('.pageform #prog1').fadeOut(200);
+                if ($layoutStyle == "mobile") {
+                    $('html, body').animate({scrollTop: $("#general-enquiry").offset().top}, 150, 'swing');
+                }
+                return false;
+            }
+            $.ajax({
+                url: $(form).attr("action"),
+                type: "POST",
+                data: $(form).serialize(),
+                success: function (response) {
+                    alert(response);
+                    if (response.match(/ContainsLink/i)) {
+                        //Display error message above form
+                        $('.pageform #prog1').fadeOut(200);
+                        $('.pageform .instructions').html('You cannot enter a link for these fields.').css({
+                            'color': 'red',
+                            'display': 'block'
+                        });
+                    }
+                    else if (response.match(/NoPrivacy/i)) {
+                        //Display try again message above form
+                        $('.pageform #prog1').fadeOut(200);
+                        $('.pageform .instructions').html('You must read and accept the Privacy Policy in order to continue.').css({
+                            'color': 'red',
+                            'display': 'block'
+                        });
+                    }
+                    else if (response.match(/Invalid/i)) {
+                        //Display try again message above form
+                        $('.pageform #prog1').fadeOut(200);
+                        $('.pageform .instructions').html('There was an error, please try again.').css({
+                            'color': 'red',
+                            'display': 'block'
+                        });
+                    }
+                    else if (response.match(/Unsuccessful/i)) {
+                        //Display failure message above form
+                        $('.pageform #prog1').fadeOut(200);
+                        $('.pageform .instructions').html('Your form could not be submitted. Please try again later or call us on 0800 33 60 33.').css({
+                            'color': 'red',
+                            'display': 'block'
+                        });
+                    }
+                    else if (response.match(/EnquirySent/i)) {
+                        //Display success message in place of form for spammer but dont track submission
+                        $('.pageform #prog1').fadeOut(200);
+                        $('.pageform.formholder').html('<h2>Thank you for your enquiry, we will be in touch soon.</h2>');
+                    }
+                    else if (response.match(/NoCaptcha/i)) {
+                        //Display try again message above form
+                        $('.pageform #prog1').fadeOut(200);
+                        $('.pageform .instructions').html('Please confirm you are not a robot.').css({
+                            'color': 'red',
+                            'display': 'block'
+                        });
+                    }
+                    else {
+                        ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Oncore Contact - Newsletter Subscribe');
+                        //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
+                        //fbq('track', 'Lead');
+                        $("#myModal").css("display", "none");
+                    }
+                },
+                error: function () {
+                    //Display failure message above form
+                    $('.pageform #prog1').fadeOut(200);
+                    $('.pageform .instructions').html('Your form could not be submitted. Please try again later.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                    //if ($layoutStyle != null) { if ($layoutStyle == "mobile") {var formPos = $(window).scrollTop() - 180;$("html, body").animate({ scrollTop: formPos }, "slow");}}
+                }
+            });
+        }
+    }); // end form
 });
 
 
@@ -5268,6 +5351,7 @@ $(document).ready(function () {
         $(this).siblings().toggleClass("open");
         var p = $(this).text();
     });
+
 
 });
 
