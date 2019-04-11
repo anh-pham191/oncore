@@ -82,15 +82,29 @@
                         <!--<li><a class="dropdown-links" href="/">Testimonials</a></li>-->
                     <!--</ul>-->
                 <!--</li>-->
-                <!--<li><h2><a href="/">Our Locations</a></h2></li>-->
-                <li>
-                    <h2><a>Get In Touch</a></h2><div class="dropdown-btn"></div>
-                    <ul>
-                        <li><a class="dropdown-links" href="/contact-us/project-enquiry/">Project Enquiry</a></li>
-                        <li><a class="dropdown-links" href="/contact-us/franchise-opportunities/">Franchising Enquiry</a></li>
-                        <!--<li><a class="dropdown-links" href="/">Career Enquiry</a></li>-->
-                    </ul>
-                </li>
+                {% if craft.request.getSegment(1) == "" %}
+                <li><h2><a class="current" href="{{ siteUrl}}">Home</a></h2></li>
+                {% else %}
+                <li><h2><a href="{{ siteUrl}}">Home</a></h2></li>
+                {% endif %}
+                {% if craft.request.getSegment(2) == "franchise-opportunities" %}
+                <li><h2><a class="current" href="{{ siteUrl}}contact-us/franchise-opportunities/">Franchise</a></h2></li>
+                {% else %}
+                <li><h2><a href="{{ siteUrl}}contact-us/franchise-opportunities/">Franchise</a></h2></li>
+                {% endif %}
+                {% if craft.request.getSegment(2) == "project-enquiry" %}
+                <li><h2><a class="current" href="{{ siteUrl}}contact-us/project-enquiry/">Get In Touch</a></h2></li>
+                {% else %}
+                <li><h2><a href="{{ siteUrl}}contact-us/project-enquiry/">Get In Touch</a></h2></li>
+                {% endif %}
+                <!--<li>-->
+                    <!--<h2><a>Get In Touch</a></h2><div class="dropdown-btn"></div>-->
+                    <!--<ul>-->
+                        <!--<li><a class="dropdown-links" href="/contact-us/project-enquiry/">Project Enquiry</a></li>-->
+                        <!--<li><a class="dropdown-links" href="/contact-us/franchise-opportunities/">Franchising Enquiry</a></li>-->
+                        <!--&lt;!&ndash;<li><a class="dropdown-links" href="/">Career Enquiry</a></li>&ndash;&gt;-->
+                    <!--</ul>-->
+                <!--</li>-->
                 <li class="phone-mobile"><h2><a href="#" type="tel">0800 33 66 55</a></h2></li>
 
             </ul>
