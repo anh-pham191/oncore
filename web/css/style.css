@@ -4001,8 +4001,16 @@ li.help {
         padding-right: 0px;
     }
 
-    #wrapper .inner.enquiry-page #content-body, #wrapper .inner.enquiry-page #content-right, #wrapper .inner.enquiry-page .contact-us-mobile {
+    #wrapper .inner.enquiry-page #content-body, #wrapper .inner.enquiry-page #content-right{
         padding: 20px
+    }
+    #wrapper .inner.enquiry-page .contact-us-mobile {
+        width: 100%;
+        float: left;
+        padding: 30px 20px;
+    }
+    .contact-us-mobile {
+        font-family: "Poppins";
     }
 }
 
@@ -6301,7 +6309,7 @@ form .tips {
         color: #333333;
     }
     #content.contact #content-body.form .pagecopy, #content.contact #content-right .formholder, #content.contact .contact-us-mobile{
-        padding: 15px 15px 0 0px;
+        padding: 10px 15px 0 0px;
     }
     #content.contact #content-body.form .pagecopy p {
         font-size: 16px;
