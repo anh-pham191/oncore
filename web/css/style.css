@@ -5454,7 +5454,7 @@ a:hover, button:hover {
     }
     .services-image-block .content-box {
         margin: 0;
-        padding: 20px 20px;
+        padding: 20px 0px;
     }
 
     .franchise-form .inner h2.title {
