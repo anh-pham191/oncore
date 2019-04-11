@@ -5215,6 +5215,8 @@ a:hover, button:hover {
     div.services-image-block {
         overflow: auto;
         padding-bottom: 3%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     div.services-image-block img.fleft, div.services-image-block img.fright {
         width: 49%;
@@ -5452,7 +5454,7 @@ a:hover, button:hover {
     }
     .services-image-block .content-box {
         margin: 0;
-        padding: 20px 0;
+        padding: 20px 20px;
     }
 
     .franchise-form .inner h2.title {
