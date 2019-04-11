@@ -4088,7 +4088,7 @@ li.help {
         padding-bottom: 20px;
     }
 
-    div#wideslideshow.overlay.header-banner {
+    div#wideslideshow.overlay.header-banner, div#wideslideshow.overlay.franchise {
         padding-bottom: 0px;
     }
 
@@ -4097,6 +4097,13 @@ li.help {
         background-color: #FFFFFF;
         color: #333333;
         background-image: none;
+    }
+
+    div#wideslideshow.overlay.franchise .overlay-container {
+        position: absolute;
+        background-color: transparent;
+        color: #ffffff;
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #00000094);
     }
 
 
@@ -4121,11 +4128,15 @@ li.help {
         width: 100%;
         padding: 10px;
     }
-    div#wideslideshow.overlay.header-banner .overlay-container h1{
+    div#wideslideshow.overlay.franchise .overlay-container .intro-bottom {
+        color: #ffffff;
+        padding-left: 0px;
+    }
+    div#wideslideshow.overlay.header-banner .overlay-container h1,  div#wideslideshow.overlay.franchise .overlay-container h1{
         padding:0px;
     }
 
-    div#wideslideshow.overlay.header-banner .overlay-container h1 {
+    div#wideslideshow.overlay.header-banner .overlay-container h1, div#wideslideshow.overlay.franchise .overlay-container h1 {
         color: #ffffff;
     }
 
@@ -4138,6 +4149,12 @@ li.help {
         height: 280px;
         width: auto;
     }
+
+    div#wideslideshow.overlay.franchise img {
+        height: auto;
+        width: auto;
+    }
+
     div#wideslideshow.overlay .overlay-container .intro-bottom {
         margin-top: 0px;
     }
@@ -4601,10 +4618,13 @@ a:hover, button:hover {
     }
 
     div#wideslideshow.overlay .overlay-container div.inner {
-        margin-top: 6vh;
+        margin-top: 35px;
+    }
+    div#wideslideshow.overlay.franchise .overlay-container div.inner {
+        margin-top: 35px;
     }
     div#wideslideshow.overlay.header-banner .overlay-container div.inner {
-        margin-top: 8vh;
+        margin-top: 17%;
     }
 }
 
