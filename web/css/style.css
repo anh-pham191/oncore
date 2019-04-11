@@ -4352,7 +4352,7 @@ li.help {
     #desktop-share ul li a {
         font-size: 1.3rem
     }
-    .inner {
+    .inner.spacing {
         padding-left: 20px;
         padding-right: 20px;
     }
