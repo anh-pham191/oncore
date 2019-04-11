@@ -3031,7 +3031,7 @@ ul {
     }
 
     #footer section.form {
-        width: 250px;
+        width: 274px;
     }
 
     #wrapper {
@@ -3438,6 +3438,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
     font-family: Open Sans;
     font-size: 16px;
     font-weight: bold;
+    border: none;
     color: #ffffff;
 }
 
@@ -3760,7 +3761,7 @@ li.help {
     font-size: 1.143rem;
     margin-bottom: 20px;
     transition: 0.3s;
-    width: 205px;
+    width: 274px;
     height: 48px;
     border-radius: 3px;
     background-color: #4fae47;
@@ -3807,7 +3808,7 @@ li.help {
     text-align: center;
     font-family: Open Sans;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -5384,8 +5385,8 @@ a:hover, button:hover {
         width: 100%;
     }
     .franchise-form .form-banner #home-form-submit {
-        font-weight: 500;
-        width: 205px;
+        font-weight: bold;
+        width: 274px;
         border-radius: 3px;
     }
 
