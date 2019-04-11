@@ -4352,6 +4352,10 @@ li.help {
     #desktop-share ul li a {
         font-size: 1.3rem
     }
+    .inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 #footer section.form li {
