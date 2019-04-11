@@ -3332,12 +3332,13 @@ div#wideslideshow.overlay.banner .overlay-container h1 {
 
 div#wideslideshow.overlay .intro-bottom {
     color: #ffffff;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 44%;
     font-family: Poppins;
     font-size: 1.5625rem;
     font-weight: 500;
 }
+
 
 div#wideslideshow.overlay.banner .intro-bottom {
     font-size: 1.5625rem;;
@@ -5191,6 +5192,10 @@ a:hover, button:hover {
 
     #wideslideshow .overlay-container .franchise-button .cta-button, #wideslideshow .overlay-container .franchise-button .find-out-more {
         width: 100%;
+    }
+    #wideslideshow.franchise .overlay-container .find-out-more {
+        color: #4fae47;
+        border: solid 2px #4fae47;
     }
 
     .customer-experience {
