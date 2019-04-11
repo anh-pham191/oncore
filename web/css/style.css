@@ -6345,7 +6345,7 @@ form .tips {
     }
 }
 
-@media only screen and (max-width: 1440px){
+@media only screen and (max-width: 1536px){
     .franchise-form {
         background-size: contain;
     }
