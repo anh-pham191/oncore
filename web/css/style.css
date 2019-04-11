@@ -5182,6 +5182,11 @@ a:hover, button:hover {
         padding-bottom: 0px;
     }
 
+    .services-image-block {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
 }
 @media only screen and (min-width: 48em) {
     div.services-image-block {
