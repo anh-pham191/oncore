@@ -9,7 +9,7 @@ a {
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
-    color: #000;
+    color: #333333;
     font-size: 1rem;
     line-height: 1.0;
     font-style: normal;
@@ -3215,7 +3215,8 @@ div#wideslideshow.overlay .overlay-container {
     width: 100%;
     transition: all .8s;
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: transparent;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #00000094);
 }
 
 div#wideslideshow.overlay.header-banner .overlay-container {
@@ -3226,7 +3227,8 @@ div#wideslideshow.overlay.header-banner .overlay-container {
     width: 100%;
     transition: all .8s;
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: transparent;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #00000094);
 }
 
 div#wideslideshow.overlay .overlay-container .text-content {
@@ -3291,10 +3293,14 @@ div#wideslideshow.overlay .overlay-container h2#arrow .arrow-down {
     min-height: 1%;
 }
 div#wideslideshow.overlay.banner .overlay-container div.inner {
-    margin-top: 6vh;
+    margin-top: 4%;
 }
 div#wideslideshow.overlay .overlay-container div.inner {
-    margin-top: 12vh;
+    margin-top: 8%;
+}
+
+div#wideslideshow.overlay.header-banner .overlay-container div.inner {
+    margin-top: 6%;
 }
 div#wideslideshow.overlay.header-banner .overlay-container div.inner span {
     color: #ffffff;
@@ -3326,7 +3332,7 @@ div#wideslideshow.overlay.banner .overlay-container h1 {
 
 div#wideslideshow.overlay .intro-bottom {
     color: #ffffff;
-    margin-top: 30px;
+    margin-top: 10px;
     width: 44%;
     font-family: Poppins;
     font-size: 1.5625rem;
@@ -3335,7 +3341,7 @@ div#wideslideshow.overlay .intro-bottom {
 
 div#wideslideshow.overlay.banner .intro-bottom {
     font-size: 1.5625rem;;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .full-width-text-left {
@@ -3363,7 +3369,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 
 .form-banner {
     position: absolute;
-    top: -154%;
+    top: -100%;
     right: 0;
     border-radius: 20px;
     width: 368px;
@@ -3433,6 +3439,10 @@ div#wideslideshow.overlay.banner .intro-bottom {
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
+}
+
+#home-form-submit:hover {
+    opacity: 0.7;
 }
 
 ul {
@@ -3625,7 +3635,7 @@ ul {
     width: 100%;
     height: 394px;
     background-color: #eaf5e9;
-    padding-top: 6%;
+    padding-top: 115px;
     text-align: center;
 }
 
@@ -3782,7 +3792,7 @@ li.help {
 }
 
 #footer a.subscribe:hover {
-    background-color: #075f2d;
+    opacity: 0.7;
 }
 
 #footer a.subscribe {
@@ -3832,10 +3842,11 @@ li.help {
 }
 
 #wrapper #wideslideshow.overlay.white .learn-more {
-    margin-top: 5vh;
+    margin-top: 20px;
     color: #FFFFFF;
     font-size: 18px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 #wrapper .inner .see-more {
@@ -3888,7 +3899,7 @@ li.help {
 
     #topnav #sitebanner .phone-top {
         float: right;
-        margin-right: 0px;
+        margin-right: 20px;
         margin-top: -53px;
     }
 
@@ -3915,7 +3926,7 @@ li.help {
     div#wideslideshow.overlay .intro-bottom {
         color: #ffffff;
         font-size: 20px;
-        margin-top: 30px;
+        margin-top: 20px;
         width: 50%;
         font-weight: 500;
     }
@@ -3926,7 +3937,7 @@ li.help {
 
     .form-banner {
         position: absolute;
-        top: -154%;
+        top: -100%;
         right: 0;
         width: 320px;
     }
@@ -3962,10 +3973,6 @@ li.help {
         display: none;
     }
 
-    .home-process {
-        padding-top: 13%;
-    }
-
     .home-process div {
         margin-left: 2.5vw;
     }
@@ -3980,11 +3987,11 @@ li.help {
 
     div#wideslideshow.overlay.banner .intro-bottom {
         font-size: 20px;
-        margin-top: -1vh;
+        margin-top: 2%;
     }
 
     #wideslideshow .overlay-container .cta-button {
-        margin-top: -2vh;
+        margin-top: -2%;
     }
 
     #wideslideshow .overlay-container .franchise-button .cta-button {
@@ -4089,7 +4096,10 @@ li.help {
         position: static;
         background-color: #FFFFFF;
         color: #333333;
+        background-image: none;
     }
+
+
 
     div#wideslideshow.overlay.banner .overlay-container {
         position: absolute;
@@ -4136,7 +4146,7 @@ li.help {
         margin-left: 0;
         margin-top: 0;
         color: #4fae47;
-        padding-left: 10px;
+        padding: 10px;
         font-weight: 600;
     }
 
@@ -4178,11 +4188,11 @@ li.help {
 
     .home-process div {
         display: block;
-        padding-top: 5vh;
+        padding-top: 10%;
     }
 
     .home-process p {
-        padding: 5vh;
+        padding: 11%;
         margin-top: 0;
     }
 
@@ -4317,7 +4327,7 @@ li.help {
     line-height: 1;
 }
 
-a:hover {
+a:hover, button:hover {
     opacity: 0.7;
 }
 
@@ -5351,6 +5361,10 @@ a:hover {
     .traffic-logo .three-cols img {
         width: 165px;
         height: auto;
+        cursor: pointer;
+    }
+    .traffic-logo .three-cols img:hover {
+        opacity: 0.7;
     }
 
     #wideslideshow .overlay-container .franchise-button .find-out-more {
@@ -5431,9 +5445,16 @@ a:hover {
 }
 @media screen and (width: 768px) {
     .inner {
-        width: 750px !important;
+        width: 700px !important;
     }
 }
+
+@media screen and (width: 1024px) {
+    .form-banner .row {
+        margin: auto 10px;
+    }
+}
+
 
 .franchise-form {
     background-color: #eaf5e9;
@@ -5555,8 +5576,6 @@ a:hover {
     }
     #content.panorama.contact #content-right{
         padding: 71px 6px 0 27px;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
     }
 
     #content.panorama.contact #content-right .formholder {
@@ -5784,7 +5803,7 @@ a:hover {
 
 @media only all and (min-width: 78em) {
     #content.panorama.contact {
-        width: 1330px;
+        width: 1200px;
     }
     #content.panorama {
         width: 1020px;
