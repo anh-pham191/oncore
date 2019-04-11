@@ -3987,11 +3987,7 @@ li.help {
 
     div#wideslideshow.overlay.banner .intro-bottom {
         font-size: 20px;
-        margin-top: 2%;
-    }
-
-    #wideslideshow .overlay-container .cta-button {
-        margin-top: -2%;
+        margin-top: 10px;
     }
 
     #wideslideshow .overlay-container .franchise-button .cta-button {
@@ -4350,7 +4346,7 @@ a:hover, button:hover {
 
 @media only all and (max-width: 91em) and (min-width: 64.0625em) {
     div#wideslideshow.overlay.banner img {
-        width: 100%;
+        width: auto;
         position: relative;
         top: 0;
         left: 0;
