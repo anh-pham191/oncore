@@ -3680,6 +3680,8 @@ ul {
         margin: 0 auto;
     }
 
+
+
     .inner-three-cols {
         width: 100%;
         margin: 0 auto;
@@ -3992,6 +3994,15 @@ li.help {
 
     #wideslideshow .overlay-container .franchise-button .cta-button {
         margin-top: 0;
+    }
+    #wrapper .inner.enquiry-page {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #wrapper .inner.enquiry-page #content-body, #wrapper .inner.enquiry-page #content-right, #wrapper .inner.enquiry-page .contact-us-mobile {
+        padding: 20px
     }
 }
 
@@ -5482,6 +5493,7 @@ a:hover, button:hover {
     background-image: url(../images/traffic-team-large-green.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: contain;
 }
 
 .block-franchise .services-image-block .content-box .meet-director {
@@ -6385,8 +6397,4 @@ form .tips {
     }
 }
 
-@media only screen and (max-width: 1536px){
-    .franchise-form {
-        background-size: contain;
-    }
-}
+
