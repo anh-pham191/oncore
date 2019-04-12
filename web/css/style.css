@@ -4374,7 +4374,7 @@ li.help {
         padding-right: 20px;
     }
     div#wideslideshow.overlay.franchise .overlay-container div.inner {
-        margin-top: 113px;
+        margin-top: 10%;
     }
     div#wideslideshow.overlay.banner h1, div#wideslideshow.overlay.banner .intro-bottom {
         width: 90%;
@@ -4667,7 +4667,7 @@ a:hover, button:hover {
         margin-top: 35px;
     }
     div#wideslideshow.overlay.franchise .overlay-container div.inner {
-        margin-top: 35px;
+        margin-top: 14%;
     }
     div#wideslideshow.overlay.header-banner .overlay-container div.inner {
         margin-top: 17%;
@@ -5241,6 +5241,9 @@ a:hover, button:hover {
         padding-left: 20px;
         padding-right: 20px;
     }
+    div#wideslideshow.overlay.banner .overlay-container div.inner {
+        margin-top: 13%;
+    }
 
 }
 @media only screen and (min-width: 48em) {
@@ -5453,11 +5456,6 @@ a:hover, button:hover {
         opacity: 0.7;
     }
 
-    #wideslideshow .overlay-container .franchise-button .find-out-more {
-        margin-left: 14px
-    }
-
-
 }
 .fright {
     float: right;
@@ -5465,6 +5463,11 @@ a:hover, button:hover {
 
 .fleft {
     float: left;
+}
+@media only screen and (min-width: 769px){
+    #wideslideshow .overlay-container .franchise-button .find-out-more {
+        margin-left: 14px
+    }
 }
 
 @media only screen and (min-width: 48em) and (max-width: 64em) {
