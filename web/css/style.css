@@ -3298,6 +3298,9 @@ div#wideslideshow.overlay.banner .overlay-container div.inner {
 div#wideslideshow.overlay .overlay-container div.inner {
     margin-top: 126px;
 }
+div#wideslideshow.overlay.franchise .overlay-container div.inner {
+    margin-top: 155px;
+}
 div#wideslideshow.overlay.header-banner .overlay-container div.inner {
     margin-top: 6%;
 }
@@ -3313,6 +3316,11 @@ div#wideslideshow.overlay .overlay-container h1, div#wideslideshow.overlay .over
     color: #ffffff;
     font-family: "Poppins";
 }
+
+div#wideslideshow.overlay.franchise .overlay-container h1{
+    font-size: 2rem;
+}
+
 div#wideslideshow.overlay.franchise .overlay-container h1 {
     width: 90%;
 }
@@ -4161,6 +4169,10 @@ li.help {
         color: #333333;
     }
 
+    div#wideslideshow.overlay.franchise .overlay-container h1 {
+        font-size: 1.5625em;
+    }
+
     div#wideslideshow.overlay.header-banner img {
         height: 280px;
         width: auto;
@@ -4356,6 +4368,9 @@ li.help {
     .inner.spacing {
         padding-left: 20px;
         padding-right: 20px;
+    }
+    div#wideslideshow.overlay.franchise .overlay-container div.inner {
+        margin-top: 113px;
     }
 }
 
@@ -4876,6 +4891,10 @@ a:hover, button:hover {
     font-size: 1.5625em;
     font-weight: 500;
     color: #2f3132;
+}
+
+.customer-experience .inner.spacing ul {
+    padding-top: 10px;
 }
 
 .three-boxes {
