@@ -3782,6 +3782,9 @@ li.help {
     background-color: #4fae47;
     padding: 0 0;
 }
+#wideslideshow.franchise .overlay-container .cta-button{
+    width: 205px;
+}
 #wideslideshow .overlay-container .franchise-button {
     padding-top: 24px;
 }
