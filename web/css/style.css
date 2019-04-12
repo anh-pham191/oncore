@@ -5123,14 +5123,20 @@ a:hover, button:hover {
     }
 
     .customer-experience h2 {
-        padding-top: 30px
+        font-size: 2em;
+    }
+    .track-record {
+        padding-top: 50px
+    }
+
+    .customer-experience p {
+        font-size: 1em;
     }
 
     .block-franchise .inner h2 {
         font-family: "Poppins";
         font-size: 2em;
         font-weight: 400;
-
         color: #2f3132;
     }
 
@@ -5247,6 +5253,30 @@ a:hover, button:hover {
     }
     div#wideslideshow.overlay.banner .overlay-container div.inner {
         margin-top: 13%;
+    }
+
+    .infographic .inner {
+        padding-top: 45px;
+    }
+    .block-franchise {
+        padding-top: 85px;
+    }
+
+    .infographic p {
+        padding-top: 40px
+    }
+
+    .block-franchise .services-image-block img{
+        padding-top: 20px
+    }
+
+    .block-franchise .services-image-block .meet-director img{
+        padding-top: 0px;
+    }
+
+    .franchise-block {
+        width: 100%;
+        float: left;
     }
 
 }
@@ -5506,7 +5536,7 @@ a:hover, button:hover {
         font-size: 2em;
         font-weight: 400;
         color: #184414;
-        padding-top: 47px;
+        padding-top: 21px;
     }
     .franchise-form .inner .three-cols {
         width: 100%;
@@ -5515,7 +5545,7 @@ a:hover, button:hover {
     .franchise-form .inner .three-cols .heading {
         font-family: "Poppins";
         font-size: 1.125em;
-        font-weight: 600;
+        font-weight: bold;
         letter-spacing: 5px;
         color: #184414;
         padding-top: 40px
@@ -6460,6 +6490,21 @@ form .tips {
 
     .franchise-form {
         background-image: none;
+        margin-top: 50px;
+    }
+    .franchise-form h3.more-info {
+        padding-top: 50px;
+        font-family: "Poppins";
+        font-size: 1.5625em;
+        text-align: center;
+        font-weight: 400;
+        color: #184414;
+    }
+    .what-is-oncore h2, .customer-experience h2 {
+        font-size: 2em;
+    }
+    .what-is-oncore ul li, .customer-experience ul li {
+        font-size: 1em
     }
 }
 
