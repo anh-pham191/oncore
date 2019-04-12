@@ -5340,7 +5340,10 @@ a:hover, button:hover {
     }
 
     .franchise-form .inner .three-cols ul {
-        padding-left: 10px;
+        padding-left: 20px;
+    }
+    .franchise-form .inner .three-cols ul {
+        list-style-type: initial;
     }
     .franchise-form .inner .three-cols ul li {
         font-family: "Open Sans";
@@ -5479,7 +5482,8 @@ a:hover, button:hover {
         padding-top: 40px
     }
     .franchise-form .inner .three-cols ul {
-        padding-left: 10px;
+        list-style-type: initial;
+        padding-left: 20px;
     }
     .franchise-form .inner .three-cols ul li {
         font-family: "Open Sans";
