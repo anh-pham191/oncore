@@ -3304,11 +3304,18 @@ div#wideslideshow.overlay.franchise .overlay-container div.inner {
 div#wideslideshow.overlay.header-banner .overlay-container div.inner {
     margin-top: 118px;
 }
-div#wideslideshow.overlay.header-banner .overlay-container div.inner span {
+div#wideslideshow.overlay.header-banner .overlay-container div.inner span, div#wideslideshow.overlay.header-banner .overlay-container div.inner span a {
     color: #ffffff;
-    font-size: 0.875em;
+    font-size: 14px;
 }
-
+div#wideslideshow.overlay.header-banner .overlay-container div.inner span a {
+    font-weight: 400;
+    text-decoration: underline;
+}
+div#wideslideshow.overlay.header-banner .overlay-container div.inner span a.bold {
+    font-weight: 600;
+    text-decoration: none;
+}
 div#wideslideshow.overlay .overlay-container h1, div#wideslideshow.overlay .overlay-container .heading {
     width: 59%;
     margin:0px;

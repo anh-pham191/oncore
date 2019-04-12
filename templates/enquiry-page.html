@@ -8,7 +8,8 @@
 
 {% block content %}
 
-{% include 'includes/header-banner.html'  with { 'image' : entry.bannerimage.first().Filename, 'h1': entry.h1heading, 'breadcrumb': entry.bannerbreadcrumb } %}
+{% include 'includes/header-banner.html'  with { 'image' : entry.bannerimage.first().Filename, 'h1': entry.h1heading, 'breadcrumb': '<a
+        href="/" >Home</a> / <a href="/contact-us/project-enquiry/">Get In Touch</a> / <a class="bold" href="/contact-us/project-enquiry/">Project Enquiry</a>' } %}
 
 <div class="inner enquiry-page">
     <section id="content" class="panorama contact" role="main">
