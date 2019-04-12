@@ -3985,7 +3985,8 @@ li.help {
     }
 
     .home-process div {
-        margin-left: 2.5%;
+        margin-left: 2.5% !important;
+        margin-right: 0 !important;
     }
 
     .home-process div:first-of-type {
@@ -4231,9 +4232,12 @@ li.help {
         margin-bottom: 40px;
     }
 
-    .home-process div {
+    .home-process div.step {
         display: block;
-        padding-top: 10%;
+        padding: 40px 0;
+    }
+    .home-process div.step:first-of-type,.home-process div.step:nth-of-type(5), .home-process div.step:nth-of-type(3) {
+        padding-bottom: 0px;
     }
 
     .home-process p {
