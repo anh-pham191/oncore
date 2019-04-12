@@ -6417,4 +6417,6 @@ form .tips {
     }
 }
 
-
+.what-is-oncore h2, .customer-experience h2, .infographic h2, .block-franchise h2, .franchise-block h2, .track-record h2, .franchise-form h2 {
+    font-family: "Poppins";
+}
