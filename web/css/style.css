@@ -3031,7 +3031,7 @@ ul {
     }
 
     #footer section.form {
-        width: 274px;
+        width: 250px;
     }
 
     #wrapper {
@@ -3293,10 +3293,10 @@ div#wideslideshow.overlay .overlay-container h2#arrow .arrow-down {
     min-height: 1%;
 }
 div#wideslideshow.overlay.banner .overlay-container div.inner {
-    margin-top: 4%;
+    margin-top: 73px;
 }
 div#wideslideshow.overlay .overlay-container div.inner {
-    margin-top: 126px;
+    margin-top: 7.5%;
 }
 div#wideslideshow.overlay.franchise .overlay-container div.inner {
     margin-top: 155px;
@@ -3985,7 +3985,7 @@ li.help {
     }
 
     .home-process div {
-        margin-left: 2.5vw;
+        margin-left: 2.5%;
     }
 
     .home-process div:first-of-type {
@@ -4365,6 +4365,10 @@ li.help {
     #desktop-share ul li a {
         font-size: 1.3rem
     }
+    .inner{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .inner.spacing {
         padding-left: 20px;
         padding-right: 20px;
@@ -4372,6 +4376,13 @@ li.help {
     div#wideslideshow.overlay.franchise .overlay-container div.inner {
         margin-top: 113px;
     }
+    div#wideslideshow.overlay.banner h1, div#wideslideshow.overlay.banner .intro-bottom {
+        width: 90%;
+    }
+    div#wideslideshow.overlay.banner .overlay-container div.inner {
+        margin-top: 3%;
+    }
+
 }
 
 #footer section.form li {
@@ -5630,6 +5641,9 @@ a:hover, button:hover {
     }
     #topnav form.notmobile {
         right: -15px;
+    }
+    div#wideslideshow.overlay.banner .overlay-container h1,  div#wideslideshow.overlay.banner .overlay-container .intro-bottom {
+        width: 65%;
     }
 }
 #content #content-right #project-job input[type=file] {
