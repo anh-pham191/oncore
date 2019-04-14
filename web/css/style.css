@@ -3934,7 +3934,7 @@ li.help {
     }
 
     div#wideslideshow.overlay .overlay-container h1, div#wideslideshow.overlay .overlay-container .heading {
-        width: 56%;
+        width: 57%;
         font-size: 32px;
         color: #ffffff;
         font-family: "Poppins";
@@ -4393,9 +4393,7 @@ li.help {
     div#wideslideshow.overlay.banner h1, div#wideslideshow.overlay.banner .intro-bottom {
         width: 90%;
     }
-    div#wideslideshow.overlay.banner .overlay-container div.inner {
-        margin-top: 3%;
-    }
+
 
 }
 
@@ -6524,4 +6522,10 @@ form .tips {
 }
 .what-is-oncore h2, .customer-experience h2 {
     padding-bottom: 10px;
+}
+
+@media only all and (max-width: 64em) and (min-width: 48em) {
+    div#wideslideshow.overlay.banner .overlay-container div.inner {
+        margin-top: 3% ;
+    }
 }
