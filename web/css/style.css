@@ -3299,10 +3299,10 @@ div#wideslideshow.overlay.banner .overlay-container div.inner {
     margin-top: 73px;
 }
 div#wideslideshow.overlay .overlay-container div.inner {
-    margin-top: 7.5%;
+    margin-top: 125px;
 }
 div#wideslideshow.overlay.franchise .overlay-container div.inner {
-    margin-top: 155px;
+    margin-top: 129px;
 }
 div#wideslideshow.overlay.header-banner .overlay-container div.inner {
     margin-top: 118px;
@@ -3328,7 +3328,7 @@ div#wideslideshow.overlay .overlay-container h1, div#wideslideshow.overlay .over
 }
 
 div#wideslideshow.overlay.franchise .overlay-container h1{
-    font-size: 2rem;
+    font-size: 2.8rem;
 }
 
 div#wideslideshow.overlay.franchise .overlay-container h1 {
@@ -4137,12 +4137,12 @@ li.help {
         background-image: none;
     }
 
-    div#wideslideshow.overlay.franchise .overlay-container {
-        position: absolute;
-        background-color: transparent;
-        color: #ffffff;
-        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
-    }
+    /*div#wideslideshow.overlay.franchise .overlay-container {*/
+        /*position: absolute;*/
+        /*background-color: transparent;*/
+        /*color: #ffffff;*/
+        /*background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));*/
+    /*}*/
 
 
 
@@ -4167,21 +4167,20 @@ li.help {
         padding: 10px;
     }
     div#wideslideshow.overlay.franchise .overlay-container .intro-bottom {
-        color: #ffffff;
         padding-left: 0px;
     }
     div#wideslideshow.overlay.header-banner .overlay-container h1,  div#wideslideshow.overlay.franchise .overlay-container h1{
         padding:0px;
     }
 
-    div#wideslideshow.overlay.header-banner .overlay-container h1, div#wideslideshow.overlay.franchise .overlay-container h1 {
-        color: #ffffff;
-    }
-
     div#wideslideshow.overlay .overlay-container h1 {
         font-size: 2em;
         color: #333333;
     }
+    div#wideslideshow.overlay.header-banner .overlay-container h1 {
+        color: #ffffff;
+    }
+
 
     div#wideslideshow.overlay.franchise .overlay-container h1 {
         font-size: 1.5625em;
@@ -4396,7 +4395,12 @@ li.help {
     div#wideslideshow.overlay.banner h1, div#wideslideshow.overlay.banner .intro-bottom {
         width: 90%;
     }
-
+    div#wideslideshow.overlay .overlay-container div.inner {
+        margin-top: 10%
+    }
+    .inner.enquiry-page #content.contact #content-body .content-left {
+        width: 100%;
+    }
 
 }
 
@@ -4682,7 +4686,7 @@ a:hover, button:hover {
         margin-top: 35px;
     }
     div#wideslideshow.overlay.franchise .overlay-container div.inner {
-        margin-top: 14%;
+        margin-top: 35px;
     }
     div#wideslideshow.overlay.header-banner .overlay-container div.inner {
         margin-top: 17%;
@@ -5710,6 +5714,18 @@ a:hover, button:hover {
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
+    border:none ;
+}
+#news-form-submit, #news2-form-submit {
+    width: 269px;
+    height: 48px;
+    border-radius: 3px;
+    background-color: #4fae47;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border:none ;
 }
 
 @media only all and (min-width: 64em) {
@@ -6422,7 +6438,9 @@ form .tips {
     }
     #content.panorama.contact #content-right, #content.panorama.contact #content-body {
         width: 100%;
-        /*margin-left: 0;*/
+    }
+    .inner.enquiry-page #content.contact #content-body {
+        padding-left: 0px;
     }
 }
 
@@ -6528,6 +6546,7 @@ form .tips {
 }
 .what-is-oncore h2, .customer-experience h2 {
     padding-bottom: 10px;
+    font-family: "Poppins";
 }
 
 @media only all and (max-width: 64em) and (min-width: 48em) {
