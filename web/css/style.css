@@ -3748,8 +3748,8 @@ li.help {
     background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
     padding-left: 34px;
     padding-top: 0px;
-    background-size: 18px 25px;
-    background-position-y: -3px;
+    background-size: 18px auto;
+    background-position-y: 1px;
 }
 
 #wrapper .inner .full-width-text .title {
@@ -4891,16 +4891,16 @@ a:hover, button:hover {
     background: url(../svg/baseline-check-24px.svg) no-repeat;
     padding-left: 30px;
     padding-top: 0px;
-    background-size: 18px 25px;
-    background-position-y: 6px;
+    background-size: 18px auto;
+    background-position-y: 11px;
 }
 
 .customer-experience ul li.unsolve {
     background: url(../svg/baseline-close-24px.svg) no-repeat;
     padding-left: 30px;
     padding-top: 0px;
-    background-size: 18px 25px;
-    background-position-y: 6px;
+    background-size: 18px auto;
+    background-position-y: 11px;
 }
 .customer-experience {
     width: 100%;
