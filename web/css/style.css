@@ -3216,7 +3216,9 @@ div#wideslideshow.overlay .overlay-container {
     transition: all .8s;
     text-align: left;
     background-color: transparent;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #00000094);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
+
 }
 
 div#wideslideshow.overlay.header-banner .overlay-container {
@@ -3228,7 +3230,8 @@ div#wideslideshow.overlay.header-banner .overlay-container {
     transition: all .8s;
     text-align: left;
     background-color: transparent;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #00000094);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
+
 }
 
 div#wideslideshow.overlay .overlay-container .text-content {
@@ -4138,7 +4141,7 @@ li.help {
         position: absolute;
         background-color: transparent;
         color: #ffffff;
-        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #00000094);
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
     }
 
 
