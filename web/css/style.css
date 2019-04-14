@@ -4927,6 +4927,11 @@ a:hover, button:hover {
     padding-top: 10px;
 }
 
+#wrapper .what-is-oncore .inner.spacing ul, #wrapper .franchise-block .inner .franchise-opp ul {
+    list-style-type: initial;
+    padding-left: 20px;
+}
+
 .three-boxes {
     width: 100%;
     height: auto;
