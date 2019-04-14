@@ -5580,6 +5580,9 @@ a:hover, button:hover {
     .inner {
         width: 700px !important;
     }
+    #wrapper .inner.enquiry-page {
+        width: 768px !important;
+    }
 }
 
 @media screen and (width: 1024px) {
