@@ -2991,7 +2991,8 @@ ul {
     ul#site-main li {
         margin-bottom: 10px;
         margin-top: 10px;
-        width: 165px;
+        /*width: 165px;*/
+        width: 200px;
     }
 
     #site-main li a.dropbtn {
