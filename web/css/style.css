@@ -5595,6 +5595,25 @@ a:hover, button:hover {
     #wrapper .inner.enquiry-page {
         width: 768px !important;
     }
+    #wideslideshow .overlay-container .franchise-button .cta-button, #wideslideshow .overlay-container .franchise-button .find-out-more {
+        width: 205px;
+    }
+    #wideslideshow .overlay-container .franchise-button .find-out-more {
+        margin-left: 14px;
+        vertical-align: middle;
+        color: #FFFFFF;
+        font-family: "Open Sans";
+        font-weight: bold;
+        font-size: 1.143rem;
+        margin-bottom: 20px;
+        transition: 0.3s;
+        width: 205px;
+        height: 48px;
+        border-radius: 3px;
+        border: solid 2px #ffffff;
+        background-color: transparent;
+        padding: 0 0;
+    }
 }
 
 @media screen and (width: 1024px) {
