@@ -6024,11 +6024,20 @@ a:hover, button:hover {
         margin-left: 0
     }
 }
-
+#wrapper.privacy {
+    margin-top: 0px;
+    margin-bottom: 90px
+}
 @media only all and (min-width: 78em) {
     #content.panorama #content-body {
         width: 662px;
         padding-left: 9px
+    }
+    .privacy  #content.panorama #content-body {
+        width: 100%;
+    }
+    .privacy .pagecopy p, .privacy .pagecopy ul li {
+        line-height: 1.63;
     }
 }
 
