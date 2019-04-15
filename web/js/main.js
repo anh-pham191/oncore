@@ -4494,8 +4494,10 @@ $(function () {
                 if ($layoutStyle == "mobile") {
                     $('html, body').animate({scrollTop: $("#general-enquiry").offset().top}, 150, 'swing');
                 }
+                console.log('front end');
                 return false;
             }
+            console.log('pass');
 
             $.ajax({
                 url: $(form).attr("action"),
@@ -4506,6 +4508,7 @@ $(function () {
                     if (response.match(/ContainsLink/i)) {
                         //Display error message above form
                         $('.pageform #prog1').fadeOut(200);
+                        console.log('theres link');
                         $('.pageform .instructions').html('You cannot enter a link for these fields.').css({
                             'color': 'red',
                             'display': 'block'
@@ -4514,6 +4517,7 @@ $(function () {
                     else if (response.match(/NoPrivacy/i)) {
                         //Display try again message above form
                         $('.pageform #prog1').fadeOut(200);
+                        console.log('no privacy');
                         $('.pageform .instructions').html('You must read and accept the Privacy Policy in order to continue.').css({
                             'color': 'red',
                             'display': 'block'
@@ -4522,6 +4526,7 @@ $(function () {
                     else if (response.match(/Invalid/i)) {
                         //Display try again message above form
                         $('.pageform #prog1').fadeOut(200);
+                        console.log('invalid');
                         $('.pageform .instructions').html('There was an error, please try again.').css({
                             'color': 'red',
                             'display': 'block'
@@ -4530,18 +4535,21 @@ $(function () {
                     else if (response.match(/Unsuccessful/i)) {
                         //Display failure message above form
                         $('.pageform #prog1').fadeOut(200);
+                        console.log('Unsuccessful');
                         $('.pageform .instructions').html('Your form could not be submitted. Please try again later or call us on 0800 33 60 33.').css({
                             'color': 'red',
                             'display': 'block'
                         });
                     }
                     else if (response.match(/EnquirySent/i)) {
+                        console.log('spammer');
                         //Display success message in place of form for spammer but dont track submission
                         $('.pageform #prog1').fadeOut(200);
                         $('.pageform.formholder').html('<h2>Thank you for your enquiry, we will be in touch soon.</h2>');
                     }
                     else if (response.match(/NoCaptcha/i)) {
                         //Display try again message above form
+                        console.log('no captcha');
                         $('.pageform #prog1').fadeOut(200);
                         $('.pageform .instructions').html('Please confirm you are not a robot.').css({
                             'color': 'red',
@@ -4549,6 +4557,7 @@ $(function () {
                         });
                     }
                     else {
+                        console.log('sent');
                         ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Encore Contact - General Enquiry');
                         //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
                         //fbq('track', 'Lead');
@@ -4556,6 +4565,7 @@ $(function () {
                     }
                 },
                 error: function () {
+                    console.log('error reaching form');
                     //Display failure message above form
                     $('.pageform #prog1').fadeOut(200);
                     $('.pageform .instructions').html('Your form could not be submitted. Please try again later.').css({
@@ -4613,7 +4623,7 @@ $(function () {
                     else if (response.match(/Unsuccessful/i)) {
                         //Display failure message above form
                         $('.pageform #prog1').fadeOut(200);
-                        $('.pageform .instructions').html('Your form could not be submitted. Please try again later or call us on 0800 33 60 33.').css({
+                        $('.pageform .instructions').html('Your form could not be submitted. Please try again later or call us on 0800 33 66 55.').css({
                             'color': 'red',
                             'display': 'block'
                         });
