@@ -5592,6 +5592,9 @@ a:hover, button:hover {
     .inner {
         width: 700px !important;
     }
+    #wrapper #content #content-body .content-left.inner {
+        padding-left: 0px;
+    }
     #wrapper .inner.enquiry-page {
         width: 768px !important;
     }
