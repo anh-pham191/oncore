@@ -215,7 +215,6 @@ if ($probSpam != "yes") {
 
             $response = curl_exec($ch);
             $decodedArray = json_decode($response, true);
-            var_dump($decodedArray);die;
             //echo $response;
 
             if (in_array("FailedValidation", $decodedArray)) {
