@@ -4847,6 +4847,7 @@ $(function () {
             if (valifirstname === "invalid" || valilastname === "invalid" || valiemail === "invalid" || valitel === "invalid" || valiprivacy === "invalid") {
                 return false;
             }
+            console.log('front end');
 
             $.ajax({
                 url: $(form).attr("action"),
@@ -4906,7 +4907,9 @@ $(function () {
                         window.location.href = "/thank-you";
                     }
                 },
-                error: function () {
+                error: function (response) {
+                    console.log(response);
+
                     //Display failure message above form
                     $('.pageform #prog1').fadeOut(200);
                     $('.pageform .instructions').html('Your form could not be submitted. Please try again later.').css({
