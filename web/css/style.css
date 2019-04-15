@@ -5620,7 +5620,11 @@ a:hover, button:hover {
     .form-banner .row {
         margin: auto 10px;
     }
+    div#wideslideshow.overlay.franchise .overlay-container h1 {
+        width: 76%;
+    }
 }
+
 
 
 .franchise-form {
