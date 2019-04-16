@@ -31,7 +31,7 @@ return [
     // Dev environment settings
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
+        'devMode' => getenv('DEV_MODE'),
     ],
 
     // Staging environment settings
