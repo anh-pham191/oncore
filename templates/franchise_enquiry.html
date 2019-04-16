@@ -312,7 +312,7 @@
     </div>
     <div class="form-banner">
         <form action="/forms/franchise-enquiry.php" method="post" id="franchise-enquiry">
-            <input type="hidden" name="g-recaptcha-response" id="captcha"/>
+            <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
             <div class="row">
                 <div class="col-md-12 input-label-wrapper">
                     <label for="formf-firstname">First Name</label>
@@ -363,6 +363,14 @@
                     <label for="formf-subscribe"> I consent to receiving marketing emails.</label>
                 </div>
             </div>
+            <div class="row tick">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>
+
+                </div>
+            </div>
 
             <div class="row tick">
                 <div class="col-md-6 col-xs-12 input-label-wrapper">
@@ -389,7 +397,7 @@
 
 {% block scripts %}
 <!--<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>-->
-<script src="{{ siteUrl}}js/recaptcha.js"></script>
+<!--<script src="{{ siteUrl}}js/recaptcha.js"></script>-->
 
 <script>
     scrollDown($(".meet-director"), $(".track-record"));
@@ -397,11 +405,11 @@
     scrollDown($(".cta-button"), $(".form-banner"));
 </script>
 <script>
-    grecaptcha.ready(function () {
-        grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
-            $('#captcha').val(token);
-        }); // this one when form submit please
-    });
+    // grecaptcha.ready(function () {
+    //     grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
+    //         $('#captcha').val(token);
+    //     }); // this one when form submit please
+    // });
 </script>
 
 {% endblock scripts%}
