@@ -3392,7 +3392,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
     right: 0;
     border-radius: 20px;
     width: 368px;
-    height: 587px;
+    height: 600px;
     box-shadow: 0 2px 50px 0 rgba(76, 76, 76, 0.3);
     background-color: #ffffff;
 }
@@ -3426,7 +3426,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 
 .form-banner .row.tick {
     height: 48px;
-    margin: 0px 33px;
+    margin: 20px 33px;
 }
 
 .form-banner h1 {
