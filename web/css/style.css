@@ -6034,6 +6034,9 @@ a:hover, button:hover {
 .privacy .pagecopy p, .privacy .pagecopy ul li {
     line-height: 1.63;
 }
+.privacy #content h1 {
+    color: #333333;
+}
 @media only all and (min-width: 78em) {
     #content.panorama #content-body {
         width: 662px;
@@ -6056,9 +6059,7 @@ a:hover, button:hover {
     #content.panorama #content-right.form {
         padding-left: 1rem
     }
-    .privacy #content h1 {
-        color: #333333;
-    }
+
 }
 
 @media only all and (min-width: 64em) {
