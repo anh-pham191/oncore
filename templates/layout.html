@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     {% endblock seocontent %}
-    {% if currentSite.name == 'oncore.local' %}
+    {% if (currentSite.name == 'oncore.local') or (currentSite.name=='Oncore Dev') %}
     <meta name="robots" content="noindex, nofollow" />
     {% endif %}
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
