@@ -4837,9 +4837,6 @@ $(function () {
             if (valifirstname === "invalid" || valilastname === "invalid" || valiemail === "invalid" || valitel === "invalid" || valiprivacy === "invalid") {
                 return false;
             }
-            console.log('front end');
-            var number = $("#formf-tel").val();
-            $("#formf-tel").val("0" + number);
 
             $.ajax({
                 url: $(form).attr("action"),
