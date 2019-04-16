@@ -3396,7 +3396,10 @@ div#wideslideshow.overlay.banner .intro-bottom {
     box-shadow: 0 2px 50px 0 rgba(76, 76, 76, 0.3);
     background-color: #ffffff;
 }
-
+.g-recaptcha {
+    transform: scale(0.88);
+    transform-origin: 0 0;
+}
 .form-control {
     width: 100%;
     height: 34px;
