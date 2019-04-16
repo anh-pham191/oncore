@@ -25,7 +25,7 @@
         <div class="form-banner">
             <h1>Get in touch</h1>
             <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
-                <input type="hidden" name="g-recaptcha-response" id="captcha"/>
+                <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
                 <div class="row">
                     <div class="col-md-12 input-label-wrapper">
                         <input type="text" class="form-control home-form" placeholder="First name"
@@ -76,7 +76,7 @@
                 </div>
                 <div class="row tick">
 
-                <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
 
                     <div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>
 
@@ -255,10 +255,10 @@
     scrollDown($(".enquiry-button"), $("#enquiry-form"));
 </script>
 <script>
-    grecaptcha.ready(function () {
-        grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
-            $('#captcha').val(token);
-        }); // this one when form submit please
-    });
+    // grecaptcha.ready(function () {
+    //     grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
+    //         $('#captcha').val(token);
+    //     }); // this one when form submit please
+    // });
 </script>
 {% endblock scripts%}
