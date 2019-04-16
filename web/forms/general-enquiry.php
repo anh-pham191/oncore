@@ -82,7 +82,7 @@ if(!$captcha){
     echo 'NoCaptcha';
     exit;
 }
-$secretKey = '6LdbAZkUAAAAABmmDIBGZb2BOV8RGODvtwzXN8Po';
+$secretKey = '6Lchap4UAAAAAPs1zt4TJ0efNwMpEfaGJKSjIQTJ';
 $ip = $_SERVER['REMOTE_ADDR'];
 $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
 $responseKeys = json_decode($response,true);
