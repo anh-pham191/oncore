@@ -4548,7 +4548,7 @@ $(function () {
                         });
                     }
                     else {
-                        ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Encore Contact - General Enquiry');
+                        ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Oncore Contact - General Enquiry');
                         //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
                         //fbq('track', 'Lead');
                         window.location.href = "/thank-you";
@@ -4805,7 +4805,7 @@ $(function () {
                         });
                     }
                     else {
-                        ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Encore Contact - General Enquiry');
+                        ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Oncore Contact - General Enquiry');
                         //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
                         //fbq('track', 'Lead');
                         window.location.href = "/thank-you";
@@ -4889,7 +4889,7 @@ $(function () {
                         });
                     }
                     else {
-                        ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Encore Contact - General Enquiry');
+                        ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Oncore Contact - General Enquiry');
                         //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
                         //fbq('track', 'Lead');
                         window.location.href = "/thank-you";
