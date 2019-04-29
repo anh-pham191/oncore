@@ -199,8 +199,8 @@ if ($probSpam != "yes") {
 //	  \"source\": \"0001 Refresh Contact - Business Opportunity - used for Franchise Enquiry\"
 //	}";
 
-        $baseURL = "https://app-3QNH83TKIO.marketingautomation.services/webforms/receivePostback/MzawMDE3MjMwAwA/";
-        $endPoint = "5853b48a-0848-4273-baaf-e390a33800f4";
+//        $baseURL = "https://app-3QNH83TKIO.marketingautomation.services/webforms/receivePostback/MzawMDE3MjMwAwA/";
+//        $endPoint = "5853b48a-0848-4273-baaf-e390a33800f4";
 
 // Prepare parameters
         $params = $params . "firstName=" . urlencode($firstname) . "&lastName=" . urlencode($lastname) . "&emailAddress=" . urlencode($email) . "&phoneNumber=" . urlencode($phone) . "&country=" . urlencode($country) . "&website=" . urlencode($frompage) . "&privacy=" . urlencode($privacy) . "&subscribe=" . urlencode($subscribe) . "&";
@@ -290,7 +290,7 @@ if ($probSpam != "yes") {
                 // Info was not sent to Ubiquity - send the info in an email to be manually entered
                 $emailsubject = "Submission from Oncore website - Franchise Enquiry - Sharpspring down";
                 $emailmessage = "First name: " . $firstname . "\n\n" . "Last name: " . $lastname . "\n\n" . "Email: " . $email . "\n\n" . "Phone: " . $phone . "\n\n" . "Country: " . $country . "\n\n" . "Read and accepted Privacy Policy : " . $privacy . "\n\n" . "Opted out setting: " . $subscribe . "\n\n" . "Message subject: " . $subject . "\n\n" . "Enquiry: " . $enquiry . "\n\n" . "Page Enquiry Made On: " . $frompage . "\n\n". "Region Interested In(UK website): " . $region;
-                mail($emailtoaddress, $emailsubject, $emailmessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
+//                mail($emailtoaddress, $emailsubject, $emailmessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
                 echo "Successful mailout"; // So that user sees their info has been collected.
             }
         }
