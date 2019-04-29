@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+{% block snippet %}
+<!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+<script> gtag('event', 'conversion', {'send_to': 'AW-776863757/hpycCKXnr5ABEI2AuPIC'}); </script>
+{% block css %}
+<link rel="stylesheet" href="{{ siteUrl}}css/style.css" media="all">
+
+<link rel="stylesheet" href="{{ siteUrl}}css/manual-lead.css" media="all">
+<link rel="stylesheet" href="{{ siteUrl}}css/normalize.min.css" media="all">
+{% endblock css %}
+{% endblock snippet %}
+{% block content %}
+
+    <div class="inner clearfix form">
+        <div class="full-width-text">
+            {% if craft.request.getSegment(2) == "broker-leads" %}
+            <div class="title">Broker Leads Form</div>
+            <p>This form is for Broker leads only.</p>
+
+            {% elseif craft.request.getSegment(2) == "portal-leads" %}
+            <div class="title">Portal Leads Form</div>
+            <p>This form is for Portal leads only</p>
+
+            {% elseif craft.request.getSegment(2) == "referral-leads" %}
+            <div class="title">Referral Leads Form</div>
+            <p>This form is for Referral leads only</p>
+
+            {% elseif craft.request.getSegment(2) == "call-centre-leads" %}
+            <div class="title">Call Centre Leads Form</div>
+            <p>This form is for Call Centre leads only.</p>
+            <p>Please only use this form if you have not received any tracking information, or were not able to ascertain from the customer where they have seen / heard about us.
+                If you have received an email from Delacon, or Call tracking Metrics related to this call, please check to see if there is any campaign tracking information</p>
+            {% elseif craft.request.getSegment(2) == "cpc-leads" %}
+            <div class="title">CPC Leads Form</div>
+            <p>This form is for CPC leads only.</p>
+            {% elseif craft.request.getSegment(2) == "general-marketing-leads" %}
+            <div class="title">General Marketing Leads Form</div>
+            <p>This form is for General Marketing Leads only.</p>
+            {% endif %}
+        </div>
+        <div class="formholder pageform">
+
+            <p class="instructions" style="display: none;"></p>
+            <form action="/forms/manual-enquiry.php" method="post" id="franchise-enquiry-leadpages">
+
+                <fieldset class="clearfix">
+                    <legend></legend>
+                    <label class="left"><input type="text" name="form-firstname" id="formf-firstname"
+                                               placeholder="First Name" data-prefix="formf"/></label>
+                    <label class="right"><input type="text" name="form-lastname" placeholder="Last Name"
+                                                id="formf-lastname" data-prefix="formf"/></label>
+                </fieldset>
+
+                <fieldset class="clearfix testinput" style="display: none">
+                    <legend></legend>
+                    <label id="form-website" class="fullwidth"><span class="hide">Prove you are human by leaving this field blank</span>
+                        <input type="text" name="form-website" autocomplete="off"/></label>
+                </fieldset>
+
+                <fieldset class="clearfix">
+                    <legend></legend>
+                    <label class="left"><input type="text" name="form-email" placeholder="Email Address"
+                                               id="formf-email" data-prefix="formf"/></label>
+                    <label class="right"><input type="text" name="form-tel" placeholder="Phone Number" id="formf-tel"
+                                                data-prefix="formf"/></label>
+                </fieldset>
+
+                <fieldset class="clearfix">
+                    <legend></legend>
+                    <label class="left"><input type="text" name="form-country-filled"
+                                               placeholder="Country interested in (optional)" id="formf-country"
+                                               data-prefix="formf"/></label>
+                    <label class="right"><input type="text" name="form-region"
+                                                placeholder="City / Town / Area interested in (optional)"
+                                                id="formf-region" data-prefix="formf"/></label>
+                </fieldset>
+                <div>
+                    <fieldset class="clearfix checklets col-md-6">
+                        <legend></legend>
+                        <p class="clearfix"><label><input type="checkbox" class="uniform-styles" name="form-privacy"
+                                                          id="formf-privacy" checked="checked" data-prefix="formf"/>
+                            <span class="note">I have read, understood and accepted the <a
+                                    href="https://www.refreshfranchiseopportunities.com.au/privacy-policy/"
+                                    target="_blank">Privacy Policy.</a></span></label></p>
+                        <p class="clearfix"><label><input type="checkbox" class="uniform-styles" name="form-subscribe"
+                                                          checked="checked"/> <span class="note">Keep up to date with news from Refresh.</span></label>
+                        </p>
+                    </fieldset>
+                    <fieldset class="clearfix col-md-6">
+                        <div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>
+                    </fieldset>
+                </div>
+                    <input type="hidden" name="form-country" value="New Zealand"/>
+                    {% if craft.request.getSegment(2) == "broker-leads" %}
+                        <input type="hidden" name="form-source" value="Broker"/>
+                        <input type="hidden" name="form-medium" value="Referral"/>
+                        <input type="hidden" name="form-content" value="Broker"/>
+                    {% elseif craft.request.getSegment(2) == "portal-leads" %}
+                        <input type="hidden" name="form-source" value="Portal"/>
+                        <input type="hidden" name="form-medium" value="cpc"/>
+                        <input type="hidden" name="form-content" value="Portal"/>
+                    {% elseif craft.request.getSegment(2) == "referral-leads" %}
+                        <input type="hidden" name="form-source" value="Referral"/>
+                        <input type="hidden" name="form-medium" value="Referral"/>
+                        <input type="hidden" name="form-content" value="Referral"/>
+                    {% elseif craft.request.getSegment(2) == "call-centre-leads" %}
+                        <input type="hidden" name="form-source" value="Call Centre"/>
+                        <input type="hidden" name="form-medium" value="Call Centre"/>
+                        <input type="hidden" name="form-content" value="Call Centre"/>
+                    {% elseif craft.request.getSegment(2) == "cpc-leads" %}
+                        <input type="hidden" name="form-lead" value="cpc"/>
+                        <input type="hidden" name="form-medium" value="CPC"/>
+                        <input type="hidden" name="form-content" value="CPC"/>
+                    {% elseif craft.request.getSegment(2) == "general-marketing-leads" %}
+                        <input type="hidden" name="form-source" value="Marketing"/>
+                        <input type="hidden" name="form-content" value="Marketing"/>
+                        <input type="hidden" name="form-lead" value="general-marketing"/>
+                {% endif %}
+
+                {% if craft.request.getSegment(2) == "cpc-leads" %}
+                <fieldset class="clearfix">
+                    <label class="right" style="width: 100%; padding-left:0">Campaign Source</label>
+                    <select style="width: 100%; height: 35px" name="form-source">
+                        <option value="Facebook">Facebook</option>
+                        <option value="Facebook Lead Form">Facebook Lead Form</option>
+                        <option value="Facebook Seminar">Facebook Seminar</option>
+                        <option value="Google Ads">Google Ads</option>
+                        <option value="Google Ads Seminar">Google Ads Seminar</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Houzz">Houzz</option>
+                        <option value="LinkedIn Recruiter">LinkedIn Recruiter</option>
+                        <option value="LinkedIn Sponsored Posts">LinkedIn Sponsored Posts</option>
+                        <option value="Trademe">Trademe</option>
+                    </select>
+                    <input type="submit" value="Submit Enquire" id="form-submit" class="submitbutton"/>
+                </fieldset>
+
+                {% else %}
+                <fieldset class="clearfix">
+                    <label class="right" style="width: 100%; padding-left:0"> Campaign Name</label>
+                    <select style="width: 100%; height: 35px" name="form-campaign">
+                        {% if craft.request.getSegment(2) == "broker-leads" %}
+                        <option value="Link Business">Link Business</option>
+                        <option value="ABC Business Brokers">ABC Business Brokers</option>
+                        <option value="Link Business National">Link Business National</option>
+                        <option value="Platform 1">Platform 1</option>
+                        {% elseif craft.request.getSegment(2) == "portal-leads" %}
+                        <option value="Franchise New Zealand Online Directory">Franchise New Zealand Online Directory</option>
+                        <option value="Inside Franchise Business">Inside Franchise Business</option>
+                        <option value="Franchise Magazine">Franchise Magazine</option>
+                        {% elseif craft.request.getSegment(2) == "referral-leads" %}
+                        <option value="Supplier">Supplier</option>
+                        <option value="Franchisee">Franchisee</option>
+                        <option value="Customer">Customer</option>
+                        <option value="Lead Generation Specialist">Lead Generation Specialist</option>
+                        <option value="Refresh Master Franchisee">Refresh Master Franchisee</option>
+                        <option value="Oncore Master Franchisee">Oncore Master Franchisee</option>
+                        <option value="Zones Master Franchisee">Zones Master Franchisee</option>
+                        <option value="General Networking">General networking</option>
+                        {% elseif craft.request.getSegment(2) == "call-centre-leads" %}
+                        <option value="Call Centre">Call Centre</option>
+                        {% elseif craft.request.getSegment(2) == "general-marketing-leads" %}
+                        <option value="TV">TV</option>
+                        <option value="Radio">Radio</option>
+                        <option value="Branded Vehicle">Branded Vehicle</option>
+                        <option value="Local Event">Local Event</option>
+                        <option value="Outdoor">Outdoor</option>
+                        <option value="Sponsorship">Sponsorship</option>
+                        <option value="Letter Box Drop">Letter Box Drop</option>
+                        <option value="Local Print Media">Local Print Media</option>
+                        <option value="Branded merchandise">Branded merchandise</option>
+                        <option value="Local Office">Local Office</option>
+                        <option value="Permanent Exhibition Centre">Permanent Exhibition Centre</option>
+                        <option value="Conference">Conference</option>
+                        <option value="Event">Event</option>
+                        <option value="Seminars">Seminars</option>
+                        {% endif %}
+
+                    </select>
+                    <input type="submit" value="Submit Enquire" id="form-submit" class="submitbutton"/>
+                </fieldset>
+                {% endif %}
+
+            </form>
+            <div id="prog1" class="progress" style="display: none;"></div>
+        </div>
+        <div class="adwordstracking"></div>
+    </div>
+
+
+
+{% endblock content%}

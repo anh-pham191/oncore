@@ -1,0 +1,282 @@
+
+div.formholder {
+    float: left;
+    width: 100%
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder {
+        padding: 1rem 10px 1rem;
+        background: #ececec
+    }
+}
+
+@media only all and (min-width: 48em) {
+    div.formholder {
+        width: 100%
+    }
+}
+
+@media only all and (min-width: 64em) {
+    div.formholder {
+        width: 100%
+    }
+}
+
+div.formholder p.instructions {
+    line-height: 1.2;
+    font-size: 1.07rem;
+    margin: 0 0 1rem
+}
+
+div.formholder label {
+    font-size: 1.07rem;
+    color: #191919;
+    padding: 5px 0px;
+}
+
+div.formholder label.error {
+    color: red;
+    font-size: 0.929rem;
+    margin-top: -1rem;
+    margin-left: 8px;
+    margin-bottom: 1.142rem;
+    display: block
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder label.error {
+        margin-top: -0.5rem
+    }
+}
+
+div.formholder label.left {
+    float: left;
+    width: 50%;
+    padding-right: 10px
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder label.left {
+        width: 100%;
+        padding-right: 0
+    }
+}
+
+div.formholder label.right {
+    float: left;
+    width: 50%;
+    padding-left: 10px
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder label.right {
+        width: 100%;
+        padding-left: 0
+    }
+}
+
+div.formholder label input, div.formholder label textarea {
+    width: 100%;
+    padding: 0.285rem 0.428rem;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.07rem;
+    color: #191919;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder label input, div.formholder label textarea {
+        margin-bottom: 0.714rem;
+        border-bottom: 1px solid #ccc;
+        background-color: #f1f1f1
+    }
+}
+
+div.formholder label textarea {
+    margin-bottom: 0
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder label textarea {
+        margin-bottom: 0.714rem;
+        border: 1px solid #d2d2d2;
+        background: #d2d2d2
+    }
+}
+
+div.formholder label :input-placeholder {
+    color: #191919;
+    opacity: 1
+}
+
+div.formholder label ::-moz-placeholder {
+    color: #191919;
+    opacity: 1
+}
+
+div.formholder label ::-webkit-input-placeholder {
+    color: #191919;
+    opacity: 1
+}
+
+div.formholder label :-ms-input-placeholder {
+    color: #191919;
+    opacity: 1
+}
+
+div.formholder p.clearfix {
+    margin-bottom: 0
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder p.clearfix {
+        margin-bottom: 0.714rem;
+        min-height: 20px
+    }
+}
+
+@media only all and (min-width: 48em) {
+    div.formholder p.clearfix + p.clearfix {
+        margin-bottom: 1rem
+    }
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder div.checker {
+        float: left
+    }
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder .fleft.country {
+        float: none
+    }
+}
+
+div.formholder .fleft.country div.fancy-select {
+    width: 250px
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder .fleft.country div.fancy-select {
+        width: 100%
+    }
+}
+
+@media only all and (min-width: 48em) {
+    div.formholder .fleft.country div.fancy-select {
+        width: 222px
+    }
+}
+
+@media only all and (min-width: 64em) {
+    div.formholder .fleft.country div.fancy-select {
+        width: 295px
+    }
+}
+
+div.formholder .fleft.country div.fancy-select div.trigger {
+    width: 250px
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder .fleft.country div.fancy-select div.trigger {
+        width: 100%
+    }
+}
+
+@media only all and (min-width: 48em) {
+    div.formholder .fleft.country div.fancy-select div.trigger {
+        width: 100%
+    }
+}
+
+div.formholder .fleft.country div.fancy-select ul.options li {
+    font-size: 1.07rem;
+    margin-bottom: 0;
+    background-color: #fff
+}
+
+div.formholder input.submitbutton {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 1rem 0;
+    vertical-align: middle;
+    background: #0085C4;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.143rem;
+    text-align: center;
+    margin-top: 8px;
+}
+
+@media only all and (max-width: 47.937em) {
+    div.formholder input.submitbutton {
+        padding: 1rem;
+        font-weight: 400;
+        width: 100%;
+        display: block
+    }
+    nav#topnav #sitebanner p a {
+        transform: translate(-50%, -50%);
+        position: relative;
+        top: 50%;
+        left: 160%;
+    }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    .notipad {
+        display: none !important;
+    }
+}
+
+
+@media only all and (min-width: 48em) {
+    div.formholder input.submitbutton {
+        padding: 1rem 0;
+        width: 100%
+    }
+}
+
+@media only all and (min-width: 64em) {
+    div.formholder input.submitbutton {
+        width: 100%
+    }
+}
+
+.invalid-tooltip {
+    position: absolute;
+    z-index: 5;
+    max-width: 100%;
+    padding: .5rem;
+    margin-top: .1rem;
+    font-size: .875rem;
+    line-height: 1;
+    color: #fff;
+    background-color: rgba(220, 53, 69, .8);
+    border-radius: .2rem;
+    top: unset;
+}
+
+.error-msg {
+    border: solid 1px red !important
+}
+
+.clearfix.checklets {
+    margin-top: 10px !important
+}
+.twocol fieldset, .form fieldset {
+    border: none !important
+}
+.full-width-text {
+    width: 73%;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
