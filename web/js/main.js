@@ -4911,7 +4911,7 @@ $(function () {
     }); // end form
     $("#franchise-enquiry-leadpages").validate({
         submitHandler: function (form) {
-            $('#project-job').append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
+            $('#franchise-enquiry-leadpages').append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
 
             var valifirstname = submitValidation('formf-firstname', 'required', 'firstname');
             var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
