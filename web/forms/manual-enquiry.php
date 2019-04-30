@@ -57,7 +57,7 @@ if ($_POST['form-lead']=="general-marketing") {
 }
 
 $content = cleanData($_POST['form-content']);
-$businessunit = "Refresh NZ Franchise Lead";
+$businessunit = "Oncore NZ Franchise Lead";
 
 $secretKey = '6LcttIoUAAAAADE5F10UcR4cIveBdG67ctqyGxvz';
 
@@ -107,7 +107,7 @@ if ($probSpam != "yes") {
         $frompage = substr($frompage, 0, 100);
         $region = substr($region, 0, 100);
 
-        $spamsubject = "SPAM from Refresh Franchise website - Franchise Enquiry";
+        $spamsubject = "SPAM from Oncore website - Franchise Enquiry";
         $spammessage = "First name: " . $firstname . "\n\n" . "Last name: " . $lastname . "\n\n" . "Email: " . $email . "\n\n" . "Phone: " . $phone . "\n\n" . "Country: " . $country . "\n\n" . "Read and accepted Privacy Policy : " . $privacy . "\n\n" . "Opted out setting: " . $subscribe . "\n\n" . "Message subject: " . $subject . "\n\n" . "Enquiry: " . $enquiry . "\n\n". "Page Enquiry Made On: " . $frompage . "\n\n". "Region Interested In(UK website): " . $region . "\n\n" . "Spam field contents: " . $honeypot;
         mail($emailtoaddress, $spamsubject, $spammessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
         $goodtogo = "no"; // Do not post to Ubiquity
@@ -196,7 +196,7 @@ if ($probSpam != "yes") {
 //			\"value\": \"$frompage\"
 //		}
 //	  ],
-//	  \"source\": \"0001 Refresh Contact - Business Opportunity - used for Franchise Enquiry\"
+//	  \"source\": \"0001 Oncore Contact - Business Opportunity - used for Franchise Enquiry\"
 //	}";
 
         $baseURL = "https://app-3QNH83TKIO.marketingautomation.services/webforms/receivePostback/MzawMDE3MjMwAwA/";
@@ -230,15 +230,15 @@ if ($probSpam != "yes") {
         }
 
         if($country=="Australia"){
-            $params = $params . "description=RefreshFranchiseAustraliaWebsite";
+            $params = $params . "description=OncoreAustraliaWebsite";
         }
         else if($country=="New Zealand"){
 //NZ
-            $params = $params . "description=RefreshFranchiseNewZealandWebsite";
+            $params = $params . "description=OncoreNewZealandWebsite";
 
         }else if($country=="United Kingdom"){
 //UK
-            $params = $params . "description=RefreshFranchiseUnitedKingdomWebsite";
+            $params = $params . "description=OncoreUnitedKingdomWebsite";
 
         }
         if ($goodtogo != "no" && !preg_match('/\d+/',$firstname) && !preg_match('/\d+/',$lastname)) {
