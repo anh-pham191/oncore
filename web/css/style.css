@@ -6702,3 +6702,42 @@ form .tips {
     color: #333333;
     padding-top: 3px;
 }
+
+.article-page h3 {
+    font-family: "Poppins";
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    color: #333333;
+    padding-bottom: 26px;
+}
+.article-page .content-body  {
+    padding-bottom: 61px;
+}
+
+.article-page .content-body p, .article-page li {
+    font-family: "LibreBaskerville";
+    font-size: 20px;
+    line-height: 1.9;
+    color: #535353;
+}
+
+.article-page ul {
+    padding-bottom: 40px;
+}
+
+.article-page .fright, .article-page .fleft {
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+.article-page .fright img {
+    width: 100%;
+    height: auto;
+}
+
+.article-page .content-with-image {
+    padding-bottom: 70px;
+}

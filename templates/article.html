@@ -3,47 +3,67 @@
 
 {% block content %}
 
-{#{% include 'includes/header-banner.html'  with { 'image' : entry.bannerimage.first().Filename, 'h1': entry.h1heading, 'breadcrumb': '<a#}
-        {#href="/" >Home</a> / <a href="/contact-us/project-enquiry/">Get In Touch</a> / <a class="bold" href="/contact-us/project-enquiry/">Project Enquiry</a>' } %}#}
+    {#{% include 'includes/header-banner.html'  with { 'image' : entry.bannerimage.first().Filename, 'h1': entry.h1heading, 'breadcrumb': '<a#}
+    {#href="/" >Home</a> / <a href="/contact-us/project-enquiry/">Get In Touch</a> / <a class="bold" href="/contact-us/project-enquiry/">Project Enquiry</a>' } %}#}
     <div id="wideslideshow" class="overlay white article-page">
-        <img src="{{siteUrl}}articleBanner/{{ entry.articleBanner.first().Filename }}" alt="Oncore - The key to faster, smoother jobs"/>
+        <img src="{{ siteUrl }}articleBanner/{{ entry.articleBanner.first().Filename }}"
+             alt="Oncore - The key to faster, smoother jobs"/>
         <div class=" overlay-container white">
             <div class="inner">
                 <h1>{{ entry.h1heading }}</h1>
+                <p>Smaller heading to be shown here</p>
+                <span>Mins to read here</span><span> By Author here</span>
             </div>
         </div>
     </div>
 
-<div class="inner article-page">
+    <div class="inner article-page">
+        {#summary text here#}
+        {% set matrixBlock = entry.articleBlock %}
+        {#table of content here #}
+        <ul>
+            {% for block in matrixBlock %}
+                {% if block.type == "paragraph" %}
 
-{% set matrixBlock = entry.articleBlock %}
-    {% for block in matrixBlock %}
-        {% if block.type == "paragraph" %}
-            <h3>{{ block.heading }}</h3>
-            <p>{{ block.body }}</p>
-        {% elseif block.type == 'contentWithImage' %}
-            <div class="fright"><img src="{{ siteUrl }}/panorama/{{ block.image.first().Filename }}" alt=""><span>{{ block.imageTextField }}</span></div>
-            <div class="fleft"><h2>{{ block.contentLeft }}</h2></div>
-        {% elseif block.type == 'commentWithImage' %}
-        {% endif %}
-    {% endfor %}
-    <div class="sep footersep"></div>
+                    <li><a href="#" style="color: #4ca845">{{ block.heading }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        {#content matrix for each paragraph here#}
+        {% for block in matrixBlock %}
+            {% if block.type == "paragraph" %}
+                <h3>{{ block.heading }}</h3>
+                <div class="content-body">{{ block.body }}</div>
+            {% elseif block.type == 'contentWithImage' %}
+                <div class="content-with-image">
 
-</div><!-- end .inner -->
+                    <div class="fleft">
+                        <div class="content-body">{{ block.contentLeft }}</div>
+                    </div>
+                    <div class="fright"><img src="{{ siteUrl }}/panorama/{{ block.image.first().Filename }}"
+                                             alt=""><span>{{ block.imageTextField }}</span></div>
+
+                </div>
+            {% elseif block.type == 'commentWithImage' %}
+            {% endif %}
+        {% endfor %}
+        <div class="sep footersep"></div>
+
+    </div><!-- end .inner -->
 
 {% endblock content %}
 
 {% block scripts %}
-<!--<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>-->
-<!--<script src="{{ siteUrl}}js/recaptcha.js"></script>-->
+    <!--<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>-->
+    <!--<script src="{{ siteUrl }}js/recaptcha.js"></script>-->
 
-<script>
-    scrollDown($(".meet-director"), $(".track-record"));
-    scrollDown($(".find-out-more"), $(".services-three-cols"));
-    scrollDown($(".cta-button"), $(".form-banner"));
-    $("fieldset.testinput").css("display", "none");
-</script>
+    <script>
+        scrollDown($(".meet-director"), $(".track-record"));
+        scrollDown($(".find-out-more"), $(".services-three-cols"));
+        scrollDown($(".cta-button"), $(".form-banner"));
+        $("fieldset.testinput").css("display", "none");
+    </script>
 
-<script>
-</script>
-{% endblock scripts%}
+    <script>
+    </script>
+{% endblock scripts %}
