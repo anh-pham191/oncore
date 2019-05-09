@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+{% block snippet %}
+    <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+
+{% endblock snippet %}
+{% block content %}
+
+    {% include 'includes/header-banner.html'  with { 'image' : 'blank', 'h1': 'Articles', 'breadcrumb': '<a
+        href="/" >Home</a> / <a href="/contact-us/project-enquiry/">Get In Touch</a> / <a class="bold" href="/contact-us/project-enquiry/">Project Enquiry</a>' } %}
+    <div class="inner full-width-text-left list-page">
+        <div class="col-md-8">
+            <p>Oncore provides maintenance, repairs, installations, decorating and insurance claim services to both
+                residential and commercial clients.</p>
+            <p class="cta-text">Here, you can find an abundance of advice and inspiration for your project, while
+                finding out more about the work Oncore does.
+                If you would like to arrange a consultation with one of our local specialists, get in touch. </p>
+        </div>
+        <div class="col-md-4">
+            <button onclick="location.href='http://oncore.local/contact-us/project-enquiry'" class="cta-button">Get in
+                touch
+            </button>
+        </div>
+    </div>
+
+    <div class="filter inner">
+        <span>Filter by: <a href="{{ siteUrl }}articles?type=repairs">Repair </a>Region Category</span>
+    </div>
+    {# find the wished category #}
+    {# {% set category = craft.categories.group('projectType').title('repairs').first() %} #}
+    {# Create an entry query with the 'section' and 'limit' parameters #}
+    {# {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(category).limit(4) %} #}
+
+
+    {% set type = craft.request.getParam('type') %}
+    {% if type is empty %}
+        {% set myEntryQuery = craft.entries().section('articlePage').limit(3) %}
+    {% else %}
+        {% set typeCat = craft.categories.group('projectType').slug(type) %}
+        {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(typeCat).limit(3) %}
+    {% endif %}
+
+
+    {# Create an entry query with the 'section' and 'limit' parameters #}
+    {# {% set myEntryQuery = craft.entries().section('articlePage').limit(4) %} #}
+
+    {% paginate myEntryQuery as pageInfo, pageEntries %}
+
+
+    {# Display the entries #}
+
+    <div class="list-block inner">
+        <div class="one-line">
+            {% for entry in pageEntries %}
+
+                <div class="col-md-4">
+                    <div class="article-box">
+                        <img src="{{siteUrl}}articleBanner/{{ entry.articleBanner.first().Filename }}" alt="" width="100%"
+                             height="250px">
+                        <div class="content-box">
+                            <p class="title">{{ entry.title }}</p>
+                            <span class="description">When Auckland locals Tim and Amy McKenzie wanted an extreme makeover of their 1930s bungalow,
+                        they contracted Refresh Renovation’s Dave Georgetti to Ut enim ad minim veniam, quis….</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% if type is empty %}
+            <a href="{{ pageInfo.firstUrl }}">First Page</a>
+        {% else %}
+            <a href="{{ pageInfo.firstUrl }}?type={{ type }}">First Page</a>
+        {% endif %}
+        {% if pageInfo.prevUrl %}
+            {% if type is empty %}
+                <a href="{{ pageInfo.prevUrl }}">Previous Page</a>
+            {% else %}
+                <a href="{{ pageInfo.prevUrl }}?type={{ type }}">Previous Page</a>
+            {% endif %}
+        {% endif %}
+
+
+
+
+        {% for page, url in pageInfo.getPrevUrls(5) %}
+            {% if type is empty %}
+                <a href="{{ url }}">{{ page }}</a>
+            {% else %}
+                <a href="{{ url }}?type={{ type }}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+
+        <span class="current">{{ pageInfo.currentPage }}</span>
+
+        {% for page, url in pageInfo.getNextUrls(5) %}
+            {% if type is empty %}
+                <a href="{{ url }}">{{ page }}</a>
+            {% else %}
+                <a href="{{ url }}?type={{ type }}">{{ page }}</a>
+            {% endif %}
+
+
+        {% endfor %}
+
+        {% if pageInfo.nextUrl %}
+            {% if type is empty %}
+                <a href="{{ pageInfo.nextUrl }}">Next Page</a>
+            {% else %}
+                <a href="{{ pageInfo.nextUrl }}?type={{ type }}">Next Page</a>
+            {% endif %}
+        {% endif %}
+        {% if type is empty %}
+            <a href="{{ pageInfo.lastUrl }}">Last Page</a>
+        {% else %}
+            <a href="{{ pageInfo.lastUrl }}?type={{ type }}">Last Page</a>
+        {% endif %}
+    </div>
+    {% include 'includes/footer-banner.html' %}
+
+{% endblock content %}

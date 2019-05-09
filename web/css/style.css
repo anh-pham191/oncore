@@ -3221,7 +3221,9 @@ div#wideslideshow.overlay .overlay-container {
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
 
 }
-
+div#wideslideshow.overlay.article-page .overlay-container {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
 div#wideslideshow.overlay.header-banner .overlay-container {
     position: absolute;
     top: 0;
@@ -3286,7 +3288,10 @@ div#wideslideshow.overlay .overlay-container h2#arrow .arrow-down {
     #wideslideshow.banner {
         height: 386px;
     }
-
+    div#wideslideshow.overlay.article-page {
+        height: 801px;
+        max-height: 801px;
+    }
 }
 
 #wrapper {
@@ -6623,5 +6628,77 @@ form .tips {
         margin-top: 3% ;
     }
 }
+.full-width-text-left.list-page {
+    display: table;
+}
+.full-width-text-left.list-page .col-md-8, .full-width-text-left.list-page .col-md-4 {
+    padding-left: 0px;
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+.full-width-text-left.list-page .col-md-4 {
+    text-align: center;
+}
+.full-width-text-left.list-page p{
+    width: 100%;
+}
 
+.full-width-text-left.list-page button.cta-button {
+    width: 274px;
+    height: 48px;
+    border-radius: 3px;
+    background-color: #4fae47;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    color: #ffffff;
+}
 
+.one-line .col-md-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 38px;
+}
+
+.one-line .article-box {
+    width: 90%;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+.one-line .article-box:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.list-block .one-line {
+    width: 100%;
+    float: left;
+}
+
+.full-width-text-left.list-page .cta-text {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "Open Sans";
+}
+
+.article-box .content-box {
+    padding: 24px 26px;
+}
+
+.article-box .title {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.article-box .description {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.63;
+    color: #333333;
+    padding-top: 3px;
+}

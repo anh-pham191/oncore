@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+{#{% include 'includes/header-banner.html'  with { 'image' : entry.bannerimage.first().Filename, 'h1': entry.h1heading, 'breadcrumb': '<a#}
+        {#href="/" >Home</a> / <a href="/contact-us/project-enquiry/">Get In Touch</a> / <a class="bold" href="/contact-us/project-enquiry/">Project Enquiry</a>' } %}#}
+    <div id="wideslideshow" class="overlay white article-page">
+        <img src="{{siteUrl}}articleBanner/{{ entry.articleBanner.first().Filename }}" alt="Oncore - The key to faster, smoother jobs"/>
+        <div class=" overlay-container white">
+            <div class="inner">
+                <h1>{{ entry.h1heading }}</h1>
+            </div>
+        </div>
+    </div>
+
+<div class="inner article-page">
+
+{% set matrixBlock = entry.articleBlock %}
+    {% for block in matrixBlock %}
+        {% if block.type == "paragraph" %}
+            <h3>{{ block.heading }}</h3>
+            <p>{{ block.body }}</p>
+        {% elseif block.type == 'contentWithImage' %}
+            <div class="fright"><img src="{{ siteUrl }}/panorama/{{ block.image.first().Filename }}" alt=""><span>{{ block.imageTextField }}</span></div>
+            <div class="fleft"><h2>{{ block.contentLeft }}</h2></div>
+        {% elseif block.type == 'commentWithImage' %}
+        {% endif %}
+    {% endfor %}
+    <div class="sep footersep"></div>
+
+</div><!-- end .inner -->
+
+{% endblock content %}
+
+{% block scripts %}
+<!--<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>-->
+<!--<script src="{{ siteUrl}}js/recaptcha.js"></script>-->
+
+<script>
+    scrollDown($(".meet-director"), $(".track-record"));
+    scrollDown($(".find-out-more"), $(".services-three-cols"));
+    scrollDown($(".cta-button"), $(".form-banner"));
+    $("fieldset.testinput").css("display", "none");
+</script>
+
+<script>
+</script>
+{% endblock scripts%}
