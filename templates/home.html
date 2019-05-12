@@ -7,13 +7,31 @@ Decorating, Painting, Gibbing and plastering, Plumbing, Electrical, Double glazi
 Insulation, Leak repairs, Roofing and spouting, Windows and doors, Cupboards and shelves, Carpet and flooring, Tiling,
 Locks and handles, Furniture assembly, Appliance fitting, Appliance installation, Air conditioning installation, Heat pump installation,
 Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car park maintenance, Gutter cleaning, Paving, Bricklaying, Concreting, Fence and gate repairs, Garden maintenance, Pergola assembly, Garden shed assembly">
+    <style>#myVideo {
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+        }
+        @media only all and (min-width: 1440px){
+            #myVideo {
+                position: relative;
+                top: -28%;
+            }
+        }
+    </style>
+
+
 {% endblock seocontent %}
 
-
 {% block content %}
+
 <div>
     <div id="wideslideshow" class="overlay white">
-        <img class="notmobile" src="{{siteUrl}}images/homepage-banner.jpg" alt="Oncore - The key to faster, smoother jobs"/>
+        {#<img class="notmobile" src="{{siteUrl}}images/homepage-banner.jpg" alt="Oncore - The key to faster, smoother jobs"/>#}
+        <video autoplay muted loop poster="/images/video-poster.jpg" id="myVideo" class="notmobile">
+            <source src="/images/video.mp4" type="video/mp4">
+        </video>
         <div class=" overlay-container white">
             <div class="inner">
             <h1>One call does it all.</h1>
