@@ -25,7 +25,7 @@ if (isset($_POST['subscribe'])) {
 } else {
     $subscribe = "";
 };
-
+$country = "New Zealand";
 $honeypot = cleanData($_POST['form-website']);
 
 if (isset($_COOKIE['fromsource'])&& $_COOKIE['fromsource']=="google") {
