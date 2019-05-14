@@ -140,154 +140,176 @@ if ($probSpam != "yes") {
             $subscribe = "True";
         }
 
-//        $url = "https://api.ubiquity.co.nz/forms/VzKw9zB0x0KqBgjQNXn6Xg/submit?apiToken=vaxIncJDcdcyEaK6KaIUV8uAtJOKR5uCB2HJhWtd4LGbeh7KORxzeqQNjPIaOREIrsK7he-3zjY8zoG4OJwIQk7ORyCuHgQA4BwqSK2V-2IH3mwvH0rMzrqQscjMLW5rOXUQXgksMjs";
+        $url = "https://api.ubiquity.co.nz/forms/L6PnmWPceEmCjAjW2RCTxw/submit?apiToken=vaxIncJDcdcyEaK6KaIUV8uAtJOKR5uCB2HJhWtd4LGbeh7KORxzeqQNjPIaOREIrsK7he-3zjY8zoG4OJwIQk7ORyCuHgQA4BwqSK2V-2IH3mwvH0rMzrqQscjMLW5rOXUQXgksMjs";
+
+        $jsonData = "{
+	  \"data\": [
+		{
+		  \"fieldID\": \"XzTPYZ5AYUmruwjW2RCn0g\",
+		  \"value\": \"$firstname\"
+		},
+		{
+		  \"fieldID\": \"aNYg14fdhEmBmAjW2RCpgg\",
+		  \"value\": \"$lastname\"
+		},
+		{
+		  \"fieldID\": \"GN0RWb8sTEatowjW2RCrtQ\",
+		  \"value\": \"$email\"
+		},
+		{
+		  \"fieldID\": \"MAjytDbyoESAaQjW2RCuOQ\",
+		  \"value\": \"$phone\"
+		},
+		{
+		  \"fieldID\": \"dujtHdKhj0uQ6wjW2RC0kw\",
+		  \"value\": \"$country\"
+		},
+		{
+		  \"fieldID\": \"K94nDPCBrka_RQjW2RDkzg\",
+		  \"value\": \"$source\"
+		},
+		{
+		  \"fieldID\": \"_VWC3t0ai06K0AjW2RDVqQ\",
+		  \"value\": \"$subscribe\"
+		},
+        {
+          \"fieldID\": \"ihRc6emVjECoYQjW2RDuiw\",
+          \"value\": \"$businessunit\"
+        },
+        {
+		  \"fieldID\": \"4QmagZQHuECOGQjW2RDpNg\",
+		  \"value\": \"$medium\"
+		},
+		{
+		  \"fieldID\": \"fAysLew1ek6kfAjW2RCxbQ\",
+		  \"value\": \"$campaign\"
+        },
+		{
+			\"fieldID\": \"Q-aYLI_fhUOE0wjW2RDwzg\",
+			\"value\": \"$frompage\"
+		}
+	  ],
+	  \"source\": \"0003 Oncore - Franchise enquiry form\"
+	}";
+
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($jsonData)));
+
+        $response = curl_exec($ch);
+        $decodedArray = json_decode($response,true);
+
+// echo $response;
+// exit;
+        if (!in_array("UpdatedRow", $decodedArray) && !in_array("AppendedRow", $decodedArray)) {
+            // Info was not sent to Ubiquity - send the info in an email to be manually entered
+            $emailsubject = "Submission from ".$leadsource." Enquiry Page - Ubiquity down";
+            $emailmessage = "First Name: ".$firstname."\n\n"."Last Name: ".$lastname."\n\n"."Email: ".$email."\n\n"."Phone: ".$phone."\n\n"."Referral source: ".$source."\n\n"."Country: ".$country."\n\n"."Where to open franchise: ".$wheretoopen."\n\n"."How soon to open franchise: ".$howsoontoopen;
+            mail($emailtoaddress,$emailsubject,$emailmessage,"From: ".$emailfromaddress."\r\n"."Content-type: text/plain; charset=utf-8\r\n");	// If any headers come via form input ensure this is sanitised
+        }
+
+
+//send data to pipedrive
+        $deal['b02f1fdf1d4985094631af3a6a4dea9d3acb99f2'] = $leadsource." Enquiry Page"; //Form used
+        $deal['8918c06b4712a1c50af08f1194dedc8f57b3f6c1'] = $wheretoopen; //Where to open franchise
+        $deal['f7b5023db425ac0ce02237080f15523c98927559'] = $howsoontoopen; //how soon to open franchise
+        include 'sync-pipedrive.php';
+
+//add lead record to log
+        include '../includes/log.php';
+
+// Send response.
+//echo "Successful";
+
+
+//        $baseURL = "https://app-3QNH83TKIO.marketingautomation.services/webforms/receivePostback/MzawMDE3MjMwAwA/";
+//        $endPoint = "5853b48a-0848-4273-baaf-e390a33800f4";
 //
-//        $jsonData = "{
-//	  \"data\": [
-//		{
-//		  \"fieldID\": \"pZ9o1Q-LokiluAjQNXn6jA\",
-//		  \"value\": \"$firstname\"
-//		},
-//		{
-//		  \"fieldID\": \"VlwpDi-gwkCAEwjQNXn6jA\",
-//		  \"value\": \"$lastname\"
-//		},
-//		{
-//		  \"fieldID\": \"yUP_vmQWjE6ZJgjQNXn6jA\",
-//		  \"value\": \"$email\"
-//		},
-//		{
-//		  \"fieldID\": \"sO4-R6ObgEaTkgjQNXn6jA\",
-//		  \"value\": \"$phone\"
-//		},
-//		{
-//		  \"fieldID\": \"x6CoNlSPUk-o6QjQNXn6jA\",
-//		  \"value\": \"$subject\"
-//		},
-//		{
-//		  \"fieldID\": \"fFEpDsMZYU6rDgjRsEdcSg\",
-//		  \"value\": \"$enquiry\"
-//		},
-//		{
-//		  \"fieldID\": \"CVXee1qyrE-FlAjRBdplTw\",
-//		  \"value\": \"$country\"
-//		},
-//		{
-//		  \"fieldID\": \"le9Ba_aQMkynIwjS8BHFoA\",
-//		  \"value\": \"$source\"
-//		},
-//		{
-//		  \"fieldID\": \"HWTZxFu3c0ioAQjRBdpXug\",
-//		  \"value\": \"$privacy\"
-//		},
-//		{
-//		  \"fieldID\": \"sUc9Gh9CjkqYtgjQNXn6jQ\",
-//		  \"value\": \"$subscribe\"
-//		},
-//        {
-//          \"fieldID\": \"SyxAD14EIkKRNgjUtKyXmw\",
-//          \"value\": \"$businessunit\"
-//        },
-//        {
-//		  \"fieldID\": \"kdTi3DvN30yWWAjT7eqkGQ\",
-//		  \"value\": \"$medium\"
-//		},
-//		{
-//		  \"fieldID\": \"DMjB23aVGkqGPAjRsEdgRw\",
-//		  \"value\": \"$campaign\"
-//        },
-//        {
-//            \"fieldID\": \"8r9VGqLl10KmagjVg3DgHg\",
-//            \"value\": \"$region\"
-//        },
-//		{
-//			\"fieldID\": \"vfAeg-4f6ka0qgjVNmbPXQ\",
-//			\"value\": \"$frompage\"
-//		}
-//	  ],
-//	  \"source\": \"0001 Refresh Contact - Business Opportunity - used for Franchise Enquiry\"
-//	}";
-        $baseURL = "https://app-3QNH83TKIO.marketingautomation.services/webforms/receivePostback/MzawMDE3MjMwAwA/";
-        $endPoint = "5853b48a-0848-4273-baaf-e390a33800f4";
-
-// Prepare parameters
-        $params = $params . "firstName=" . urlencode($firstname) . "&lastName=" . urlencode($lastname) . "&emailAddress=" . urlencode($email) . "&phoneNumber=" . urlencode($phone) . "&country=" . urlencode($country) . "&website=" . urlencode($frompage) . "&privacy=" . urlencode($privacy) . "&subscribe=" . urlencode($subscribe) . "&";
-
-        if (!empty($region)) {
-            $params = $params . "state=" . urlencode($region) . "&";
-        }
-
-        if (!empty($enquiry)) {
-            $params = $params . "enquiry=" . urlencode($enquiry) . "&";
-        }
-
-        if (!empty($source)) {
-            $params = $params . "campaignSource=" . urlencode($source) . "&";
-        }
-
-        if (!empty($medium)) {
-            $params = $params . "campaignMedium=" . urlencode($medium) . "&";
-        }
-
-        if (!empty($campaign)) {
-            $params = $params . "campaignName=" . urlencode($campaign) . "&";
-        }
-
-        $params = $params . "description=OncoreNewZealandWebsite";
-
-        if ($goodtogo != "no" && !preg_match('/\d+/',$firstname) && !preg_match('/\d+/',$lastname)) {
-
-            // Prepare URL
-            $ssRequest = $baseURL . $endPoint . "/jsonp/?" . $params;
-
-
-// Send request
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $ssRequest);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            $response = curl_exec($ch);
-            $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            curl_close($ch);
-            if ($httpcode != "400") { //check successful response out put
-                // Buffer all upcoming output...
-                ob_start();
-
-                // Send response.
-                echo "Successful";
-                echo $httpcode;
-
-                // Get the size of the output.
-                $size = ob_get_length();
-
-                // Disable compression (in case content length is compressed).
-                header("Content-Encoding: none");
-
-                // Set the content length of the response.
-                header("Content-Length: {$size}");
-
-                // Close the connection.
-                header("Connection: close");
-
-                // Flush all output.
-                ob_end_flush();
-                ob_flush();
-                flush();
-
-                // Close current session (if it exists).
-                if (session_id()){
-                    session_write_close();
-                }
-
-                //add lead record to log
-                include '../includes/log.php';
-            } else {
-                // Info was not sent to Ubiquity - send the info in an email to be manually entered
-                $emailsubject = "Submission from Oncore Consumer website - Franchise Enquiry - Sharpspring down";
-                $emailmessage = "First name: " . $firstname . "\n\n" . "Last name: " . $lastname . "\n\n" . "Email: " . $email . "\n\n" . "Phone: " . $phone . "\n\n" . "Country: " . $country . "\n\n" . "Read and accepted Privacy Policy : " . $privacy . "\n\n" . "Opted out setting: " . $subscribe . "\n\n" . "Message subject: " . $subject . "\n\n" . "Enquiry: " . $enquiry . "\n\n" . "Page Enquiry Made On: " . $frompage . "\n\n". "Region Interested In(UK website): " . $region;
-                mail($emailtoaddress, $emailsubject, $emailmessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
-                echo "Successful mailout"; // So that user sees their info has been collected.
-            }
-        }
+//// Prepare parameters
+//        $params = $params . "firstName=" . urlencode($firstname) . "&lastName=" . urlencode($lastname) . "&emailAddress=" . urlencode($email) . "&phoneNumber=" . urlencode($phone) . "&country=" . urlencode($country) . "&website=" . urlencode($frompage) . "&privacy=" . urlencode($privacy) . "&subscribe=" . urlencode($subscribe) . "&";
+//
+//        if (!empty($region)) {
+//            $params = $params . "state=" . urlencode($region) . "&";
+//        }
+//
+//        if (!empty($enquiry)) {
+//            $params = $params . "enquiry=" . urlencode($enquiry) . "&";
+//        }
+//
+//        if (!empty($source)) {
+//            $params = $params . "campaignSource=" . urlencode($source) . "&";
+//        }
+//
+//        if (!empty($medium)) {
+//            $params = $params . "campaignMedium=" . urlencode($medium) . "&";
+//        }
+//
+//        if (!empty($campaign)) {
+//            $params = $params . "campaignName=" . urlencode($campaign) . "&";
+//        }
+//
+//        $params = $params . "description=OncoreNewZealandWebsite";
+//
+//        if ($goodtogo != "no" && !preg_match('/\d+/',$firstname) && !preg_match('/\d+/',$lastname)) {
+//
+//            // Prepare URL
+//            $ssRequest = $baseURL . $endPoint . "/jsonp/?" . $params;
+//
+//
+//// Send request
+//            $ch = curl_init();
+//            curl_setopt($ch, CURLOPT_URL, $ssRequest);
+//            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//            $response = curl_exec($ch);
+//            $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+//            curl_close($ch);
+//            if ($httpcode != "400") { //check successful response out put
+//                // Buffer all upcoming output...
+//                ob_start();
+//
+//                // Send response.
+//                echo "Successful";
+//                echo $httpcode;
+//
+//                // Get the size of the output.
+//                $size = ob_get_length();
+//
+//                // Disable compression (in case content length is compressed).
+//                header("Content-Encoding: none");
+//
+//                // Set the content length of the response.
+//                header("Content-Length: {$size}");
+//
+//                // Close the connection.
+//                header("Connection: close");
+//
+//                // Flush all output.
+//                ob_end_flush();
+//                ob_flush();
+//                flush();
+//
+//                // Close current session (if it exists).
+//                if (session_id()){
+//                    session_write_close();
+//                }
+//
+//                //add lead record to log
+//                include '../includes/log.php';
+//            } else {
+//                // Info was not sent to Ubiquity - send the info in an email to be manually entered
+//                $emailsubject = "Submission from Oncore Consumer website - Franchise Enquiry - Sharpspring down";
+//                $emailmessage = "First name: " . $firstname . "\n\n" . "Last name: " . $lastname . "\n\n" . "Email: " . $email . "\n\n" . "Phone: " . $phone . "\n\n" . "Country: " . $country . "\n\n" . "Read and accepted Privacy Policy : " . $privacy . "\n\n" . "Opted out setting: " . $subscribe . "\n\n" . "Message subject: " . $subject . "\n\n" . "Enquiry: " . $enquiry . "\n\n" . "Page Enquiry Made On: " . $frompage . "\n\n". "Region Interested In(UK website): " . $region;
+//                mail($emailtoaddress, $emailsubject, $emailmessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
+//                echo "Successful mailout"; // So that user sees their info has been collected.
+//            }
+//        }
     }
 }
 ?>
