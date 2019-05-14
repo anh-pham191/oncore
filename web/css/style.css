@@ -6661,6 +6661,9 @@ form .tips {
     padding-right: 0px;
     padding-top: 38px;
 }
+.related-articles .one-line .col-md-4 {
+    padding-top: 0px;
+}
 
 .one-line .article-box {
     width: 90%;
@@ -6695,7 +6698,7 @@ form .tips {
     color: #333333;
 }
 
-.article-box .description {
+.article-box .description p {
     font-family: "Open Sans";
     font-size: 16px;
     line-height: 1.63;
@@ -6733,11 +6736,66 @@ form .tips {
     float: none;
 }
 
-.article-page .fright img {
+.article-page .fright img, .article-page .fleft img {
     width: 100%;
     height: auto;
 }
 
 .article-page .content-with-image {
     padding-bottom: 70px;
+}
+
+.article-page .comment-with-image .content-body p{
+    font-family: "Poppins";
+    font-size: 36px;
+    font-weight: bold;
+    color: #184414;
+}
+
+.article-page .comment-with-image .content-author {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.63;
+    color: #333333;
+}
+
+.article-page .comment-with-image .fright {
+    padding: 20px 40px;
+}
+
+.related-articles {
+    height: 651px;
+    background-color: #f1f1f1;
+}
+
+.related-articles .inner .col-md-4 {
+    margin-top: 80px;
+}
+div#wideslideshow.overlay.article-page .overlay-container h1 {
+    font-family: "Poppins";
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #ffffff;
+}
+div#wideslideshow.overlay.article-page .overlay-container div.inner {
+    margin-top: 32%;
+}
+div#wideslideshow.overlay.article-page .overlay-container p {
+    font-family: "Open Sans";
+    font-size: 22px;
+    line-height: 1.45;
+    color: #ffffff;
+}
+
+div#wideslideshow.overlay.article-page .overlay-container span {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.38;
+    color: #ffffff;
+}
+
+.article-page .content-body.intro {
+    padding-top: 47px;
+    padding-bottom: 20px
 }

@@ -52,14 +52,17 @@
         <div class="one-line">
             {% for entry in pageEntries %}
 
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4">
                     <div class="article-box">
                         <img src="{{siteUrl}}articleBanner/{{ entry.articleBanner.first().Filename }}" alt="" width="100%"
                              height="250px">
                         <div class="content-box">
                             <p class="title">{{ entry.title }}</p>
-                            <span class="description">When Auckland locals Tim and Amy McKenzie wanted an extreme makeover of their 1930s bungalow,
-                        they contracted Refresh Renovation’s Dave Georgetti to Ut enim ad minim veniam, quis….</span>
+                            <span class="description">
+                                {{ entry.articleIntro }}
+                                {#When Auckland locals Tim and Amy McKenzie wanted an extreme makeover of their 1930s bungalow,#}
+                        {#they contracted Refresh Renovation’s Dave Georgetti to Ut enim ad minim veniam, quis….#}
+                            </span>
                         </div>
                     </div>
                 </div>
