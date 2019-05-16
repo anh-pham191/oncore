@@ -22,27 +22,26 @@
         </div>
     </div>
 
-    {% if craft.request.getSegment(1) != "offers" %}
+    {% if craft.request.getSegment(0) !== "offers" %}
+        <h1>{{ craft.request.getSegment(1) }}</h1>
+
         <div class="filter inner">
-            <span>Filter by: <a href="{{ siteUrl }}articles?type=repairs">Repair </a>Region Category</span>
-        </div>
+        <span>Filter by: <a href="{{ siteUrl }}articles?type=repairs">Repair </a>Region Category</span>
+    </div>
     {% endif %}
+
 
     {# find the wished category #}
     {# {% set category = craft.categories.group('projectType').title('repairs').first() %} #}
     {# Create an entry query with the 'section' and 'limit' parameters #}
     {# {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(category).limit(4) %} #}
 
-    {% if craft.request.getSegment(1) == "articles" %}
-        {% set type = craft.request.getParam('type') %}
-        {% if type is empty %}
-            {% set myEntryQuery = craft.entries().section('articlePage').limit(3) %}
-        {% else %}
-            {% set typeCat = craft.categories.group('projectType').slug(type) %}
-            {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(typeCat).limit(3) %}
-        {% endif %}
+    {% set type = craft.request.getParam('type') %}
+    {% if type is empty %}
+        {% set myEntryQuery = craft.entries().section('articlePage').limit(3) %}
     {% else %}
-        {% set myEntryQuery = craft.entries().section('offerPage').limit(3) %}
+        {% set typeCat = craft.categories.group('projectType').slug(type) %}
+        {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(typeCat).limit(3) %}
     {% endif %}
 
 
@@ -75,18 +74,16 @@
                 </div>
             {% endfor %}
         </div>
-        {% if type is defined %}
+        {% if type is empty %}
+            <a href="{{ pageInfo.firstUrl }}">First Page</a>
+        {% else %}
+            <a href="{{ pageInfo.firstUrl }}?type={{ type }}">First Page</a>
+        {% endif %}
+        {% if pageInfo.prevUrl %}
             {% if type is empty %}
-                <a href="{{ pageInfo.firstUrl }}">First Page</a>
+                <a href="{{ pageInfo.prevUrl }}">Previous Page</a>
             {% else %}
-                <a href="{{ pageInfo.firstUrl }}?type={{ type }}">First Page</a>
-            {% endif %}
-            {% if pageInfo.prevUrl %}
-                {% if type is empty %}
-                    <a href="{{ pageInfo.prevUrl }}">Previous Page</a>
-                {% else %}
-                    <a href="{{ pageInfo.prevUrl }}?type={{ type }}">Previous Page</a>
-                {% endif %}
+                <a href="{{ pageInfo.prevUrl }}?type={{ type }}">Previous Page</a>
             {% endif %}
         {% endif %}
 
@@ -94,45 +91,36 @@
 
 
         {% for page, url in pageInfo.getPrevUrls(5) %}
-            {% if type is defined %}
-                {% if type is empty %}
-                    <a href="{{ url }}">{{ page }}</a>
-                {% else %}
-                    <a href="{{ url }}?type={{ type }}">{{ page }}</a>
-                {% endif %}
+            {% if type is empty %}
+                <a href="{{ url }}">{{ page }}</a>
+            {% else %}
+                <a href="{{ url }}?type={{ type }}">{{ page }}</a>
             {% endif %}
         {% endfor %}
 
         <span class="current">{{ pageInfo.currentPage }}</span>
 
         {% for page, url in pageInfo.getNextUrls(5) %}
-            {% if type is defined %}
-                {% if type is empty %}
-                    <a href="{{ url }}">{{ page }}</a>
-                {% else %}
-                    <a href="{{ url }}?type={{ type }}">{{ page }}</a>
-                {% endif %}
+            {% if type is empty %}
+                <a href="{{ url }}">{{ page }}</a>
+            {% else %}
+                <a href="{{ url }}?type={{ type }}">{{ page }}</a>
             {% endif %}
 
 
         {% endfor %}
 
         {% if pageInfo.nextUrl %}
-            {% if type is defined %}
-                {% if type is empty %}
-                    <a href="{{ pageInfo.nextUrl }}">Next Page</a>
-                {% else %}
-                    <a href="{{ pageInfo.nextUrl }}?type={{ type }}">Next Page</a>
-                {% endif %}
-            {% endif %}
-
-        {% endif %}
-        {% if type is defined %}
             {% if type is empty %}
-                <a href="{{ pageInfo.lastUrl }}">Last Page</a>
+                <a href="{{ pageInfo.nextUrl }}">Next Page</a>
             {% else %}
-                <a href="{{ pageInfo.lastUrl }}?type={{ type }}">Last Page</a>
+                <a href="{{ pageInfo.nextUrl }}?type={{ type }}">Next Page</a>
             {% endif %}
+        {% endif %}
+        {% if type is empty %}
+            <a href="{{ pageInfo.lastUrl }}">Last Page</a>
+        {% else %}
+            <a href="{{ pageInfo.lastUrl }}?type={{ type }}">Last Page</a>
         {% endif %}
     </div>
     {% include 'includes/footer-banner.html' %}

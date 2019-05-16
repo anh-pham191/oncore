@@ -4877,7 +4877,8 @@ a:hover, button:hover {
 }
 
 #wrapper .inner .notmiddle-size {
-    padding-top: 30px
+    padding-top: 30px;
+    padding-bottom: 50px
 }
 
 .what-is-oncore {
@@ -6798,4 +6799,49 @@ div#wideslideshow.overlay.article-page .overlay-container span {
 .article-page .content-body.intro {
     padding-top: 47px;
     padding-bottom: 20px
+}
+
+.form-website {
+    display: none;
+}
+.home-standard {
+    background-color: #fafafa;
+    height: auto;
+    overflow: auto;
+}
+.home-standard .inner {
+    padding: 65px 0px;
+    overflow: auto;
+
+}
+.home-standard .col-md-4.col-sm-4 {
+    padding: 30px 40px 0px 0px;
+}
+
+.home-standard .col-md-4.col-sm-4 span.title {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333333;
+    background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
+    padding-left: 26px;
+    padding-top: 0;
+    background-size: 18px auto;
+    background-position-y: 6px;
+}
+
+.home-standard .col-md-4.col-sm-4 p{
+    padding: 7px 0px;
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.63;
+    color: #333333;
+}
+
+.home-standard .col-md-4.col-sm-4 .get-in-touch {
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: bold;
+    color: #4fae47;
 }

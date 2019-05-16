@@ -1,8 +1,9 @@
 {% extends "layout.html" %}
 {% block seocontent %}
-<title>Oncore NZ | Installation, Maintainance and Repairs | Home</title>
-<meta name="description" content="Get the job done fast, easy and stress free with NZ's leading team for residential and commercial repairs, maintenance, insurance work, and installations. Call us today">
-<meta name="keywords" content="handyman, hire a hubby, repairman, auckland, cheap, affordable, on call, callout, quote, Repairs, Property maintenance,
+    <title>Oncore NZ | Installation, Maintainance and Repairs | Home</title>
+    <meta name="description"
+          content="Get the job done fast, easy and stress free with NZ's leading team for residential and commercial repairs, maintenance, insurance work, and installations. Call us today">
+    <meta name="keywords" content="handyman, hire a hubby, repairman, auckland, cheap, affordable, on call, callout, quote, Repairs, Property maintenance,
 Decorating, Painting, Gibbing and plastering, Plumbing, Electrical, Double glazing retrofitting, Double glazing replacements, Home automation,
 Insulation, Leak repairs, Roofing and spouting, Windows and doors, Cupboards and shelves, Carpet and flooring, Tiling,
 Locks and handles, Furniture assembly, Appliance fitting, Appliance installation, Air conditioning installation, Heat pump installation,
@@ -13,7 +14,8 @@ Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car p
             width: 100%;
             height: auto;
         }
-        @media only all and (min-width: 1440px){
+
+        @media only all and (min-width: 1440px) {
             #myVideo {
                 position: relative;
                 top: -28%;
@@ -26,261 +28,308 @@ Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car p
 
 {% block content %}
 
-<div>
-    <div id="wideslideshow" class="overlay white">
-        {#<img class="notmobile" src="{{siteUrl}}images/homepage-banner.jpg" alt="Oncore - The key to faster, smoother jobs"/>#}
-        <video autoplay muted loop poster="/images/video-poster.jpg" id="myVideo" class="notmobile">
-            <source src="/images/video.mp4" type="video/mp4">
-        </video>
-        <div class=" overlay-container white">
-            <div class="inner">
-            <h1>One call does it all.</h1>
-            <div class="intro-bottom">Oncore is New Zealand's leading team for residential and commercial repairs,
-                maintenance, insurance work, and installations.
-            </div>
-            <p class="learn-more">Learn more <img style="width: 12px" src="{{siteUrl}}svg/baseline-keyboard_arrow_down-24px.svg">
-            </p>
+    <div>
+        <div id="wideslideshow" class="overlay white">
+            {#<img class="notmobile" src="{{siteUrl}}images/homepage-banner.jpg" alt="Oncore - The key to faster, smoother jobs"/>#}
+            <video autoplay muted loop poster="/images/video-poster.jpg" id="myVideo" class="notmobile">
+                <source src="/images/video.mp4" type="video/mp4">
+            </video>
+            <div class=" overlay-container white">
+                <div class="inner">
+                    <h1>One call does it all.</h1>
+                    <div class="intro-bottom">Oncore is New Zealand's leading team for residential and commercial
+                        repairs,
+                        maintenance, insurance work, and installations.
+                    </div>
+                    <p class="learn-more">Learn more <img style="width: 12px"
+                                                          src="{{ siteUrl }}svg/baseline-keyboard_arrow_down-24px.svg">
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="full-width-text-left inner" style="position: relative">
-        <div class="form-banner">
-            <h1>Get in touch</h1>
-            <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
-                <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
-                <div class="row">
-                    <div class="col-md-12 input-label-wrapper">
-                        <input type="text" class="form-control home-form" placeholder="First name"
-                               aria-label="First name" name="firstname" id="formf-firstname"
-                               data-prefix="formf"/>
+        <div class="full-width-text-left inner" style="position: relative">
+            <div class="form-banner">
+                <h1>Get in touch</h1>
+                <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
+                    <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <input type="text" class="form-control home-form" placeholder="First name"
+                                   aria-label="First name" name="firstname" id="formf-firstname"
+                                   data-prefix="formf"/>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 input-label-wrapper">
-                        <input type="text" class="form-control home-form"
-                               aria-label="Last name" name="lastname" placeholder="Last Name"
-                               id="formf-lastname" data-prefix="formf"/>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <input type="text" class="form-control home-form"
+                                   aria-label="Last name" name="lastname" placeholder="Last Name"
+                                   id="formf-lastname" data-prefix="formf"/>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 input-label-wrapper">
-                        <input type="text" class="form-control home-form"
-                               name="email" placeholder="Email Address"
-                               id="formf-email" data-prefix="formf"/>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <input type="text" class="form-control home-form"
+                                   name="email" placeholder="Email Address"
+                                   id="formf-email" data-prefix="formf"/>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 input-label-wrapper">
-                        <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
-                        <!--placeholder="Enter phone number" aria-label="Phone number"-->
-                        <!--data-prefix="c-car"/>-->
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
+                            <!--placeholder="Enter phone number" aria-label="Phone number"-->
+                            <!--data-prefix="c-car"/>-->
 
-                        <input type="tel" class="form-control home-form phone-input" placeholder="Phone Number"
-                               name="tel"  id="formf-tel"
-                               data-prefix="formf" data-phoneformat="yes">
+                            <input type="tel" class="form-control home-form phone-input" placeholder="Phone Number"
+                                   name="tel" id="formf-tel"
+                                   data-prefix="formf" data-phoneformat="yes">
+                        </div>
                     </div>
-                </div>
 
-                <div class="row tick">
-                    <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                        <input type="checkbox" class="uniform-styles" name="privacy"
-                               id="formf-privacy" checked="checked" data-prefix="formf"/>
-                        <label for="formf-privacy"> I have read, understood and accepted the <a
-                                href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                    <div class="row tick">
+                        <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                            <input type="checkbox" class="uniform-styles" name="privacy"
+                                   id="formf-privacy" checked="checked" data-prefix="formf"/>
+                            <label for="formf-privacy"> I have read, understood and accepted the <a
+                                        href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row tick">
-                    <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                        <input type="checkbox" class="uniform-styles" name="subscribe"  id="formf-subscribe"
-                               checked="checked"/>
-                        <label for="formf-subscribe"> I consent to receiving marketing emails.</label>
+                    <div class="row tick">
+                        <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                            <input type="checkbox" class="uniform-styles" name="subscribe" id="formf-subscribe"
+                                   checked="checked"/>
+                            <label for="formf-subscribe"> I consent to receiving marketing emails.</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row tick">
+                    <div class="row tick">
 
-                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
 
-                        <div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>
+                            <div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>
 
+                        </div>
                     </div>
-                </div>
 
-                <div class="row tick">
-                    <div class="col-md-6 col-xs-12 input-label-wrapper">
-                        <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit" value="Get in touch"/>
+                    <div class="row tick">
+                        <div class="col-md-6 col-xs-12 input-label-wrapper">
+                            <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit"
+                                   value="Get in touch"/>
 
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
+
+            <p><strong>The Oncore process ensures your project is delivered to a high standard, on time and within your
+                    budget.</strong></p>
+            <p>From your first consultation, through to project completion, Oncore provides one point of contact. This
+                means no managing multiple trades, no project overruns and no stress.</p>
         </div>
 
-        <p><strong>The Oncore process ensures your project is delivered to a high standard, on time and within your
-            budget.</strong></p>
-        <p>From your first consultation, through to project completion, Oncore provides one point of contact. This
-            means no managing multiple trades, no project overruns and no stress.</p>
     </div>
 
-</div>
+    <div class="home-process">
+        <div class="inner">
+            <div class="step">
+                <img class="image-process" src="{{ siteUrl }}svg/comms.svg">
+                <span>Initial </br> consultation</span>
+            </div>
+            <div class="light-arrow">
+                <img src="{{ siteUrl }}svg/lightarrow.svg">
+            </div>
+            <div class="step">
+                <img class="image-process" src="{{ siteUrl }}svg/quote.svg">
+                <span>Quote </br>&nbsp </span>
+            </div>
+            <div class="light-arrow">
+                <img src="{{ siteUrl }}svg/lightarrow.svg">
+            </div>
+            <div class="step">
+                <img class="image-process" src="{{ siteUrl }}svg/tools.svg">
+                <span>Contractor </br> &nbsp</span>
+            </div>
+            <div class="light-arrow">
+                <img src="{{ siteUrl }}svg/lightarrow.svg">
+            </div>
+            <div class="step">
+                <img class="image-process" src="{{ siteUrl }}svg/projectmanage.svg">
+                <span>High quality </br> management</span>
+            </div>
 
-<div class="home-process">
-    <div class="inner">
-    <div class="step">
-        <img class="image-process" src="{{siteUrl}}svg/comms.svg">
-        <span>Initial </br> consultation</span>
-    </div>
-    <div class="light-arrow">
-        <img src="{{siteUrl}}svg/lightarrow.svg">
-    </div>
-    <div class="step">
-        <img class="image-process" src="{{siteUrl}}svg/quote.svg">
-        <span>Quote </br>&nbsp </span>
-    </div>
-    <div class="light-arrow">
-        <img src="{{siteUrl}}svg/lightarrow.svg">
-    </div>
-    <div class="step">
-        <img class="image-process" src="{{siteUrl}}svg/tools.svg">
-        <span>Contractor </br> &nbsp</span>
-    </div>
-    <div class="light-arrow">
-        <img src="{{siteUrl}}svg/lightarrow.svg">
-    </div>
-    <div class="step">
-        <img class="image-process" src="{{siteUrl}}svg/projectmanage.svg">
-        <span>High quality </br> management</span>
-    </div>
-
-    <!--<p> Learn more <img style="width: 16px" src="{{siteUrl}}svg/arrow-learn-more.svg"></p>-->
-    </div>
-</div>
-<div id="wrapper" style="padding-bottom: 50px">
-    <div class="inner">
-        <div class="full-width-text">
-            <div class="title">Our maintenance and repair services</div>
-            <p>Oncore provides both commercial and residential maintenance and repair services. Whatever the job, we can
-                get it done.</p>
+            <!--<p> Learn more <img style="width: 16px" src="{{ siteUrl }}svg/arrow-learn-more.svg"></p>-->
         </div>
-        <div class="row justmobile">
-            <div class="col-sm-12 col-xs-12">
-                <ul class="help-wrap">
-                    <li class="help">Repairs</li>
-                    <li class="help">Property maintenance</li>
-                    <li class="help">Decorating</li>
-                    <li class="help">Painting</li>
-                    <li class="help">Gibbing and plastering</li>
-                    <li class="help">Plumbing</li>
-                    <li class="help">Electrical</li>
-                    <li class="help">Double glazing retrofitting</li>
-                    <li class="help">Double glazing replacements</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row middle-size">
-            <div class="col-md-6 col-sm-6">
-                <ul class="help-wrap">
-                    <li class="help">Repairs</li>
-                    <li class="help">Property maintenance</li>
-                    <li class="help">Decorating</li>
-                    <li class="help">Painting</li>
-                    <li class="help">Gibbing and plastering</li>
-                    <li class="help">Plumbing</li>
-                    <li class="help">Electrical</li>
-                    <li class="help">Double glazing retrofitting</li>
-                    <li class="help">Double glazing replacements</li>
-                </ul>
-            </div>
-
-            <div class="col-md-6 col-sm-6">
-                <ul class="help-wrap">
-                    <li class="help">Furniture assembly</li>
-                    <li class="help">Appliance fitting</li>
-                    <li class="help">Appliance installation</li>
-                    <li class="help">Air conditioning installation</li>
-                    <li class="help">Heat pump installation</li>
-                    <li class="help">Water blasting</li>
-                    <li class="help">Building cleaning</li>
-                    <li class="help">Roof cleaning</li>
-                    <li class="help">Path, driveway cleaning</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row notmobile notmiddle-size">
-            <div class="col-md-3">
-                <ul class="help-wrap">
-                    <li class="help">Repairs</li>
-                    <li class="help">Property maintenance</li>
-                    <li class="help">Decorating</li>
-                    <li class="help">Painting</li>
-                    <li class="help">Gibbing and plastering</li>
-                    <li class="help">Plumbing</li>
-                    <li class="help">Electrical</li>
-                    <li class="help">Double glazing retrofitting</li>
-                    <li class="help">Double glazing replacements</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <ul class="help-wrap">
-                    <li class="help">Home automation</li>
-                    <li class="help">Insulation</li>
-                    <li class="help">Leak repairs</li>
-                    <li class="help">Roofing and spouting</li>
-                    <li class="help">Windows and doors</li>
-                    <li class="help">Cupboards and shelves</li>
-                    <li class="help">Carpet and flooring</li>
-                    <li class="help">Tiling</li>
-                    <li class="help">Locks and handles</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <ul class="help-wrap">
-                    <li class="help">Furniture assembly</li>
-                    <li class="help">Appliance fitting</li>
-                    <li class="help">Appliance installation</li>
-                    <li class="help">Air conditioning installation</li>
-                    <li class="help">Heat pump installation</li>
-                    <li class="help">Water blasting</li>
-                    <li class="help">Building cleaning</li>
-                    <li class="help">Roof cleaning</li>
-                    <li class="help">Path, driveway cleaning</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <ul class="help-wrap">
-                    <li class="help">Car park maintenance</li>
-                    <li class="help">Gutter cleaning</li>
-                    <li class="help">Paving</li>
-                    <li class="help">Bricklaying</li>
-                    <li class="help">Concreting</li>
-                    <li class="help">Fence and gate repairs</li>
-                    <li class="help">Garden maintenance</li>
-                    <li class="help">Pergola assembly</li>
-                    <li class="help">Garden shed assembly</li>
-                </ul>
-            </div>
-        </div>
-        <!--to develop bullet point-->
-        <!--<div class="see-more">-->
-            <!--<span>See more type of work <img style="width: 16px" src="{{siteUrl}}svg/arrow.svg"></span></div>-->
     </div>
-</div>
-{% include 'includes/footer-banner.html' %}
+    <div id="wrapper">
+        <div class="inner">
+            <div class="full-width-text">
+                <div class="title">Our maintenance and repair services</div>
+                <p>Oncore provides both commercial and residential maintenance and repair services. Whatever the job, we
+                    can
+                    get it done.</p>
+            </div>
+            <div class="row justmobile">
+                <div class="col-sm-12 col-xs-12">
+                    <ul class="help-wrap">
+                        <li class="help">Repairs</li>
+                        <li class="help">Property maintenance</li>
+                        <li class="help">Decorating</li>
+                        <li class="help">Painting</li>
+                        <li class="help">Gibbing and plastering</li>
+                        <li class="help">Plumbing</li>
+                        <li class="help">Electrical</li>
+                        <li class="help">Double glazing retrofitting</li>
+                        <li class="help">Double glazing replacements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row middle-size">
+                <div class="col-md-6 col-sm-6">
+                    <ul class="help-wrap">
+                        <li class="help">Repairs</li>
+                        <li class="help">Property maintenance</li>
+                        <li class="help">Decorating</li>
+                        <li class="help">Painting</li>
+                        <li class="help">Gibbing and plastering</li>
+                        <li class="help">Plumbing</li>
+                        <li class="help">Electrical</li>
+                        <li class="help">Double glazing retrofitting</li>
+                        <li class="help">Double glazing replacements</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <ul class="help-wrap">
+                        <li class="help">Furniture assembly</li>
+                        <li class="help">Appliance fitting</li>
+                        <li class="help">Appliance installation</li>
+                        <li class="help">Air conditioning installation</li>
+                        <li class="help">Heat pump installation</li>
+                        <li class="help">Water blasting</li>
+                        <li class="help">Building cleaning</li>
+                        <li class="help">Roof cleaning</li>
+                        <li class="help">Path, driveway cleaning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row notmobile notmiddle-size">
+                <div class="col-md-3">
+                    <ul class="help-wrap">
+                        <li class="help">Repairs</li>
+                        <li class="help">Property maintenance</li>
+                        <li class="help">Decorating</li>
+                        <li class="help">Painting</li>
+                        <li class="help">Gibbing and plastering</li>
+                        <li class="help">Plumbing</li>
+                        <li class="help">Electrical</li>
+                        <li class="help">Double glazing retrofitting</li>
+                        <li class="help">Double glazing replacements</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="help-wrap">
+                        <li class="help">Home automation</li>
+                        <li class="help">Insulation</li>
+                        <li class="help">Leak repairs</li>
+                        <li class="help">Roofing and spouting</li>
+                        <li class="help">Windows and doors</li>
+                        <li class="help">Cupboards and shelves</li>
+                        <li class="help">Carpet and flooring</li>
+                        <li class="help">Tiling</li>
+                        <li class="help">Locks and handles</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="help-wrap">
+                        <li class="help">Furniture assembly</li>
+                        <li class="help">Appliance fitting</li>
+                        <li class="help">Appliance installation</li>
+                        <li class="help">Air conditioning installation</li>
+                        <li class="help">Heat pump installation</li>
+                        <li class="help">Water blasting</li>
+                        <li class="help">Building cleaning</li>
+                        <li class="help">Roof cleaning</li>
+                        <li class="help">Path, driveway cleaning</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="help-wrap">
+                        <li class="help">Car park maintenance</li>
+                        <li class="help">Gutter cleaning</li>
+                        <li class="help">Paving</li>
+                        <li class="help">Bricklaying</li>
+                        <li class="help">Concreting</li>
+                        <li class="help">Fence and gate repairs</li>
+                        <li class="help">Garden maintenance</li>
+                        <li class="help">Pergola assembly</li>
+                        <li class="help">Garden shed assembly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--to develop bullet point-->
+            <!--<div class="see-more">-->
+            <!--<span>See more type of work <img style="width: 16px" src="{{ siteUrl }}svg/arrow.svg"></span></div>-->
+        </div>
+        <div class="home-standard">
+            <div class="inner ">
+                <div class="full-width-text">
+                    <div class="title">We can help you meet the Healthy Homes Standards</div>
+                    <p>From 2021 onwards, all landlords will be required by law to meet certain rental property
+                        standards. </p>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <span class="title">Insulation</span>
+                    <p>If your insulation isn’t up to standard, we can top it up or replace it as needed. It’s that
+                        simple.</p>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <span class="title">Heating</span>
+                    <p>Oncore will explain your options and, if required, provide your property with a high-quality
+                        fixed-heating installation. </p>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <span class="title">Ventilation</span>
+                    <p>We’ll advise you on whether or not your extractor fans and windows meet the standards. If not,
+                        we’ll get them sorted.</p>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <span class="title">Drainage and guttering </span>
+                    <p>Our team will improve your property’s drainage, guttering, drainpipes and ground moisture
+                        barrier; ensuring there are no surface water or drainage issues. </p>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <span class="title">Draught stopping </span>
+                    <p>Oncore specialises in stopping gaps and holes in walls, ceilings, windows, floors and doors. We
+                        can also close in all unused chimneys and fireplaces.</p>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <span class="title">Don't know where to start?</span>
+                    <p>Oncore can help you to meet all of these standards with one call!</p>
+                    <a class="get-in-touch" href="contact-us/project-enquiry">Get in touch <img style="margin-top: -4px;" src="svg/arrow.svg" alt="Get in touch"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    {% include 'includes/footer-banner.html' %}
 
 {% endblock %}
 {% block scripts %}
-<!--<script src="{{ siteUrl}}js/recaptcha.js"></script>-->
+    <!--<script src="{{ siteUrl }}js/recaptcha.js"></script>-->
 
-<script>
-    scrollDown($( ".learn-more" ),  $(".home-process"));
-    scrollDown($(".arrow-down"), $("#services-box"));
-    scrollDown($(".enquiry-button"), $("#enquiry-form"));
-</script>
-<script>
-    // grecaptcha.ready(function () {
-    //     grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
-    //         $('#captcha').val(token);
-    //     }); // this one when form submit please
-    // });
-</script>
-{% endblock scripts%}
+    <script>
+        scrollDown($(".learn-more"), $(".home-process"));
+        scrollDown($(".arrow-down"), $("#services-box"));
+        scrollDown($(".enquiry-button"), $("#enquiry-form"));
+    </script>
+    <script>
+        // grecaptcha.ready(function () {
+        //     grecaptcha.execute('6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH', {action: 'homepage'}).then(function (token) {
+        //         $('#captcha').val(token);
+        //     }); // this one when form submit please
+        // });
+    </script>
+{% endblock scripts %}

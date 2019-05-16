@@ -1,0 +1,238 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <style> @media only all and (min-width:48em){
+            #content.panorama,#content.panorama.contact #content-body{
+                padding:24px 10px 0 10px
+            }
+        }
+        @media only all and (min-width:1025px){
+            #content.panorama{
+                width:992px;
+                padding:35px 4px 0 4px
+            }
+            #content.panorama.contact #content-body{
+                padding:35px 10px 0 10px
+            }
+            #handbook-form{
+                width:80%
+            }
+        }
+        @media only all and (min-width:78em){
+            #content.panorama{
+                width:1200px;
+                padding:35px 0 0 0
+            }
+            .stage2-form #content.panorama{
+                width:992px
+            }
+            #content.panorama.contact #content-body{
+                padding:35px 15px 0 15px
+            }
+        }
+        #content.panorama.contact #content-body,#content.panorama.contact #content-right{
+            width:50%;
+            margin-left:0
+        }
+        #content.panorama.contact #content-right{
+            background-color:#fafafa
+        }
+        @media only all and (max-width:47.937em){
+            #content.panorama.contact #content-body{
+                width:100%;
+                padding:20px
+            }
+            #content.panorama.contact #content-right{
+                width:100%;
+                padding:40px 0
+            }
+        }
+        #content.panorama.contact #content-right img{
+            width:100%
+        }
+        h1{
+            font-family:'Montserrat',sans-serif;
+            font-size:35px;
+            line-height:1.29;
+            font-weight:800
+        }
+        h2{
+            font-family:'Montserrat',sans-serif;
+            font-size:22px;
+            line-height:1.45;
+            font-weight:500
+        }
+        #handbook-form .row div{
+            padding:0
+        }
+        #handbook-form{
+            padding-top:42px
+        }
+        .step3,.step2{
+            display:none
+        }
+        .invalid-tooltip{
+            padding:.5rem !important
+        }
+        #submit{
+            margin-top:15px
+        }
+        .input-label-wrapper{
+            margin-bottom: 25px !important
+        }
+        .inner .row{
+            margin-left:0px;
+            margin-right: 0px
+        }
+        @media only all and (min-width: 78em){
+            #content.panorama.contact #content-body,#content.panorama.contact #content-right {
+                padding: 35px 15px 0 15px;
+            }
+        }
+    </style>
+    <div class="inner">
+
+        <section id="content" class="panorama contact" role="main">
+            <div class="clearfix">
+                <div id="content-body" class="form">
+                    <h1>Get a free digital copy of Renovate Handbook</h1>
+                    <h2>Just sign up to our newsletter and we’ll send it your way.</h2>
+                    <div class="theformarea-c formholder" id="handbook-form">
+                        <p class="instructions"></p>
+                        <form action="/forms/renovate-handbook.php" method="post" id="handbook" name="handbook" enctype="multipart/form-data" class="clearfix stage1form">
+                            <!--first+last name-->
+                            <div class="row step2" id="firstName">
+                                <div class="col-md-12 col-sm-12 col-xs-12 input-label-wrapper">
+                                    <label class="labelname">First name</label>
+                                    <input type="text" class="form-control" aria-label="First name" name="firstName" id="firstName-handbook" data-validate="required">
+                                </div>
+                            </div>
+                            <div class="row step2" id="lastName">
+                                <div class="col-md-12 col-sm-12 col-xs-12 input-label-wrapper">
+                                    <label class="labelname">Last name</label>
+                                    <input type="text" class="form-control" aria-label="Last name" name="lastName" id="lastName-handbook">
+                                </div>
+                            </div>
+                            <!--/first+last name-->
+
+                            <!--email #-->
+                            <div class="row step1" id="email">
+                                <div class="col-md-12 input-label-wrapper">
+                                    <label class="labelname">Email</label>
+                                    <input type="text" class="form-control" aria-label="Email address" name="email" id="email-handbook" data-validate="email">
+                                </div>
+                            </div>
+                            <!--/email #-->
+
+                            <!--phone #-->
+                            <div class="row step2" id="mobile">
+                                <div class="col-md-12 input-label-wrapper">
+                                    <label class="labelname">Phone</label>
+                                    <input type="text" class="form-control" aria-label="Phone number" name="mobile" id="mobile-handbook">
+                                </div>
+                            </div>
+                            <!--/phone #-->
+                            <div class="row step2" id="region">
+                                <div class="col-md-12 input-label-wrapper">
+                                    <label class="labelname">Region</label>
+                                    <input type="text" class="form-control" aria-label="Phone number" name="region" id="region-handbook">
+                                </div>
+                            </div>
+                            <!--enquiry-->
+                            <div class="row step3" id="lead">
+                                <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                    <label class="labelname">One last question (optional):<br/><br/>If you are actively thinking about renovating, would you like someone from Refresh to contact you?</label>
+                                    <label><input type="radio" id="lead-y" class="uniform-styles input-label-wrapper" name="lead" value="yes" checked> Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label><input type="radio" id="lead-n" class="uniform-styles input-label-wrapper" name="lead" value="no"> No</label>
+                                </div>
+                            </div>
+                            <div class="row step3" id="enquiry">
+                                <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                    <label class="labelname">Tell us a bit about your project (optional)</label>
+                                    <textarea rows="5" class="form-control col-xs-12" name="enquiry" aria-label="Enquiry" id="enquiry-handbook"></textarea>
+                                </div>
+                            </div>
+                            <!--/enquiry-->
+
+
+                            <div class="row step1" id="privacy">
+                                <div class="col-sm-12 col-xs-12 input-label-wrapper chkbox-wrapper">
+                                    <input type="checkbox" name="privacy" id="privacy-handbook" aria-label="Privacy" {if "{site_version}" != "version-uk"}checked="checked"{/if} data-validate="privacy">
+                                    <label for="privacy-handbook"> I have read, understood and accepted the <a href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                                </div>
+                            </div>
+
+                            <div class="row step2" id="subscribe">
+                                <div class="col-sm-12 col-xs-12 input-label-wrapper chkbox-wrapper">
+                                    <input type="checkbox" name="subscribe" id="privacy-subscribe" aria-label="Subscribe" {if "{site_version}" != "version-uk"}checked="checked"{/if}>
+                                    <label for="privacy-subscribe"> I consent to receiving marketing communications.</label>
+                                </div>
+                            </div>
+
+                            <fieldset class="clearfix form-website">
+                                <legend></legend>
+                                <label id="c-enq-website" class="input fullwidth"><span>Prove you are human by leaving this field blank</span> <input type="text" name="website" autocomplete="off"></label>
+                            </fieldset>
+
+                            <input type="hidden" name="formpage" id="formpage-handbook">
+                            <input type="hidden" name="formname" value="Renovate Handbook Download">
+                            <input type="hidden" name="step" id="step-handbook" value="step1">
+
+                            <!-- Country -->
+
+                            <input type="hidden" name="country" value="New Zealand" id="country-handbook">
+
+                            <!--submit buttons-->
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12 input-label-wrapper">
+                                    <button type="submit" class="btn btn-primary btn-block" id="submit">Get Renovate Handbook</button>
+                                </div>
+                            </div>
+                            <!--submit buttons-->
+                        </form>
+                        <div id="prog1" class="progress" style="display: none;"></div>
+                    </div>
+                </div>
+                <div id="content-right">
+                    <img src="/images/renovate-handbook-bg.jpg" alt="Renovate Handbook" />
+
+
+
+                </div>
+            </div>
+        </section>
+
+    </div><!-- end .inner -->
+
+
+
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <!--<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>-->
+    <!--<script src="{{ siteUrl }}js/recaptcha.js"></script>-->
+
+    <script>
+        $(".heading-links").click(function () {
+            var that = $(this);
+            $(".heading").each(function () {
+                if (that.html() === $(this).html()) {
+                    $('html, body').animate({scrollTop: $(this).offset().top - 130}, 1000);
+                }
+            });
+        })
+        scrollDown($(".meet-director"), $(".track-record"));
+        scrollDown($(".find-out-more"), $(".services-three-cols"));
+        scrollDown($(".cta-button"), $(".form-banner"));
+        $("fieldset.testinput").css("display", "none");
+
+
+    </script>
+
+    <script>
+    </script>
+{% endblock scripts %}
