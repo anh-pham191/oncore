@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+    {#{% include 'includes/header-banner.html'  with { 'image' : entry.bannerimage.first().Filename, 'h1': entry.h1heading, 'breadcrumb': '<a#}
+    {#href="/" >Home</a> / <a href="/contact-us/project-enquiry/">Get In Touch</a> / <a class="bold" href="/contact-us/project-enquiry/">Project Enquiry</a>' } %}#}
+    <div id="wideslideshow" class="overlay white article-page">
+        <img src="{{ siteUrl }}articleBanner/{{ entry.articleBanner.first().Filename }}"
+             alt="Oncore - The key to faster, smoother jobs"/>
+        <div class=" overlay-container white">
+            <div class="inner">
+                <h1>{{ entry.h1heading }}</h1>
+                <p>Smaller heading to be shown here</p>
+                <span>Mins to read here</span><span> By Author here</span>
+            </div>
+        </div>
+    </div>
+
+    <div class=" article-page">
+        {#summary text here#}
+        <div class="content-body inner intro">{{ entry.articleIntro }}</div>
+
+
+        {% set matrixBlock = entry.articleBlock %}
+        {#table of content here #}
+        <ul class="inner">
+            {% for block in matrixBlock %}
+                {% if block.type == "paragraph" %}
+
+                    <li><a class="heading-links" style="color: #4ca845">{{ block.heading }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        {#content matrix for each paragraph here#}
+        {% for block in matrixBlock %}
+            {% if block.type == "paragraph" %}
+                <h3 class="inner heading">{{ block.heading }}</h3>
+                <div class="content-body inner">{{ block.body }}</div>
+                {% if block.pullTextLeft is not empty and block.pullImageRight is not empty %}
+                    <div class="content-with-image inner">
+
+                        <div class="fleft">
+                            <div class="content-body">{{ block.pullTextLeft }}</div>
+                        </div>
+                        <div class="fright"><img src="{{ siteUrl }}/articleBanner/{{ block.pullImageRight.first().Filename }}"
+                                                 alt="">
+                            {% if block.imageCaption is not empty %}
+                                <span>{{ block.imageCaption }}</span>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                {% endif %}
+
+                {% if block.pullTextRight is not empty and block.pullImageLeft is not empty %}
+                    <div class="content-with-image inner">
+
+
+                        <div class="fleft"><img src="{{ siteUrl }}/articleBanner/{{ block.pullImageLeft.first().Filename }}"
+                                                 alt="">
+                            {% if block.imageCaption is not empty %}
+                                <span>{{ block.imageCaption }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="fright">
+                            <div class="content-body">{{ block.pullTextRight }}</div>
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if block.fullWidthImage is not empty %}
+                    <div class="inner">
+                        <img width="100%" src="{{ siteUrl }}/articleBanner/{{ block.fullWidthImage.first().Filename }}"
+                             alt="">
+                        {% if block.imageCaption is not empty %}
+                            <span>{{ block.imageCaption }}</span>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if block.pullQuoteImage is not empty and block.pullQuoteText is not empty %}
+                    <div class="comment-with-image">
+                        <div class="fleft">
+                            <img width="100%" height="466px"
+                                 src="{{ siteUrl }}/articleBanner/{{ block.pullQuoteImage.first().Filename }}"
+                                 alt="">
+                            {% if block.imageCaption is not empty %}
+                                <span>{{ block.imageCaption }}</span>
+                            {% endif %}
+                        </div>
+
+                        <div class="fright">
+                            <div class="content-body">{{ block.pullQuoteText }}</div>
+                            <div class="content-author">{{ block.pullQuoteTextAuthor }}</div>
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if block.extraContent is not empty %}
+                    <div class="content-body inner">{{ block.extraContent }}</div>
+                {% endif %}
+
+            {% endif %}
+        {% endfor %}
+        {#get previous and next entry#}
+        <div class="inner">
+            {% set prevEntries = entry.getPrev(craft.entries.section('articlePage')) %}
+            {% if prevEntries|length %}
+                <a href="{{ prevEntries.url() }}">Previous</a>
+            {% endif %}
+            {% set nextEntries = entry.getNext(craft.entries.section('articlePage')) %}
+            {% if nextEntries|length %}
+                <a href="{{ nextEntries.url() }}">Next</a>
+            {% endif %}
+        </div>
+        {#get list of three related entry#}
+        {% set query = craft.entries.section('articlePage').id('not ' ~ entry.id).limit(3) %}
+        {% if query|length %}
+
+            {% set prevEntries = clone(query).order('postDate desc').all() %}
+            {#{% set prevEntries = clone(query).postDate('> ' ~ entry.postDate.timestamp).order('postDate desc').all() %}#}
+            <div class="related-articles">
+                <div class="inner one-line">
+                    {% for entry in prevEntries %}
+                        <div class="col-md-4 col-sm-4">
+                            <div class="article-box">
+                                <img src="{{ siteUrl }}articleBanner/{{ entry.articleBanner.first().Filename }}" alt=""
+                                     width="100%"
+                                     height="250px">
+                                <div class="content-box">
+                                    <p class="title">{{ entry.title }}</p>
+                                    <span class="description">{{ entry.articleIntro }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% include 'includes/footer-banner.html' %}
+
+    </div><!-- end .inner -->
+
+{% endblock content %}
+
+{% block scripts %}
+    <!--<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>-->
+    <!--<script src="{{ siteUrl }}js/recaptcha.js"></script>-->
+
+    <script>
+        $(".heading-links").click(function () {
+            var that = $(this);
+            $(".heading").each(function () {
+                if (that.html() === $(this).html()) {
+                    $('html, body').animate({scrollTop: $(this).offset().top - 130}, 1000);
+                }
+            });
+        })
+        scrollDown($(".meet-director"), $(".track-record"));
+        scrollDown($(".find-out-more"), $(".services-three-cols"));
+        scrollDown($(".cta-button"), $(".form-banner"));
+        $("fieldset.testinput").css("display", "none");
+
+
+    </script>
+
+    <script>
+    </script>
+{% endblock scripts %}

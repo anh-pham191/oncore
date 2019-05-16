@@ -1,0 +1,425 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <style> @media only all and (min-width:48em){
+            #content.panorama,#content.panorama.contact #content-body{
+                padding:24px 10px 0 10px
+            }
+        }
+        @media only all and (min-width:1025px){
+            #content.panorama{
+                width:992px;
+                padding:35px 4px 0 4px
+            }
+            #content.panorama.contact #content-body{
+                padding:35px 10px 0 10px
+            }
+            #handbook-form{
+                width:80%
+            }
+        }
+        @media only all and (min-width:78em){
+            #content.panorama{
+                width:1200px;
+                padding:35px 0 0 0
+            }
+            .stage2-form #content.panorama{
+                width:992px
+            }
+            #content.panorama.contact #content-body{
+                padding:35px 15px 0 15px
+            }
+        }
+        #content.panorama.contact #content-body,#content.panorama.contact #content-right{
+            width:50%;
+            margin-left:0
+        }
+        #content.panorama.contact #content-right{
+            background-color:#fafafa
+        }
+        @media only all and (max-width:47.937em){
+            #content.panorama.contact #content-body{
+                width:100%;
+                padding:20px
+            }
+            #content.panorama.contact #content-right{
+                width:100%;
+                padding:40px 0
+            }
+        }
+        #content.panorama.contact #content-right img{
+            width:100%
+        }
+        h1{
+            font-family:'Montserrat',sans-serif;
+            font-size:35px;
+            line-height:1.29;
+            font-weight:800
+        }
+        h2{
+            font-family:'Montserrat',sans-serif;
+            font-size:22px;
+            line-height:1.45;
+            font-weight:500
+        }
+        #handbook-form .row div{
+            padding:0
+        }
+        #handbook-form{
+            padding-top:42px
+        }
+        .step3,.step2{
+            display:none
+        }
+        .invalid-tooltip{
+            padding:.5rem !important
+        }
+        #submit{
+            margin-top:15px
+        }
+        .input-label-wrapper{
+            margin-bottom: 25px !important
+        }
+        .inner .row{
+            margin-left:0px;
+            margin-right: 0px
+        }
+        @media only all and (min-width: 78em){
+            #content.panorama.contact #content-body,#content.panorama.contact #content-right {
+                padding: 35px 15px 0 15px;
+            }
+        }
+
+        .step3 label {
+            display: inline-block;
+        }
+    </style>
+    <div class="inner">
+
+        <section id="content" class="panorama contact" role="main">
+            <div class="clearfix">
+                <div id="content-body" class="form">
+                    <h1>Get a free digital copy of Renovate Handbook</h1>
+                    <h2>Just sign up to our newsletter and we’ll send it your way.</h2>
+                    <div class="theformarea-c formholder" id="handbook-form">
+                        <p class="instructions"></p>
+                        <form action="/forms/renovate-handbook.php" method="post" id="handbook" name="handbook" enctype="multipart/form-data" class="clearfix stage1form">
+                            <!--first+last name-->
+                            <div class="row step2" id="firstName">
+                                <div class="col-md-12 col-sm-12 col-xs-12 input-label-wrapper">
+                                    <label class="labelname">First name</label>
+                                    <input type="text" class="form-control" aria-label="First name" name="firstName" id="firstName-handbook" data-validate="required">
+                                </div>
+                            </div>
+                            <div class="row step2" id="lastName">
+                                <div class="col-md-12 col-sm-12 col-xs-12 input-label-wrapper">
+                                    <label class="labelname">Last name</label>
+                                    <input type="text" class="form-control" aria-label="Last name" name="lastName" id="lastName-handbook">
+                                </div>
+                            </div>
+                            <!--/first+last name-->
+
+                            <!--email #-->
+                            <div class="row step1" id="email">
+                                <div class="col-md-12 input-label-wrapper">
+                                    <label class="labelname">Email</label>
+                                    <input type="text" class="form-control" aria-label="Email address" name="email" id="email-handbook" data-validate="email">
+                                </div>
+                            </div>
+                            <!--/email #-->
+
+                            <!--phone #-->
+                            <div class="row step2" id="mobile">
+                                <div class="col-md-12 input-label-wrapper">
+                                    <label class="labelname">Phone</label>
+                                    <input type="text" class="form-control" aria-label="Phone number" name="mobile" id="mobile-handbook">
+                                </div>
+                            </div>
+                            <!--/phone #-->
+                            <div class="row step2" id="region">
+                                <div class="col-md-12 input-label-wrapper">
+                                    <label class="labelname">Region</label>
+                                    <input type="text" class="form-control" aria-label="Phone number" name="region" id="region-handbook">
+                                </div>
+                            </div>
+                            <!--enquiry-->
+                            <div class="row step3" id="lead">
+                                <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                    <label class="labelname">One last question (optional):<br/><br/>If you are actively thinking about renovating, would you like someone from Refresh to contact you?</label>
+                                    <label style="padding-left: 20px"><input type="radio" id="lead-y" class="uniform-styles input-label-wrapper" name="lead" value="yes" checked> Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label><input type="radio" id="lead-n" class="uniform-styles input-label-wrapper" name="lead" value="no"> No</label>
+                                </div>
+                            </div>
+                            <div class="row step3" id="enquiry">
+                                <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                    <label class="labelname">Tell us a bit about your project (optional)</label>
+                                    <textarea rows="5" class="form-control col-xs-12" name="enquiry" aria-label="Enquiry" id="enquiry-handbook"></textarea>
+                                </div>
+                            </div>
+                            <!--/enquiry-->
+
+
+                            <div class="row step1" id="privacy">
+                                <div class="col-sm-12 col-xs-12 input-label-wrapper chkbox-wrapper">
+                                    <input type="checkbox" name="privacy" id="privacy-handbook" aria-label="Privacy" checked="checked" data-validate="privacy">
+                                    <label for="privacy-handbook"> I have read, understood and accepted the <a href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                                </div>
+                            </div>
+
+                            <div class="row step2" id="subscribe">
+                                <div class="col-sm-12 col-xs-12 input-label-wrapper chkbox-wrapper">
+                                    <input type="checkbox" name="subscribe" id="privacy-subscribe" aria-label="Subscribe" {if "{site_version}" != "version-uk"}checked="checked"{/if}>
+                                    <label for="privacy-subscribe"> I consent to receiving marketing communications.</label>
+                                </div>
+                            </div>
+
+                            <fieldset class="clearfix form-website">
+                                <legend></legend>
+                                <label id="c-enq-website" class="input fullwidth"><span>Prove you are human by leaving this field blank</span> <input type="text" name="website" autocomplete="off"></label>
+                            </fieldset>
+
+                            <input type="hidden" name="formpage" id="formpage-handbook">
+                            <input type="hidden" name="formname" value="Renovate Handbook Download">
+                            <input type="hidden" name="step" id="step-handbook" value="step1">
+
+                            <!-- Country -->
+
+                            <input type="hidden" name="country" value="New Zealand" id="country-handbook">
+
+                            <!--submit buttons-->
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12 input-label-wrapper">
+                                    <button type="submit" class="btn btn-primary btn-block" id="submit">Get Renovate Handbook</button>
+                                </div>
+                            </div>
+                            <!--submit buttons-->
+                        </form>
+                        <div id="prog1" class="progress" style="display: none;"></div>
+                    </div>
+                </div>
+                <div id="content-right">
+                    <img src="/images/renovate-handbook-bg.jpg" alt="Renovate Handbook" />
+
+
+
+                </div>
+            </div>
+        </section>
+
+    </div><!-- end .inner -->
+
+
+
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <!--<script src="https://www.google.com/recaptcha/api.js?render=6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH"></script>-->
+    <!--<script src="{{ siteUrl }}js/recaptcha.js"></script>-->
+
+    <script>
+        $(".heading-links").click(function () {
+            var that = $(this);
+            $(".heading").each(function () {
+                if (that.html() === $(this).html()) {
+                    $('html, body').animate({scrollTop: $(this).offset().top - 130}, 1000);
+                }
+            });
+        })
+        scrollDown($(".meet-director"), $(".track-record"));
+        scrollDown($(".find-out-more"), $(".services-three-cols"));
+        scrollDown($(".cta-button"), $(".form-banner"));
+        $("fieldset.testinput").css("display", "none");
+
+
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function(){
+            $("#formpage-handbook").val(window.location.href);
+            $( ":input" ).on('input propertychange', function() {
+                if (this.dataset.validate != undefined && this.dataset.validate != null) {
+                    handbookValidation(this.dataset.validate,this.id);
+                }
+            });
+            $(":input").focusout(function(){
+                if (this.dataset.validate != undefined && this.dataset.validate != null) {
+                    handbookValidation(this.dataset.validate,this.id);
+                }
+            });
+            $("#handbook").validate({submitHandler:function(D){
+
+                    if($('#email').is(':visible')) {
+                        //step 1
+                        var validation;
+                        var email = $('#email-handbook').val();
+                        if (!email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                            if(!$("#invalid-email-handbook").length){
+                                $("#email-handbook").after( "<div class='invalid-tooltip' id='invalid-email-handbook'>Please enter a valid email address.</div>" );
+                            }
+                            $("#email-handbook").addClass( "error-msg" );
+                            if($("#email-handbook").prev().attr("class")=="labelname"){
+                                $("#email-handbook").prev().addClass("error-red");
+                            }
+                            validation = "invalid";
+                        }else{
+                            $("#invalid-email-handbook").css({display: "none" });
+                            $("#email-handbook").removeClass( "error-msg" );
+                            $("#email-handbook").prev().removeClass("error-red");
+
+                        }
+
+                        if($("#privacy-handbook").prop("checked") == false){
+                            if(!$("#invalid-privacy-handbook").length){
+                                $("#privacy-handbook").next("label").after( "<div class='invalid-tooltip' id='invalid-privacy-handbook'>Please read and accept the Privacy Policy.</div>" );
+                            }
+                            $("#invalid-privacy-handbook").css({display: "block" });
+                            $("#privacy-handbook").addClass( "error-msg" );
+                            validation = "invalid";
+                        }else{
+                            $("#invalid-privacy-handbook").css({display: "none" });
+                            $("#privacy-handbook").removeClass( "error-msg" );
+                        }
+
+                    }else if($('#firstName').is(':visible')) {
+                        if ($("#firstName-handbook").val() === ""){
+                            if(!$("#invalid-firstName-handbook").length){
+                                $("#firstName-handbook").after( "<div class='invalid-tooltip' id='invalid-firstName-handbook'>This field is required.</div>" );
+                            }
+                            $("#invalid-firstName-handbook").css({display: "block" });
+                            $("#firstName-handbook").addClass("error-msg");
+                            if($("#firstName-handbook").prev().attr("class")=="labelname"){
+                                $("#firstName-handbook").prev().addClass("error-red");
+                            }
+                            validation = "invalid";
+                        }else{
+                            if($("#invalid-firstName-handbook").length){
+                                $("#invalid-firstName-handbook").css({display: "none" });
+                            }
+                            $("#firstName-handbook").removeClass("error-msg");
+                            $("#firstName-handbook").prev().removeClass("error-red");
+                        }
+                    }
+
+                    if(validation === "invalid"){
+                        return false;
+                    }
+                    $("#prog1").fadeIn(200);
+
+                    $.ajax({url:$(D).attr("action"),type:"POST",data:$(D).serialize(),
+                        success:function(result){
+                            try{if(result.replace(/\s+/g,"")=="Successful"){
+                                if($('#email').is(':visible')) {
+                                    //step 1
+                                    ga("send","event","Exit intent popups","Email entered","Renovate handbook download form");
+                                    window.location.href="/clippings/special-offer/renovate-handbook-download/pagetype/step2/";
+                                }else if($('#firstName').is(':visible')) {
+                                    //step 2
+                                    ga("send","event","Exit intent popups","Subscribed to newsletter","Renovate handbook download form");
+                                    window.location.href="/clippings/special-offer/renovate-handbook-download/pagetype/step3/";
+                                }else if($('#enquiry').is(':visible')) {
+                                    //step 3
+                                    ga("send","event","Exit intent popups","Submit enquiry","Renovate handbook download form");
+                                    window.location.href="/contact-us/thank-you/pagetype/renovate-handbook/";
+                                }
+                            }else{
+                                $('#prog1').fadeOut(200);$(".instructions").html("Your form submission was Invalid. Please try again later.").css({color:"red"});
+                                return false;
+                            }
+                            }catch(err){
+                                $("html,body").animate({"scrollTop":$(".instructions").offset().top-200},1000);
+
+                                if(result.replace(/\s+/g,"")=="spam"){
+                                    $('#prog1').fadeOut(200);$(".instructions").html("Your form submission was Invalid. Please try again later.").css({color:"red"});return false;
+                                }else if(result.replace(/\s+/g,"")=="noprivacy"){
+                                    $('#prog1').fadeOut(200);$(".instructions").html("You must read and accept the Privacy Policy in order to continue.").css({color:"red"});return false;
+                                }else{
+                                    $('#prog1').fadeOut(200);$(".instructions").html("Your form submission was Invalid. Please try again later.").css({color:"red"});}return false;
+                            }
+                        },error:function(xhr,resp,text){
+                            $('#prog1').fadeOut(200);$(".instructions").html("Your form submission was Invalid. Please try again later.").css({color:"red"});
+                            $("html,body").animate({"scrollTop":$(".instructions").offset().top-200},1000);return false;
+                        }});
+
+                }});
+        });
+        function handbookValidation(type,id){
+            if(type=="required"){
+                if ($("#"+id).val() === ""){
+                    if(!$("#invalid-"+id).length){
+                        $("#"+id).after( "<div class='invalid-tooltip' id='invalid-"+id+"'>This field is required.</div>" );
+                    }
+                    $("#invalid-"+id).css({display: "block" });
+                    $("#"+id).addClass("error-msg");
+                    if($("#"+id).prev().attr("class")=="labelname"){
+                        $("#"+id).prev().addClass("error-red");
+                    }
+                }else{
+                    if($("#invalid-"+id).length){
+                        $("#invalid-"+id).css({display: "none" });
+                    }
+                    $("#"+id).removeClass("error-msg");
+                    $("#"+id).prev().removeClass("error-red");
+                }
+            }else if(type=="email"){
+                if (!$("#"+id).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                    if(!$("#invalid-"+id).length){
+                        $("#"+id).after( "<div class='invalid-tooltip' id='invalid-"+id+"'>Please enter a valid email address.</div>" )
+                    }
+                    $("#invalid-"+id).css({display: "block" });
+                    $("#"+id).addClass( "error-msg" );
+                    if($("#"+id).prev().attr("class")=="labelname"){
+                        $("#"+id).prev().addClass("error-red");
+                    }
+                }else{
+                    if($("#invalid-"+id).length){
+                        $("#invalid-"+id).css({display: "none" });
+                    }
+                    $("#"+id).removeClass( "error-msg" );
+                    $("#"+id).prev().removeClass("error-red");
+                }
+            }else if(type=="privacy"){
+                if($("#"+id).prop("checked") == false){
+                    if(!$("#invalid-"+id).length){
+                        $("#"+id).next("label").after( "<div class='invalid-tooltip' id='invalid-"+id+"'>Please read and accept the Privacy Policy.</div>" );
+                    }
+                    $("#invalid-"+id).css({display: "block" });
+                    $("#"+id).addClass( "error-msg" );
+                }else{
+                    $("#invalid-"+id).css({display: "none" });
+                    $("#"+id).removeClass( "error-msg" );
+                }
+            }
+        }
+
+        var last_segment = location.href.match(/([^\/]*)\/*$/)[1];
+        if(last_segment == "step2"){
+            $("h1").text("Almost there!");
+            $("h2").text("Provide a few more details and your copy will be on it’s way.");
+            $("#email-handbook").val($.cookie("handbookemail"));
+            $("#privacy-handbook").attr("checked",true);
+            $(".step1").hide();
+            $(".step2").show();
+            $("#step-handbook").val("step2");
+        }else if( last_segment == "step3"){
+            $("h1").text("Thank you!");
+            $("h2").text("You will receive an email with your free digital copy of Renovate Handbook.");
+            $("#submit").text("Send extra information");
+            $("#firstName-handbook").val($.cookie("handbookfirstname"));
+            $("#lastName-handbook").val($.cookie("handbooklastname"));
+            $("#mobile-handbook").val($.cookie("handbookphone"));
+            $("#email-handbook").val($.cookie("handbookemail"));
+            $("#privacy-handbook").attr("checked",true);
+            if($.cookie("handbooksubscribe")=="False"){
+                $("#subscribe-handbook").attr("checked",true);
+            }
+            $(".step2").hide();
+            $(".step1").hide();
+            $(".step3").show();
+            $("#step-handbook").val("step3");
+        }
+    </script>
+{% endblock scripts %}
