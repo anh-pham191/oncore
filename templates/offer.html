@@ -146,7 +146,7 @@
                             <!--enquiry-->
                             <div class="row step3" id="lead">
                                 <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                                    <label class="labelname">One last question (optional):<br/><br/>If you are actively thinking about renovating, would you like someone from Refresh to contact you?</label>
+                                    <label class="labelname">One last question (optional):<br/><br/>If you are actively thinking about home maintenance, would you like someone from Oncore to contact you?</label>
                                     <label style="padding-left: 20px"><input type="radio" id="lead-y" class="uniform-styles input-label-wrapper" name="lead" value="yes" checked> Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <label><input type="radio" id="lead-n" class="uniform-styles input-label-wrapper" name="lead" value="no"> No</label>
                                 </div>
@@ -397,16 +397,16 @@
 
         var last_segment = location.href.match(/([^\/]*)\/*$/)[1];
         if(last_segment == "step2"){
-            $("h1").text("Almost there!");
-            $("h2").text("Provide a few more details and your copy will be on it’s way.");
+            $("#content-body h1").text("Almost there!");
+            $("#content-body h2").text("Provide a few more details and your copy will be on it’s way.");
             $("#email-handbook").val($.cookie("handbookemail"));
             $("#privacy-handbook").attr("checked",true);
             $(".step1").hide();
             $(".step2").show();
             $("#step-handbook").val("step2");
         }else if( last_segment == "step3"){
-            $("h1").text("Thank you!");
-            $("h2").text("You will receive an email with your free digital copy of Renovate Handbook.");
+            $("#content-body h1").text("Thank you!");
+            $("#content-body h2").text("You will receive an email with your free digital copy of Renovate Handbook.");
             $("#submit").text("Send extra information");
             $("#firstName-handbook").val($.cookie("handbookfirstname"));
             $("#lastName-handbook").val($.cookie("handbooklastname"));
