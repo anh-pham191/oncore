@@ -117,7 +117,7 @@ if (isset($_COOKIE['frommedium'])) {
 
 // Check if fields that shouldn't do contain a URL
 
-$testString = $firstname.$lastname.$mobile;
+$testString = $firstname.$lastname.$phone;
 $isHTTP = strpos($testString, 'http:');
 $isHTTPS = strpos($testString, 'https:');
 if (($isHTTP !== false) || ($isHTTPS !== false)) {
