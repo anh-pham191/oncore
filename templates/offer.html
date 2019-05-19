@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
+{% block snippet %}
+    {% block seocontent %}
+        <title>{{ entry.title }}</title>
+        <meta name="description"
+              content="{{ entry.seoMetaDescription }}">
+        <meta name="keywords" content="{{ entry.seoMetaKeywords }}">
+    {% endblock seocontent %}
+    <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
 
+{% endblock snippet %}
 
 {% block content %}
     <style> @media only all and (min-width:48em){
