@@ -1,0 +1,17 @@
+<div class="one-line">
+    {% for entry in pageEntries %}
+
+        <div class="col-md-4 col-sm-4"  onclick="location.href='{{ entry.url }}'">
+            <div class="article-box">
+                <img src="{{ siteUrl }}articleBanner/{{ entry.articleBanner.first().Filename }}" alt=""
+                     width="100%"
+                     height="250px">
+                <div class="content-box">
+                    <p class="title">{{ entry.title }}</p>
+                    <div class="description">
+                        <p>{{ entry.articleIntro }}</p></div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

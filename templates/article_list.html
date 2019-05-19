@@ -4,19 +4,22 @@
 
 {% endblock snippet %}
 {% block content %}
+    <div id="list-page">
+    {% if craft.request.getSegment(1) == "articles" %}
+        {% include 'includes/header-banner.html'  with { "image" : entry.bannerimage.first().Filename, "h1": "Articles", "breadcrumb": "<a
+        href='/' >Home</a> / <a href='/articles/'>Blog</a>  / <a class='bold' href='/articles/'>Articles</a>" } %}
+    {% elseif craft.request.getSegment(1) == "offers" %}
+        {% include 'includes/header-banner.html'  with { "image" : entry.bannerimage.first().Filename, "h1": "Offers", "breadcrumb": "<a
+        href='/' >Home</a> / <a class='bold' href='/offers/'>Offers</a>" } %}
+    {% endif %}
 
-    {% include 'includes/header-banner.html'  with { 'image' : 'blank', 'h1': 'Articles', 'breadcrumb': '<a
-        href="/" >Home</a> / <a href="/contact-us/project-enquiry/">Get In Touch</a> / <a class="bold" href="/contact-us/project-enquiry/">Project Enquiry</a>' } %}
     <div class="inner full-width-text-left list-page">
-        <div class="col-md-8">
-            <p>Oncore provides maintenance, repairs, installations, decorating and insurance claim services to both
-                residential and commercial clients.</p>
-            <p class="cta-text">Here, you can find an abundance of advice and inspiration for your project, while
-                finding out more about the work Oncore does.
-                If you would like to arrange a consultation with one of our local specialists, get in touch. </p>
+        <div class="col-md-8 col-xs-12">
+            <p>{{ entry.pageIntroductionBoldText }}</p>
+            <p class="cta-text">{{ entry.pageIntroductionSmallerText }}</p>
         </div>
-        <div class="col-md-4">
-            <button onclick="location.href='http://oncore.local/contact-us/project-enquiry'" class="cta-button">Get in
+        <div class="col-md-4 col-xs-12 innermobile">
+            <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get in
                 touch
             </button>
         </div>
@@ -33,15 +36,15 @@
     {# Create an entry query with the 'section' and 'limit' parameters #}
     {# {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(category).limit(4) %} #}
 
-    {% if craft.request.getSegment(1) == "articles" %}
+    {% if craft.request.getSegment(1) == "articles" %} {#if articles page #}
         {% set type = craft.request.getParam('type') %}
-        {% if type is empty %}
+        {% if type is empty %} {# no filter in the page#}
             {% set myEntryQuery = craft.entries().section('articlePage').limit(3) %}
-        {% else %}
+        {% else %} {# get entry based on the filter #}
             {% set typeCat = craft.categories.group('projectType').slug(type) %}
             {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(typeCat).limit(3) %}
         {% endif %}
-    {% else %}
+    {% else %} {# if offer pages #}
         {% set myEntryQuery = craft.entries().section('offerPage').limit(3) %}
     {% endif %}
 
@@ -50,91 +53,38 @@
     {# {% set myEntryQuery = craft.entries().section('articlePage').limit(4) %} #}
 
     {% paginate myEntryQuery as pageInfo, pageEntries %}
-
-
     {# Display the entries #}
 
     <div class="list-block inner">
-        <div class="one-line">
-            {% for entry in pageEntries %}
-
-                <div class="col-md-4 col-sm-4">
-                    <div class="article-box">
-                        <img src="{{ siteUrl }}articleBanner/{{ entry.articleBanner.first().Filename }}" alt=""
-                             width="100%"
-                             height="250px">
-                        <div class="content-box">
-                            <p class="title">{{ entry.title }}</p>
-                            <span class="description">
-                                {{ entry.articleIntro }}
-                                {#When Auckland locals Tim and Amy McKenzie wanted an extreme makeover of their 1930s bungalow,#}
-                                {#they contracted Refresh Renovation’s Dave Georgetti to Ut enim ad minim veniam, quis….#}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        {% if type is defined %}
-            {% if type is empty %}
-                <a href="{{ pageInfo.firstUrl }}">First Page</a>
-            {% else %}
-                <a href="{{ pageInfo.firstUrl }}?type={{ type }}">First Page</a>
-            {% endif %}
-            {% if pageInfo.prevUrl %}
-                {% if type is empty %}
-                    <a href="{{ pageInfo.prevUrl }}">Previous Page</a>
-                {% else %}
-                    <a href="{{ pageInfo.prevUrl }}?type={{ type }}">Previous Page</a>
-                {% endif %}
-            {% endif %}
-        {% endif %}
-
-
-
-
-        {% for page, url in pageInfo.getPrevUrls(5) %}
-            {% if type is defined %}
-                {% if type is empty %}
-                    <a href="{{ url }}">{{ page }}</a>
-                {% else %}
-                    <a href="{{ url }}?type={{ type }}">{{ page }}</a>
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-
-        <span class="current">{{ pageInfo.currentPage }}</span>
-
-        {% for page, url in pageInfo.getNextUrls(5) %}
-            {% if type is defined %}
-                {% if type is empty %}
-                    <a href="{{ url }}">{{ page }}</a>
-                {% else %}
-                    <a href="{{ url }}?type={{ type }}">{{ page }}</a>
-                {% endif %}
-            {% endif %}
-
-
-        {% endfor %}
-
-        {% if pageInfo.nextUrl %}
-            {% if type is defined %}
-                {% if type is empty %}
-                    <a href="{{ pageInfo.nextUrl }}">Next Page</a>
-                {% else %}
-                    <a href="{{ pageInfo.nextUrl }}?type={{ type }}">Next Page</a>
-                {% endif %}
-            {% endif %}
-
-        {% endif %}
-        {% if type is defined %}
-            {% if type is empty %}
-                <a href="{{ pageInfo.lastUrl }}">Last Page</a>
-            {% else %}
-                <a href="{{ pageInfo.lastUrl }}?type={{ type }}">Last Page</a>
-            {% endif %}
+        {% include 'includes/article-block-list.html'  with { 'pageEntries' : pageEntries } %}
+        {% if craft.request.getSegment(1) == "offers" %} {#theres no category needed so no filter in pagination #}
+            {% include 'includes/pagination-listpage.html'  with { "filter" : 0, "pageInfo": pageInfo } %}
+        {% else %}
+            {% include 'includes/pagination-listpage.html'  with { "filter" : 1, "pageInfo": pageInfo, "type": type } %}
         {% endif %}
     </div>
     {% include 'includes/footer-banner.html' %}
-
+    </div>
 {% endblock content %}
+{% block scripts %}
+    <script>
+        var titleLength = 47;
+        var descriptionLength = 180;
+        if ($(window).width() >= 768 && $(window).width() < 1024){
+            titleLength = 35;
+            descriptionLength = 120;
+        }
+        trimText(titleLength, $(".article-box .title"));
+        trimText(descriptionLength, $(".article-box .description p"));
+        function trimText(count, object){
+            object.each(function () {
+                var content = $(this).text();
+                if (content.length > count) {
+
+                    var c = content.substr(0, count);
+                    $(this).html(c + "...");
+                }
+            })
+        }
+    </script>
+{% endblock scripts %}
