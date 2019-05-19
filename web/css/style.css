@@ -4390,6 +4390,11 @@ li.help {
     line-height: 2;
     margin-left: 7px
 }
+.home-standard .inner {
+    padding: 65px 20px;
+    overflow: auto;
+
+}
 
 @media only all and (min-width: 48em) and (max-width: 64em) {
     #desktop-share ul li a i {
@@ -6819,11 +6824,7 @@ div#wideslideshow.overlay.article-page .overlay-container span {
     height: auto;
     overflow: auto;
 }
-.home-standard .inner {
-    padding: 65px 0px;
-    overflow: auto;
 
-}
 .home-standard .col-md-4.col-sm-4 {
     padding: 30px 40px 0px 0px;
 }
