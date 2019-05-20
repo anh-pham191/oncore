@@ -3,9 +3,9 @@
 
         <div class="col-md-4 col-sm-4"  onclick="location.href='{{ entry.url }}'">
             <div class="article-box">
-                <img src="{{ siteUrl }}articleBanner/{{ entry.articleThumbnailImage.first().Filename }}" alt=""
-                     width="100%"
-                     height="250px">
+                <div class="image-box">
+                    <img src="{{ siteUrl }}articleBanner/{{ entry.articleThumbnailImage.first().Filename }}" alt="">
+                </div>
                 <div class="content-box">
                     <p class="title">{{ entry.title }}</p>
                     <div class="description">

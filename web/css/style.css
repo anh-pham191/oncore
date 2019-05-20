@@ -6710,6 +6710,15 @@ form .tips {
     min-height: 250px;
 }
 
+.article-box .image-box {
+    height: 250px;
+    width: 100%;
+    overflow: hidden
+}
+.article-box .image-box img {
+    width: 100%;
+    height: auto;
+}
 .article-box .title {
     font-family: "Poppins";
     font-size: 25px;
