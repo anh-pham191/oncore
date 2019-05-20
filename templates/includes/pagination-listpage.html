@@ -1,8 +1,8 @@
 <div class="pagination">
     {% if filter == 0 %}
         {#{% if pageInfo.prevUrl %}#}
-        <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"> <img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
-        <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"> <img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
+        <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"> <img src="/svg/arrow-green-left.svg" alt="">Previous Page</a>
+        <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"> <img src="/svg/arrow-green-left.svg" alt=""></a>
         {#{% endif %}#}
         <div class="paginate col-md-8 col-sm-6 col-xs-6">
             {% for page, url in pageInfo.getPrevUrls(5) %}
@@ -14,17 +14,17 @@
             {% endfor %}
         </div>
         {#{% if pageInfo.nextUrl %}#}
-        <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}">Next Page</a>
-        <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}"></a>
+        <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}">Next Page<img src="/svg/arrow-green-right.svg" alt=""></a>
+        <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}"><img src="/svg/arrow-green-right.svg" alt=""></a>
         {#{% endif %}#}
     {% else %}
         {#{% if pageInfo.prevUrl %}#}
         {% if type is empty %}
-            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"><img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
-            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"><img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
+            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"><img src="/svg/arrow-green-left.svg" alt="">Previous Page</a>
+            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"><img src="/svg/arrow-green-left.svg" alt=""></a>
         {% else %}
-            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
-            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
+            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="/svg/arrow-green-left.svg" alt="">Previous Page</a>
+            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="/svg/arrow-green-left.svg" alt=""></a>
         {% endif %}
         {#{% endif %}#}
 
@@ -56,11 +56,11 @@
         {#{% if pageInfo.nextUrl %}#}
         {% if type is defined %}
             {% if type is empty %}
-                <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}">Next Page</a>
-                <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}"></a>
+                <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}">Next Page<img src="/svg/arrow-green-right.svg" alt=""></a>
+                <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}"><img src="/svg/arrow-green-right.svg" alt=""></a>
             {% else %}
-                <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}?type={{ type }}">Next Page</a>
-                <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}?type={{ type }}"></a>
+                <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}?type={{ type }}">Next Page<img src="/svg/arrow-green-right.svg" alt=""></a>
+                <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}?type={{ type }}"><img src="/svg/arrow-green-right.svg" alt=""></a>
             {% endif %}
         {% endif %}
 

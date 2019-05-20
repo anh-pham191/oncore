@@ -19,9 +19,11 @@
              alt="Oncore - The key to faster, smoother jobs"/>
         <div class=" overlay-container white">
             <div class="inner">
-                <h1>{{ entry.title }}</h1>
-                <p>Here’s our guide to the things you should know</p>
-                <span>Mins to read here</span><span> By Author here</span>
+                <div class="title-box">
+                    <h1>{{ entry.title }}</h1>
+                    <p>Here’s our guide to the things you should know</p>
+                    <span>Mins to read here</span><span> By Author here</span>
+                </div>
             </div>
         </div>
     </div>
@@ -52,8 +54,9 @@
                         <div class="fleft">
                             <div class="content-body">{{ block.pullTextLeft }}</div>
                         </div>
-                        <div class="fright"><img src="{{ siteUrl }}/articleBanner/{{ block.pullImageRight.first().Filename }}"
-                                                 alt="">
+                        <div class="fright"><img
+                                    src="{{ siteUrl }}/articleBanner/{{ block.pullImageRight.first().Filename }}"
+                                    alt="">
                             {% if block.imageCaption is not empty %}
                                 <span>{{ block.imageCaption }}</span>
                             {% endif %}
@@ -66,8 +69,9 @@
                     <div class="content-with-image inner">
 
 
-                        <div class="fleft"><img src="{{ siteUrl }}/articleBanner/{{ block.pullImageLeft.first().Filename }}"
-                                                 alt="">
+                        <div class="fleft"><img
+                                    src="{{ siteUrl }}/articleBanner/{{ block.pullImageLeft.first().Filename }}"
+                                    alt="">
                             {% if block.imageCaption is not empty %}
                                 <span>{{ block.imageCaption }}</span>
                             {% endif %}
@@ -172,13 +176,14 @@
         $("fieldset.testinput").css("display", "none");
         var titleLength = 47;
         var descriptionLength = 180;
-        if ($(window).width() >= 768 && $(window).width() < 1024){
+        if ($(window).width() >= 768 && $(window).width() < 1024) {
             titleLength = 35;
             descriptionLength = 120;
         }
         trimText(titleLength, $(".article-box .title"));
         trimText(descriptionLength, $(".article-box .description p"));
-        function trimText(count, object){
+
+        function trimText(count, object) {
             object.each(function () {
                 var content = $(this).text();
                 if (content.length > count) {

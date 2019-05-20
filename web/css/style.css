@@ -6735,9 +6735,14 @@ form .tips {
 }
 .article-page .content-body  {
     padding-bottom: 61px;
+    width: 80%;
 }
 
-.article-page .content-body p, .article-page li {
+.article-page .comment-with-image .content-body, .article-page .content-with-image .content-body {
+    padding-bottom: 0px;
+}
+
+.article-page .content-body p, .article-page li, .article-page .content-body.intro {
     font-family: "LibreBaskerville";
     font-size: 20px;
     line-height: 1.9;
@@ -6760,7 +6765,7 @@ form .tips {
     height: auto;
 }
 
-.article-page .content-with-image {
+.article-page .content-with-image, .article-page .comment-with-image {
     padding-bottom: 70px;
 }
 
@@ -6769,6 +6774,7 @@ form .tips {
     font-size: 36px;
     font-weight: bold;
     color: #184414;
+    line-height: normal;
 }
 
 .article-page .comment-with-image .content-author {
@@ -6798,14 +6804,17 @@ div#wideslideshow.overlay.article-page .overlay-container h1 {
     color: #ffffff;
     width: 100%;
 }
-div#wideslideshow.overlay.article-page .overlay-container div.inner {
-    margin-top: 32%;
+div#wideslideshow.overlay.article-page .overlay-container div.inner .title-box {
+    position: absolute;
+    bottom: 50px;
 }
 div#wideslideshow.overlay.article-page .overlay-container p {
     font-family: "Open Sans";
     font-size: 22px;
     line-height: 1.45;
     color: #ffffff;
+    padding-bottom: 19px;
+    padding-top: 5px;
 }
 
 div#wideslideshow.overlay.article-page .overlay-container span {
@@ -6879,6 +6888,10 @@ div#wideslideshow.overlay.article-page .overlay-container span {
 
 .paginate.prev-page img {
     margin-right: 50px;
+}
+
+.paginate.next-page img {
+    margin-left: 50px;
 }
 .paginate.next-page, .paginate.prev-page {
     background-color: #fafafa;
