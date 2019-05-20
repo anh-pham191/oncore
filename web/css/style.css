@@ -5785,7 +5785,7 @@ a:hover, button:hover {
     width: 100%;
 }
 
-#content.contact #content-right #project-job #c-car-submit {
+#content.contact #content-right #project-job #c-car-submit, #handbook-form button#submit {
     width: 269px;
     height: 48px;
     border-radius: 3px;
