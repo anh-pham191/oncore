@@ -4391,7 +4391,7 @@ li.help {
     margin-left: 7px
 }
 .home-standard .inner {
-    padding: 65px 20px;
+    padding: 65px 0px;
     overflow: auto;
 
 }
@@ -5662,6 +5662,9 @@ a:hover, button:hover {
         border: solid 2px #ffffff;
         background-color: transparent;
         padding: 0 0;
+    }
+    .home-standard .inner {
+        padding: 65px 20px;
     }
 }
 
