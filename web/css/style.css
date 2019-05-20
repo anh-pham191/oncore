@@ -6711,7 +6711,7 @@ form .tips {
 }
 
 .article-box .image-box {
-    height: 250px;
+    height: 220px;
     width: 100%;
     overflow: hidden
 }
@@ -6926,6 +6926,9 @@ div#wideslideshow.overlay.article-page .overlay-container span {
         width: 100%;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .article-box .image-box {
+        height: 150px;
     }
 }
 @media only all and (max-width: 47.99em) {
