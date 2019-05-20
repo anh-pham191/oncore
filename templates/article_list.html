@@ -77,6 +77,9 @@
         var titleLength = 47;
         var descriptionLength = 180;
         if ($(window).width() >= 768 && $(window).width() < 1024){
+            titleLength = 30;
+            descriptionLength = 100;
+        } else if ($(window).width() >= 1024 && $(window).width() < 1249){
             titleLength = 35;
             descriptionLength = 120;
         }
