@@ -1,8 +1,8 @@
 <div class="pagination">
     {% if filter == 0 %}
         {#{% if pageInfo.prevUrl %}#}
-        <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"> <img src="svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
-        <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"> <img src="svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
+        <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"> <img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
+        <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"> <img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
         {#{% endif %}#}
         <div class="paginate col-md-8 col-sm-6 col-xs-6">
             {% for page, url in pageInfo.getPrevUrls(5) %}
@@ -20,11 +20,11 @@
     {% else %}
         {#{% if pageInfo.prevUrl %}#}
         {% if type is empty %}
-            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"><img src="svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
-            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"><img src="svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
+            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"><img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
+            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"><img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
         {% else %}
-            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
-            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
+            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt="">Previous Page</a>
+            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="/svg/baseline-arrow_right_alt-24px (1) copy 2.svg" alt=""></a>
         {% endif %}
         {#{% endif %}#}
 

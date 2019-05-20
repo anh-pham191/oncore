@@ -6796,6 +6796,7 @@ div#wideslideshow.overlay.article-page .overlay-container h1 {
     font-weight: 600;
     line-height: 1.29;
     color: #ffffff;
+    width: 100%;
 }
 div#wideslideshow.overlay.article-page .overlay-container div.inner {
     margin-top: 32%;

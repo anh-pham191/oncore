@@ -20,7 +20,7 @@
         <div class=" overlay-container white">
             <div class="inner">
                 <h1>{{ entry.title }}</h1>
-                <p>Smaller heading to be shown here</p>
+                <p>Here’s our guide to the things you should know</p>
                 <span>Mins to read here</span><span> By Author here</span>
             </div>
         </div>
@@ -138,7 +138,7 @@
                                      height="250px">
                                 <div class="content-box">
                                     <p class="title">{{ entry.title }}</p>
-                                    <span class="description">{{ entry.articleIntro }}</span>
+                                    <div class="description"><p>{{ entry.articleIntro }}</p></div>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +170,24 @@
         scrollDown($(".find-out-more"), $(".services-three-cols"));
         scrollDown($(".cta-button"), $(".form-banner"));
         $("fieldset.testinput").css("display", "none");
+        var titleLength = 47;
+        var descriptionLength = 180;
+        if ($(window).width() >= 768 && $(window).width() < 1024){
+            titleLength = 35;
+            descriptionLength = 120;
+        }
+        trimText(titleLength, $(".article-box .title"));
+        trimText(descriptionLength, $(".article-box .description p"));
+        function trimText(count, object){
+            object.each(function () {
+                var content = $(this).text();
+                if (content.length > count) {
 
+                    var c = content.substr(0, count);
+                    $(this).html(c + "...");
+                }
+            })
+        }
 
     </script>
 
