@@ -6362,10 +6362,7 @@ a:hover, button:hover {
         margin-left: 0
     }
 
-    #content h1 {
-        color: #077b3a;
-        font-weight: 400
-    }
+
 }
 
 @media only all and (min-width: 48em) {
