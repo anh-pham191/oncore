@@ -48,7 +48,7 @@
             {% set myEntryQuery = craft.entries().section('articlePage').limit(9) %}
         {% else %} {# get entry based on the filter #}
             {% set typeCat = craft.categories.group('projectType').slug(type) %}
-            {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(typeCat).limit(9 %}
+            {% set myEntryQuery = craft.entries().section('articlePage').relatedTo(typeCat).limit(9) %}
         {% endif %}
     {% else %} {# if offer pages #}
         {% set myEntryQuery = craft.entries().section('offerPage').limit(9) %}
