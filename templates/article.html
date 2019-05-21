@@ -2,7 +2,7 @@
 
 {% block snippet %}
     {% block seocontent %}
-        <title>{{ entry.title }}</title>
+        <title>{{ entry.seoPageTitle }}</title>
         <meta name="description"
               content="{{ entry.seoMetaDescription }}">
         <meta name="keywords" content="{{ entry.seoMetaKeywords }}">
@@ -21,12 +21,12 @@
             <div class="inner">
                 <div class="title-box">
                     <h1>{{ entry.title }}</h1>
-                    <p>Here’s our guide to the things you should know//</p>
+                    <p>{{ entry.smallerHeading }}</p>
                     <span class="minute">
                         <img src="/svg/clock.svg" alt=""
                                               style="width: 18px; margin-top: -4px; margin-right: 10px;">
-                        10 minutes read //</span><span
-                            class="author"> By Jane Doe//</span>
+                        {{ entry.minuteToRead }} minutes read</span><span
+                            class="author"> By {{ entry.articleAuthor }}</span>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
         {#content matrix for each paragraph here#}
         {% for block in matrixBlock %}
             {% if block.type == "paragraph" %}
-                <div class="inner heading"><h3>{{ block.heading }}</h3><span class="back-to-top">Back to top</span>
+                <div class="inner heading"><h3>{{ block.heading }}</h3><span class="back-to-top notmobile">Back to top</span>
                 </div>
                 <div class="content-body inner">{{ block.body }}</div>
                 {% if block.pullTextLeft is not empty and block.pullImageRight is not empty %}
@@ -146,7 +146,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-3 next">
                     {% set nextEntries = entry.getNext(craft.entries.section('articlePage')) %}
                     {% if nextEntries|length %}
-                        <a href="" class="fright">
+                        <a href="{{ nextEntries.url() }}" class="fright">
                             <span class="notmobile">Next</span>
                             <div class="fright">
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -204,7 +204,7 @@
         var descriptionLength = 180;
         if ($(window).width() >= 768 && $(window).width() < 1024) {
             titleLength = 35;
-            descriptionLength = 120;
+            descriptionLength = 100;
         }
         trimText(titleLength, $(".article-box .title"));
         trimText(descriptionLength, $(".article-box .description p"));

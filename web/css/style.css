@@ -3735,6 +3735,8 @@ ul {
         margin: 0 auto;
     }
 
+
+
     .inner-three-cols {
         width: 100%;
         margin: 0 auto;
@@ -3971,7 +3973,13 @@ li.help {
     div#wideslideshow.overlay {
         max-height: 500px;
     }
-
+    div#wideslideshow.overlay.article-page {
+        height: 500px;
+    }
+    div#wideslideshow.overlay.article-page img {
+        width: auto;
+        height: auto;
+    }
     div#wideslideshow.overlay .overlay-container h1, div#wideslideshow.overlay .overlay-container .heading {
         width: 57%;
         font-size: 32px;
@@ -4111,6 +4119,12 @@ li.help {
     .notmiddle-size {
         display: none;
     }
+    #wrapper .article-page .inner {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px
+    }
 }
 
 @media only all and (max-width: 47.99em) {
@@ -4168,6 +4182,10 @@ li.help {
     div#wideslideshow.overlay.header-banner, div#wideslideshow.overlay.franchise {
         padding-bottom: 0px;
     }
+    div#wideslideshow.overlay.article-page .overlay-container {
+        position: absolute;
+        background-color: transparent;
+    }
 
     div#wideslideshow.overlay .overlay-container {
         position: static;
@@ -4201,6 +4219,9 @@ li.help {
         color: #333333;
         width: 100%;
         padding: 10px;
+    }
+    div#wideslideshow.overlay.article-page .overlay-container h1 {
+        padding-left: 0px;
     }
 
     div#wideslideshow.overlay.franchise .overlay-container .intro-bottom {
@@ -4542,6 +4563,7 @@ a:hover, button:hover {
 }
 
 @media only all and (max-width: 47.937em) {
+
     #menu-mobile {
         left: 0;
         z-index: 999;
@@ -6948,7 +6970,9 @@ div#wideslideshow.overlay.article-page .overlay-container span {
     line-height: 1.38;
     color: #ffffff;
 }
-
+div#wideslideshow.overlay.article-page .overlay-container .minute {
+    padding-right: 17px;
+}
 .article-page .content-body.intro {
     padding-top: 47px;
     padding-bottom: 20px
@@ -7038,6 +7062,9 @@ div#wideslideshow.overlay.article-page .overlay-container span {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .article-page .comment-with-image .content-body p {
+        font-size: 25px;
+    }
     .article-box .content-box {
         height: 250px;
     }
@@ -7107,6 +7134,7 @@ div#wideslideshow.overlay.article-page .overlay-container span {
     display: none;
     position: fixed;
     top: 90px;
+    z-index: 1;
     width: 35%;
     /*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));*/
     left: 17%;
@@ -7153,12 +7181,6 @@ div#wideslideshow.overlay.article-page .overlay-container span {
     }
 }
 
-@media only all and (max-width: 47.937em) {
-    .blog-scrolling {
-        /*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0))*/
-    }
-
-}
 #link-tools .center i {
     color: #656565;
     font-size: 25px;
@@ -7192,4 +7214,47 @@ div#wideslideshow.overlay.article-page .overlay-container span {
     font-size: 14px;
     line-height: 1.57;
     color: #333333;
+}
+@media only all and (max-width: 47.937em) {
+    .blog-scrolling {
+        /*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0))*/
+    }
+    #wrapper .related-articles .inner.one-line {
+        padding-bottom: 45px;
+    }
+    #link-tools .prev a, #link-tools .next a {
+        width: 100%;
+    }
+    .article-page .comment-with-image .content-body p {
+        font-size: 20px;
+    }
+    .article-page li {
+        padding-left: 8px;
+    }
+    .article-page .comment-with-image .fright, .article-page .comment-with-image .fleft, .article-page .content-with-image .fright, .article-page .content-with-image .fleft {
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        float: left;
+    }
+    .article-page .content-body {
+        width: 100%;
+    }
+    .related-articles {
+        height: auto;
+        overflow: auto;
+    }
+    .article-page .fright img, .article-page .fleft img {
+        padding-top: 60px;
+    }
+
+    .article-page .comment-with-image img {
+        padding-top: 0px;
+    }
+    .article-page .image-caption {
+        padding-bottom: 60px;
+        width: 100%;
+        float: left;
+    }
+
 }
