@@ -4,16 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% if (currentSite.name == 'oncore.local') or (currentSite.name=='Oncore Dev') %}
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex">
+    {% endif %}
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     {% block seocontent %}
     {# SEO FIELDS - DEFAULT BELOW #}
     <title>Oncore</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     {% endblock seocontent %}
-    {% if (currentSite.name == 'oncore.local') or (currentSite.name=='Oncore Dev') %}
-    <meta name="robots" content="noindex, nofollow" />
-    {% endif %}
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="stylesheet" href="{{ siteUrl}}css/font-awesome.min.css" media="all">
     <link href='https://fonts.googleapis.com/css?family=Poppins:300,500,600,700' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700" rel="stylesheet">
