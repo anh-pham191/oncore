@@ -202,9 +202,15 @@
         $("fieldset.testinput").css("display", "none");
         var titleLength = 47;
         var descriptionLength = 180;
-        if ($(window).width() >= 768 && $(window).width() < 1024) {
+        if ($(window).width() >= 768 && $(window).width() < 1248) {
             titleLength = 35;
-            descriptionLength = 100;
+            descriptionLength = 120;
+            $(".article-box .title").each(function(){
+                $(this).css("font-size", "20px");
+            });
+            $(".article-box .description p").each(function(){
+                $(this).css("font-size", "14px");
+            })
         }
         trimText(titleLength, $(".article-box .title"));
         trimText(descriptionLength, $(".article-box .description p"));
