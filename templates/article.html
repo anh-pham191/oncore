@@ -21,14 +21,21 @@
             <div class="inner">
                 <div class="title-box">
                     <h1>{{ entry.title }}</h1>
-                    <p>Here’s our guide to the things you should know</p>
-                    <span>Mins to read here</span><span> By Author here</span>
+                    <p>Here’s our guide to the things you should know//</p>
+                    <span class="minute">
+                        <img src="/svg/clock.svg" alt=""
+                                              style="width: 18px; margin-top: -4px; margin-right: 10px;">
+                        10 minutes read //</span><span
+                            class="author"> By Jane Doe//</span>
                 </div>
             </div>
         </div>
     </div>
+    <div class="blog-scrolling">
+        <ul class="sns-share notmobile"><li><a href="javascript:sharePage('facebook')"><i class="fa fa-facebook-official"></i></a></li><li><a href="javascript:sharePage('linkedin')"><i class="fa fa-linkedin-square"></i></a></li><li><a href="javascript:sharePage('twitter')"><i class="fa fa-twitter"></i></a></li></ul>
+    </div>
 
-    <div class=" article-page">
+    <div class="article-section article-page">
         {#summary text here#}
         <div class="content-body inner intro">{{ entry.articleIntro }}</div>
 
@@ -39,14 +46,18 @@
             {% for block in matrixBlock %}
                 {% if block.type == "paragraph" %}
 
-                    <li><a class="heading-links" style="color: #4ca845">{{ block.heading }}</a></li>
+                    <li><a class="heading-links" style="color: #4ca845">{{ block.heading }}</a> <img class="light-arrow"
+                                                                                                     src="/svg/light-arrow-down.svg"
+                                                                                                     alt=""><img
+                                style="display: none" class="green-arrow" src="/svg/green-arrow-down.svg" alt=""></li>
                 {% endif %}
             {% endfor %}
         </ul>
         {#content matrix for each paragraph here#}
         {% for block in matrixBlock %}
             {% if block.type == "paragraph" %}
-                <h3 class="inner heading">{{ block.heading }}</h3>
+                <div class="inner heading"><h3>{{ block.heading }}</h3><span class="back-to-top">Back to top</span>
+                </div>
                 <div class="content-body inner">{{ block.body }}</div>
                 {% if block.pullTextLeft is not empty and block.pullImageRight is not empty %}
                     <div class="content-with-image inner">
@@ -58,7 +69,7 @@
                                     src="{{ siteUrl }}/articleBanner/{{ block.pullImageRight.first().Filename }}"
                                     alt="">
                             {% if block.imageCaption is not empty %}
-                                <span>{{ block.imageCaption }}</span>
+                                <span class="image-caption">{{ block.imageCaption }}</span>
                             {% endif %}
                         </div>
 
@@ -73,7 +84,7 @@
                                     src="{{ siteUrl }}/articleBanner/{{ block.pullImageLeft.first().Filename }}"
                                     alt="">
                             {% if block.imageCaption is not empty %}
-                                <span>{{ block.imageCaption }}</span>
+                                <span class="image-caption">{{ block.imageCaption }}</span>
                             {% endif %}
                         </div>
                         <div class="fright">
@@ -87,7 +98,7 @@
                         <img width="100%" src="{{ siteUrl }}/articleBanner/{{ block.fullWidthImage.first().Filename }}"
                              alt="">
                         {% if block.imageCaption is not empty %}
-                            <span>{{ block.imageCaption }}</span>
+                            <span class="image-caption">{{ block.imageCaption }}</span>
                         {% endif %}
                     </div>
                 {% endif %}
@@ -98,7 +109,7 @@
                                  src="{{ siteUrl }}/articleBanner/{{ block.pullQuoteImage.first().Filename }}"
                                  alt="">
                             {% if block.imageCaption is not empty %}
-                                <span>{{ block.imageCaption }}</span>
+                                <span class="image-caption">{{ block.imageCaption }}</span>
                             {% endif %}
                         </div>
 
@@ -117,14 +128,34 @@
         {% endfor %}
         {#get previous and next entry#}
         <div class="inner">
-            {% set prevEntries = entry.getPrev(craft.entries.section('articlePage')) %}
-            {% if prevEntries|length %}
-                <a href="{{ prevEntries.url() }}">Previous</a>
-            {% endif %}
-            {% set nextEntries = entry.getNext(craft.entries.section('articlePage')) %}
-            {% if nextEntries|length %}
-                <a href="{{ nextEntries.url() }}">Next</a>
-            {% endif %}
+            <div class="row clearfix" id="link-tools">
+                <div class="col-md-4 col-sm-4 col-xs-3 prev">
+                    {% set prevEntries = entry.getPrev(craft.entries.section('articlePage')) %}
+                    {% if prevEntries|length %}
+                        <a href="{{ prevEntries.url() }}" class="fleft">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                            <div class="fright notmobile">Previous</div>
+                            </a>
+                    {% endif %}
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6 center">
+                    <a href="javascript:sharePage('facebook')"><i class="fa fa-facebook-official"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="javascript:sharePage('linkedin')"><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="javascript:sharePage('twitter')"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-3 next">
+                    {% set nextEntries = entry.getNext(craft.entries.section('articlePage')) %}
+                    {% if nextEntries|length %}
+                        <a href="" class="fright">
+                            <span class="notmobile">Next</span>
+                            <div class="fright">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            </div>
+
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
         {#get list of three related entry#}
         {% set query = craft.entries.section('articlePage').id('not ' ~ entry.id).limit(3) %}
@@ -137,9 +168,10 @@
                     {% for entry in prevEntries %}
                         <div class="col-md-4 col-sm-4">
                             <div class="article-box">
-                                <img src="{{ siteUrl }}articleBanner/{{ entry.articleBanner.first().Filename }}" alt=""
-                                     width="100%"
-                                     height="250px">
+                                <div class="image-box">
+                                    <img src="{{ siteUrl }}articleBanner/{{ entry.articleBanner.first().Filename }}"
+                                         alt="">
+                                </div>
                                 <div class="content-box">
                                     <p class="title">{{ entry.title }}</p>
                                     <div class="description"><p>{{ entry.articleIntro }}</p></div>
@@ -162,17 +194,11 @@
     <!--<script src="{{ siteUrl }}js/recaptcha.js"></script>-->
 
     <script>
-        $(".heading-links").click(function () {
-            var that = $(this);
-            $(".heading").each(function () {
-                if (that.html() === $(this).html()) {
-                    $('html, body').animate({scrollTop: $(this).offset().top - 130}, 1000);
-                }
-            });
-        })
+
         scrollDown($(".meet-director"), $(".track-record"));
         scrollDown($(".find-out-more"), $(".services-three-cols"));
         scrollDown($(".cta-button"), $(".form-banner"));
+        scrollDown($(".back-to-top"), $("#wideslideshow"));
         $("fieldset.testinput").css("display", "none");
         var titleLength = 47;
         var descriptionLength = 180;
@@ -194,8 +220,40 @@
             })
         }
 
-    </script>
+        $(".heading-links").hover(function () {
+                $(this).siblings(".green-arrow").css("display", "inline");
+                $(this).siblings(".light-arrow").css("display", "none");
+                $(this).css("text-decoration", "underline");
+            }, function () {
+                $(this).siblings(".light-arrow").css("display", "inline");
+                $(this).siblings(".green-arrow").css("display", "none");
+                $(this).css("text-decoration", "none");
+            }
+        );
 
-    <script>
+        $(".heading-links").click(function () {
+            var that = $(this);
+
+            $(".heading h3").each(function () {
+                if (that.html() === $(this).html()) {
+                    $('html, body').animate({scrollTop: $(this).offset().top - 130}, 1000);
+                }
+            });
+        });
+        $(window).scroll(function(){
+            var p=$(window).scrollTop();
+            var navtop = $("#wideslideshow").offset().top;
+            var blogtop = $(".article-section").offset().top;
+            if(p>blogtop){
+                if($(window).width()<768){
+                    $(".blog-scrolling").css({ top: 0 });
+                }else{
+                    $(".blog-scrolling").css({ top: navtop });
+                }
+                $(".blog-scrolling").show(200);
+            }else{ $(".blog-scrolling").hide(200);
+            }
+        });
+
     </script>
 {% endblock scripts %}

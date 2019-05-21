@@ -2,18 +2,21 @@
     padding: 0;
     margin: 0;
 }
+
 a {
-    color: #00b234;
+    color: #4fae47;
     cursor: pointer;
 }
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     color: #333333;
     font-size: 1rem;
-    line-height: 1.0;
     font-style: normal;
     background-color: #fff;
+    line-height: 1.25;
+
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
@@ -33,7 +36,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.25;
 }
 
 .btn, .slick-slider {
@@ -1184,8 +1186,7 @@ button, input, select, textarea {
 }
 
 a:focus, a:hover, a:visited {
-    /*color: #23527c*/
-    color: #007722
+    color: #4fae47
 }
 
 a:focus {
@@ -2934,6 +2935,7 @@ ul {
     .notmobile {
         display: none !important;
     }
+
     .full-width-text-left.list-page {
         margin: 0 auto !important;
     }
@@ -3020,6 +3022,7 @@ ul {
         margin: 0 15px 8px 0;
     }
 }
+
 .contact .input-label-wrapper {
     margin-bottom: 15px
 }
@@ -3082,6 +3085,7 @@ ul {
         display: block;
         height: 26px;
     }
+
     .full-width-text-left.list-page .col-md-8, .full-width-text-left.list-page .col-md-4 {
         padding-left: 0px;
         float: none;
@@ -3226,13 +3230,15 @@ div#wideslideshow.overlay .overlay-container {
     transition: all .8s;
     text-align: left;
     background-color: transparent;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.58));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.58));
 
 }
+
 div#wideslideshow.overlay.article-page .overlay-container {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
 }
+
 div#wideslideshow.overlay.header-banner .overlay-container {
     position: absolute;
     top: 0;
@@ -3242,7 +3248,7 @@ div#wideslideshow.overlay.header-banner .overlay-container {
     transition: all .8s;
     text-align: left;
     background-color: transparent;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.58));
 
 }
 
@@ -3291,12 +3297,15 @@ div#wideslideshow.overlay .overlay-container h2#arrow .arrow-down {
     #wideslideshow {
         height: 601px;
     }
+
     #wideslideshow.header-banner {
         height: 301px;
     }
+
     #wideslideshow.banner {
         height: 386px;
     }
+
     div#wideslideshow.overlay.article-page {
         height: 801px;
         max-height: 801px;
@@ -3310,39 +3319,47 @@ div#wideslideshow.overlay .overlay-container h2#arrow .arrow-down {
 .clearfix {
     min-height: 1%;
 }
+
 div#wideslideshow.overlay.banner .overlay-container div.inner {
     margin-top: 73px;
 }
+
 div#wideslideshow.overlay .overlay-container div.inner {
     margin-top: 156px;
 }
+
 div#wideslideshow.overlay.franchise .overlay-container div.inner {
     margin-top: 129px;
 }
+
 div#wideslideshow.overlay.header-banner .overlay-container div.inner {
     margin-top: 118px;
 }
+
 div#wideslideshow.overlay.header-banner .overlay-container div.inner span, div#wideslideshow.overlay.header-banner .overlay-container div.inner span a {
     color: #ffffff;
     font-size: 14px;
 }
+
 div#wideslideshow.overlay.header-banner .overlay-container div.inner span a {
     font-weight: 400;
     text-decoration: underline;
 }
+
 div#wideslideshow.overlay.header-banner .overlay-container div.inner span a.bold {
     font-weight: 600;
     text-decoration: none;
 }
+
 div#wideslideshow.overlay .overlay-container h1, div#wideslideshow.overlay .overlay-container .heading {
     width: 59%;
-    margin:0px;
+    margin: 0px;
     font-size: 3.75rem;
     color: #ffffff;
     font-family: "Poppins";
 }
 
-div#wideslideshow.overlay.franchise .overlay-container h1{
+div#wideslideshow.overlay.franchise .overlay-container h1 {
     font-size: 2.8rem;
 }
 
@@ -3350,7 +3367,7 @@ div#wideslideshow.overlay.franchise .overlay-container h1 {
     width: 90%;
 }
 
-div#wideslideshow.overlay.header-banner .overlay-container h1{
+div#wideslideshow.overlay.header-banner .overlay-container h1 {
     font-size: 3em;
 }
 
@@ -3370,7 +3387,6 @@ div#wideslideshow.overlay .intro-bottom {
     font-size: 1.5625rem;
     font-weight: 500;
 }
-
 
 div#wideslideshow.overlay.banner .intro-bottom {
     font-size: 1.5625rem;;
@@ -3410,10 +3426,12 @@ div#wideslideshow.overlay.banner .intro-bottom {
     box-shadow: 0 2px 50px 0 rgba(76, 76, 76, 0.3);
     background-color: #ffffff;
 }
+
 .g-recaptcha {
     transform: scale(0.88);
     transform-origin: 0 0;
 }
+
 .form-control {
     width: 100%;
     height: 34px;
@@ -3717,8 +3735,6 @@ ul {
         margin: 0 auto;
     }
 
-
-
     .inner-three-cols {
         width: 100%;
         margin: 0 auto;
@@ -3803,12 +3819,15 @@ li.help {
     background-color: #4fae47;
     padding: 0 0;
 }
-#wideslideshow.franchise .overlay-container .cta-button{
+
+#wideslideshow.franchise .overlay-container .cta-button {
     width: 205px;
 }
+
 #wideslideshow .overlay-container .franchise-button {
     padding-top: 24px;
 }
+
 #wideslideshow .overlay-container .find-out-more {
     vertical-align: middle;
     color: #FFFFFF;
@@ -3925,7 +3944,6 @@ li.help {
         display: none;
     }
 
-
     li.help {
         padding-top: 2px;
     }
@@ -4036,20 +4054,23 @@ li.help {
     #wideslideshow .overlay-container .franchise-button .cta-button {
         margin-top: 0;
     }
+
     #wrapper .inner.enquiry-page {
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
     }
 
-    #wrapper .inner.enquiry-page #content-body, #wrapper .inner.enquiry-page #content-right{
+    #wrapper .inner.enquiry-page #content-body, #wrapper .inner.enquiry-page #content-right {
         padding: 20px
     }
+
     #wrapper .inner.enquiry-page .contact-us-mobile {
         width: 100%;
         float: left;
         padding: 30px 20px;
     }
+
     .contact-us-mobile {
         font-family: "Poppins";
     }
@@ -4156,14 +4177,11 @@ li.help {
     }
 
     /*div#wideslideshow.overlay.franchise .overlay-container {*/
-        /*position: absolute;*/
-        /*background-color: transparent;*/
-        /*color: #ffffff;*/
-        /*background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));*/
+    /*position: absolute;*/
+    /*background-color: transparent;*/
+    /*color: #ffffff;*/
+    /*background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,0.58));*/
     /*}*/
-
-
-
     div#wideslideshow.overlay.banner .overlay-container {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.4);
@@ -4184,21 +4202,23 @@ li.help {
         width: 100%;
         padding: 10px;
     }
+
     div#wideslideshow.overlay.franchise .overlay-container .intro-bottom {
         padding-left: 0px;
     }
-    div#wideslideshow.overlay.header-banner .overlay-container h1,  div#wideslideshow.overlay.franchise .overlay-container h1{
-        padding:0px;
+
+    div#wideslideshow.overlay.header-banner .overlay-container h1, div#wideslideshow.overlay.franchise .overlay-container h1 {
+        padding: 0px;
     }
 
     div#wideslideshow.overlay .overlay-container h1 {
         font-size: 2em;
         color: #333333;
     }
+
     div#wideslideshow.overlay.header-banner .overlay-container h1 {
         color: #ffffff;
     }
-
 
     div#wideslideshow.overlay.franchise .overlay-container h1 {
         font-size: 1.5625em;
@@ -4271,7 +4291,8 @@ li.help {
         display: block;
         padding: 40px 0;
     }
-    .home-process div.step:first-of-type,.home-process div.step:nth-of-type(5), .home-process div.step:nth-of-type(3) {
+
+    .home-process div.step:first-of-type, .home-process div.step:nth-of-type(5), .home-process div.step:nth-of-type(3) {
         padding-bottom: 0px;
     }
 
@@ -4390,6 +4411,7 @@ li.help {
     line-height: 2;
     margin-left: 7px
 }
+
 .home-standard .inner {
     padding: 65px 0px;
     overflow: auto;
@@ -4409,23 +4431,29 @@ li.help {
     #desktop-share ul li a {
         font-size: 1.3rem
     }
-    .inner{
+
+    .inner {
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .inner.spacing {
         padding-left: 20px;
         padding-right: 20px;
     }
+
     div#wideslideshow.overlay.franchise .overlay-container div.inner {
         margin-top: 56px;
     }
+
     div#wideslideshow.overlay.banner h1, div#wideslideshow.overlay.banner .intro-bottom {
         width: 90%;
     }
+
     div#wideslideshow.overlay .overlay-container div.inner {
         margin-top: 10%
     }
+
     .inner.enquiry-page #content.contact #content-body .content-left {
         width: 100%;
     }
@@ -4454,6 +4482,7 @@ a:hover, button:hover {
 .error-msg {
     border: solid 1.5px #b00321 !important;
 }
+
 .contact .invalid-tooltip {
     z-index: 5;
     max-width: 100%;
@@ -4467,6 +4496,7 @@ a:hover, button:hover {
     position: static;
     background-color: transparent;
 }
+
 .invalid-tooltip {
     position: absolute;
     top: 100%;
@@ -4713,9 +4743,11 @@ a:hover, button:hover {
     div#wideslideshow.overlay .overlay-container div.inner {
         margin-top: 35px;
     }
+
     div#wideslideshow.overlay.franchise .overlay-container div.inner {
         margin-top: 35px;
     }
+
     div#wideslideshow.overlay.header-banner .overlay-container div.inner {
         margin-top: 17%;
     }
@@ -4916,6 +4948,7 @@ a:hover, button:hover {
     line-height: 2.11;
 
 }
+
 .customer-experience ul li.solve {
     background: url(../svg/baseline-check-24px.svg) no-repeat;
     padding-left: 30px;
@@ -4931,6 +4964,7 @@ a:hover, button:hover {
     background-size: 18px auto;
     background-position-y: 11px;
 }
+
 .customer-experience {
     width: 100%;
     height: auto;
@@ -5061,6 +5095,7 @@ a:hover, button:hover {
 .spacing-bottom {
     margin-bottom: 24px;
 }
+
 @media only screen and (min-width: 64em) and (max-width: 78em) {
     div#wideslideshow.overlay .overlay-container h1, div#wideslideshow.overlay .overlay-container .heading {
         font-size: 3em;
@@ -5079,13 +5114,14 @@ a:hover, button:hover {
     }
 
 }
+
 @media only screen and (min-width: 64em) {
     .customer-experience .inner .col-md-7.col-sm-7 {
         padding-top: 40px;
     }
 
-
 }
+
 @media only screen and (min-width: 48em) and (max-width: 64em) {
     .info-image-desktop {
         display: none;
@@ -5104,15 +5140,15 @@ a:hover, button:hover {
     .three-boxes .three-cols {
         min-height: 630px;
     }
+
     .customer-experience .inner.spacing .col-md-5.col-sm-5.spacing, .customer-experience .inner.spacing .col-md-7.col-sm-7 {
         width: 100% !important;
     }
 
     .customer-experience .inner.spacing .col-md-7.col-sm-7 {
-        padding:0 ;
+        padding: 0;
         padding-bottom: 40px;
     }
-
 
 }
 
@@ -5174,6 +5210,7 @@ a:hover, button:hover {
     .customer-experience h2 {
         font-size: 2em;
     }
+
     .track-record {
         padding-top: 50px
     }
@@ -5287,6 +5324,7 @@ a:hover, button:hover {
     #wideslideshow .overlay-container .franchise-button .cta-button, #wideslideshow .overlay-container .franchise-button .find-out-more {
         width: 100%;
     }
+
     #wideslideshow.franchise .overlay-container .find-out-more {
         color: #4fae47;
         border: solid 2px #4fae47;
@@ -5300,6 +5338,7 @@ a:hover, button:hover {
         padding-left: 20px;
         padding-right: 20px;
     }
+
     div#wideslideshow.overlay.banner .overlay-container div.inner {
         margin-top: 13%;
     }
@@ -5307,6 +5346,7 @@ a:hover, button:hover {
     .infographic .inner {
         padding-top: 45px;
     }
+
     .block-franchise {
         padding-top: 85px;
     }
@@ -5315,11 +5355,11 @@ a:hover, button:hover {
         padding-top: 40px
     }
 
-    .block-franchise .services-image-block img{
+    .block-franchise .services-image-block img {
         padding-top: 20px
     }
 
-    .block-franchise .services-image-block .meet-director img{
+    .block-franchise .services-image-block .meet-director img {
         padding-top: 0px;
     }
 
@@ -5328,9 +5368,8 @@ a:hover, button:hover {
         float: left;
     }
 
-
-
 }
+
 @media only screen and (min-width: 48em) {
     div.services-image-block {
         overflow: auto;
@@ -5338,14 +5377,17 @@ a:hover, button:hover {
         padding-left: 20px;
         padding-right: 20px;
     }
+
     div.services-image-block img.fleft, div.services-image-block img.fright {
         width: 49%;
         height: auto;
     }
+
     div.services-image-block div.fleft {
         width: 49%;
         position: relative;
     }
+
     .services-image-block .content-box {
         width: 70%;
         margin: 5% auto 30px;
@@ -5367,6 +5409,7 @@ a:hover, button:hover {
         color: #2f3132;
         padding-top: 15px
     }
+
     .block-franchise .inner h2 {
         font-family: "Poppins";
         font-size: 2.8125em;
@@ -5374,14 +5417,17 @@ a:hover, button:hover {
         color: #2f3132;
         padding: 50px 0;
     }
+
     .franchise-block .franchise-opp {
         float: left;
         width: 54%;
     }
+
     .franchise-block .map {
         width: 46%;
         float: right;
     }
+
     .franchise-block .franchise-opp h2 {
         font-family: "Poppins";
         font-size: 2.8125em;
@@ -5405,6 +5451,7 @@ a:hover, button:hover {
     .row-director {
         padding-bottom: 50px
     }
+
     .track-record .name {
         font-family: "Poppins";
         font-size: 1.25em;
@@ -5412,13 +5459,15 @@ a:hover, button:hover {
         color: #333333;
         padding-bottom: 10px;
     }
-    .track-record .col-md-6{
+
+    .track-record .col-md-6 {
         padding: 0px 20px 0px 0px;
     }
 
     .track-record .col-md-6.spacing {
         padding: 40px 20px 40px 0px;
     }
+
     .track-record .description {
         font-family: "Open Sans";
         font-size: 1.125em;
@@ -5427,12 +5476,14 @@ a:hover, button:hover {
         color: #2f3132;
     }
 
-    .track-record .row-director{
+    .track-record .row-director {
         overflow: auto;
     }
+
     .franchise-block {
         overflow: auto;
     }
+
     .franchise-form .inner h2.title {
         font-family: "Poppins";
         font-size: 2.8125em;
@@ -5451,6 +5502,7 @@ a:hover, button:hover {
         padding-right: 20px
 
     }
+
     .franchise-form .inner .three-cols .heading {
         font-family: "Poppins";
         font-size: 1.125em;
@@ -5462,9 +5514,11 @@ a:hover, button:hover {
     .franchise-form .inner .three-cols ul {
         padding-left: 20px;
     }
+
     .franchise-form .inner .three-cols ul {
         list-style-type: initial;
     }
+
     .franchise-form .inner .three-cols ul li {
         font-family: "Open Sans";
         font-size: 1.125em;
@@ -5472,7 +5526,8 @@ a:hover, button:hover {
         color: #184414;
         padding-bottom: 14px;
     }
-    .franchise-form .inner .three-cols .heading{
+
+    .franchise-form .inner .three-cols .heading {
         padding-top: 65px;
         padding-bottom: 14px;
     }
@@ -5507,6 +5562,7 @@ a:hover, button:hover {
         border: solid 1px #979797;
         width: 100%;
     }
+
     .franchise-form .form-banner #home-form-submit {
         font-weight: bold;
         width: 274px;
@@ -5521,7 +5577,7 @@ a:hover, button:hover {
 
     .traffic-logo {
         width: 100%;
-        height:auto;
+        height: auto;
         overflow: auto;
     }
 
@@ -5537,12 +5593,13 @@ a:hover, button:hover {
         height: auto;
         cursor: pointer;
     }
+
     .traffic-logo .three-cols img:hover {
         opacity: 0.7;
     }
 
-
 }
+
 .fright {
     float: right;
 }
@@ -5550,7 +5607,8 @@ a:hover, button:hover {
 .fleft {
     float: left;
 }
-@media only screen and (min-width: 769px){
+
+@media only screen and (min-width: 769px) {
     #wideslideshow .overlay-container .franchise-button .find-out-more {
         margin-left: 14px
     }
@@ -5562,18 +5620,19 @@ a:hover, button:hover {
         font-size: 2em;
         padding: 0 20px;
     }
+
     .franchise-block .franchise-opp ul li {
         font-size: 1.5625em
     }
 
-
-
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1800px) {
     div#wideslideshow.thank-you.overlay img {
         width: auto;
         height: 100%;
     }
+
     div#wideslideshow.overlay.thank-you .intro-bottom, div#wideslideshow.overlay.thank-you h1 {
         width: 70%
     }
@@ -5582,16 +5641,20 @@ a:hover, button:hover {
         margin-top: 150px
     }
 }
-@media only screen and (max-width: 63.99em){
+
+@media only screen and (max-width: 63.99em) {
     .franchise-block .map {
         display: none;
     }
+
     .franchise-block .franchise-opp {
         width: 100%;
     }
+
     div.services-image-block img.fleft, div.services-image-block img.fright, div.services-image-block div.fleft {
         width: 100%;
     }
+
     .services-image-block .content-box {
         margin: 0;
         padding: 20px 0px;
@@ -5604,6 +5667,7 @@ a:hover, button:hover {
         color: #184414;
         padding-top: 21px;
     }
+
     .franchise-form .inner .three-cols {
         width: 100%;
     }
@@ -5616,10 +5680,12 @@ a:hover, button:hover {
         color: #184414;
         padding-top: 40px
     }
+
     .franchise-form .inner .three-cols ul {
         list-style-type: initial;
         padding-left: 20px;
     }
+
     .franchise-form .inner .three-cols ul li {
         font-family: "Open Sans";
         font-size: 1em;
@@ -5629,24 +5695,30 @@ a:hover, button:hover {
     }
 
 }
+
 @media only all and (max-width: 1024px) {
     #topnav #sitebanner .fleft.logo {
         margin-left: 0px;
     }
 }
+
 @media screen and (width: 768px) {
     .inner {
         width: 758px !important;
     }
+
     #wrapper #content #content-body .content-left.inner {
         padding-left: 0px;
     }
+
     #wrapper .inner.enquiry-page {
         width: 768px !important;
     }
+
     #wideslideshow .overlay-container .franchise-button .cta-button, #wideslideshow .overlay-container .franchise-button .find-out-more {
         width: 205px;
     }
+
     #wideslideshow .overlay-container .franchise-button .find-out-more {
         margin-left: 14px;
         vertical-align: middle;
@@ -5663,6 +5735,7 @@ a:hover, button:hover {
         background-color: transparent;
         padding: 0 0;
     }
+
     .home-standard .inner {
         padding: 65px 20px;
     }
@@ -5672,12 +5745,11 @@ a:hover, button:hover {
     .form-banner .row {
         margin: auto 10px;
     }
+
     div#wideslideshow.overlay.franchise .overlay-container h1 {
         width: 76%;
     }
 }
-
-
 
 .franchise-form {
     background-color: #eaf5e9;
@@ -5693,7 +5765,7 @@ a:hover, button:hover {
     font-weight: 600;
     letter-spacing: 3.9px;
     color: #4fae47;
-    cursor:pointer;
+    cursor: pointer;
     padding-top: 20px;
 }
 
@@ -5701,20 +5773,19 @@ a:hover, button:hover {
     padding: 0;
 }
 
-
-#content.panorama.contact #content-right form input:focus, #content.panorama.contact #content-right form textarea:focus, #content.panorama.contact #content-right form .fancy-select:focus{
+#content.panorama.contact #content-right form input:focus, #content.panorama.contact #content-right form textarea:focus, #content.panorama.contact #content-right form .fancy-select:focus {
     border: solid 1px #016330;
     background-color: #fff;
 }
 
-.label-green{
+.label-green {
     color: #016330;
 }
-.label-red{
+
+.label-red {
     color: #b00321;
     font-weight: 600;
 }
-
 
 #content.contact #content-right #project-job .phone-code {
     display: inline;
@@ -5729,7 +5800,7 @@ a:hover, button:hover {
     height: 47px;
 }
 
-#content.contact #content-right #project-job .phone-code span{
+#content.contact #content-right #project-job .phone-code span {
     line-height: 47px;
 }
 
@@ -5737,14 +5808,12 @@ a:hover, button:hover {
     width: 37%;
 }
 
-
 #content.contact #content-right #project-job #formf-tel {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-
-::-webkit-file-upload-button{
+::-webkit-file-upload-button {
     padding: 10px 14px;
     border-radius: 10px;
     border: 1px solid #707070;
@@ -5769,18 +5838,22 @@ a:hover, button:hover {
     #topnav #sitebanner .phone-top {
         margin-left: -20px;
     }
+
     #sitebanner ul.links-top {
         margin-top: -23px;
         transition: .3s;
         margin-right: -5px;
     }
+
     #topnav form.notmobile {
         right: -15px;
     }
-    div#wideslideshow.overlay.banner .overlay-container h1,  div#wideslideshow.overlay.banner .overlay-container .intro-bottom {
+
+    div#wideslideshow.overlay.banner .overlay-container h1, div#wideslideshow.overlay.banner .overlay-container .intro-bottom {
         width: 65%;
     }
 }
+
 #content #content-right #project-job input[type=file] {
     width: 100%;
 }
@@ -5794,8 +5867,9 @@ a:hover, button:hover {
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-    border:none ;
+    border: none;
 }
+
 #news-form-submit, #news2-form-submit {
     width: 269px;
     height: 48px;
@@ -5805,7 +5879,7 @@ a:hover, button:hover {
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-    border:none ;
+    border: none;
 }
 
 @media only all and (min-width: 64em) {
@@ -5813,7 +5887,8 @@ a:hover, button:hover {
         border-bottom-left-radius: 25px;
         padding: 82px 10px 0 0px;
     }
-    #content.panorama.contact #content-right{
+
+    #content.panorama.contact #content-right {
         padding: 71px 6px 0 27px;
     }
 
@@ -5826,12 +5901,12 @@ a:hover, button:hover {
     }
 
     /*#content.contact #content-body .contact-us-desktop p {*/
-        /*margin: 18px 0 30px 0;*/
+    /*margin: 18px 0 30px 0;*/
     /*}*/
 
-
 }
-#content.panorama.contact #content-right{
+
+#content.panorama.contact #content-right {
     background-color: #fafafa;
 
 }
@@ -5849,7 +5924,6 @@ a:hover, button:hover {
     width: 50%;
     margin-left: 0;
 }
-
 
 @media only all and (min-width: 64em) {
     ul.serviceslist li:nth-child(14), ul.serviceslist li:nth-child(7) {
@@ -5973,6 +6047,7 @@ a:hover, button:hover {
         width: 992px;
         padding: 35px 4px 0
     }
+
     #content.contact #content-body .pagecopy p strong {
         font-size: 20px;
         font-weight: 700;
@@ -5985,7 +6060,7 @@ a:hover, button:hover {
         letter-spacing: 0;
     }
 
-    #content.contact #content-body h3{
+    #content.contact #content-body h3 {
         font-family: Open Sans;
         font-size: 20px;
         font-weight: 700;
@@ -6010,13 +6085,14 @@ a:hover, button:hover {
         color: #016330;
     }
 
-    #content.contact #content-body p{
+    #content.contact #content-body p {
         font-family: Open Sans;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.63;
         color: #333333;
     }
+
     #content.contact #content-body li a {
         font-family: Open Sans;
         font-size: 16px;
@@ -6044,11 +6120,13 @@ a:hover, button:hover {
     #content.panorama.contact {
         width: 1200px;
     }
+
     #content.panorama {
         width: 1020px;
         padding: 35px 0 0
     }
-    .justipad{
+
+    .justipad {
         display: none;
     }
 }
@@ -6063,6 +6141,7 @@ a:hover, button:hover {
         width: 63%;
         margin-left: 6px
     }
+
     #wrapper.privacy #content.panorama #content-body {
         width: 100%;
     }
@@ -6075,24 +6154,30 @@ a:hover, button:hover {
         margin-left: 0
     }
 }
+
 #wrapper.privacy {
     margin-top: 0px;
     margin-bottom: 90px
 }
+
 .privacy .pagecopy p, .privacy .pagecopy ul li {
     line-height: 1.63;
 }
+
 .privacy #content h1 {
     color: #333333;
 }
+
 @media only all and (min-width: 78em) {
     #content.panorama #content-body {
         width: 662px;
         padding-left: 9px
     }
-    .privacy  #content.panorama #content-body {
+
+    .privacy #content.panorama #content-body {
         width: 100%;
     }
+
     .privacy .pagecopy p, .privacy .pagecopy ul li {
         line-height: 1.63;
     }
@@ -6362,7 +6447,6 @@ a:hover, button:hover {
         margin-left: 0
     }
 
-
 }
 
 @media only all and (min-width: 48em) {
@@ -6388,6 +6472,7 @@ a:hover, button:hover {
     max-width: 100%;
     height: auto
 }
+
 .contact .form-control {
     display: block;
     width: 100%;
@@ -6400,8 +6485,8 @@ a:hover, button:hover {
     background-image: none;
     border: 1px solid #707070;
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -6422,6 +6507,7 @@ a:hover, button:hover {
     -o-transition: all 240ms ease-out;
     background-color: #fafafa;
 }
+
 #content.contact #content-right div.fancy-select div.trigger:after {
     content: "";
     display: block;
@@ -6458,26 +6544,29 @@ form .tips {
     position: relative;
 }
 
-#content.contact #content-body .content-left  h2 {
+#content.contact #content-body .content-left h2 {
     font-weight: 500;
     font-family: "Poppins";
     font-size: 1.5625em;
 }
 
-@media only screen and (min-width: 1023px){
+@media only screen and (min-width: 1023px) {
 
     .contact-us-mobile {
         display: none;
     }
 }
+
 @media only screen and (max-width: 1023px) {
     .contact-us-desktop {
         display: none;
     }
+
     #top #wrapper #wideslideshow .text-content {
         width: 65%;
         height: 50%
     }
+
     #top #wrapper #wideslideshow .text-content .heading-content {
         font-size: 28px;
     }
@@ -6485,6 +6574,7 @@ form .tips {
     #top #wrapper #wideslideshow .text-content .intro-bottom {
         font-size: 18px;
     }
+
     #content.panorama.contact .clearfix .contact-us-mobile h3 {
         font-family: Montserrat, sans-serif;
         font-size: 20px;
@@ -6495,12 +6585,15 @@ form .tips {
         letter-spacing: normal;
         color: #333333;
     }
+
     #content.panorama.contact .clearfix .contact-us-mobile p span a {
         font-weight: 600;
     }
+
     #content.panorama.contact .clearfix .contact-us-mobile div {
         padding-top: 15px
     }
+
     #content.panorama.contact .clearfix .contact-us-mobile p, #content.panorama.contact .clearfix .contact-us-mobile li {
         font-size: 16px;
         font-weight: 500;
@@ -6510,9 +6603,11 @@ form .tips {
         letter-spacing: normal;
         color: #333333;
     }
+
     #content.panorama.contact .clearfix .contact-us-mobile ul {
         margin-bottom: 20px;
     }
+
     #content.panorama.contact .clearfix .contact-us-mobile div strong {
         font-size: 20px;
         font-weight: 600;
@@ -6522,19 +6617,24 @@ form .tips {
         letter-spacing: normal;
         color: #333333;
     }
-    #content.contact #content-body.form .pagecopy, #content.contact #content-right .formholder, #content.contact .contact-us-mobile{
+
+    #content.contact #content-body.form .pagecopy, #content.contact #content-right .formholder, #content.contact .contact-us-mobile {
         padding: 10px 15px 0 0px;
     }
+
     #content.contact #content-body.form .pagecopy p {
         font-size: 16px;
     }
+
     #content.contact #content-body.form .pagecopy p strong {
         font-size: 20px;
         font-weight: 600;
     }
+
     #content.panorama.contact #content-right, #content.panorama.contact #content-body {
         width: 100%;
     }
+
     .inner.enquiry-page #content.contact #content-body {
         padding-left: 0px;
     }
@@ -6550,8 +6650,8 @@ form .tips {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -6588,6 +6688,7 @@ form .tips {
     margin: 16px auto;
     margin-top: 0;
 }
+
 #myModal .form-control.home-form, #new-step2 .form-control.home-form {
     width: 100%;
 }
@@ -6599,27 +6700,31 @@ form .tips {
 #myModal #news-form-submit, #new-step2 #news2-form-submit {
     width: 100%;
 }
+
 #new-step2 .modal-content {
     width: 458px;
     height: 572px;
 }
+
 .modal-content p {
     font-family: "Poppins";
     font-size: 18px;
     font-weight: 500;
     color: #333333;
 }
+
 @media only screen and (max-width: 48em) {
-    .modal-content,#new-step2 .modal-content {
+    .modal-content, #new-step2 .modal-content {
         width: 90%;
         height: auto;
-        margin:40% auto;
+        margin: 40% auto;
     }
 
     .franchise-form {
         background-image: none;
         margin-top: 50px;
     }
+
     .franchise-form h3.more-info {
         padding-top: 50px;
         font-family: "Poppins";
@@ -6628,9 +6733,11 @@ form .tips {
         font-weight: 400;
         color: #184414;
     }
+
     .what-is-oncore h2, .customer-experience h2 {
         font-size: 2em;
     }
+
     .what-is-oncore ul li, .customer-experience ul li {
         font-size: 1em
     }
@@ -6640,6 +6747,7 @@ form .tips {
     font-family: "Poppins";
 
 }
+
 .what-is-oncore h2, .customer-experience h2 {
     padding-bottom: 10px;
     font-family: "Poppins";
@@ -6647,9 +6755,10 @@ form .tips {
 
 @media only all and (max-width: 64em) and (min-width: 48em) {
     div#wideslideshow.overlay.banner .overlay-container div.inner {
-        margin-top: 3% ;
+        margin-top: 3%;
     }
 }
+
 .full-width-text-left.list-page {
     display: table;
 }
@@ -6657,7 +6766,8 @@ form .tips {
 .full-width-text-left.list-page .col-md-4 {
     text-align: center;
 }
-.full-width-text-left.list-page p{
+
+.full-width-text-left.list-page p {
     width: 100%;
 }
 
@@ -6676,6 +6786,7 @@ form .tips {
 .one-line .col-md-4 {
     padding-top: 38px;
 }
+
 .related-articles .one-line .col-md-4 {
     padding-top: 0px;
 }
@@ -6684,7 +6795,8 @@ form .tips {
     box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
 }
-.one-line .article-box:hover{
+
+.one-line .article-box:hover {
     cursor: pointer;
     box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
@@ -6712,10 +6824,12 @@ form .tips {
     width: 100%;
     overflow: hidden
 }
+
 .article-box .image-box img {
     width: 100%;
     height: auto;
 }
+
 .article-box .title {
     font-family: "Poppins";
     font-size: 25px;
@@ -6738,8 +6852,10 @@ form .tips {
     line-height: 1;
     color: #333333;
     padding-bottom: 26px;
+    float: left;
 }
-.article-page .content-body  {
+
+.article-page .content-body {
     padding-bottom: 61px;
     width: 80%;
 }
@@ -6759,7 +6875,7 @@ form .tips {
     padding-bottom: 40px;
 }
 
-.article-page .fright, .article-page .fleft {
+.article-page .comment-with-image .fright, .article-page .comment-with-image .fleft, .article-page .content-with-image .fright, .article-page .content-with-image .fleft {
     width: 50%;
     display: table-cell;
     vertical-align: middle;
@@ -6775,7 +6891,7 @@ form .tips {
     padding-bottom: 70px;
 }
 
-.article-page .comment-with-image .content-body p{
+.article-page .comment-with-image .content-body p {
     font-family: "Poppins";
     font-size: 36px;
     font-weight: bold;
@@ -6802,6 +6918,7 @@ form .tips {
 .related-articles .inner .col-md-4 {
     margin-top: 80px;
 }
+
 div#wideslideshow.overlay.article-page .overlay-container h1 {
     font-family: "Poppins";
     font-size: 35px;
@@ -6810,10 +6927,12 @@ div#wideslideshow.overlay.article-page .overlay-container h1 {
     color: #ffffff;
     width: 100%;
 }
+
 div#wideslideshow.overlay.article-page .overlay-container div.inner .title-box {
     position: absolute;
     bottom: 50px;
 }
+
 div#wideslideshow.overlay.article-page .overlay-container p {
     font-family: "Open Sans";
     font-size: 22px;
@@ -6838,6 +6957,7 @@ div#wideslideshow.overlay.article-page .overlay-container span {
 .form-website {
     display: none;
 }
+
 .home-standard {
     background-color: #fafafa;
     height: auto;
@@ -6861,7 +6981,7 @@ div#wideslideshow.overlay.article-page .overlay-container span {
     background-position-y: 6px;
 }
 
-.home-standard .col-md-4.col-sm-4 p{
+.home-standard .col-md-4.col-sm-4 p {
     padding: 7px 0px;
     font-family: "Open Sans";
     font-size: 16px;
@@ -6899,6 +7019,7 @@ div#wideslideshow.overlay.article-page .overlay-container span {
 .paginate.next-page img {
     margin-left: 50px;
 }
+
 .paginate.next-page, .paginate.prev-page {
     background-color: #fafafa;
     padding: 11px 14px;
@@ -6909,33 +7030,39 @@ div#wideslideshow.overlay.article-page .overlay-container span {
     width: 100%;
     float: left;
 }
-@media only screen and (min-width: 1024px) and (max-width: 1247px)  {
+
+@media only screen and (min-width: 1024px) and (max-width: 1247px) {
     .article-box .content-box {
         height: 250px;
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px)  {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .article-box .content-box {
         height: 250px;
     }
+
     #list-page .inner {
         width: 100%;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .article-box .image-box {
         height: 150px;
     }
 }
+
 @media only all and (max-width: 47.99em) {
     .full-width-text-left.list-page p:first-of-type {
         padding-top: 21px;
         padding-bottom: 8px;
     }
+
     .full-width-text-left.list-page .cta-text {
         font-size: 16px;
     }
+
     .full-width-text-left.list-page button.cta-button {
         margin-top: 10px;
         margin-bottom: 40px;
@@ -6947,4 +7074,122 @@ div#wideslideshow.overlay.article-page .overlay-container span {
         padding-right: 20px;
     }
 
+}
+
+.article-page li {
+    padding-left: 18px
+}
+
+.article-page li::before {
+    content: "• ";
+    color: #4ca845;
+    padding-right: 18px
+}
+
+.back-to-top {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.38;
+    color: #bcbcbc;
+    padding-left: 8px;
+}
+
+.back-to-top:hover {
+    color: #6fb969;
+    cursor: pointer;
+}
+
+.inner.heading {
+    overflow: auto;
+}
+
+.blog-scrolling {
+    display: none;
+    position: fixed;
+    top: 90px;
+    width: 35%;
+    /*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));*/
+    left: 17%;
+    transform: translate(-50%, 0)
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc
+}
+
+.progress-bar {
+    height: 8px;
+    background: #0079bb;
+    width: 0%
+}
+
+.blog-scrolling a.view, .blog-scrolling ul.sns-share {
+    margin-left: 15px
+}
+
+.blog-scrolling a.view {
+    display: block;
+    margin-top: 30px
+}
+
+.blog-scrolling ul.sns-share {
+    margin-top: 30px
+}
+
+.blog-scrolling ul.sns-share li a {
+    color: #656565;
+    font-size: 25px
+}
+
+.blog-scrolling ul.sns-share li {
+    margin-bottom: 10px
+}
+
+@media only all and (min-width: 95em) {
+    .blog-scrolling {
+        width: 5%
+    }
+}
+
+@media only all and (max-width: 47.937em) {
+    .blog-scrolling {
+        /*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0))*/
+    }
+
+}
+#link-tools .center i {
+    color: #656565;
+    font-size: 25px;
+    line-height: 48px;
+}
+#link-tools .prev a, #link-tools .next a {
+    width: 150px;
+    height: 48px;
+    padding: 0 20px;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #f1f1f1;
+}
+#link-tools .prev {
+    padding-left: 0;
+}
+#link-tools .center {
+    text-align: center;
+    line-height: 48px;
+}
+#link-tools .next {
+    padding-right: 0;
+}
+
+#link-tools {
+    padding-bottom: 60px;
+}
+.image-caption{
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 1.57;
+    color: #333333;
 }

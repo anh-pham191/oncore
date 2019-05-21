@@ -1,69 +1,106 @@
-<div class="pagination">
-    {% if filter == 0 %}
-        {#{% if pageInfo.prevUrl %}#}
-        <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"> <img src="/svg/arrow-green-left.svg" alt="">Previous Page</a>
-        <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"> <img src="/svg/arrow-green-left.svg" alt=""></a>
-        {#{% endif %}#}
-        <div class="paginate col-md-8 col-sm-6 col-xs-6">
-            {% for page, url in pageInfo.getPrevUrls(5) %}
-                <a href="{{ url }}">{{ page }}</a>
-            {% endfor %}
-            <span class="current">{{ pageInfo.currentPage }}</span>
-            {% for page, url in pageInfo.getNextUrls(5) %}
-                <a href="{{ url }}">{{ page }}</a>
-            {% endfor %}
-        </div>
-        {#{% if pageInfo.nextUrl %}#}
-        <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}">Next Page<img src="/svg/arrow-green-right.svg" alt=""></a>
-        <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}"><img src="/svg/arrow-green-right.svg" alt=""></a>
-        {#{% endif %}#}
-    {% else %}
-        {#{% if pageInfo.prevUrl %}#}
-        {% if type is empty %}
-            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}"><img src="/svg/arrow-green-left.svg" alt="">Previous Page</a>
-            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}"><img src="/svg/arrow-green-left.svg" alt=""></a>
+<div class="pagination inner">
+    <div class="row clearfix" id="link-tools">
+        {% if filter == 0 %}
+            {#{% if pageInfo.prevUrl %}#}
+            <div class="col-md-4 col-sm-4 col-xs-3 prev">
+                <a href="{{ pageInfo.prevUrl }}" class="fleft">
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    <div class="fright notmobile">Previous</div>
+                </a>
+            </div>
+            {#{% endif %}#}
+            <div class="col-md-4 col-sm-4 col-xs-6 center">
+                {% for page, url in pageInfo.getPrevUrls(5) %}
+                    <a href="{{ url }}">{{ page }}</a>
+                {% endfor %}
+                <span class="current">{{ pageInfo.currentPage }}</span>
+                {% for page, url in pageInfo.getNextUrls(5) %}
+                    <a href="{{ url }}">{{ page }}</a>
+                {% endfor %}
+            </div>
+            {#{% if pageInfo.nextUrl %}#}
+            <div class="col-md-4 col-sm-4 col-xs-3 next">
+                    <a href="{{ pageInfo.nextUrl }}" class="fright">
+                        <span class="notmobile">Next</span>
+                        <div class="fright">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </div>
+
+                    </a>
+            </div>
+            {#{% endif %}#}
         {% else %}
-            <a class="paginate prev-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="/svg/arrow-green-left.svg" alt="">Previous Page</a>
-            <a class="paginate prev-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.prevUrl }}?type={{ type }}"><img src="/svg/arrow-green-left.svg" alt=""></a>
-        {% endif %}
-        {#{% endif %}#}
+            {#{% if pageInfo.prevUrl %}#}
 
 
-        <div class="paginate col-md-8 col-sm-6 col-xs-6">
-            {% for page, url in pageInfo.getPrevUrls(5) %}
-                {% if type is defined %}
-                    {% if type is empty %}
-                        <a href="{{ url }}">{{ page }}</a>
-                    {% else %}
-                        <a href="{{ url }}?type={{ type }}">{{ page }}</a>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
-
-            <span class="current">{{ pageInfo.currentPage }}</span>
-
-            {% for page, url in pageInfo.getNextUrls(5) %}
-                {% if type is defined %}
-                    {% if type is empty %}
-                        <a href="{{ url }}">{{ page }}</a>
-                    {% else %}
-                        <a href="{{ url }}?type={{ type }}">{{ page }}</a>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
-        </div>
-
-        {#{% if pageInfo.nextUrl %}#}
-        {% if type is defined %}
             {% if type is empty %}
-                <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}">Next Page<img src="/svg/arrow-green-right.svg" alt=""></a>
-                <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}"><img src="/svg/arrow-green-right.svg" alt=""></a>
+                <div class="col-md-4 col-sm-4 col-xs-3 prev">
+                        <a href="{{ pageInfo.prevUrl }}" class="fleft">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                            <div class="fright notmobile">Previous</div>
+                        </a>
+                </div>
             {% else %}
-                <a class="paginate next-page col-md-2 col-sm-3 notmobile" href="{{ pageInfo.nextUrl }}?type={{ type }}">Next Page<img src="/svg/arrow-green-right.svg" alt=""></a>
-                <a class="paginate next-page col-md-2 col-xs-3 justmobile" href="{{ pageInfo.nextUrl }}?type={{ type }}"><img src="/svg/arrow-green-right.svg" alt=""></a>
+                <div class="col-md-4 col-sm-4 col-xs-3 prev">
+                    <a href="{{ pageInfo.prevUrl }}?type={{ type }}" class="fleft">
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        <div class="fright notmobile">Previous</div>
+                    </a>
+                </div>
             {% endif %}
-        {% endif %}
+            {#{% endif %}#}
 
-        {#{% endif %}#}
-    {% endif %}
+
+            <div class="col-md-4 col-sm-4 col-xs-6 center">
+                {% for page, url in pageInfo.getPrevUrls(5) %}
+                    {% if type is defined %}
+                        {% if type is empty %}
+                            <a href="{{ url }}">{{ page }}</a>
+                        {% else %}
+                            <a href="{{ url }}?type={{ type }}">{{ page }}</a>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+
+                <span class="current">{{ pageInfo.currentPage }}</span>
+
+                {% for page, url in pageInfo.getNextUrls(5) %}
+                    {% if type is defined %}
+                        {% if type is empty %}
+                            <a href="{{ url }}">{{ page }}</a>
+                        {% else %}
+                            <a href="{{ url }}?type={{ type }}">{{ page }}</a>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            {#{% if pageInfo.nextUrl %}#}
+            {% if type is defined %}
+                {% if type is empty %}
+                    <div class="col-md-4 col-sm-4 col-xs-3 next">
+                            <a href="{{ pageInfo.nextUrl }}" class="fright">
+                                <span class="notmobile">Next</span>
+                                <div class="fright">
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+
+                            </a>
+                    </div>
+                {% else %}
+                    <div class="col-md-4 col-sm-4 col-xs-3 next">
+                        <a href="{{ pageInfo.nextUrl }}?type={{ type }}" class="fright">
+                            <span class="notmobile">Next</span>
+                            <div class="fright">
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            </div>
+
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+            {#{% endif %}#}
+        {% endif %}
+    </div>
 </div>
