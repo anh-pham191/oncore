@@ -4,3 +4,4 @@
 .DS_Store
 /config/project.yaml
 web/articleBanner/*
+web/robots.txt
