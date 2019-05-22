@@ -7256,5 +7256,10 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
         width: 100%;
         float: left;
     }
-
+    .article-page .comment-with-image .fright {
+        padding: 20px 20px;
+    }
+    .article-page .comment-with-image .content-author {
+        padding-top: 10px;
+    }
 }
