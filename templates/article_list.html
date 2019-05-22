@@ -31,34 +31,34 @@
         </div>
     </div>
 
-    {% if craft.request.getSegment(1) != "offers" %}
-        <h1>{{ craft.app.request.getQueryStringWithoutPath() }}</h1>
-        <div class="filter inner">
-            {% set projectType = craft.categories.group('projectType').all() %}
-            <ul id="">Project Type
-                {% for type in projectType %}
-                    {% if craft.request.getParam('type') is empty %}
-                        <a href="{{ craft.app.request.absoluteUrl }}?type={{ type.uri }}">{{ type.title }}</a>
-                    {% else %}
-                        <a href="{{ craft.request.getUrl() }}?type={{ type.uri }}">{{ type.title }}</a>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+    {#{% if craft.request.getSegment(1) != "offers" %}#}
+        {#<h1>{{ craft.app.request.getQueryStringWithoutPath() }}</h1>#}
+        {#<div class="filter inner">#}
+            {#{% set projectType = craft.categories.group('projectType').all() %}#}
+            {#<ul id="">Project Type#}
+                {#{% for type in projectType %}#}
+                    {#{% if craft.request.getParam('type') is empty %}#}
+                        {#<a href="{{ craft.app.request.absoluteUrl }}?type={{ type.uri }}">{{ type.title }}</a>#}
+                    {#{% else %}#}
+                        {#<a href="{{ craft.request.getUrl() }}?type={{ type.uri }}">{{ type.title }}</a>#}
+                    {#{% endif %}#}
+                {#{% endfor %}#}
+            {#</ul>#}
 
-            {% set regionCat = craft.categories.group('region').all() %}
-            <ul>Region
-                {% for region in regionCat %}
-                    {% if craft.request.getParam('region') is empty %}
-                        <a href="{{ craft.app.request.absoluteUrl }}?region={{ region.uri }}">{{ region.title }}</a>
-                    {% else %}
-                        <a href="{{ craft.request.getUrl() }}?region={{ region.uri }}">{{ region.title }}</a>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+            {#{% set regionCat = craft.categories.group('region').all() %}#}
+            {#<ul>Region#}
+                {#{% for region in regionCat %}#}
+                    {#{% if craft.request.getParam('region') is empty %}#}
+                        {#<a href="{{ craft.app.request.absoluteUrl }}?region={{ region.uri }}">{{ region.title }}</a>#}
+                    {#{% else %}#}
+                        {#<a href="{{ craft.request.getUrl() }}?region={{ region.uri }}">{{ region.title }}</a>#}
+                    {#{% endif %}#}
+                {#{% endfor %}#}
+            {#</ul>#}
 
-            <span>Filter by: <a href="{{ siteUrl }}articles?type=repairs">Repair </a>Region Category</span>
-        </div>
-    {% endif %}
+            {#<span>Filter by: <a href="{{ siteUrl }}articles?type=repairs">Repair </a>Region Category</span>#}
+        {#</div>#}
+    {#{% endif %}#}
 
     {# find the wished category #}
     {# {% set category = craft.categories.group('projectType').title('repairs').first() %} #}
