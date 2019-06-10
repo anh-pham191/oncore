@@ -5647,6 +5647,13 @@ a:hover, button:hover {
         font-size: 1.5625em
     }
 
+    .blog-scrolling a.view, .blog-scrolling ul.sns-share {
+        margin-left: 5px !important;
+    }
+    .blog-scrolling ul.sns-share li a {
+        font-size: 16px !important;
+    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1800px) {
@@ -5724,44 +5731,7 @@ a:hover, button:hover {
     }
 }
 
-@media screen and (width: 768px) {
-    .inner {
-        width: 758px !important;
-    }
 
-    #wrapper #content #content-body .content-left.inner {
-        padding-left: 0px;
-    }
-
-    #wrapper .inner.enquiry-page {
-        width: 768px !important;
-    }
-
-    #wideslideshow .overlay-container .franchise-button .cta-button, #wideslideshow .overlay-container .franchise-button .find-out-more {
-        width: 205px;
-    }
-
-    #wideslideshow .overlay-container .franchise-button .find-out-more {
-        margin-left: 14px;
-        vertical-align: middle;
-        color: #FFFFFF;
-        font-family: "Open Sans";
-        font-weight: bold;
-        font-size: 1.143rem;
-        margin-bottom: 20px;
-        transition: 0.3s;
-        width: 205px;
-        height: 48px;
-        border-radius: 3px;
-        border: solid 2px #ffffff;
-        background-color: transparent;
-        padding: 0 0;
-    }
-
-    .home-standard .inner {
-        padding: 65px 20px;
-    }
-}
 
 @media screen and (width: 1024px) {
     .form-banner .row {
@@ -6867,11 +6837,11 @@ form .tips {
     padding-top: 3px;
 }
 
-.article-page h3 {
+.article-page h2 {
     font-family: "Poppins";
     font-size: 28px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.5;
     color: #333333;
     padding-bottom: 26px;
     float: left;
@@ -6886,10 +6856,11 @@ form .tips {
     padding-bottom: 0px;
 }
 
+
 .article-page .content-body p, .article-page li, .article-page .content-body.intro {
     font-family: "LibreBaskerville";
-    font-size: 20px;
-    line-height: 1.9;
+    font-size: 26px;
+    line-height: 1.5;
     color: #535353;
 }
 
@@ -6921,6 +6892,9 @@ form .tips {
     line-height: normal;
 }
 
+.article-page .comment-with-image .content-body p {
+    line-height: 1.25;
+}
 .article-page .comment-with-image .content-author {
     font-family: "Open Sans";
     font-size: 16px;
@@ -7135,10 +7109,10 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     position: fixed;
     top: 90px;
     z-index: 1;
-    width: 35%;
-    /*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));*/
-    left: 17%;
-    transform: translate(-50%, 0)
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    /*left: 17%;*/
+    /*transform: translate(-50%, 0)*/
 }
 
 .progress-container {
@@ -7175,11 +7149,6 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     margin-bottom: 10px
 }
 
-@media only all and (min-width: 95em) {
-    .blog-scrolling {
-        width: 5%
-    }
-}
 
 #link-tools .center i {
     color: #656565;
@@ -7262,4 +7231,60 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     .article-page .comment-with-image .content-author {
         padding-top: 10px;
     }
+}
+@media screen and (width: 768px) {
+    .inner {
+        width: 758px !important;
+    }
+
+    #wrapper #content #content-body .content-left.inner {
+        padding-left: 0px;
+    }
+
+    #wrapper .inner.enquiry-page {
+        width: 768px !important;
+    }
+
+    #wideslideshow .overlay-container .franchise-button .cta-button, #wideslideshow .overlay-container .franchise-button .find-out-more {
+        width: 205px;
+    }
+
+    #wideslideshow .overlay-container .franchise-button .find-out-more {
+        margin-left: 14px;
+        vertical-align: middle;
+        color: #FFFFFF;
+        font-family: "Open Sans";
+        font-weight: bold;
+        font-size: 1.143rem;
+        margin-bottom: 20px;
+        transition: 0.3s;
+        width: 205px;
+        height: 48px;
+        border-radius: 3px;
+        border: solid 2px #ffffff;
+        background-color: transparent;
+        padding: 0 0;
+    }
+
+    .home-standard .inner {
+        padding: 65px 20px;
+    }
+    .article-page .comment-with-image .fright, .article-page .comment-with-image .fleft, .article-page .content-with-image .fright, .article-page .content-with-image .fleft {
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        float: left;
+    }
+    .article-page .content-body {
+        width: 100%;
+    }
+    .article-page .image-caption {
+        padding-bottom: 60px;
+        width: 100%;
+        float: left;
+    }
+    .article-page .fright img, .article-page .fleft img {
+        padding-top: 60px;
+    }
+
 }
