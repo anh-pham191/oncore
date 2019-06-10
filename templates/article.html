@@ -167,7 +167,7 @@
             <div class="related-articles">
                 <div class="inner one-line">
                     {% for entry in prevEntries %}
-                        <div class="col-md-4 col-sm-4">
+                        <div class="col-md-4 col-sm-4" onclick="location.href='{{entry.url()}}'">
                             <div class="article-box">
                                 <div class="image-box">
                                     <img src="{{ siteUrl }}articleBanner/{{ entry.articleBanner.first().Filename }}"
