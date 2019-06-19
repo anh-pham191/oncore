@@ -6856,6 +6856,10 @@ form .tips {
     padding-bottom: 0px;
 }
 
+.article-page .content-with-image .fright .content-body {
+    float: right;
+}
+
 
 .article-page .content-body p, .article-page li, .article-page .content-body.intro {
     font-family: "LibreBaskerville";
