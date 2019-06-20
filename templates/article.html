@@ -59,7 +59,7 @@
             {% if block.type == "paragraph" %}
                 <div class="inner heading"><h2>{{ block.heading }}</h2><span class="back-to-top notmobile">Back to top</span>
                 </div>
-                <div class="content-body inner">{{ block.body | nl2br }}</div>
+                <div class="content-body inner">{{ block.body | nl2br | raw }}</div>
                 {% if block.pullTextLeft is not empty and block.pullImageRight is not empty %}
                     <div class="content-with-image inner">
 

@@ -7082,7 +7082,8 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
 }
 
 .article-page li {
-    padding-left: 18px
+    padding-left: 2.285714em;
+    text-indent: -1.28571429em;
 }
 
 .article-page li::before {
