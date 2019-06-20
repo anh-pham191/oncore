@@ -59,12 +59,12 @@
             {% if block.type == "paragraph" %}
                 <div class="inner heading"><h2>{{ block.heading }}</h2><span class="back-to-top notmobile">Back to top</span>
                 </div>
-                <div class="content-body inner">{{ block.body }}</div>
+                <div class="content-body inner">{{ block.body | nl2br }}</div>
                 {% if block.pullTextLeft is not empty and block.pullImageRight is not empty %}
                     <div class="content-with-image inner">
 
                         <div class="fleft">
-                            <div class="content-body">{{ block.pullTextLeft }}</div>
+                            <div class="content-body">{{ block.pullTextLeft | nl2br  }}</div>
                         </div>
                         <div class="fright"><img
                                     src="{{ siteUrl }}/articleBanner/{{ block.pullImageRight.first().Filename }}"
@@ -85,11 +85,11 @@
                                     src="{{ siteUrl }}/articleBanner/{{ block.pullImageLeft.first().Filename }}"
                                     alt="">
                             {% if block.imageCaption is not empty %}
-                                <span class="image-caption">{{ block.imageCaption }}</span>
+                                <span class="image-caption">{{ block.imageCaption | nl2br }}</span>
                             {% endif %}
                         </div>
                         <div class="fright">
-                            <div class="content-body">{{ block.pullTextRight }}</div>
+                            <div class="content-body">{{ block.pullTextRight | nl2br }}</div>
                         </div>
                     </div>
                 {% endif %}
@@ -99,7 +99,7 @@
                         <img width="100%" src="{{ siteUrl }}/articleBanner/{{ block.fullWidthImage.first().Filename }}"
                              alt="">
                         {% if block.imageCaption is not empty %}
-                            <span class="image-caption">{{ block.imageCaption }}</span>
+                            <span class="image-caption">{{ block.imageCaption | nl2br }}</span>
                         {% endif %}
                     </div>
                 {% endif %}
@@ -110,19 +110,19 @@
                                  src="{{ siteUrl }}/articleBanner/{{ block.pullQuoteImage.first().Filename }}"
                                  alt="">
                             {% if block.imageCaption is not empty %}
-                                <span class="image-caption">{{ block.imageCaption }}</span>
+                                <span class="image-caption">{{ block.imageCaption | nl2br }}</span>
                             {% endif %}
                         </div>
 
                         <div class="fright">
-                            <div class="content-body">{{ block.pullQuoteText }}</div>
+                            <div class="content-body">{{ block.pullQuoteText | nl2br }}</div>
                             <div class="content-author">{{ block.pullQuoteTextAuthor }}</div>
                         </div>
                     </div>
                 {% endif %}
 
                 {% if block.extraContent is not empty %}
-                    <div class="content-body inner">{{ block.extraContent }}</div>
+                    <div class="content-body inner">{{ block.extraContent | nl2br }}</div>
                 {% endif %}
 
             {% endif %}
