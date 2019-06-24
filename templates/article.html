@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
-
+{% block seocontent %}
+<title>{{ entry.seoPageTitle }}</title>
+<meta name="description"
+      content="{{ entry.seoMetaDescription }}">
+<meta name="keywords" content="{{ entry.seoMetaKeywords }}">
+{% endblock seocontent %}
+<!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
 {% block snippet %}
-    {% block seocontent %}
-        <title>{{ entry.seoPageTitle }} | Oncore</title>
-        <meta name="description"
-              content="{{ entry.seoMetaDescription }}">
-        <meta name="keywords" content="{{ entry.seoMetaKeywords }}">
-    {% endblock seocontent %}
-    <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+
 
 {% endblock snippet %}
 {% block content %}
