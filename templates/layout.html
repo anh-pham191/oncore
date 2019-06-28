@@ -351,8 +351,70 @@
 
     })
 
+        // recaptcha 3 for all site
 
+    var renderRecaptcha = function() {
+        for (var i = 0; i < document.forms.length; ++i) {
+
+            var form = document.forms[i];
+            var holder = form.querySelector('.recaptcha-holder');
+            if (null === holder){
+                continue;
+
+            }
+
+            (function(frm){
+                var holderId = grecaptcha.render(holder,{
+                    'sitekey': '6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH',
+                    'size': 'invisible',
+                    'badge' : 'bottomright', // possible values: bottomright, bottomleft, inline
+                    'callback' : function (recaptchaToken) {
+                    frm.elements['g-recaptcha-response'].innerHTML = recaptchaToken;
+                }
+                });
+
+                frm.onsubmit = function (evt){
+                    evt.preventDefault();
+                    grecaptcha.execute(holderId).then(function(token) {
+                        if(typeof frm.elements['formname'] != "undefined" && frm.elements['formname'].value != ""){
+                            if(frm.elements['formname'].value == "Competition Enquiry"){
+                                submitCompetition();
+                            }else{
+                                submitEnquirePart1(frm);
+                            }
+                        }else{
+                            submitEnquirePart2();
+                        }
+                    });
+                };
+            })(form);
+        }
+    };
+    var renderRecaptchaPopup = function() {
+        var form = document.forms.popup;
+        var holder = form.querySelector('.recaptcha-holder');
+
+        (function(frm){
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH',
+                'size': 'invisible',
+                'badge' : 'bottomright', // possible values: bottomright, bottomleft, inline
+                'callback' : function (recaptchaToken) {
+                    frm.elements['g-recaptcha-response'].innerHTML = recaptchaToken;
+                }
+            });
+
+            frm.onsubmit = function (evt){
+                evt.preventDefault();
+                grecaptcha.execute(holderId).then(function(token) {
+                    submitEnquirePart1(frm);
+                });
+            };
+        })(form);
+    };
 </script>
+<script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
+
 {% block scripts %}
 
 {% endblock scripts%}
