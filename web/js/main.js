@@ -5116,7 +5116,7 @@ function submitValidation(id, type, para) {
 }
 
 function submitEnquirePart1(form) {
-    form.append('<input type="text" name="3frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
+    $(form).append('<input type="text" name="3frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
 
     var valifirstname = submitValidation('formf-firstname', 'required', 'firstname');
     var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
