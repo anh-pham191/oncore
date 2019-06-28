@@ -377,8 +377,8 @@
                     evt.preventDefault();
                     grecaptcha.execute(holderId).then(function(token) {
                         if(typeof frm.elements['formname'] != "undefined" && frm.elements['formname'].value != ""){
-                            if(frm.elements['formname'].value == "Competition Enquiry"){
-                                submitCompetition();
+                            if(frm.elements['formname'].value == "Franchise Enquiry"){
+                                submitFranchiseEnquiry(frm);
                             }else{
                                 submitEnquirePart1(frm);
                             }
