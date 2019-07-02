@@ -6932,7 +6932,11 @@ div#wideslideshow.overlay.article-page .overlay-container div.inner .title-box {
     position: absolute;
     bottom: 50px;
 }
-
+@media only screen and (min-width: 1247px) {
+    div#wideslideshow.overlay.article-page .overlay-container div.inner .title-box {
+        width: 1200px;
+    }
+}
 div#wideslideshow.overlay.article-page .overlay-container p {
     font-family: "Open Sans";
     font-size: 22px;
