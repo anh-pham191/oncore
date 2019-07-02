@@ -5117,7 +5117,7 @@ function submitFranchiseEnquiry(form) {
 
 function submitEnquirePart1(form) {
     $(form).append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
-
+    $('#prog1').fadeIn(100);
     var valifirstname = submitValidation('formf-firstname', 'required', 'firstname');
     var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
     var valiemail = submitValidation('formf-email', 'email');
