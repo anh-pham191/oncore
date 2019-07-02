@@ -7293,7 +7293,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     }
 
 }
-.formholder .progress, .theformarea .progress {
+.formholder .progress, .theformarea .progress, .form-banner .progress {
     background: url("/images/ajax-loader.gif") 50% 50% no-repeat #fff;
     width: 100%;
     height: 100%;
