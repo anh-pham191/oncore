@@ -86,9 +86,6 @@
                                                           checked="checked"/> <span class="note">Keep up to date with news from Refresh.</span></label>
                         </p>
                     </fieldset>
-                    <fieldset class="clearfix col-md-6">
-                        <div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>
-                    </fieldset>
                 </div>
                     <input type="hidden" name="form-country" value="New Zealand"/>
                     {% if craft.request.getSegment(2) == "broker-leads" %}
@@ -181,10 +178,11 @@
                         {% endif %}
 
                     </select>
+
                     <input type="submit" value="Submit Enquire" id="form-submit" class="submitbutton"/>
                 </fieldset>
                 {% endif %}
-
+                <div class="recaptcha-holder"></div>
             </form>
             <div id="prog1" class="progress" style="display: none;"></div>
         </div>
