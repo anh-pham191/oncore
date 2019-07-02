@@ -42,6 +42,8 @@ if (isset($_POST['frompage'])) {
 } else {
     $frompage = "";
 }
+$formpage = $frompage;
+$identifier = "Oncore Contact - General Enquiry";
 if (isset($_COOKIE['fromcampaign'])) {
     $campaign = cleanData($_COOKIE['fromcampaign']);
 } else {

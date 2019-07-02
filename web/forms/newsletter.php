@@ -117,6 +117,9 @@ if(isset($_POST['frompage'])){
 else {
     $frompage = '';
 }
+$formpage = $frompage;
+$identifier = "0002 Oncore Newsletter - Footer - Subscribe to newsletter";
+
 $subscribe = "False";
 
 $url = "https://api.ubiquity.co.nz/forms/ZOhgVVclZkqJQwjWvY5-wg/submit?apiToken=vaxIncJDcdcyEaK6KaIUV8uAtJOKR5uCB2HJhWtd4LGbeh7KORxzeqQNjPIaOREIrsK7he-3zjY8zoG4OJwIQk7ORyCuHgQA4BwqSK2V-2IH3mwvH0rMzrqQscjMLW5rOXUQXgksMjs";
