@@ -407,7 +407,15 @@
             frm.onsubmit = function (evt){
                 evt.preventDefault();
                 grecaptcha.execute(holderId).then(function(token) {
-                    submitEnquirePart1(frm);
+                    if(typeof frm.elements['formname'] != "undefined" && frm.elements['formname'].value != ""){
+                        if(frm.elements['formname'].value == "Franchise Enquiry"){
+                            submitFranchiseEnquiry(frm);
+                        }else{
+                            submitEnquirePart1(frm);
+                        }
+                    }else{
+                        submitEnquirePart1(frm);
+                    }
                 });
             };
         })(form);
