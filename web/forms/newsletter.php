@@ -6,7 +6,7 @@ if (isset($_POST['firstname'])) {
 } else {
     $firstname = '';
 }
-
+echo 1;
 if (isset($_POST['lastname'])) {
     $lastname = trim(addslashes($_POST['lastname']));
 } else {
