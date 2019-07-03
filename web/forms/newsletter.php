@@ -116,6 +116,8 @@ echo 3;
 
 if (isset($_COOKIE['frommedium'])) {
     $medium = cleanData($_COOKIE['frommedium']);
+} else {
+    $medium = "Not set";
 }
 echo 4;
 
