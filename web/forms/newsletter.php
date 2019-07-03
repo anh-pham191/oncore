@@ -6,7 +6,6 @@ if (isset($_POST['firstname'])) {
 } else {
     $firstname = '';
 }
-echo 1;
 if (isset($_POST['lastname'])) {
     $lastname = trim(addslashes($_POST['lastname']));
 } else {
@@ -21,7 +20,6 @@ if (isset($_POST['tel'])) {
 } else {
     $phone = '';
 }
-echo 2;
 
 if (isset($_COOKIE['fromsource'])) {
     if ($_COOKIE['fromsource'] == "google") {
@@ -112,26 +110,17 @@ if (isset($_COOKIE['fromsource'])) {
 } else {
     $source = "Oncore Consumer Website";
 };
-echo 3;
+
 
 if (isset($_POST['frompage'])) {
     $frompage = trim($_POST['frompage']);
 } else {
     $frompage = '';
 }
-echo 5;
-if (isset($_COOKIE['fromcampaign'])) {
-    $campaign = cleanData($_COOKIE['fromcampaign']);
-} else {
-    $campaign = "N/A";
-};
-echo 6;
+
 $formpage = $frompage;
-echo 7;
 $identifier = "0002 Oncore Newsletter - Footer - Subscribe to newsletter";
-echo 8;
 $subscribe = "False";
-echo 9;
 if (empty($firstname) || $firstname == "") { //not a lead
     $url = "https://api.ubiquity.co.nz/forms/ZOhgVVclZkqJQwjWvY5-wg/submit?apiToken=vaxIncJDcdcyEaK6KaIUV8uAtJOKR5uCB2HJhWtd4LGbeh7KORxzeqQNjPIaOREIrsK7he-3zjY8zoG4OJwIQk7ORyCuHgQA4BwqSK2V-2IH3mwvH0rMzrqQscjMLW5rOXUQXgksMjs";
 
