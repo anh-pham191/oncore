@@ -114,13 +114,6 @@ if (isset($_COOKIE['fromsource'])) {
 };
 echo 3;
 
-if (isset($_COOKIE['frommedium'])) {
-    $medium = cleanData($_COOKIE['frommedium']);
-} else {
-    $medium = "Not set";
-}
-echo 4;
-
 if (isset($_POST['frompage'])) {
     $frompage = trim($_POST['frompage']);
 } else {
