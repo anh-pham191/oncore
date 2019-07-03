@@ -24,7 +24,7 @@ $subscribe = cleanData($_POST['privacy']);
 $honeypot = cleanData($_POST['website']);
 $step = cleanData($_POST['step']);
 $lead = cleanData($_POST['lead']);
-
+$identifier = "0003 Oncore Contact - Renovate Handbook Download";
 if (isset($_COOKIE['fromcampaign'])) {
     $campaign = cleanData($_COOKIE['fromcampaign']);
 } else {
@@ -274,7 +274,7 @@ if ($probSpam != "yes") {
 
                         //add lead record to log
                         include '../includes/log.php';
-
+                        include "Spreadsheet-API.php";
                         echo "Successful";
 
                     }
