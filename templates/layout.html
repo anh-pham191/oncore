@@ -31,26 +31,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" media="all">
     <link rel="stylesheet" href="{{ siteUrl}}css/normalize.min.css" media="all">
     <!---->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDTPNVS');</script>
+    <!-- End Google Tag Manager -->
 
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129576409-1"></script>
+    <!-- Global site tag (gtag.js) - Google Ads: 776863757 -->
+    <script> window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-129576409-1');
+    gtag('config', 'AW-776863757'); </script>
     {% if (currentSite.name != 'oncore.local') and (currentSite.name !='Oncore Dev') %}
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WDTPNVS');</script>
-        <!-- End Google Tag Manager -->
 
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129576409-1"></script>
-        <!-- Global site tag (gtag.js) - Google Ads: 776863757 -->
-        <script> window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-129576409-1');
-        gtag('config', 'AW-776863757'); </script>
         <script type="text/javascript">
             var _ss = _ss || [];
             _ss.push(['_setDomain', 'https://koi-3QNH83TKIO.marketingautomation.services/net']);
@@ -351,8 +351,78 @@
 
     })
 
+        // recaptcha 3 for all site
 
+    var renderRecaptcha = function() {
+        for (var i = 0; i < document.forms.length; ++i) {
+
+            var form = document.forms[i];
+            var holder = form.querySelector('.recaptcha-holder');
+            if (null === holder){
+                continue;
+
+            }
+
+            (function(frm){
+                var holderId = grecaptcha.render(holder,{
+                    'sitekey': '6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH',
+                    'size': 'invisible',
+                    'badge' : 'bottomright', // possible values: bottomright, bottomleft, inline
+                    'callback' : function (recaptchaToken) {
+                    frm.elements['g-recaptcha-response'].innerHTML = recaptchaToken;
+                }
+                });
+
+                frm.onsubmit = function (evt){
+                    evt.preventDefault();
+                    grecaptcha.execute(holderId).then(function(token) {
+                        if(typeof frm.elements['formname'] != "undefined" && frm.elements['formname'].value != ""){
+                            if(frm.elements['formname'].value == "Franchise Enquiry"){
+                                submitFranchiseEnquiry(frm);
+                            }else{
+                                submitEnquirePart1(frm);
+                            }
+                        }else{
+                            submitEnquirePart1(frm);
+                        }
+                    });
+                };
+            })(form);
+        }
+    };
+    var renderRecaptchaPopup = function() {
+        var form = document.forms.popup;
+        var holder = form.querySelector('.recaptcha-holder');
+
+        (function(frm){
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH',
+                'size': 'invisible',
+                'badge' : 'bottomright', // possible values: bottomright, bottomleft, inline
+                'callback' : function (recaptchaToken) {
+                    frm.elements['g-recaptcha-response'].innerHTML = recaptchaToken;
+                }
+            });
+
+            frm.onsubmit = function (evt){
+                evt.preventDefault();
+                grecaptcha.execute(holderId).then(function(token) {
+                    if(typeof frm.elements['formname'] != "undefined" && frm.elements['formname'].value != ""){
+                        if(frm.elements['formname'].value == "Franchise Enquiry"){
+                            submitFranchiseEnquiry(frm);
+                        }else{
+                            submitEnquirePart1(frm);
+                        }
+                    }else{
+                        submitEnquirePart1(frm);
+                    }
+                });
+            };
+        })(form);
+    };
 </script>
+<script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
+
 {% block scripts %}
 
 {% endblock scripts%}

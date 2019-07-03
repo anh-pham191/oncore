@@ -44,6 +44,12 @@ if (isset($_COOKIE['fromsource'])){
         $source = "Social Media";
     } else if ($_COOKIE['fromsource']=="Mailout") {
         $source = "Mailout";
+    } else if ($_COOKIE['fromsource']=="Social Media Post") {
+        $source = "Social Media";
+    } else if ($_COOKIE['fromsource']=="Harmoney") {
+        $source = "Harmoney";
+    } else if ($_COOKIE['fromsource']=="referral") {
+        $source = "Referral";
     } else if ($_COOKIE['fromsource']=="Local Print Media") {
         $source = "Local Print Media";
     } else if ($_COOKIE['fromsource']=="banner") {
@@ -100,15 +106,20 @@ if (isset($_COOKIE['fromsource'])){
         $source = "Home Show";
     } else if ($_COOKIE['fromsource']=="seminar") {
         $source = "Seminars";
-    } else if ($_COOKIE['fromsource']=="Harmoney") {
-        $source = "Harmoney";
+    } else if ($_COOKIE['fromsource']=="directory") {
+        $source = "Directory";
+    } else if ($_COOKIE['fromsource']=="cinema") {
+        $source = "Cinema";
+    } else if ($_COOKIE['fromsource']=="other") {
+        $source = "Other";
+    } else if ($_COOKIE['fromsource']=="Re-engagement") {
+        $source = "Re-engagement";
     } else{
-        $source = "Oncore Website";
+        $source = "Oncore Consumer Website";
     }
 }else{
-    $source = "Oncore Website";
-}
-
+    $source = "Oncore Consumer Website";
+};
 if (isset($_COOKIE['frommedium'])) {
     $medium = cleanData($_COOKIE['frommedium']);
 }else {
