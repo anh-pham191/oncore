@@ -238,7 +238,7 @@ if (empty($firstname) || $firstname == "") { //not a lead
     },
     {
       \"fieldID\": \"1m4CmWmHv0qerwjWvZFcHg\",
-      \"value\": \"True\"
+      \"value\": \"on\"
     },
     {
         \"fieldID\": \"isGEXWUHB06m3wjWvZH0RQ\",
