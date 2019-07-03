@@ -20,7 +20,15 @@ if (isset($_POST['tel'])) {
 } else {
     $phone = '';
 }
-
+if (isset($_COOKIE['frommedium'])) {
+    $medium = trim($_COOKIE['frommedium']);
+} else {
+    $medium = "Not set";
+};if (isset($_COOKIE['fromcampaign'])) {
+    $campaign = trim($_COOKIE['fromcampaign']);
+} else {
+    $campaign = "Not set";
+};
 if (isset($_COOKIE['fromsource'])) {
     if ($_COOKIE['fromsource'] == "google") {
         $source = "Google AdWords";
