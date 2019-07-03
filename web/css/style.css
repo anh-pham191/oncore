@@ -4024,7 +4024,7 @@ li.help {
     }
 
     .form-banner .row {
-        height: 48px;
+        height: auto;
         margin: 15px 10px;
     }
 
