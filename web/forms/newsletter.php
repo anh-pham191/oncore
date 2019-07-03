@@ -269,6 +269,7 @@ if (empty($firstname) || $firstname == "") { //not a lead
             echo "Your form submission was Invalid. Please go back and try again.";
         } elseif ((in_array("UpdatedRow", $decodedArray)) || (in_array("AppendedRow", $decodedArray))) {
             echo "Successful";
+            $privacy = "TRUE";
             include "Spreadsheet-API.php";
         } else {
             // Info was not sent to Ubiquity - send the info in an email to be manually entered
