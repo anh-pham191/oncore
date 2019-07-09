@@ -494,12 +494,16 @@
         if (navigator.geolocation) {
             alert(1);
             navigator.geolocation.getCurrentPosition(function(pos) {
-                var me = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+                var position = {
+                    lat: pos.coords.latitude,
+                    lng: pos.coords.longitude
+                };
                 var marker = new google.maps.Marker({
                     map: map,
-                    position: me
+                    position: position
                 });
                 map.setZoom(12);
+                map.setCenter(marker.getPosition());
             }, function(error) {
                 // ...
             });
