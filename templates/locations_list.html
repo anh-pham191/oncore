@@ -453,6 +453,7 @@
 
         }
         $('#current-location').click(function () {
+            clearPrevious(userMarker, userCircle);
             if (navigator.geolocation) {
                 alert(1);
                 navigator.geolocation.getCurrentPosition(function(pos) {
