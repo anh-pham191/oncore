@@ -445,12 +445,38 @@
             position: relocate
         });
         map.setZoom(12);
+        findNearby(document.querySelector("input#destination.inputBox").value, marker);
 
+    }
+    $('#current-location').click(function () {
+        if (navigator.geolocation) {
+            alert(1);
+            navigator.geolocation.getCurrentPosition(function(pos) {
+                var position = {
+                    lat: pos.coords.latitude,
+                    lng: pos.coords.longitude
+                };
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: position
+                });
+                map.setZoom(12);
+                map.setCenter(marker.getPosition());
+                findNearby(position, marker);
+
+            }, function(error) {
+                console.log("Browser not supported")
+            });
+        }
+
+    })
+
+    function findNearby(address, marker){
         //In order to lookup the the position of a zip-code you can use the geocoding API:
         // https://developers.google.com/maps/documentation/geocoding/
         var geocode_api_base_url = "https://maps.googleapis.com/maps/api/geocode/json?";
         var params = {
-            adress : document.querySelector("input#destination.inputBox").value,
+            address : address,
             components : "country:nz",
             sensor : false,
             key: "AIzaSyCg29UmrclswAOYDBkWeztNZbR45gLlz1w",
@@ -490,26 +516,6 @@
             });
         });
     }
-    $('#current-location').click(function () {
-        if (navigator.geolocation) {
-            alert(1);
-            navigator.geolocation.getCurrentPosition(function(pos) {
-                var position = {
-                    lat: pos.coords.latitude,
-                    lng: pos.coords.longitude
-                };
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: position
-                });
-                map.setZoom(12);
-                map.setCenter(marker.getPosition());
-            }, function(error) {
-                // ...
-            });
-        }
-
-    })
 </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg29UmrclswAOYDBkWeztNZbR45gLlz1w&callback=initMap&libraries=geometry"></script>
 
