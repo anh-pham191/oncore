@@ -244,14 +244,14 @@
         });
         $(".back-link").click(function (e) {
             e.preventDefault();
-            $("#map-view").show();
-            $("#list-view").hide();
+            $("#map-view").show(500);
+            $("#list-view").hide(500);
         })
 
         $(".toggle-list").click(function (e) {
             e.preventDefault();
-            $("#map-view").hide();
-            $("#list-view").show();
+            $("#map-view").hide(500);
+            $("#list-view").show(500);
         })
         var titleLength = 47;
         var descriptionLength = 180;
@@ -632,8 +632,8 @@
         })
 
         function clearPrevious(userMarker, userCircle) {
-            $("#map-view").show();
-            $("#list-view").hide();
+            $("#map-view").show(500);
+            $("#list-view").hide(500);
             for (var i = 0; i < userMarker.length; i++) {
                 if (userMarker[i].id == "searchID") {
                     //Remove the marker from Map
