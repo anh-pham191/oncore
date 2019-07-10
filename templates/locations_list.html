@@ -165,6 +165,10 @@
             font-size: 16px;
             text-decoration: underline;
         }
+        .nearby-list:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
     </style>
 {% endblock snippet %}
 
@@ -537,7 +541,7 @@
                 if (status == google.maps.GeocoderStatus.OK) {
 
                     var infowindow = new google.maps.InfoWindow();
-                    var contentString = "<a href='/about-us/locations/" + arr[1] + "'><div class='map-title'>" + arr[2] + "</div><div class='map-address'><i class='fa fa-map-marker'></i> " + arr[0] + "</div><div>Covers the following areas:<br/><b>" + coveredAreas + "</b></div><br/><a class='map-link' href='" + arr[1] + "'>View location</a></a>";
+                    var contentString = "<a href='" + arr[1] + "'><div class='map-title'>" + arr[2] + "</div><div class='map-address'><i class='fa fa-map-marker'></i> " + arr[0] + "</div><div>Covers the following areas:<br/><b>" + coveredAreas + "</b></div><br/><a class='map-link' href='" + arr[1] + "'>View location</a></a>";
                     var marker = new google.maps.Marker({
                         map: map,
                         title: arr[2],
