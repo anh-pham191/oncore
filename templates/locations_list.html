@@ -150,6 +150,21 @@
             font-size: 25px;
             font-weight: 500;
         }
+        #list-view a {
+            font-family: "Poppins";
+            font-size: 20px;
+            font-weight: 500;
+        }
+        #list-view a:hover + .arrow{
+            display: inline !important;
+            opacity: 0.7;
+        }
+
+        #list-view .back a {
+            font-family: "Open Sans";
+            font-size: 16px;
+            text-decoration: underline;
+        }
     </style>
 {% endblock snippet %}
 
@@ -198,7 +213,7 @@
                 <h2>Full list of locations</h2>
                 {% for entry in myEntryQuery %}
                     <div class="col-md-4">
-                        <span>{{ entry.title }}</span>
+                        <a href="{{ entry.url }}">{{ entry.title }}</a> <img class="arrow" style="margin-top: -4px; display: none" src="svg/arrow.svg" alt="Get in touch">
                     </div>
                 {% endfor %}
                 <div class="back">
