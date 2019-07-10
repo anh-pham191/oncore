@@ -169,6 +169,12 @@
             cursor: pointer;
             opacity: 0.7;
         }
+        #number-location {
+            font-family: "Poppins";
+            font-size: 25px;
+            font-weight: 500;
+            margin-top: 50px;
+        }
     </style>
 {% endblock snippet %}
 
@@ -210,6 +216,7 @@
         </div>
         <div class="inner">
             <div id="map-view">
+                <p id="number-location"></p>
                 <div class="col-md-6" id="map-section"></div>
                 <div class="col-md-6" id="nearby-location"></div>
             </div>
@@ -637,6 +644,7 @@
         })
 
         function clearPrevious(userMarker, userCircle) {
+            $("#nearby-location").html();
             $("#map-view").show(500);
             $("#list-view").hide(500);
             for (var i = 0; i < userMarker.length; i++) {
@@ -698,9 +706,10 @@
                 });
                 $("#nearby-location").html("");
                 $.each(title, function (i, k) {
-                    console.log(in_area);
                     $("#nearby-location").append('<li onclick="location.href=&quot;'+in_area[i].url+'&quot;" class="nearby-list">' + k + '</li>');
                 });
+                $("#number-location").html(title.length + " locations(s) near "+ document.querySelector("input#destination.inputBox").value);
+
             });
         }
     </script>
