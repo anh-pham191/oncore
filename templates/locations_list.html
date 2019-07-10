@@ -567,8 +567,7 @@
         button.addEventListener("click", getLocation);
 
         function getLocation(event) {
-            $("#map-view").show();
-            $("#list-view").hide();
+
             clearPrevious(userMarker, userCircle);
             event.preventDefault();
             var in_area = [];
@@ -633,6 +632,8 @@
         })
 
         function clearPrevious(userMarker, userCircle) {
+            $("#map-view").show();
+            $("#list-view").hide();
             for (var i = 0; i < userMarker.length; i++) {
                 if (userMarker[i].id == "searchID") {
                     //Remove the marker from Map
