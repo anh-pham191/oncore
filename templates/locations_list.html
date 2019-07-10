@@ -127,6 +127,29 @@
             margin-bottom: 9px;
             padding-left: 20px;
         }
+        #map-view {
+            overflow: auto;
+            height: auto;
+        }
+        #list-view .col-md-4 {
+            padding-left: 0px;
+        }
+
+        #list-view {
+            margin-top: 50px;
+        }
+        #list-view .back {
+            width: 100%;
+            float: left;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+        #list-view h2 {
+            margin-bottom: 30px;
+            font-family: "Poppins";
+            font-size: 25px;
+            font-weight: 500;
+        }
     </style>
 {% endblock snippet %}
 
@@ -163,13 +186,25 @@
 
         </div>
         <div class="help-text inner">
-            <p>Can’t find what you’re looking for? Try view our full list of locations.</p>
+            <p class="list-toggle">Can’t find what you’re looking for? <a href="#" class="toggle-list">Try view our full list of locations.</a></p>
+            <p class="support">Your browser does not support location detection.</p>
         </div>
         <div class="inner">
-            <div class="col-md-6" id="map-section"></div>
-            <div class="col-md-6" id="nearby-location">
+            <div id="map-view">
+                <div class="col-md-6" id="map-section"></div>
+                <div class="col-md-6" id="nearby-location"></div>
             </div>
-
+            <div id="list-view">
+                <h2>Full list of locations</h2>
+                {% for entry in myEntryQuery %}
+                    <div class="col-md-4">
+                        <span>{{ entry.title }}</span>
+                    </div>
+                {% endfor %}
+                <div class="back">
+                    <a href="#" class="back-link">Back to map view</a>
+                </div>
+            </div>
         </div>
 
 
@@ -188,6 +223,21 @@
 {% block scripts %}
 
     <script>
+        $(function () {
+            $("#map-view").hide();
+            $(".help-text p.support").hide()
+        });
+        $(".back-link").click(function (e) {
+            e.preventDefault();
+            $("#map-view").show();
+            $("#list-view").hide();
+        })
+
+        $(".toggle-list").click(function (e) {
+            e.preventDefault();
+            $("#map-view").hide();
+            $("#list-view").show();
+        })
         var titleLength = 47;
         var descriptionLength = 180;
         if ($(window).width() >= 768 && $(window).width() < 1024) {
@@ -502,6 +552,8 @@
         button.addEventListener("click", getLocation);
 
         function getLocation(event) {
+            $("#map-view").show();
+            $("#list-view").hide();
             clearPrevious(userMarker, userCircle);
             event.preventDefault();
             var in_area = [];
@@ -516,9 +568,10 @@
 
         function printCoordinates(results) {
             if (results.status === "ZERO_RESULTS") {
-                $(".help-text p").text("Can’t find what you’re looking for? Try view our full list of locations.")
+                // $(".help-text p").html("Can’t find what you’re looking for?  <a href='#' class='toggle-list'>Try view our full list of locations.</a>")
             } else {
-                $(".help-text p").text("")
+                $(".list-toggle").show();
+                $(".help-text p.support").hide()
                 userSelectLat = results.results[0].geometry.location.lat;
                 userSelectLng = results.results[0].geometry.location.lng;
                 // console.log('arrayresults = '+userSelectLat,userSelectLng);
@@ -557,7 +610,8 @@
                     findNearby(position, marker);
 
                 }, function (error) {
-                    $(".help-text p").text("Your browser does not support location detection.")
+                    $(".list-toggle").hide();
+                    $(".help-text p.support").show()
                 });
             }
 
