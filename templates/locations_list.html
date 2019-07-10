@@ -130,6 +130,7 @@
         #map-view {
             overflow: auto;
             height: auto;
+            margin-bottom: 50px;
         }
         #list-view .col-md-4 {
             padding-left: 0px;
@@ -175,6 +176,26 @@
             font-weight: 500;
             margin-top: 50px;
         }
+        @media only all and (max-width: 767px) {
+            #nearby-location {
+                overflow: auto;
+                height: auto;
+                padding-left: 2px;
+                padding-right: 2px;
+                margin-bottom: 30px;
+            }
+            .nearby-list {
+                font-size: 16px;
+            }
+            #list-view .col-md-4 {
+                margin-top: 30px;
+            }
+        }
+        @media only all and (min-width: 767px) and (max-width: 1024px) {
+            .nearby-list {
+                font-size: 20px;
+            }
+        }
     </style>
 {% endblock snippet %}
 
@@ -195,7 +216,7 @@
         {% for entry in myEntryQuery %}
             {% for contact in entry.contactAddress %}
                 <input type="hidden"
-                       value="{{ contact.address }}|{{ entry.uri }}|{{ entry.h1heading }}|{{ contact.coveredAreas }}"
+                       value="{{ contact.address }}|{{ entry.uri }}|{{ entry.h1heading }}|{{ contact.coveredAreas }}|{{ entry.title }}"
                        class="address"/>
             {% endfor %}
         {% endfor %}
@@ -217,13 +238,13 @@
         <div class="inner">
             <div id="map-view">
                 <p id="number-location"></p>
-                <div class="col-md-6" id="map-section"></div>
-                <div class="col-md-6" id="nearby-location"></div>
+                <div class="col-md-6 col-sm-6" id="map-section"></div>
+                <div class="col-md-6 col-sm-6" id="nearby-location"></div>
             </div>
             <div id="list-view">
                 <h2>Full list of locations</h2>
                 {% for entry in myEntryQuery %}
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-4 ">
                         <a href="{{ entry.url }}">{{ entry.title }}</a> <img class="arrow" style="margin-top: -4px; display: none" src="svg/arrow.svg" alt="Get in touch">
                     </div>
                 {% endfor %}
@@ -551,7 +572,7 @@
                     var contentString = "<a href='" + arr[1] + "'><div class='map-title'>" + arr[2] + "</div><div class='map-address'><i class='fa fa-map-marker'></i> " + arr[0] + "</div><div>Covers the following areas:<br/><b>" + coveredAreas + "</b></div><br/><a class='map-link' href='" + arr[1] + "'>View location</a></a>";
                     var marker = new google.maps.Marker({
                         map: map,
-                        title: arr[2],
+                        title: arr[4],
                         url: arr[1],
                         icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
                         position: results[0].geometry.location
@@ -711,9 +732,9 @@
                     $("#nearby-location").append('<li onclick="location.href=&quot;'+in_area[i].url+'&quot;" class="nearby-list">' + k + '</li>');
                 });
                 if(search) {
-                    $("#number-location").html(title.length + " locations(s) near "+ document.querySelector("input#destination.inputBox").value);
+                    $("#number-location").html(title.length + " location(s) near "+ document.querySelector("input#destination.inputBox").value);
                 } else {
-                    $("#number-location").html(title.length + " locations(s) near you");
+                    $("#number-location").html(title.length + " location(s) near you");
                 }
             });
         }
