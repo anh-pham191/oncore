@@ -580,7 +580,6 @@
 
         function getLocation(event) {
 
-            clearPrevious(userMarker, userCircle);
             event.preventDefault();
             var in_area = [];
             //store city entered into a variable, put it in quotes, and add that to the geocode URL
@@ -589,7 +588,10 @@
             var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=AIzaSyCg29UmrclswAOYDBkWeztNZbR45gLlz1w";
             //return JSON and
             // console.log(geocodeURL);
-            $.get(geocodeURL, printCoordinates)
+            if(city){
+                clearPrevious(userMarker, userCircle);
+                $.get(geocodeURL, printCoordinates)
+            }
         }
 
         function printCoordinates(results) {
