@@ -613,7 +613,7 @@
             marker.id = "searchID";
             userMarker.push(marker);
             map.setZoom(12);
-            findNearby(document.querySelector("input#destination.inputBox").value, marker);
+            findNearby(document.querySelector("input#destination.inputBox").value, marker, true);
 
         }
 
@@ -633,7 +633,7 @@
                     userMarker.push(marker);
                     map.setZoom(12);
                     map.setCenter(marker.getPosition());
-                    findNearby(position, marker);
+                    findNearby(position, marker, false);
 
                 }, function (error) {
                     $(".list-toggle").hide();
@@ -661,7 +661,7 @@
             userCircle = []; // this is if you really want to remove them, so you reset the variable.
         }
 
-        function findNearby(address, marker) {
+        function findNearby(address, marker, search) {
             //In order to lookup the the position of a zip-code you can use the geocoding API:
             // https://developers.google.com/maps/documentation/geocoding/
             var geocode_api_base_url = "https://maps.googleapis.com/maps/api/geocode/json?";
@@ -708,8 +708,11 @@
                 $.each(title, function (i, k) {
                     $("#nearby-location").append('<li onclick="location.href=&quot;'+in_area[i].url+'&quot;" class="nearby-list">' + k + '</li>');
                 });
-                $("#number-location").html(title.length + " locations(s) near "+ document.querySelector("input#destination.inputBox").value);
-
+                if(search) {
+                    $("#number-location").html(title.length + " locations(s) near "+ document.querySelector("input#destination.inputBox").value);
+                } else {
+                    $("#number-location").html(title.length + " locations(s) near you");
+                }
             });
         }
     </script>
