@@ -541,6 +541,7 @@
                     var marker = new google.maps.Marker({
                         map: map,
                         title: arr[2],
+                        url: arr[1],
                         icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
                         position: results[0].geometry.location
                     });
@@ -684,13 +685,17 @@
                 var title = [];
                 $.each(markerList, function (i, marker) {
                     if (search_area.getBounds().contains(marker.getPosition()) && google.maps.geometry.spherical.computeDistanceBetween(search_area.getCenter(), marker.getPosition()) <= search_area.getRadius()) {
-                        in_area.push(marker);
-                        title.indexOf(marker.getTitle()) === -1 ? title.push(marker.getTitle()) : console.log();
+                        // title.indexOf(marker.getTitle()) === -1 ? title.push(marker.getTitle()) : console.log();
+                        if(title.indexOf(marker.getTitle()) === -1) {
+                            title.push(marker.getTitle());
+                            in_area.push(marker);
+                        }
                     }
                 });
                 $("#nearby-location").html("");
                 $.each(title, function (i, k) {
-                    $("#nearby-location").append("<li class='nearby-list'>" + k + "</li>");
+                    console.log(in_area);
+                    $("#nearby-location").append('<li onclick="location.href=&quot;'+in_area[i].url+'&quot;" class="nearby-list">' + k + '</li>');
                 });
             });
         }
