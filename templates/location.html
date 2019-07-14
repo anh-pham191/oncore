@@ -18,7 +18,88 @@
             font-weight: bold;
             color: #0079bb
         }
+        .inner.location, .inner.individual, .inner.people {
+            height: auto;
+            overflow: auto;
+        }
+        .inner.location {
+            padding: 60px 0;
+        }
 
+        .inner.location .text-intro {
+            background-color: #f1f1f1;
+            height: 411px;
+        }
+
+        .inner.location .col-md-6 {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .inner.location .text-intro .container {
+            width: 85%;
+            margin: 0 auto;
+            padding-top: 36px;
+        }
+        .inner.location .text-intro .container .phone-number {
+            margin-top: 9px;
+            margin-bottom: 21px;
+            display: block;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: bold;
+            color: #4fae47;
+        }
+        .inner.location .text-intro .container .title {
+            font-family: "Poppins";
+            font-size: 25px;
+            font-weight: 500;
+        }
+        .inner.location .text-intro .container .content {
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.63;
+        }
+        .inner.individual .col-md-4 {
+            position: relative;
+            padding-left: 39px
+        }
+        .inner .suburbs {
+            font-family: "Poppins";
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            margin-top: 20px;
+            display: block;
+        }
+
+        .inner.individual .fa {
+            position: absolute;
+            top: 11%;
+            left: 0;
+            font-size: 28px;
+            color: #4fae47;
+        }
+
+        .inner .line-address {
+            font-family: "Open Sans";
+            font-size: 16px;
+            line-height: 1.63;
+        }
+        .inner .directions {
+            font-family: "Open Sans";
+            font-size: 16px;
+            line-height: 1.38;
+            margin-top: 15px;
+            display: block;
+            text-decoration: underline;
+        }
+
+        .inner.people {
+            padding-top: 60px ;
+            padding-bottom: 70px;
+        }
     </style>
 {% endblock snippet %}
 {% block content %}
@@ -31,15 +112,37 @@
                        class="address"/>
             {% endfor %}
         <input type="hidden" value="{{ entry.title }}" id="current-location"/>
-        <div class="inner">
-            <div class="col-md-6">
-                <h2>{{ entry.title }}</h2>
-                <span>{{ entry.regionalPhoneNumber }}</span>
-                <p>{{ entry.pageContent }}</p>
+        <div class="inner location">
+            <div class="col-md-6 col-sm-6 text-intro">
+                <div class="container">
+                    <h2 class="title">{{ entry.title }}</h2>
+                    <span class="phone-number">{{ entry.regionalPhoneNumber }}</span>
+                    <p class="content">{{ entry.pageContent }}</p>
+                </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
                 <div id="map-section"></div>
             </div>
+        </div>
+
+        <div class="inner individual">
+            <h2>Individual locations</h2>
+            {% for contact in entry.contactAddress %}
+                <div class="col-md-4 col-sm-4">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    {#<img src="/svg/map-marker.svg" alt="">#}
+                    <span class="suburbs">{{ contact.suburbs }}</span>
+                    {% set address = contact.address | split(',') %}
+                    {% for a in address %}
+                        <p class="line-address">{{ address[loop.index0] }}</p>
+                    {% endfor %}
+                    <a href="" class="directions">Directions and map</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="inner people">
+            <h2>Meet the {{ entry.title }} team</h2>
         </div>
         {% include 'includes/footer-banner.html' %}
     </div>
