@@ -2939,6 +2939,11 @@ ul {
     .full-width-text-left.list-page {
         margin: 0 auto !important;
     }
+    .person {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
 }
 
 @media only all and (min-width: 64em) {
@@ -7305,4 +7310,42 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     top: 0;
     left: 0;
     z-index: 4;
+}
+
+.person .person-image{
+    height: auto;
+    width: 100%
+}
+
+.person .name {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.person {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.person .person-block {
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    margin: 0 auto
+}
+
+.person .person-block .text-block {
+    padding: 20px;
+    min-height: 267px;
+}
+.person .job  {
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 1.57;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+.person .description {
+    font-size: 16px;
+    line-height: 1.7;
 }

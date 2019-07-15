@@ -100,6 +100,25 @@
             padding-top: 60px ;
             padding-bottom: 70px;
         }
+
+        .inner.people h2 {
+            margin-bottom: 35px;
+        }
+        @media only all and (max-width: 47.937em) {
+            .inner.location .text-intro {
+                height: auto;
+            }
+            .inner.location .text-intro .container {
+                padding-bottom: 36px;
+            }
+        }
+        @media only all and (min-width: 48em) and (max-width: 64em) {
+            .inner.location .text-intro, #map-section {
+                height: 550px;
+
+            }
+        }
+
     </style>
 {% endblock snippet %}
 {% block content %}
@@ -143,12 +162,39 @@
 
         <div class="inner people">
             <h2>Meet the {{ entry.title }} team</h2>
+            {#get region category of this location#}
+            {% set category = craft.categories.group('region').relatedTo(entry).first() %}
+            {#get all person in this region category#}
+             {% set e = craft.entries().section('person').relatedTo(category).all() %}
+
+            {% for person in e %}
+                <div class="col-md-4 col-sm-4 person">
+                    <div class="person-block">
+                        <img class="person-image" src="{{ siteUrl }}personImage/{{ person.personImage.first().Filename }}" alt="">
+                        <div class="text-block">
+                            <p class="name">{{ person.personName }}</p>
+                            <p class="job">{{ person.jobTitle }}</p>
+                            <p class="description">{{ person.personDescription }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
         {% include 'includes/footer-banner.html' %}
     </div>
 {% endblock content %}
 {% block scripts %}
     <script>
+
+        var descriptionLength = 220;
+        if ($(window).width() >= 768 && $(window).width() < 1024){
+            descriptionLength = 120;
+        } else if ($(window).width() >= 1024 && $(window).width() < 1249){
+            descriptionLength = 170;
+        }
+        trimText(descriptionLength, $(".person .description"));
+
+
         var map;
         var markerList = [];
         function initMap() {

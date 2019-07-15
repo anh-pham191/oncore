@@ -426,6 +426,16 @@
             };
         })(form);
     };
+    function trimText(count, object){
+        object.each(function () {
+            var content = $(this).text();
+            if (content.length > count) {
+
+                var c = content.substr(0, count);
+                $(this).html(c + "...");
+            }
+        })
+    }
 </script>
 <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
 

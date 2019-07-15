@@ -196,6 +196,18 @@
                 font-size: 20px;
             }
         }
+        #list-view .fa {
+            font-size: 20px;
+            color: #4fae47;
+        }
+
+        #nearby-location .fa {
+              font-size: 35px;
+            padding-right: 15px;
+            line-height: 93px;
+            color: #4fae47;
+
+        }
     </style>
 {% endblock snippet %}
 
@@ -245,7 +257,7 @@
                 <h2>Full list of locations</h2>
                 {% for entry in myEntryQuery %}
                     <div class="col-md-4 col-sm-4 ">
-                        <a href="{{ entry.url }}">{{ entry.title }}</a> <img class="arrow" style="margin-top: -4px; display: none" src="/svg/arrow.svg" alt="Get in touch">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="{{ entry.url }}">{{ entry.title }}</a> <img class="arrow" style="margin-top: -4px; display: none" src="/svg/arrow.svg" alt="Get in touch">
                     </div>
                 {% endfor %}
                 <div class="back">
@@ -729,7 +741,7 @@
                 });
                 $("#nearby-location").html("");
                 $.each(title, function (i, k) {
-                    $("#nearby-location").append('<li onclick="location.href=&quot;/'+in_area[i].url+'&quot;" class="nearby-list">' + k + '</li>');
+                    $("#nearby-location").append('<li onclick="location.href=&quot;/'+in_area[i].url+'&quot;" class="nearby-list"> <i class="fa fa-map-marker" aria-hidden="true"></i>' + k + '</li>');
                 });
                 if(search) {
                     $("#number-location").html(title.length + " location(s) near "+ document.querySelector("input#destination.inputBox").value);
