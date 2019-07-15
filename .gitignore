@@ -5,3 +5,5 @@
 /config/project.yaml
 web/articleBanner/*
 web/robots.txt
+web/personImage/
+web/personImage/*
