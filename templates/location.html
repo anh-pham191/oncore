@@ -161,24 +161,26 @@
         </div>
 
         <div class="inner people">
-            <h2>Meet the {{ entry.title }} team</h2>
             {#get region category of this location#}
             {% set category = craft.categories.group('region').relatedTo(entry).first() %}
             {#get all person in this region category#}
-             {% set e = craft.entries().section('person').relatedTo(category).all() %}
+            {% set e = craft.entries.section('person').relatedTo(category) %}
+            {% if e|length %}
+                <h2>Meet the {{ entry.title }} team</h2>
 
-            {% for person in e %}
-                <div class="col-md-4 col-sm-4 person">
-                    <div class="person-block">
-                        <img class="person-image" src="{{ siteUrl }}personImage/{{ person.personImage.first().Filename }}" alt="">
-                        <div class="text-block">
-                            <p class="name">{{ person.personName }}</p>
-                            <p class="job">{{ person.jobTitle }}</p>
-                            <p class="description">{{ person.personDescription }}</p>
+                {% for person in e %}
+                    <div class="col-md-4 col-sm-4 person">
+                        <div class="person-block">
+                            <img class="person-image" src="{{ siteUrl }}personImage/{{ person.personImage.first().Filename }}" alt="">
+                            <div class="text-block">
+                                <p class="name">{{ person.personName }}</p>
+                                <p class="job">{{ person.jobTitle }}</p>
+                                <p class="description">{{ person.personDescription }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            {% endif %}
         </div>
         {% include 'includes/footer-banner.html' %}
     </div>
@@ -393,13 +395,17 @@
                     }
                 });
             for (var i = 0; i < lis.length; i++) {
-                mapAddress(map, lis[i].value);
+                if(lis.length== 1) {
+                    mapAddress(map, lis[i].value, true);
+                } else {
+                    mapAddress(map, lis[i].value, false);
+                }
             }
 
         }
 
 
-        function mapAddress(map, address) {
+        function mapAddress(map, address, one_marker) {
             var geocoder = new google.maps.Geocoder();
             var arr = address.split("|");
             if (arr[3] == "") {
@@ -474,6 +480,10 @@
                         icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
                         position: results[0].geometry.location
                     });
+                    if(one_marker){
+                        map.setCenter(marker.getPosition());
+                        map.setZoom(10);
+                    }
 
                     marker.addListener('click', function () {
                         map.setZoom(15);

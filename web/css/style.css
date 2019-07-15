@@ -3026,6 +3026,10 @@ ul {
     #footer section.form li {
         margin: 0 15px 8px 0;
     }
+    .person {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 .contact .input-label-wrapper {
