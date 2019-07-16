@@ -21,5 +21,6 @@ $listFeed->insert([
     'utmkeyword' => "",
     'landingpageurl' => $formpage,
     'formidentifier' => $identifier,
+    'suburb' => $location
 ]);
 ?>
