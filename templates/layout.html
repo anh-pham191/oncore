@@ -32,6 +32,15 @@
     <link rel="stylesheet" href="{{ siteUrl}}css/normalize.min.css" media="all">
     <!---->
     {% if (currentSite.name == 'oncore.local') or (currentSite.name =='Oncore Dev') %}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129576409-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-129576409-2');
+        </script>
 
 
 
