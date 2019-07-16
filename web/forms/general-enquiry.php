@@ -14,7 +14,11 @@ $firstname = cleanData($_POST['firstname']);
 $lastname = cleanData($_POST['lastname']);
 $email = cleanData($_POST['email']);
 $phone = cleanData($_POST['tel']);
-$country = "New Zealand";
+if (isset($_POST['location'])) {
+    $location = cleanData($_POST['location']);
+} else {
+    $location = "";
+};$country = "New Zealand";
 if (isset($_POST['privacy'])) {
     $privacy = cleanData($_POST['privacy']);
 } else {
@@ -275,6 +279,10 @@ if ($probSpam != "yes") {
 		{
 		  \"fieldID\": \"2UkdM00uzES_tgjWUFgihQ\",
 		  \"value\": \"$creative\"
+        },
+        {
+		  \"fieldID\": \"JN7dg42xtUuI8gjXCpVHvA\",
+		  \"value\": \"$location\"
         },
 		{
 		  \"fieldID\": \"kVxA-ShxDUqmBgjWTwUSGA\",

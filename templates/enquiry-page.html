@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
+{% block snippet %}
+
 {% block seocontent %}
 <title>Have repairman at your door in minutes | Oncore NZ</title>
 <meta name="description" content="Oncore provides fast, simple and professional installation, repair and maintenance services. Call now and have one of our people at your door in minutes!">
@@ -8,7 +10,16 @@ Insulation, Leak repairs, Roofing and spouting, Windows and doors, Cupboards and
 Locks and handles, Furniture assembly, Appliance fitting, Appliance installation, Air conditioning installation, Heat pump installation,
 Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car park maintenance, Gutter cleaning, Paving, Bricklaying, Concreting, Fence and gate repairs, Garden maintenance, Pergola assembly, Garden shed assembly">
 {% endblock seocontent %}
-
+<style>
+    span.location-des {
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-style: italic;
+        line-height: 1.36;
+        color: #8e8e8e;
+    }
+</style>
+{% endblock snippet %}
 
 {% block content %}
 
@@ -68,6 +79,30 @@ Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car p
                                 <label class="labelname">Email Address</label>
                                 <input type="text" name="email" class="form-control" aria-label="Email address" id="formf-email"
                                        data-prefix="formf"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Property Location</label>
+                                <select name="location" id="" class="form-control" required >
+                                    <option value="" disabled selected hidden>Select location</option>
+                                    <option value="AKL - Auckland Central">AKL - Auckland Central</option>
+                                    <option value="AKL - Franklin">AKL - Franklin</option>
+                                    <option value="AKL - Manukau">AKL - Manukau</option>
+                                    <option value="AKL - Rodney">AKL - Rodney</option>
+                                    <option value="AKL - West Auckland">AKL - West Auckland</option>
+                                    <option value="WEL - Wellington Central">WEL - Wellington Central</option>
+                                    <option value="WEL - Porirua">WEL - Porirua</option>
+                                    <option value="WEL - Upper Hutt">WEL - Upper Hutt</option>
+                                    <option value="WEL - Lower Hutt">WEL - Lower Hutt</option>
+                                    <option value="WEL - Kapiti">WEL - Kapiti</option>
+                                    <option value="WEL - Petone">WEL - Petone</option>
+                                    <option value="WEL - Otaki">WEL - Otaki</option>
+                                    <option value="WEL - Miramar">WEL - Miramar</option>
+                                    <option value="WEL - Lyall Bay">WEL - Lyall Bay</option>
+                                    <option value="Rather not say">Rather not say</option>
+                                </select>
+                                <span class="location-des">We ask for property location to enable us to seamlessly connect you with a maintenance specialist in your area. </span>
                             </div>
                         </div>
                         <div class="row">
