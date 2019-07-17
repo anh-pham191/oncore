@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+{% block snippet %}
+    {% block seocontent %}
+        {#<title>{{ entry.seoPageTitle }} | Oncore</title>#}
+        {#<meta name="description" content="{{ entry.seoMetaDescription }}">#}
+        {#<meta name="keywords" content="{{ entry.seoMetaKeywords }}">#}
+    {% endblock seocontent %}
+    <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+{% endblock snippet %}
+{% block content %}
+    <div >
+        <div>
+            <div id="wideslideshow" class="overlay white">
+                <img class="notmobile" src="{{siteUrl}}images/homepage-banner.jpg" alt="Oncore - The key to faster, smoother jobs"/>
+
+                <div class=" overlay-container white">
+                    <div class="inner container">
+                        <h1>One call does it all.</h1>
+                        <div class="intro-bottom">Oncore is New Zealand's leading team for residential and commercial
+                            repairs,
+                            maintenance, insurance work, and installations.
+                        </div>
+                        <p class="learn-more">Learn more <img style="width: 12px"
+                                                              src="{{ siteUrl }}svg/baseline-keyboard_arrow_down-24px.svg">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="full-width-text-left inner" style="position: relative">
+                <div class="form-banner">
+                    <h1>Get in touch</h1>
+                    <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
+                        <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname" for="formf-firstname">First Name</label>
+                                <input type="text" class="form-control home-form"
+                                       aria-label="First name" name="firstname" id="formf-firstname"
+                                       data-prefix="formf"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Last Name</label>
+                                <input type="text" class="form-control home-form"
+                                       aria-label="Last name" name="lastname"
+                                       id="formf-lastname" data-prefix="formf"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Email Address</label>
+                                <input type="text" class="form-control home-form"
+                                       name="email"
+                                       id="formf-email" data-prefix="formf"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Property Location</label>
+                                <select name="location" id="" class="form-control home-form" required >
+                                    <option value="" disabled selected hidden>Select location</option>
+                                    <option value="AKL - Auckland Central">AKL - Auckland Central</option>
+                                    <option value="AKL - Franklin">AKL - Franklin</option>
+                                    <option value="AKL - Manukau">AKL - Manukau</option>
+                                    <option value="AKL - Rodney">AKL - Rodney</option>
+                                    <option value="AKL - West Auckland">AKL - West Auckland</option>
+                                    <option value="WEL - Wellington Central">WEL - Wellington Central</option>
+                                    <option value="WEL - Porirua">WEL - Porirua</option>
+                                    <option value="WEL - Upper Hutt">WEL - Upper Hutt</option>
+                                    <option value="WEL - Lower Hutt">WEL - Lower Hutt</option>
+                                    <option value="WEL - Kapiti">WEL - Kapiti</option>
+                                    <option value="WEL - Petone">WEL - Petone</option>
+                                    <option value="WEL - Otaki">WEL - Otaki</option>
+                                    <option value="WEL - Miramar">WEL - Miramar</option>
+                                    <option value="WEL - Lyall Bay">WEL - Lyall Bay</option>
+                                    <option value="Rather not say">Rather not say</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Phone</label>
+                                <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
+                                <!--placeholder="Enter phone number" aria-label="Phone number"-->
+                                <!--data-prefix="c-car"/>-->
+
+                                <input type="tel" class="form-control home-form phone-input"
+                                       name="tel" id="formf-tel"
+                                       data-prefix="formf" data-phoneformat="yes">
+                            </div>
+                        </div>
+
+                        <div class="row tick">
+                            <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                <input type="checkbox" class="uniform-styles" name="privacy"
+                                       id="formf-privacy" checked="checked" data-prefix="formf"/>
+                                <label for="formf-privacy"> I have read, understood and accepted the <a
+                                            href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                            </div>
+                        </div>
+                        <div class="row tick">
+                            <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                                <input type="checkbox" class="uniform-styles" name="subscribe" id="formf-subscribe"
+                                       checked="checked"/>
+                                <label for="formf-subscribe"> I consent to receiving marketing emails.</label>
+                            </div>
+                        </div>
+                        <!--<div class="row tick">-->
+
+                        <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+
+                        <!--<div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>-->
+
+                        <!--</div>-->
+                        <!--</div>-->
+                        <div class="recaptcha-holder"></div>
+                        <input type="hidden" value="Project Enquiry" name="formname">
+                        <div class="row tick">
+                            <div class="col-md-6 col-xs-12 input-label-wrapper">
+                                <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit"
+                                       value="Get in touch"/>
+
+                            </div>
+                        </div>
+                        <div id="prog1" class="progress" style="display: none;"></div>
+                    </form>
+                </div>
+
+                <p><strong>What do the standards cover and how can we help you meet them?</strong></p>
+                <p>From your first consultation, through to project completion, Oncore provides one point of contact. This
+                    means no managing multiple trades, no project overruns and no stress.</p>
+            </div>
+
+        </div>
+
+    </div>
+    {% include 'includes/footer-banner.html' %}
+
+{% endblock content %}
+{% block scripts %}
+
+{% endblock scripts %}
