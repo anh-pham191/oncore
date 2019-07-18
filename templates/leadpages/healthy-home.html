@@ -5,30 +5,144 @@
         {#<meta name="description" content="{{ entry.seoMetaDescription }}">#}
         {#<meta name="keywords" content="{{ entry.seoMetaKeywords }}">#}
     {% endblock seocontent %}
+    <style>
+
+        #wrapper .white-container .healthy-box {
+            min-height: 580px;
+            margin-bottom: 42px;
+        }
+        #wrapper .white-container .healthy-box .container {
+            padding: 42px;
+            background-color: #f5f5f5;
+            min-height: 580px;
+        }
+
+        #wrapper .white-container .healthy-box .container .heading {
+            font-family: "Poppins";
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.25;
+            color: #2f3132;
+            background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
+            padding-left: 33px;
+            padding-top: 0;
+            background-size: 24px auto;
+            background-position-y: 8px;
+            margin-bottom: 32px;
+            display: block;
+        }
+
+        #wrapper .white-container .healthy-box .container .summary {
+            font-family: "Poppins";
+            font-size: 25px;
+            font-weight: 500;
+            color: #2f3132;
+            margin-bottom: 15px;
+        }
+        #wrapper .white-container .healthy-box .container .text-content {
+            font-family: "Open Sans";
+            font-size: 18px;
+            line-height: 1.44;
+            color: #2f3132;
+        }
+        #wrapper .white-container .box-content {
+            margin-top: 50px;
+        }
+
+        #wrapper .white-container .healthy-box.contact .container {
+            background-color: #eaf5e9;
+        }
+        #wrapper .white-container .healthy-box.contact .container .heading {
+            background: none;
+            padding-left: 0px;
+        }
+
+        #wrapper .white-container .healthy-box .container .phone {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-family: "Open Sans";
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #4fae47;
+            display: block;
+            text-align: left;
+        }
+        #wrapper .white-container .healthy-box .container .cta-button {
+            width: 205px;
+        }
+        #wrapper .full-width-text-left.text-container .form-banner {
+            position: static;
+            float: right;
+            margin-top: -79px;
+            margin-left: 42px;
+        }
+        #wrapper .full-width-text-left.text-container p {
+            width: 100%
+        }
+        #wrapper .full-width-text-left.text-container p:first-of-type {
+            padding-bottom: 25px;
+        }
+        #wrapper .full-width-text-left.text-container p.bottom {
+            margin-top: 30px;
+            margin-bottom: 2px;
+        }
+        .form-banner .title {
+            font-family: "Poppins";
+            font-size: 25px;
+            font-weight: 600;
+            color: #2f3132;
+            display: block;
+            margin-top: 35px
+        }
+        .form-banner .container {
+            padding-left: 42px;
+            padding-right: 42px;
+        }
+        .form-banner .container .row{
+            margin-left: 0px;
+            margin-right: 0px;
+            height: auto;
+        }
+        .form-banner .container .row .input-label-wrapper {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .form-banner .container .row.tick {
+            margin: 0;
+        }
+    </style>
     <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
 {% endblock snippet %}
 {% block content %}
-    <div >
-        <div>
-            <div id="wideslideshow" class="overlay white">
-                <img class="notmobile" src="{{siteUrl}}images/homepage-banner.jpg" alt="Oncore - The key to faster, smoother jobs"/>
 
-                <div class=" overlay-container white">
-                    <div class="inner container">
-                        <h1>One call does it all.</h1>
-                        <div class="intro-bottom">Oncore is New Zealand's leading team for residential and commercial
-                            repairs,
-                            maintenance, insurance work, and installations.
-                        </div>
-                        <p class="learn-more">Learn more <img style="width: 12px"
-                                                              src="{{ siteUrl }}svg/baseline-keyboard_arrow_down-24px.svg">
-                        </p>
+    <div id="wideslideshow" class="overlay white">
+        <img class="notmobile" src="{{ siteUrl }}images/homepage-banner.jpg"
+             alt="Oncore - The key to faster, smoother jobs"/>
+
+        <div class=" overlay-container white">
+            <div class="inner relative-inner">
+                <div class="inner container-box">
+                    <h1>Have you got work to do on your rental?</h1>
+                    <div class="intro-bottom">From July 2021 onwards, all landlords will be required by law to meet the
+                        Healthy Homes Standards - Oncore can ensure your property meets them.
                     </div>
+                    <button onclick="location.href='http://oncore.local/contact-us/project-enquiry'" class="cta-button">Get
+                        in touch
+                    </button>
+                    <span class="learn-more">Learn more <img style="width: 12px"
+                                                             src="{{ siteUrl }}svg/baseline-keyboard_arrow_down-24px.svg">
+                            </span>
                 </div>
             </div>
-            <div class="full-width-text-left inner" style="position: relative">
-                <div class="form-banner">
-                    <h1>Get in touch</h1>
+        </div>
+    </div>
+    <div class="green-container">
+        <div class="full-width-text-left inner text-container" style="position: relative">
+            <div class="form-banner">
+                <div class="container">
+                    <span class="title">Get in touch</span>
+                    <span class="helper">Hire Oncore to bring your rental up to meet the standards</span>
                     <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
                         <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
                         <div class="row">
@@ -58,7 +172,7 @@
                         <div class="row">
                             <div class="col-md-12 input-label-wrapper">
                                 <label class="labelname">Property Location</label>
-                                <select name="location" id="" class="form-control home-form" required >
+                                <select name="location" id="" class="form-control home-form" required>
                                     <option value="" disabled selected hidden>Select location</option>
                                     <option value="AKL - Auckland Central">AKL - Auckland Central</option>
                                     <option value="AKL - Franklin">AKL - Franklin</option>
@@ -103,7 +217,8 @@
                             <div class="col-sm-12 col-xs-12 input-label-wrapper">
                                 <input type="checkbox" class="uniform-styles" name="subscribe" id="formf-subscribe"
                                        checked="checked"/>
-                                <label for="formf-subscribe"> I consent to receiving marketing emails.</label>
+                                <label for="formf-subscribe"> Sign me up to receive home maintance advice and inspiration.
+                                    (Don’t worry - if you change your mind you can unsubscribe at anytime)</label>
                             </div>
                         </div>
                         <!--<div class="row tick">-->
@@ -126,16 +241,61 @@
                         <div id="prog1" class="progress" style="display: none;"></div>
                     </form>
                 </div>
-
-                <p><strong>What do the standards cover and how can we help you meet them?</strong></p>
-                <p>From your first consultation, through to project completion, Oncore provides one point of contact. This
-                    means no managing multiple trades, no project overruns and no stress.</p>
             </div>
 
+            <p><strong>What do the standards cover and how can we help you meet them?</strong></p>
+            <ul>
+                <li><span class="heading">Heating</span>
+                    <p class="content">To meet the Healthy Homes’ heating standards, you must have a fixed device in the
+                        home’s main living area that reaches at least 18 degrees C</p></li>
+                <li><span class="heading">Insulation</span>
+                    <p class="content">Your rental property’s ceiling and underfloor insulation must be up to the
+                        standards of the 2008 New Zealand Building Code.</p></li>
+                <li><span class="heading">Ventilation</span>
+                    <p class="content">When it comes to meeting the Healthy Homes’ ventilation standards, there are a
+                        few things to check for. Firstly, there must be windows which can open to the equivalent of 5%
+                        of the floor area. </p></li>
+                <li><span class="heading">Moisture ingress and drainage</span>
+                    <p class="content">The moisture ingress and drainage standards cover efficient drainage, roof water
+                        removal and ground moisture barriers. </p></li>
+                <li><span class="heading">Draught Stopping</span>
+                    <p class="content">The main goals behind the draught stopping standard are to ensure your tenants
+                        stay warm and comfortable year round, in an energy efficient manner. </p></li>
+            </ul>
+            <span class="disclaimer">To meet these standards, you must meet the regulations set out below. Guides and tools will be available online from July 1st 2019 onward to assist landlords in understanding their obligations.  </span>
+            <p class="bottom">Who do these standards impact?</p>
+            <span class="content">The healthy homes standards affect landlords and their tenants. Landlords will be required by law to meet the minimum housing requirements set out in the Healthy Homes Standards.</span>
+            <p class="bottom">When do the property fixes need to be in place by?</p>
+            <span class="content">Landlords will be required to meet the standards by 1st July, 2021. This excludes tenancies under Housing New Zealand and registered community housing providers, who must meet the standards by 1st July 2023.</span>
         </div>
-
     </div>
-    {% include 'includes/footer-banner.html' %}
+
+    <div class="white-container inner">
+        <h2 class="heading">Why choose Oncore</h2>
+        <div class="process">
+            <div class="col-md-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">Proven Process</span><p>Oncore’s unique process ensures our customer’s properties exceed the national standards. We can provide you with a property inspection and make any necessary improvements. </p></div>
+            <div class="col-md-4 project"><img src="/svg/project-management.svg" alt=""><span class="title">Project management</span><p>With Oncore, you don’t need to worry about following up with contractors and keeping projects on track. Tell us what you need and we’ll take care of it!</p></div>
+            <div class="col-md-4 response"><img src="/svg/fast-response.svg" alt=""><span class="title">Fast response times</span><p>We understand the importance of a fast and reliable service. Call or message us and we’ll get back to you within 48 hours. </p></div>
+        </div>
+        <h2 class="heading">Learn more about the requirements to meet the standards</h2>
+        <div class="box-content">
+            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Heating</span><p class="summary">To meet the Healthy Homes’ heating standards, you must have a fixed device in your home’s main living area that reaches at least 18 degrees Celsius. </p><p class="text-content">Certain heating devices will not meet requirements. This includes open fires, Unflued combustion heaters and electric heaters (excluding heat pumps). If your home’s living area currently doesn’t meet these standards, Oncore can advise you on the best product for your home and will provide a high-quality installation.</p></div></div>
+            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Insulation</span><p class="summary">Your rental property’s ceiling and underfloor insulation must be up to the standards of the 2008 New Zealand Building Code, and ceiling insulation needs to be at least 120mm in thickness. </p><p class="text-content">Additionally, your insulation needs to meet the Healthy Homes Standards’ definition of being in “reasonable condition”. If you’re not sure if your insulation currently meets these standards, Oncore can help. We’ll inspect your insulation and upgrade it as needed.</p></div></div>
+            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Ventilation</span><p class="summary">When it comes to meeting the Healthy Homes’ ventilation standards, there are a few things to check for. </p><p class="text-content">Firstly, there must be windows which can open to the equivalent of  5% of the floor area in your property’s bedrooms, dining rooms, living rooms, lounges, open plan rooms and kitchens. Secondly, bathrooms and kitchens (or rooms containing a bath, shower or cooktop) must contain a sufficiently sized extractor fan which provides external ventilation. If you’re unsure of whether or not your extractor fan meets these standards, or if you require window installations, get in touch with Oncore to arrange a consultation.</p></div></div>
+            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Moisture ingress and drainage</span><p class="summary">The moisture ingress and drainage standards cover efficient drainage, roof water removal and ground moisture barriers. </p><p class="text-content">Firstly, you will be required to ensure there are sufficient drainage systems in place at your rental property, which will remove surface, storm and groundwater. Secondly, efficient gutters, downpipes and drains must be installed. Thirdly, if you have an enclosed subfloor cavity, it must be with a ground moisture barrier that meets New Zealand standards. Oncore can provide you with a moisture ingress and drainage inspection and take the necessary steps to prevent any future water damage to your property.</p></div></div>
+            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Draught Stopping</span><p class="summary">The main goals behind the draught stopping standard are to ensure your tenants stay warm and comfortable year round, in an energy efficient manner. Keep a lookout for any significant gaps under doors, around windows, within the walls or in the floors. </p><p class="text-content">If your property includes an unused fireplace or chimney, these will need to be blocked in order to reduce any unnecessary draughts. If any areas of your property require draught stopping, Oncore can make the necessary repairs; ensuring your property is healthy, comfortable and meets national regulations.  </p></div></div>
+            <div class="col-md-6 healthy-box contact">
+                <div class="container">
+                    <span class="heading">Get in touch</span>
+                    <p class="summary">Are you unsure of whether or not your property will meet the Healthy Homes Standards?  </p>
+                    <p class="text-content">Give Oncore a call, or make on online enquiry, to arrange a free consultation. We’ll manage any necessary inspections and upgrades for you, with minimal disruption to your day-to-day life.</p>
+                    <span class="phone">0800 33 66 55</span>
+                    <button onclick="location.href='http://oncore.local/contact-us/project-enquiry'" class="cta-button">Get in touch</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 {% endblock content %}
 {% block scripts %}

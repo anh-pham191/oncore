@@ -6773,7 +6773,7 @@ form .tips {
     width: 100%;
 }
 
-.full-width-text-left.list-page button.cta-button {
+.full-width-text-left.list-page button.cta-button, #wrapper .white-container .healthy-box .container .cta-button {
     width: 274px;
     height: 48px;
     border-radius: 3px;
@@ -7353,4 +7353,134 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
 .person .description {
     font-size: 16px;
     line-height: 1.7;
+}
+div#wideslideshow.overlay .overlay-container div.inner.relative-inner {
+    position: relative;
+    margin-top: 0px;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box {
+    border-radius: 9px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.27);
+    background-color: rgba(255, 255, 255, 0.93);
+    width: 624px;
+    position: absolute;
+    top: 80px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 30px;
+    margin-top: 0px;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box h1, div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
+    color: #2f3132;
+    width: 100%;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
+    padding-top: 50px;
+    font-size: 48px;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
+    padding-top: 13px;
+    font-size: 25px;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
+    width: 205px;
+    margin-top: 20px;
+    margin-right: 32px;
+}
+#wrapper div#wideslideshow.overlay .overlay-container div.inner.container-box .learn-more {
+    color: #4fae47;
+}
+#wrapper .green-container {
+    background-color: #eaf5e9;
+}
+#wrapper .full-width-text-left.text-container {
+    margin: 0px auto !important;
+    padding: 45px 0px;
+}
+#wrapper .full-width-text-left.text-container .form-banner {
+    top: 0;
+    width: 475px;
+    border-radius: 7px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.27);
+    background-color: #ffffff;
+}
+#wrapper .full-width-text-left.text-container .form-banner span.helper {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.44;
+    color: #2f3132;
+    display: block;
+    margin-bottom: 29px;
+}
+#wrapper .full-width-text-left.text-container .form-control.home-form {
+    width: 394px;
+}
+#wrapper div.inner.text-container span.heading {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 500;
+    color: #2f3132;
+    background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
+    padding-left: 33px;
+    padding-top: 0;
+    background-size: 24px auto;
+    background-position-y: 5px;
+}
+#wrapper div.inner.text-container p.content {
+    padding-left: 33px;
+}
+#wrapper div.inner.text-container .content {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.44;
+    color: #2f3132;
+}
+#wrapper div.inner.text-container .disclaimer {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.63;
+    color: #2f3132;
+}
+#wrapper .white-container h2, #wrapper .white-container .process {
+    margin: 0 auto;
+    text-align: center;
+}
+#wrapper .white-container h2.heading {
+    font-size: 32px;
+    margin-top: 50px;
+    max-width: 624px;
+}
+#wrapper .white-container .process {
+    min-height: 100px;
+    overflow: hidden;
+    margin-top: 30px
+}
+#wrapper .white-container .process img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 80px;
+    margin-bottom: 10px;
+}
+#wrapper .white-container .process .title {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 600;
+}
+#wrapper .white-container .process .proven .title {
+    color: #d37f04;
+}#wrapper .white-container .process .project .title {
+    color: #4c983b;
+}#wrapper .white-container .process .response .title {
+    color: #0079bb;
+}
+
+#wrapper .white-container .process p {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.63;
+    color: #2f3132;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
