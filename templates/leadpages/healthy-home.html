@@ -87,30 +87,46 @@
             margin-top: 30px;
             margin-bottom: 2px;
         }
-        .form-banner .title {
-            font-family: "Poppins";
-            font-size: 25px;
-            font-weight: 600;
-            color: #2f3132;
-            display: block;
-            margin-top: 35px
+
+        @media only all and (min-width: 48em) and (max-width: 64em){
+            div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
+                font-size: 24px;
+                padding-top: 18px
+            }
+            div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
+                font-size: 18px;
+                padding-top: 10px;
+                margin-top: 0px;
+            }
+            div#wideslideshow.overlay .overlay-container div.inner.container-box {
+                width: 55% !important;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 0px;
+                top: 50px;
+            }
+            #wideslideshow .overlay-container .cta-button, #wrapper #wideslideshow.overlay.white .learn-more {
+                font-size: 16px;
+            }
+            div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
+                width: 149px
+            }
         }
-        .form-banner .container {
-            padding-left: 42px;
-            padding-right: 42px;
+        @media only all and (min-width: 64em) and (max-width: 78em){
+            div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
+                font-size: 32px;
+                padding-top: 18px
+            }
+            div#wideslideshow.overlay .overlay-container div.inner.container-box {
+                width: 450px !important;
+                top: 80px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 0px;
+            }
         }
-        .form-banner .container .row{
-            margin-left: 0px;
-            margin-right: 0px;
-            height: auto;
-        }
-        .form-banner .container .row .input-label-wrapper {
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-        .form-banner .container .row.tick {
-            margin: 0;
-        }
+
+
     </style>
     <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
 {% endblock snippet %}
@@ -232,7 +248,7 @@
                         <div class="recaptcha-holder"></div>
                         <input type="hidden" value="Project Enquiry" name="formname">
                         <div class="row tick">
-                            <div class="col-md-6 col-xs-12 input-label-wrapper">
+                            <div class="col-md-8 col-xs-12 input-label-wrapper">
                                 <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit"
                                        value="Get in touch"/>
 
@@ -273,18 +289,18 @@
     <div class="white-container inner">
         <h2 class="heading">Why choose Oncore</h2>
         <div class="process">
-            <div class="col-md-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">Proven Process</span><p>Oncore’s unique process ensures our customer’s properties exceed the national standards. We can provide you with a property inspection and make any necessary improvements. </p></div>
-            <div class="col-md-4 project"><img src="/svg/project-management.svg" alt=""><span class="title">Project management</span><p>With Oncore, you don’t need to worry about following up with contractors and keeping projects on track. Tell us what you need and we’ll take care of it!</p></div>
-            <div class="col-md-4 response"><img src="/svg/fast-response.svg" alt=""><span class="title">Fast response times</span><p>We understand the importance of a fast and reliable service. Call or message us and we’ll get back to you within 48 hours. </p></div>
+            <div class="col-md-4 col-sm-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">Proven Process</span><p>Oncore’s unique process ensures our customer’s properties exceed the national standards. We can provide you with a property inspection and make any necessary improvements. </p></div>
+            <div class="col-md-4 col-sm-4 project"><img src="/svg/project-management.svg" alt=""><span class="title">Project management</span><p>With Oncore, you don’t need to worry about following up with contractors and keeping projects on track. Tell us what you need and we’ll take care of it!</p></div>
+            <div class="col-md-4 col-sm-4 response"><img src="/svg/fast-response.svg" alt=""><span class="title">Fast response times</span><p>We understand the importance of a fast and reliable service. Call or message us and we’ll get back to you within 48 hours. </p></div>
         </div>
         <h2 class="heading">Learn more about the requirements to meet the standards</h2>
         <div class="box-content">
-            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Heating</span><p class="summary">To meet the Healthy Homes’ heating standards, you must have a fixed device in your home’s main living area that reaches at least 18 degrees Celsius. </p><p class="text-content">Certain heating devices will not meet requirements. This includes open fires, Unflued combustion heaters and electric heaters (excluding heat pumps). If your home’s living area currently doesn’t meet these standards, Oncore can advise you on the best product for your home and will provide a high-quality installation.</p></div></div>
-            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Insulation</span><p class="summary">Your rental property’s ceiling and underfloor insulation must be up to the standards of the 2008 New Zealand Building Code, and ceiling insulation needs to be at least 120mm in thickness. </p><p class="text-content">Additionally, your insulation needs to meet the Healthy Homes Standards’ definition of being in “reasonable condition”. If you’re not sure if your insulation currently meets these standards, Oncore can help. We’ll inspect your insulation and upgrade it as needed.</p></div></div>
-            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Ventilation</span><p class="summary">When it comes to meeting the Healthy Homes’ ventilation standards, there are a few things to check for. </p><p class="text-content">Firstly, there must be windows which can open to the equivalent of  5% of the floor area in your property’s bedrooms, dining rooms, living rooms, lounges, open plan rooms and kitchens. Secondly, bathrooms and kitchens (or rooms containing a bath, shower or cooktop) must contain a sufficiently sized extractor fan which provides external ventilation. If you’re unsure of whether or not your extractor fan meets these standards, or if you require window installations, get in touch with Oncore to arrange a consultation.</p></div></div>
-            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Moisture ingress and drainage</span><p class="summary">The moisture ingress and drainage standards cover efficient drainage, roof water removal and ground moisture barriers. </p><p class="text-content">Firstly, you will be required to ensure there are sufficient drainage systems in place at your rental property, which will remove surface, storm and groundwater. Secondly, efficient gutters, downpipes and drains must be installed. Thirdly, if you have an enclosed subfloor cavity, it must be with a ground moisture barrier that meets New Zealand standards. Oncore can provide you with a moisture ingress and drainage inspection and take the necessary steps to prevent any future water damage to your property.</p></div></div>
-            <div class="col-md-6 healthy-box"><div class="container"><span class="heading">Draught Stopping</span><p class="summary">The main goals behind the draught stopping standard are to ensure your tenants stay warm and comfortable year round, in an energy efficient manner. Keep a lookout for any significant gaps under doors, around windows, within the walls or in the floors. </p><p class="text-content">If your property includes an unused fireplace or chimney, these will need to be blocked in order to reduce any unnecessary draughts. If any areas of your property require draught stopping, Oncore can make the necessary repairs; ensuring your property is healthy, comfortable and meets national regulations.  </p></div></div>
-            <div class="col-md-6 healthy-box contact">
+            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Heating</span><p class="summary">To meet the Healthy Homes’ heating standards, you must have a fixed device in your home’s main living area that reaches at least 18 degrees Celsius. </p><p class="text-content">Certain heating devices will not meet requirements. This includes open fires, Unflued combustion heaters and electric heaters (excluding heat pumps). If your home’s living area currently doesn’t meet these standards, Oncore can advise you on the best product for your home and will provide a high-quality installation.</p></div></div>
+            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Insulation</span><p class="summary">Your rental property’s ceiling and underfloor insulation must be up to the standards of the 2008 New Zealand Building Code, and ceiling insulation needs to be at least 120mm in thickness. </p><p class="text-content">Additionally, your insulation needs to meet the Healthy Homes Standards’ definition of being in “reasonable condition”. If you’re not sure if your insulation currently meets these standards, Oncore can help. We’ll inspect your insulation and upgrade it as needed.</p></div></div>
+            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Ventilation</span><p class="summary">When it comes to meeting the Healthy Homes’ ventilation standards, there are a few things to check for. </p><p class="text-content">Firstly, there must be windows which can open to the equivalent of  5% of the floor area in your property’s bedrooms, dining rooms, living rooms, lounges, open plan rooms and kitchens. Secondly, bathrooms and kitchens (or rooms containing a bath, shower or cooktop) must contain a sufficiently sized extractor fan which provides external ventilation. If you’re unsure of whether or not your extractor fan meets these standards, or if you require window installations, get in touch with Oncore to arrange a consultation.</p></div></div>
+            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Moisture ingress and drainage</span><p class="summary">The moisture ingress and drainage standards cover efficient drainage, roof water removal and ground moisture barriers. </p><p class="text-content">Firstly, you will be required to ensure there are sufficient drainage systems in place at your rental property, which will remove surface, storm and groundwater. Secondly, efficient gutters, downpipes and drains must be installed. Thirdly, if you have an enclosed subfloor cavity, it must be with a ground moisture barrier that meets New Zealand standards. Oncore can provide you with a moisture ingress and drainage inspection and take the necessary steps to prevent any future water damage to your property.</p></div></div>
+            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Draught Stopping</span><p class="summary">The main goals behind the draught stopping standard are to ensure your tenants stay warm and comfortable year round, in an energy efficient manner. Keep a lookout for any significant gaps under doors, around windows, within the walls or in the floors. </p><p class="text-content">If your property includes an unused fireplace or chimney, these will need to be blocked in order to reduce any unnecessary draughts. If any areas of your property require draught stopping, Oncore can make the necessary repairs; ensuring your property is healthy, comfortable and meets national regulations.  </p></div></div>
+            <div class="col-md-6 col-sm-6 healthy-box contact">
                 <div class="container">
                     <span class="heading">Get in touch</span>
                     <p class="summary">Are you unsure of whether or not your property will meet the Healthy Homes Standards?  </p>

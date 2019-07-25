@@ -3457,7 +3457,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 }
 
 .form-control.home-form {
-    width: 276px;
+    width: 100%;
     height: 48px;
     border-radius: 10px;
     border: solid 1px #979797;
@@ -3495,7 +3495,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 }
 
 #home-form-submit {
-    width: 274px;
+    width: 100%;
     height: 48px;
     border-radius: 3px;
     background-color: #4fae47;
@@ -7410,10 +7410,6 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     line-height: 1.44;
     color: #2f3132;
     display: block;
-    margin-bottom: 29px;
-}
-#wrapper .full-width-text-left.text-container .form-control.home-form {
-    width: 394px;
 }
 #wrapper div.inner.text-container span.heading {
     font-family: "Poppins";
@@ -7483,4 +7479,42 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     margin-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
+}
+.form-banner .title {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 600;
+    color: #2f3132;
+    display: block;
+    margin-top: 35px
+}
+.form-banner .container {
+    padding-left: 42px;
+    padding-right: 42px;
+}
+@media only all and (max-width: 64em) {
+    .form-banner .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media only all and (max-width: 48em) {
+    #home-form-submit {
+        margin-top: 15px;
+    }
+}
+.form-banner .container .row{
+    margin-left: 0px;
+    margin-right: 0px;
+    height: auto;
+}
+.form-banner .container .row .input-label-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.form-banner .container .row.tick {
+    margin: 0;
+}
+.form-banner form {
+    margin-top: 0.67em;
 }
