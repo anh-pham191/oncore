@@ -7354,3 +7354,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     font-size: 16px;
     line-height: 1.7;
 }
+.article-section a, .article-section span.back-to-top{
+    position:sticky;
+    z-index:2
+}

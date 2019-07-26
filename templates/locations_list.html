@@ -129,6 +129,7 @@
             line-height: 98px;
             margin-bottom: 9px;
             padding-left: 20px;
+            color: #4fae47
         }
         #map-view {
             overflow: auto;
@@ -287,11 +288,12 @@
 
     <script>
         $(function () {
-            $("#map-view").hide();
+            $("#list-view").hide();
             $(".help-text p.support").hide()
         });
         $(".back-link").click(function (e) {
             e.preventDefault();
+            $(".help-text").show(500);
             $("#map-view").show(500);
             $("#list-view").hide(500);
         })
@@ -300,6 +302,7 @@
             e.preventDefault();
             $("#map-view").hide(500);
             $("#list-view").show(500);
+            $(".help-text").hide(500);
         })
         var titleLength = 47;
         var descriptionLength = 180;
@@ -590,7 +593,8 @@
                         map: map,
                         title: arr[4],
                         url: arr[1],
-                        icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
+                        // icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
+                        icon: "http://maps.google.com/mapfiles/ms/micons/blue-dot.png",
                         position: results[0].geometry.location
                     });
                     marker.addListener('click', function () {
@@ -620,7 +624,7 @@
             event.preventDefault();
             var in_area = [];
             //store city entered into a variable, put it in quotes, and add that to the geocode URL
-            var city = document.querySelector("input#destination.inputBox").value;
+            var city = document.querySelector("input#destination.inputBox").value + ", New Zealand";
             var cityInQuotes = "\"" + city + "\""
             var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=AIzaSyCg29UmrclswAOYDBkWeztNZbR45gLlz1w";
             //return JSON and
@@ -635,19 +639,24 @@
             if (results.status === "ZERO_RESULTS") {
                 // $(".help-text p").html("Can’t find what you’re looking for?  <a href='#' class='toggle-list'>Try view our full list of locations.</a>")
             } else {
+
                 $(".list-toggle").show();
                 $(".help-text p.support").hide()
                 userSelectLat = results.results[0].geometry.location.lat;
                 userSelectLng = results.results[0].geometry.location.lng;
                 // console.log('arrayresults = '+userSelectLat,userSelectLng);
             }
+            $(".help-text").show(500);
             //re-center map based on new location
             var relocate = new google.maps.LatLng(userSelectLat, userSelectLng);
             map.setCenter(relocate);
             var marker = new google.maps.Marker({
                 id: "user",
                 map: map,
-                position: relocate
+                position: relocate,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+                }
             });
             marker.id = "searchID";
             userMarker.push(marker);
@@ -658,6 +667,7 @@
 
         $('#current-location').click(function () {
             clearPrevious(userMarker, userCircle);
+            $(".help-text").show(500);
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (pos) {
                     var position = {
