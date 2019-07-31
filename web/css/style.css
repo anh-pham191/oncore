@@ -7518,3 +7518,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 .form-banner form {
     margin-top: 0.67em;
 }
+.article-section a, .article-section span.back-to-top{
+    position:sticky;
+    z-index:2
+}

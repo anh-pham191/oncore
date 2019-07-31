@@ -155,7 +155,7 @@
                     {% for a in address %}
                         <p class="line-address">{{ address[loop.index0] }}</p>
                     {% endfor %}
-                    <a href="" class="directions">Directions and map</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query={{contact.address}}" class="directions" target="_blank">Directions and map</a>
                 </div>
             {% endfor %}
         </div>
@@ -477,7 +477,8 @@
                         map: map,
                         title: arr[4],
                         url: arr[1],
-                        icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
+                        // icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
+                        icon: "http://maps.google.com/mapfiles/ms/micons/blue-dot.png",
                         position: results[0].geometry.location
                     });
                     if(one_marker){
