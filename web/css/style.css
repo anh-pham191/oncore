@@ -7305,6 +7305,34 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     .article-page .fright img, .article-page .fleft img {
         padding-top: 60px;
     }
+    #wrapper .green-container div.inner.text-container span.heading, #wrapper .white-container .healthy-box .container .summary {
+        font-size: 20px !important;
+        background-size: 19px auto !important;
+
+    }
+    #wrapper div.inner.text-container p.bottom {
+        font-weight: bold;
+    }
+    #wrapper .white-container h2.heading {
+        font-size: 24px !important;
+    }
+    #wrapper .white-container .healthy-box .container .heading {
+        font-size: 24px !important;
+        background-size: 18px auto!important;
+        background-position-y: 5px!important;
+    }
+    #wrapper .white-container .healthy-box .container .text-content {
+        font-size: 16px !important;
+    }
+    #wrapper .white-container .healthy-box .container .heading {
+        margin-bottom: 10px !important;
+    }
+    #wrapper .white-container .healthy-box .container .summary {
+        margin-bottom: 5px !important;
+    }
+    #wrapper .white-container .healthy-box .container {
+        min-height: 704px !important;
+    }
 
 }
 .formholder .progress, .theformarea .progress, .form-banner .progress {
@@ -7444,7 +7472,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper .white-container h2.heading {
     font-size: 32px;
     margin-top: 50px;
-    max-width: 560px;
+    max-width: 60%;
 }
 #wrapper .white-container .process {
     min-height: 100px;
@@ -7756,3 +7784,6 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     margin-top: 20px;
 }
 
+#wrapper div.inner.text-container p.bottom {
+    font-weight: bold;
+}

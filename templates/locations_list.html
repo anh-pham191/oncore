@@ -626,7 +626,7 @@
             //store city entered into a variable, put it in quotes, and add that to the geocode URL
             var city = document.querySelector("input#destination.inputBox").value + ", New Zealand";
             var cityInQuotes = "\"" + city + "\""
-            var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=AIzaSyCg29UmrclswAOYDBkWeztNZbR45gLlz1w";
+            var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=AIzaSyBuHcqN5QvGKS2Jq7Q44V_jiohv9MxJQZM";
             //return JSON and
             // console.log(geocodeURL);
             if(city){
@@ -718,7 +718,7 @@
                 address: address,
                 components: "country:nz",
                 sensor: false,
-                key: "AIzaSyCg29UmrclswAOYDBkWeztNZbR45gLlz1w",
+                key: "AIzaSyBuHcqN5QvGKS2Jq7Q44V_jiohv9MxJQZM",
             }
             // This is the result set of markers in area
             var in_area = [];
@@ -765,7 +765,7 @@
             });
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg29UmrclswAOYDBkWeztNZbR45gLlz1w&callback=initMap&libraries=geometry"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuHcqN5QvGKS2Jq7Q44V_jiohv9MxJQZMw&callback=initMap&libraries=geometry"></script>
 
 
 {% endblock scripts %}

@@ -6,7 +6,41 @@
         <meta name="keywords" content="{{ entry.seoMetaKeywords }}">
     {% endblock seocontent %}
     <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+<style>
+    #wrapper .green-container div.inner.text-container span.heading {
+        font-family: "Poppins";
+        font-size: 25px;
+        font-weight: 500;
+        color: #2f3132;
+        background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
+        padding-left: 33px;
+        padding-top: 0;
+        background-size: 24px auto;
+        background-position-y: 5px;
+    }
+    #wrapper .green-container div.inner.text-container p.content {
+        padding-left: 33px;
+    }
+    @media only all and (max-width: 47.937em){
+        #wrapper div.inner.text-container ul, #wrapper div.inner.text-container .disclaimer, #wrapper div.inner.text-container .content {
+            padding-left: 20px;
+            padding-right: 20px;
+            display: block;
+            width: 100%
+        }
+        #wrapper .green-container div.inner.text-container p.content {
+            padding: 13px 0px;
+        }
+        #wrapper .full-width-text-left.text-container {
+            padding-bottom: 40px !important;
+        }
+        #wrapper .white-container h2.heading {
+            max-width: 100%;
+        }
+    }
+</style>
 {% endblock snippet %}
+
 {% block content %}
 
     <div id="wideslideshow" class="overlay white">
