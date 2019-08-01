@@ -1,0 +1,183 @@
+{% extends "layout.html" %}
+{% block snippet %}
+{% block seocontent %}
+{#<title>{{ entry.seoPageTitle }} | Oncore</title>#}
+{#<meta name="description" content="{{ entry.seoMetaDescription }}">#}
+{#<meta name="keywords" content="{{ entry.seoMetaKeywords }}">#}
+{% endblock seocontent %}
+<!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+{% endblock snippet %}
+{% block content %}
+
+<div id="wideslideshow" class="overlay white">
+    <img src="{{ siteUrl }}images/homepage-banner.jpg"
+         alt="Oncore - The key to faster, smoother jobs"/>
+
+    <div class=" overlay-container white">
+        <div class="inner relative-inner">
+            <div class="inner container-box">
+                <h1>{{ entry.h1heading }}</h1>
+                <div class="intro-bottom">{{entry.containerBoxDescription}}
+                </div>
+                <button onclick="location.href='http://oncore.local/contact-us/project-enquiry'" class="cta-button">Get
+                    in touch
+                </button>
+                <span class="learn-more">Learn more <img style="width: 12px"
+                                                         src="{{ siteUrl }}svg/baseline-keyboard_arrow_down-24px.svg">
+                            </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="green-container">
+    <div class="full-width-text-left inner text-container" style="position: relative">
+        <div class="form-banner">
+            <div class="container">
+                <span class="title">Get in touch</span>
+                <span class="helper">Hire Oncore to bring your rental up to meet the standards</span>
+                <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
+                    <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname" for="formf-firstname">First Name</label>
+                            <input type="text" class="form-control home-form"
+                                   aria-label="First name" name="firstname" id="formf-firstname"
+                                   data-prefix="formf"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Last Name</label>
+                            <input type="text" class="form-control home-form"
+                                   aria-label="Last name" name="lastname"
+                                   id="formf-lastname" data-prefix="formf"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Email Address</label>
+                            <input type="text" class="form-control home-form"
+                                   name="email"
+                                   id="formf-email" data-prefix="formf"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Property Location</label>
+                            <select name="location" id="" class="form-control home-form" required>
+                                <option value="" disabled selected hidden>Select location</option>
+                                <option value="AKL - Auckland Central">AKL - Auckland Central</option>
+                                <option value="AKL - Franklin">AKL - Franklin</option>
+                                <option value="AKL - Manukau">AKL - Manukau</option>
+                                <option value="AKL - Rodney">AKL - Rodney</option>
+                                <option value="AKL - West Auckland">AKL - West Auckland</option>
+                                <option value="WEL - Wellington Central">WEL - Wellington Central</option>
+                                <option value="WEL - Porirua">WEL - Porirua</option>
+                                <option value="WEL - Upper Hutt">WEL - Upper Hutt</option>
+                                <option value="WEL - Lower Hutt">WEL - Lower Hutt</option>
+                                <option value="WEL - Kapiti">WEL - Kapiti</option>
+                                <option value="WEL - Petone">WEL - Petone</option>
+                                <option value="WEL - Otaki">WEL - Otaki</option>
+                                <option value="WEL - Miramar">WEL - Miramar</option>
+                                <option value="WEL - Lyall Bay">WEL - Lyall Bay</option>
+                                <option value="Rather not say">Rather not say</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Phone</label>
+                            <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
+                            <!--placeholder="Enter phone number" aria-label="Phone number"-->
+                            <!--data-prefix="c-car"/>-->
+
+                            <input type="tel" class="form-control home-form phone-input"
+                                   name="tel" id="formf-tel"
+                                   data-prefix="formf" data-phoneformat="yes">
+                        </div>
+                    </div>
+
+                    <div class="row tick">
+                        <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                            <input type="checkbox" class="uniform-styles" name="privacy"
+                                   id="formf-privacy" checked="checked" data-prefix="formf"/>
+                            <label for="formf-privacy"> I have read, understood and accepted the <a
+                                    href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                        </div>
+                    </div>
+                    <div class="row tick">
+                        <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                            <input type="checkbox" class="uniform-styles" name="subscribe" id="formf-subscribe"
+                                   checked="checked"/>
+                            <label for="formf-subscribe"> Sign me up to receive home maintance advice and inspiration.
+                                (Don’t worry - if you change your mind you can unsubscribe at anytime)</label>
+                        </div>
+                    </div>
+                    <!--<div class="row tick">-->
+
+                    <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+
+                    <!--<div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>-->
+
+                    <!--</div>-->
+                    <!--</div>-->
+                    <div class="recaptcha-holder"></div>
+                    <input type="hidden" value="Project Enquiry" name="formname">
+                    <div class="row tick">
+                        <div class="col-md-8 col-xs-12 input-label-wrapper">
+                            <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit"
+                                   value="Get in touch"/>
+
+                        </div>
+                    </div>
+                    <div id="prog1" class="progress" style="display: none;"></div>
+                </form>
+            </div>
+        </div>
+
+        <p class="strong"><strong>{{entry.fullWidthTextLeftHeading}}</strong></p>
+        <div class="content">{{entry.fullWidthTextLeftBelowHeading}}</div>
+        <ul>
+            {% for description in entry.fullWidthTextLeftDescription %}
+                <li><span class="heading">{{ description.question }}</span>
+                    <p class="content">{{ description.answer }}</p></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="white-container inner inner-box">
+    <h2 class="heading">Why choose Oncore</h2>
+    <div class="process">
+        <div class="col-md-4 col-sm-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">Proven Process</span><p>Oncore’s unique process ensures our customer’s properties exceed the national standards. We can provide you with a property inspection and make any necessary improvements. </p></div>
+        <div class="col-md-4 col-sm-4 project"><img src="/svg/project-management.svg" alt=""><span class="title">Project management</span><p>With Oncore, you don’t need to worry about following up with contractors and keeping projects on track. Tell us what you need and we’ll take care of it!</p></div>
+        <div class="col-md-4 col-sm-4 response"><img src="/svg/fast-response.svg" alt=""><span class="title">Fast response times</span><p>We understand the importance of a fast and reliable service. Call or message us and we’ll get back to you within 48 hours. </p></div>
+    </div>
+    <h2 class="heading">{{entry.learnMoreHeading}}</h2>
+    <div class="box-content">
+        {% for block in entry.learnMoreBlock %}
+        <div class="col-md-6 col-sm-6 healthy-box">
+            <div class="container">
+                <span class="heading">{{block.heading}}</span>
+                <p class="summary">{{block.smallerHeading}}</p>
+                <p class="text-content">{{block.description}}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="col-md-6 col-sm-6 healthy-box contact">
+            <div class="container">
+                <span class="heading">Get in touch</span>
+                <p class="summary">Are you unsure of whether or not your property will meet the Healthy Homes Standards?  </p>
+                <p class="text-content">Give Oncore a call, or make on online enquiry, to arrange a free consultation. We’ll manage any necessary inspections and upgrades for you, with minimal disruption to your day-to-day life.</p>
+                <span class="phone">0800 33 66 55</span>
+                <button onclick="location.href='http://oncore.local/contact-us/project-enquiry'" class="cta-button">Get in touch</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+{% block scripts %}
+
+{% endblock scripts %}

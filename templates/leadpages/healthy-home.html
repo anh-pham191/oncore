@@ -5,135 +5,12 @@
         {#<meta name="description" content="{{ entry.seoMetaDescription }}">#}
         {#<meta name="keywords" content="{{ entry.seoMetaKeywords }}">#}
     {% endblock seocontent %}
-    <style>
-
-        #wrapper .white-container .healthy-box {
-            min-height: 580px;
-            margin-bottom: 42px;
-        }
-        #wrapper .white-container .healthy-box .container {
-            padding: 42px;
-            background-color: #f5f5f5;
-            min-height: 580px;
-        }
-
-        #wrapper .white-container .healthy-box .container .heading {
-            font-family: "Poppins";
-            font-size: 32px;
-            font-weight: bold;
-            line-height: 1.25;
-            color: #2f3132;
-            background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
-            padding-left: 33px;
-            padding-top: 0;
-            background-size: 24px auto;
-            background-position-y: 8px;
-            margin-bottom: 32px;
-            display: block;
-        }
-
-        #wrapper .white-container .healthy-box .container .summary {
-            font-family: "Poppins";
-            font-size: 25px;
-            font-weight: 500;
-            color: #2f3132;
-            margin-bottom: 15px;
-        }
-        #wrapper .white-container .healthy-box .container .text-content {
-            font-family: "Open Sans";
-            font-size: 18px;
-            line-height: 1.44;
-            color: #2f3132;
-        }
-        #wrapper .white-container .box-content {
-            margin-top: 50px;
-        }
-
-        #wrapper .white-container .healthy-box.contact .container {
-            background-color: #eaf5e9;
-        }
-        #wrapper .white-container .healthy-box.contact .container .heading {
-            background: none;
-            padding-left: 0px;
-        }
-
-        #wrapper .white-container .healthy-box .container .phone {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            font-family: "Open Sans";
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            color: #4fae47;
-            display: block;
-            text-align: left;
-        }
-        #wrapper .white-container .healthy-box .container .cta-button {
-            width: 205px;
-        }
-        #wrapper .full-width-text-left.text-container .form-banner {
-            position: static;
-            float: right;
-            margin-top: -79px;
-            margin-left: 42px;
-        }
-        #wrapper .full-width-text-left.text-container p {
-            width: 100%
-        }
-        #wrapper .full-width-text-left.text-container p:first-of-type {
-            padding-bottom: 25px;
-        }
-        #wrapper .full-width-text-left.text-container p.bottom {
-            margin-top: 30px;
-            margin-bottom: 2px;
-        }
-
-        @media only all and (min-width: 48em) and (max-width: 64em){
-            div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
-                font-size: 24px;
-                padding-top: 18px
-            }
-            div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
-                font-size: 18px;
-                padding-top: 10px;
-                margin-top: 0px;
-            }
-            div#wideslideshow.overlay .overlay-container div.inner.container-box {
-                width: 55% !important;
-                padding-left: 20px;
-                padding-right: 20px;
-                padding-bottom: 0px;
-                top: 50px;
-            }
-            #wideslideshow .overlay-container .cta-button, #wrapper #wideslideshow.overlay.white .learn-more {
-                font-size: 16px;
-            }
-            div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
-                width: 149px
-            }
-        }
-        @media only all and (min-width: 64em) and (max-width: 78em){
-            div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
-                font-size: 32px;
-                padding-top: 18px
-            }
-            div#wideslideshow.overlay .overlay-container div.inner.container-box {
-                width: 450px !important;
-                top: 80px;
-                padding-left: 20px;
-                padding-right: 20px;
-                padding-bottom: 0px;
-            }
-        }
-
-
-    </style>
     <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
 {% endblock snippet %}
 {% block content %}
 
     <div id="wideslideshow" class="overlay white">
-        <img class="notmobile" src="{{ siteUrl }}images/homepage-banner.jpg"
+        <img src="{{ siteUrl }}images/homepage-banner.jpg"
              alt="Oncore - The key to faster, smoother jobs"/>
 
         <div class=" overlay-container white">
@@ -259,7 +136,7 @@
                 </div>
             </div>
 
-            <p><strong>What do the standards cover and how can we help you meet them?</strong></p>
+            <p class="strong"><strong>What do the standards cover and how can we help you meet them?</strong></p>
             <ul>
                 <li><span class="heading">Heating</span>
                     <p class="content">To meet the Healthy Homes’ heating standards, you must have a fixed device in the
@@ -286,7 +163,7 @@
         </div>
     </div>
 
-    <div class="white-container inner">
+    <div class="white-container inner inner-box">
         <h2 class="heading">Why choose Oncore</h2>
         <div class="process">
             <div class="col-md-4 col-sm-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">Proven Process</span><p>Oncore’s unique process ensures our customer’s properties exceed the national standards. We can provide you with a property inspection and make any necessary improvements. </p></div>

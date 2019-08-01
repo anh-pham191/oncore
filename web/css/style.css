@@ -7364,7 +7364,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box {
     background-color: rgba(255, 255, 255, 0.93);
     width: 624px;
     position: absolute;
-    top: 80px;
+    top: 50px;
     padding-left: 36px;
     padding-right: 36px;
     padding-bottom: 30px;
@@ -7425,7 +7425,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper div.inner.text-container p.content {
     padding-left: 33px;
 }
-#wrapper div.inner.text-container .content {
+#wrapper div.inner.text-container .content{
     font-family: "Open Sans";
     font-size: 18px;
     line-height: 1.44;
@@ -7444,7 +7444,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper .white-container h2.heading {
     font-size: 32px;
     margin-top: 50px;
-    max-width: 624px;
+    max-width: 560px;
 }
 #wrapper .white-container .process {
     min-height: 100px;
@@ -7522,3 +7522,237 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     position:sticky;
     z-index:2
 }
+
+#wrapper .white-container .healthy-box {
+    min-height: 580px;
+    margin-bottom: 42px;
+}
+#wrapper .white-container .healthy-box .container {
+    padding: 42px;
+    background-color: #f5f5f5;
+    min-height: 580px;
+}
+
+#wrapper .green-container div.inner.text-container span.heading {
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: bold;
+    background: none;
+    padding-left: 0px;
+}
+#wrapper .green-container div.inner.text-container p.content {
+    padding-left: 0px;
+}
+
+#wrapper .white-container .healthy-box .container .heading {
+    font-family: "Poppins";
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #2f3132;
+    background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
+    padding-left: 33px;
+    padding-top: 0;
+    background-size: 24px auto;
+    background-position-y: 8px;
+    margin-bottom: 32px;
+    display: block;
+}
+
+#wrapper .white-container .healthy-box .container .summary {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 500;
+    color: #2f3132;
+    margin-bottom: 15px;
+}
+#wrapper .white-container .healthy-box .container .text-content {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.44;
+    color: #2f3132;
+}
+#wrapper .white-container .box-content {
+    margin-top: 50px;
+}
+
+#wrapper .white-container .healthy-box.contact .container {
+    background-color: #eaf5e9;
+}
+#wrapper .white-container .healthy-box.contact .container .heading {
+    background: none;
+    padding-left: 0px;
+}
+
+#wrapper .white-container .healthy-box .container .phone {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #4fae47;
+    display: block;
+    text-align: left;
+}
+#wrapper .white-container .healthy-box .container .cta-button {
+    width: 205px;
+}
+#wrapper .full-width-text-left.text-container .form-banner {
+    position: static;
+    float: right;
+    margin-top: -79px;
+    margin-left: 42px;
+}
+#wrapper .full-width-text-left.text-container p {
+    width: 100%
+}
+#wrapper .full-width-text-left.text-container p:first-of-type {
+    padding-bottom: 25px;
+}
+#wrapper .full-width-text-left.text-container p.bottom {
+    margin-top: 30px;
+    margin-bottom: 2px;
+}
+@media only all and (max-width: 47.937em){
+    div#wideslideshow.overlay .overlay-container div.inner.container-box {
+        position: static;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        padding: 0px;
+    }
+    div#wideslideshow.overlay .overlay-container .relative-inner div.inner.container-box h1, div#wideslideshow.overlay .overlay-container .relative-inner .intro-bottom {
+        padding: 0px;
+    }
+    div#wideslideshow.overlay .overlay-container .relative-inner div.inner.container-box h1, #wrapper .white-container h2.heading, #wrapper .white-container .healthy-box .container .heading {
+        font-size: 24px;
+    }
+    div#wideslideshow.overlay .overlay-container .relative-inner div.inner.container-box .intro-bottom {
+        font-size: 18px;
+        font-weight: normal;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.relative-inner {
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+    #wrapper .full-width-text-left.text-container .form-banner {
+        float: none;
+        margin: 0px;
+        width: 100%;
+        border: none;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
+        margin-right: 10px;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button, #wrapper #wideslideshow.overlay.white .learn-more {
+        font-size: 16px;
+        width: 50%;
+    }
+    #wrapper .green-container div.inner.text-container p.content, #wrapper .green-container div.inner.text-container span.heading {
+        padding-left: 20px
+    }
+    #wrapper .white-container .healthy-box .container .heading {
+        padding-left: 28px;
+        background-size: 18px auto;
+        background-position-y: 6px;
+    }
+    #wrapper .white-container .healthy-box {
+        padding-left: 0px;
+        padding-right: 0px;
+        min-height: inherit;
+        margin-bottom: 42px;
+        height: auto;
+    }
+    div#wideslideshow.overlay {
+        max-height: initial;
+    }
+    #wrapper .white-container .process .proven .title {
+        font-size: 20px;
+    }
+    #wrapper .white-container .process img {
+        height: 60px;
+    }
+    #wrapper .white-container .healthy-box .container .summary {
+        font-size: 20px;
+    }
+    #wrapper .white-container .healthy-box .container .text-content {
+        font-size: 18px;
+    }
+    #wrapper .inner.inner-box {
+        padding-left: 0px;
+        padding-right: 0px
+    }
+    #wrapper .white-container .healthy-box .container {
+        padding: 30px 20px;
+        min-height: initial;
+        height: auto;
+    }
+    #wrapper .white-container h2.heading, #wrapper .white-container .process {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #wrapper .white-container .process .project {
+        margin: 40px auto;
+    }
+    #wrapper .full-width-text-left.text-container p.strong {
+        padding-bottom: 0px;
+    }
+}
+@media only all and (min-width: 48em) and (max-width: 64em){
+    div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
+        font-size: 24px;
+        padding-top: 18px
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
+        font-size: 18px;
+        padding-top: 10px;
+        margin-top: 0px;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box {
+        width: 55% !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+        top: 50px;
+    }
+    #wideslideshow .overlay-container .cta-button, #wrapper #wideslideshow.overlay.white .learn-more {
+        font-size: 16px;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
+        width: 149px
+    }
+    #wrapper .green-container .full-width-text-left.text-container .form-banner {
+        width: 45%;
+    }
+    #wrapper .green-container .full-width-text-left.text-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #wrapper .white-container .healthy-box .container {
+        min-height: 620px;
+    }
+}
+@media only all and (min-width: 64em) and (max-width: 78em){
+    div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
+        font-size: 32px;
+        padding-top: 18px
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box {
+        width: 450px !important;
+        top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+    }
+}
+#wrapper div.inner.text-container p {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.44;
+    color: #2f3132;
+}
+#wrapper div.inner.text-container ul {
+    margin-top: 20px;
+}
+
