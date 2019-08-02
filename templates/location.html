@@ -218,11 +218,8 @@
     function initMap() {
 
         var address = $("#current-location").val() + ", New Zealand";
-        var geocoder = new google.maps.Geocoder();
-
         var center = {lat: -41.838875, lng: 171.7799};
         var zoom = 12;
-
         var mapOptions = {
             zoom: zoom,
             center: center,
@@ -402,14 +399,7 @@
         };
         map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
         var lis = $('.address');
-        // geocoder.geocode({
-        //         'address': address
-        //     },
-        //     function (results, status) {
-        //         if (status == google.maps.GeocoderStatus.OK) {
-        //             map.setCenter(results[0].geometry.location);
-        //         }
-        //     });
+
         for (var i = 0; i < lis.length; i++) {
             if (lis.length == 1) {
                 mapAddress(map, lis[i].value, true);
@@ -422,7 +412,6 @@
 
 
     function mapAddress(map, address, one_marker) {
-        var geocoder = new google.maps.Geocoder();
         var arr = address.split("|");
         console.log(arr[6]);
         if (arr[3] == "") {
