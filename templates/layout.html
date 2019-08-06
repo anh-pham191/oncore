@@ -338,7 +338,8 @@
     }
 
     function scrollDown(button, destination) {
-        button.click(function () {
+        button.click(function (e) {
+            e.preventDefault();
             $('html, body').animate({scrollTop: destination.offset().top - 130}, 1000);
         });
     }

@@ -15,7 +15,7 @@ body {
     font-size: 1rem;
     font-style: normal;
     background-color: #fff;
-    line-height: 1.25;
+    line-height: 1.5;
 
 }
 
@@ -2901,7 +2901,7 @@ ul {
     }
 
     #wrapper {
-        margin-top: 65px;
+        margin-top: 60px;
     }
 
     #sitebanner .mobile-nav .col-xs-2 {
@@ -7405,10 +7405,12 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box h1, div#wid
 div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
     padding-top: 50px;
     font-size: 48px;
+    line-height: 1.2;
 }
 div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
     padding-top: 13px;
     font-size: 25px;
+    margin-top: 0px;
 }
 div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
     width: 205px;
@@ -7435,7 +7437,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper .full-width-text-left.text-container .form-banner span.helper {
     font-family: "Open Sans";
     font-size: 18px;
-    line-height: 1.44;
+    line-height: 1.5;
     color: #2f3132;
     display: block;
 }
@@ -7456,7 +7458,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper div.inner.text-container .content{
     font-family: "Open Sans";
     font-size: 18px;
-    line-height: 1.44;
+    line-height: 1.5;
     color: #2f3132;
 }
 #wrapper div.inner.text-container .disclaimer {
@@ -7473,6 +7475,8 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     font-size: 32px;
     margin-top: 50px;
     max-width: 60%;
+    font-family: "Poppins";
+    font-weight: bold;
 }
 #wrapper .white-container .process {
     min-height: 100px;
@@ -7502,7 +7506,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper .white-container .process p {
     font-family: "Open Sans";
     font-size: 16px;
-    line-height: 1.63;
+    line-height: 1.5;
     color: #2f3132;
     margin-top: 10px;
     padding-left: 5px;
@@ -7552,13 +7556,13 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 }
 
 #wrapper .white-container .healthy-box {
-    min-height: 580px;
+    min-height: 500px;
     margin-bottom: 42px;
 }
 #wrapper .white-container .healthy-box .container {
     padding: 42px;
     background-color: #f5f5f5;
-    min-height: 580px;
+    min-height: 500px;
 }
 
 #wrapper .green-container div.inner.text-container span.heading {
@@ -7578,7 +7582,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     font-weight: bold;
     line-height: 1.25;
     color: #2f3132;
-    background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
+    background: url(/svg/tick.svg) no-repeat;
     padding-left: 33px;
     padding-top: 0;
     background-size: 24px auto;
@@ -7597,7 +7601,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper .white-container .healthy-box .container .text-content {
     font-family: "Open Sans";
     font-size: 18px;
-    line-height: 1.44;
+    line-height: 1.5;
     color: #2f3132;
 }
 #wrapper .white-container .box-content {
@@ -7695,7 +7699,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     div#wideslideshow.overlay {
         max-height: initial;
     }
-    #wrapper .white-container .process .proven .title {
+    #wrapper .white-container .process .title {
         font-size: 20px;
     }
     #wrapper .white-container .process img {
@@ -7725,6 +7729,9 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     }
     #wrapper .full-width-text-left.text-container p.strong {
         padding-bottom: 0px;
+    }
+    .form-banner .container .row.tick .col-md-8.input-label-wrapper {
+        position: static;
     }
 }
 @media only all and (min-width: 48em) and (max-width: 64em){
@@ -7777,7 +7784,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper div.inner.text-container p {
     font-family: "Open Sans";
     font-size: 18px;
-    line-height: 1.44;
+    line-height: 1.5;
     color: #2f3132;
 }
 #wrapper div.inner.text-container ul {
@@ -7786,4 +7793,16 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 
 #wrapper div.inner.text-container p.bottom {
     font-weight: bold;
+}
+#wrapper .green-container div.inner.text-container .more {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+span.location-des {
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.36;
+    color: #8e8e8e;
 }

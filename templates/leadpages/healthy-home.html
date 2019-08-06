@@ -12,7 +12,7 @@
         font-size: 25px;
         font-weight: 500;
         color: #2f3132;
-        background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
+        background: url(/svg/tick.svg) no-repeat;
         padding-left: 33px;
         padding-top: 0;
         background-size: 24px auto;
@@ -54,12 +54,10 @@
                     <div class="intro-bottom">From July 2021 onwards, all landlords will be required by law to meet the
                         Healthy Homes Standards - Oncore can ensure your property meets them.
                     </div>
-                    <button onclick="location.href='http://oncore.local/contact-us/project-enquiry'" class="cta-button">Get
+                    <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get
                         in touch
                     </button>
-                    <span class="learn-more">Learn more <img style="width: 12px"
-                                                             src="{{ siteUrl }}svg/baseline-keyboard_arrow_down-24px.svg">
-                            </span>
+                    <span class="learn-more">Learn more</span>
                 </div>
             </div>
         </div>
@@ -99,7 +97,7 @@
                         <div class="row">
                             <div class="col-md-12 input-label-wrapper">
                                 <label class="labelname">Property Location</label>
-                                <select name="location" id="" class="form-control home-form" required oninvalid="this.setCustomValidity('Please select a location from the list')">
+                                <select name="location" id="" class="form-control home-form" required>
                                     <option value="" disabled selected hidden>Select location</option>
                                     <option value="AKL - Rodney">AKL - Rodney</option>
                                     <option value="AKL - North Shore">AKL - North Shore</option>
@@ -121,7 +119,7 @@
                                     <option value="PMR - Palmerston North">PMR - Palmerston North</option>
                                     <option value="QTN - Queenstown">QTN - Queenstown</option>
                                     <option value="ROT - Rotorua">ROT - Rotorua</option>
-                                    <option value="TUO - Tauopo">TUO - Tauopo</option>
+                                    <option value="TUO - Taupo">TUO - Taupo</option>
                                     <option value="TRG - Tauranga">TRG - Tauranga</option>
                                     <option value="TIU - Timaru">TIU - Timaru</option>
                                     <option value="WAG - Whanganui">WAG - Whanganui</option>
@@ -131,6 +129,8 @@
                                     <option value="WRE - Whangarei">WRE - Whangarei</option>
                                     <option value="Rather not say">Rather not say</option>
                                 </select>
+                                <span class="location-des">We ask for property location to enable us to seamlessly connect you with a maintenance specialist in your area. </span>
+
                             </div>
                         </div>
                         <div class="row">
@@ -175,7 +175,7 @@
                         <div class="row tick">
                             <div class="col-md-8 col-xs-12 input-label-wrapper">
                                 <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit"
-                                       value="Get in touch"/>
+                                       value="Send message"/>
 
                             </div>
                         </div>
@@ -186,20 +186,20 @@
 
             <p class="strong"><strong>What do the standards cover and how can we help you meet them?</strong></p>
             <ul>
-                <li><span class="heading">Heating</span>
+                <li><span class="heading">Heating</span><a class="more" href="">Learn more<img class="more" src="/svg/arrow_down.svg" alt=""></a>
                     <p class="content">To meet the Healthy Homes’ heating standards, you must have a fixed device in the
                         home’s main living area that reaches at least 18 degrees C</p></li>
-                <li><span class="heading">Insulation</span>
+                <li><span class="heading">Insulation</span><a class="more" href=""><img src="/svg/arrow_down.svg" alt=""></a>
                     <p class="content">Your rental property’s ceiling and underfloor insulation must be up to the
                         standards of the 2008 New Zealand Building Code.</p></li>
-                <li><span class="heading">Ventilation</span>
+                <li><span class="heading">Ventilation</span><a class="more" href=""><img src="/svg/arrow_down.svg" alt=""></a>
                     <p class="content">When it comes to meeting the Healthy Homes’ ventilation standards, there are a
                         few things to check for. Firstly, there must be windows which can open to the equivalent of 5%
                         of the floor area. </p></li>
-                <li><span class="heading">Moisture ingress and drainage</span>
+                <li><span class="heading">Moisture ingress and drainage</span><a class="more" href=""><img src="/svg/arrow_down.svg" alt=""></a>
                     <p class="content">The moisture ingress and drainage standards cover efficient drainage, roof water
                         removal and ground moisture barriers. </p></li>
-                <li><span class="heading">Draught Stopping</span>
+                <li><span class="heading">Draught Stopping</span><a class="more" href=""><img src="/svg/arrow_down.svg" alt=""></a>
                     <p class="content">The main goals behind the draught stopping standard are to ensure your tenants
                         stay warm and comfortable year round, in an energy efficient manner. </p></li>
             </ul>
@@ -219,7 +219,7 @@
             <div class="col-md-4 col-sm-4 response"><img src="/svg/fast-response.svg" alt=""><span class="title">Fast response times</span><p>We understand the importance of a fast and reliable service. Call or message us and we’ll get back to you within 48 hours. </p></div>
         </div>
         <h2 class="heading">Learn more about the requirements to meet the standards</h2>
-        <div class="box-content">
+        <div class="box-content" id="box-content">
             <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Heating</span><p class="summary">To meet the Healthy Homes’ heating standards, you must have a fixed device in your home’s main living area that reaches at least 18 degrees Celsius. </p><p class="text-content">Certain heating devices will not meet requirements. This includes open fires, Unflued combustion heaters and electric heaters (excluding heat pumps). If your home’s living area currently doesn’t meet these standards, Oncore can advise you on the best product for your home and will provide a high-quality installation.</p></div></div>
             <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Insulation</span><p class="summary">Your rental property’s ceiling and underfloor insulation must be up to the standards of the 2008 New Zealand Building Code, and ceiling insulation needs to be at least 120mm in thickness. </p><p class="text-content">Additionally, your insulation needs to meet the Healthy Homes Standards’ definition of being in “reasonable condition”. If you’re not sure if your insulation currently meets these standards, Oncore can help. We’ll inspect your insulation and upgrade it as needed.</p></div></div>
             <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Ventilation</span><p class="summary">When it comes to meeting the Healthy Homes’ ventilation standards, there are a few things to check for. </p><p class="text-content">Firstly, there must be windows which can open to the equivalent of  5% of the floor area in your property’s bedrooms, dining rooms, living rooms, lounges, open plan rooms and kitchens. Secondly, bathrooms and kitchens (or rooms containing a bath, shower or cooktop) must contain a sufficiently sized extractor fan which provides external ventilation. If you’re unsure of whether or not your extractor fan meets these standards, or if you require window installations, get in touch with Oncore to arrange a consultation.</p></div></div>
@@ -230,8 +230,8 @@
                     <span class="heading">Get in touch</span>
                     <p class="summary">Are you unsure of whether or not your property will meet the Healthy Homes Standards?  </p>
                     <p class="text-content">Give Oncore a call, or make on online enquiry, to arrange a free consultation. We’ll manage any necessary inspections and upgrades for you, with minimal disruption to your day-to-day life.</p>
-                    <span class="phone">0800 33 66 55</span>
-                    <button onclick="location.href='http://oncore.local/contact-us/project-enquiry'" class="cta-button">Get in touch</button>
+                    <a href="tel:0800 33 66 55" class="phone">0800 33 66 55</a>
+                    <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get in touch</button>
                 </div>
             </div>
         </div>
@@ -240,5 +240,8 @@
 
 {% endblock content %}
 {% block scripts %}
-
+<script>
+    scrollDown($(".more"), $(".box-content"));
+    scrollDown($(".learn-more"), $(".box-content"));
+</script>
 {% endblock scripts %}
