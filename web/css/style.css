@@ -4306,7 +4306,7 @@ li.help {
         padding-right: 9px;
     }
 
-    .full-width-text-left p:first-of-type {
+    .full-width-text-left p:first-of-type, .full-width-text-left.text-container p.strong {
         padding-top: 40px;
         padding-bottom: 13px;
     }
@@ -7556,13 +7556,13 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 }
 
 #wrapper .white-container .healthy-box {
-    min-height: 500px;
+    min-height: 530px;
     margin-bottom: 42px;
 }
 #wrapper .white-container .healthy-box .container {
     padding: 42px;
     background-color: #f5f5f5;
-    min-height: 500px;
+    min-height: 530px;
 }
 
 #wrapper .green-container div.inner.text-container span.heading {
