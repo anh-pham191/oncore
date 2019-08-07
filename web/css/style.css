@@ -7769,6 +7769,9 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     #wrapper .white-container .healthy-box .container {
         min-height: 620px;
     }
+    .form-banner .container .row.tick .col-md-8.input-label-wrapper {
+        position: static;
+    }
 }
 @media only all and (min-width: 64em) and (max-width: 78em){
     div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
