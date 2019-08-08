@@ -258,7 +258,7 @@
                     will provide a high-quality installation.</p>
                 {% set entry = craft.entries.section('healthyHome').slug('heating').first() %}
                 {% if entry | length %}
-                <a href="{{entry.url}}">Learn more about heating</a>
+                <a class="learn-more" href="{{entry.url}}">Learn more about heating</a>
                 {% endif %}
 
             </div>
@@ -288,7 +288,7 @@
                     in touch with Oncore to arrange a consultation.</p>
                 {% set entry = craft.entries.section('healthyHome').slug('ventilation').first() %}
                 {% if entry | length %}
-                <a href="{{entry.url}}">Learn more about ventilation</a>
+                <a class="learn-more" href="{{entry.url}}">Learn more about ventilation</a>
                 {% endif %}</div>
         </div>
         <div class="col-md-6 col-sm-6 healthy-box">
@@ -303,7 +303,7 @@
                     water damage to your property.</p>
                 {% set entry = craft.entries.section('healthyHome').slug('moisture').first() %}
                 {% if entry | length %}
-                <a style="font-weight: bold" href="{{entry.url}}">Learn more about moisture ingress and drainage</a>
+                <a class="learn-more" href="{{entry.url}}">Learn more about moisture ingress and drainage</a>
                 {% endif %}</div>
         </div>
         <div class="col-md-6 col-sm-6 healthy-box">
@@ -317,7 +317,7 @@
                     meets national regulations. </p>
                 {% set entry = craft.entries.section('healthyHome').slug('draught').first() %}
                 {% if entry | length %}
-                <a href="{{entry.url}}">Learn more about draught</a>
+                <a class="learn-more" href="{{entry.url}}">Learn more about draught</a>
                 {% endif %}</div>
         </div>
         <div class="col-md-6 col-sm-6 healthy-box contact">
