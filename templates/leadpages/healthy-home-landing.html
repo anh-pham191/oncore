@@ -20,8 +20,9 @@
 {% block content %}
 
 <div id="wideslideshow" class="overlay white">
+    {% set image = entry.bannerimage.first() %}
 
-    <img src="{{ siteUrl }}panoramaImage/{{ entry.bannerimage.first().Filename }}"
+    <img src="{{ image.getUrl()  }}"
          alt="Oncore - The key to faster, smoother jobs"/>
 
     <div class=" overlay-container white">

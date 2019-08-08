@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 {% block snippet %}
-    {% block seocontent %}
-        <title>{{ entry.seoPageTitle }} | Oncore</title>
-        <meta name="description" content="{{ entry.seoMetaDescription }}">
-        <meta name="keywords" content="{{ entry.seoMetaKeywords }}">
-    {% endblock seocontent %}
-    <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+{% block seocontent %}
+<title>{{ entry.seoPageTitle }} | Oncore</title>
+<meta name="description" content="{{ entry.seoMetaDescription }}">
+<meta name="keywords" content="{{ entry.seoMetaKeywords }}">
+{% endblock seocontent %}
+<!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
 <style>
     #wrapper .green-container div.inner.text-container span.heading {
         font-family: "Poppins";
@@ -18,227 +18,322 @@
         background-size: 24px auto;
         background-position-y: 5px;
     }
+
     #wrapper .green-container div.inner.text-container p.content {
         padding-left: 33px;
     }
+
     #wrapper .white-container .healthy-box .container, #wrapper .white-container .healthy-box {
         min-height: 629px;
     }
-    @media only all and (max-width: 47.937em){
+
+    @media only all and (max-width: 47.937em) {
         #wrapper div.inner.text-container ul, #wrapper div.inner.text-container .disclaimer, #wrapper div.inner.text-container .content {
             padding-left: 20px;
             padding-right: 20px;
             display: block;
             width: 100%
         }
+
         #wrapper .green-container div.inner.text-container p.content {
             padding: 13px 0px;
         }
+
         #wrapper .full-width-text-left.text-container {
             padding-bottom: 40px !important;
         }
+
         #wrapper .white-container h2.heading {
             max-width: 100%;
         }
     }
+    #wrapper .white-container .healthy-box .container .learn-more {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
 </style>
 {% endblock snippet %}
 
 {% block content %}
 
-    <div id="wideslideshow" class="overlay white">
-        <img src="{{ siteUrl }}images/homepage-banner.jpg"
-             alt="Oncore - The key to faster, smoother jobs"/>
+<div id="wideslideshow" class="overlay white">
+    <img src="{{ siteUrl }}images/homepage-banner.jpg"
+         alt="Oncore - The key to faster, smoother jobs"/>
 
-        <div class=" overlay-container white">
-            <div class="inner relative-inner">
-                <div class="inner container-box">
-                    <h1>Have you got work to do on your rental?</h1>
-                    <div class="intro-bottom">From July 2021 onwards, all landlords will be required by law to meet the
-                        Healthy Homes Standards - Oncore can ensure your property meets them.
+    <div class=" overlay-container white">
+        <div class="inner relative-inner">
+            <div class="inner container-box">
+                <h1>Have you got work to do on your rental?</h1>
+                <div class="intro-bottom">From July 2021 onwards, all landlords will be required by law to meet the
+                    Healthy Homes Standards - Oncore can ensure your property meets them.
+                </div>
+                <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get
+                    in touch
+                </button>
+                <span class="learn-more">Learn more</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="green-container">
+    <div class="full-width-text-left inner text-container" style="position: relative">
+        <div class="form-banner">
+            <div class="container">
+                <span class="title">Get in touch</span>
+                <span class="helper">Hire Oncore to bring your rental up to meet the standards</span>
+                <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
+                    <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname" for="formf-firstname">First Name</label>
+                            <input type="text" class="form-control home-form"
+                                   aria-label="First name" name="firstname" id="formf-firstname"
+                                   data-prefix="formf"/>
+                        </div>
                     </div>
-                    <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get
-                        in touch
-                    </button>
-                    <span class="learn-more">Learn more</span>
-                </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Last Name</label>
+                            <input type="text" class="form-control home-form"
+                                   aria-label="Last name" name="lastname"
+                                   id="formf-lastname" data-prefix="formf"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Email Address</label>
+                            <input type="text" class="form-control home-form"
+                                   name="email"
+                                   id="formf-email" data-prefix="formf"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Property Location</label>
+                            <select name="location" id="" class="form-control home-form" required>
+                                <option value="" disabled selected hidden>Select location</option>
+                                <option value="AKL - Rodney">AKL - Rodney</option>
+                                <option value="AKL - North Shore">AKL - North Shore</option>
+                                <option value="AKL - Waitakere">AKL - Waitakere</option>
+                                <option value="AKL - Auckland Central">AKL - Auckland Central</option>
+                                <option value="AKL - East Auckland">AKL - East Auckland</option>
+                                <option value="AKL - Manukau">AKL - Manukau</option>
+                                <option value="AKL - Franklin">AKL - Franklin</option>
+                                <option value="BHE - Blenheim">BHE - Blenheim</option>
+                                <option value="CHC - Christchurch">CHC - Christchurch</option>
+                                <option value="DUD - Dunedin">DUD - Dunedin</option>
+                                <option value="GIS - Gisborne">GIS - Gisborne</option>
+                                <option value="HLZ - Hamilton">HLZ - Hamilton</option>
+                                <option value="IVC - Invecargill">IVC - Invecargill</option>
+                                <option value="KAT - Kaitai">KAT - Kaitai</option>
+                                <option value="KKE - KeriKeri">KKE - KeriKeri</option>
+                                <option value="NPE - Napier">NPE - Napier</option>
+                                <option value="NSN - Nelson">NSN - Nelson</option>
+                                <option value="PMR - Palmerston North">PMR - Palmerston North</option>
+                                <option value="QTN - Queenstown">QTN - Queenstown</option>
+                                <option value="ROT - Rotorua">ROT - Rotorua</option>
+                                <option value="TUO - Taupo">TUO - Taupo</option>
+                                <option value="TRG - Tauranga">TRG - Tauranga</option>
+                                <option value="TIU - Timaru">TIU - Timaru</option>
+                                <option value="WAG - Whanganui">WAG - Whanganui</option>
+                                <option value="WLG - Wellington">WLG - Wellington</option>
+                                <option value="WSZ - Westport">WSZ - Westport</option>
+                                <option value="WHK - Whakatane">WHK - Whakatane</option>
+                                <option value="WRE - Whangarei">WRE - Whangarei</option>
+                                <option value="Rather not say">Rather not say</option>
+                            </select>
+                            <span class="location-des">We ask for property location to enable us to seamlessly connect you with a maintenance specialist in your area. </span>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Phone</label>
+                            <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
+                            <!--placeholder="Enter phone number" aria-label="Phone number"-->
+                            <!--data-prefix="c-car"/>-->
+
+                            <input type="tel" class="form-control home-form phone-input"
+                                   name="tel" id="formf-tel"
+                                   data-prefix="formf" data-phoneformat="yes">
+                        </div>
+                    </div>
+
+                    <div class="row tick">
+                        <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                            <input type="checkbox" class="uniform-styles" name="privacy"
+                                   id="formf-privacy" checked="checked" data-prefix="formf"/>
+                            <label for="formf-privacy"> I have read, understood and accepted the <a
+                                    href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
+                        </div>
+                    </div>
+                    <div class="row tick">
+                        <div class="col-sm-12 col-xs-12 input-label-wrapper">
+                            <input type="checkbox" class="uniform-styles" name="subscribe" id="formf-subscribe"
+                                   checked="checked"/>
+                            <label for="formf-subscribe"> Sign me up to receive home maintance advice and inspiration.
+                                (Don’t worry - if you change your mind you can unsubscribe at anytime)</label>
+                        </div>
+                    </div>
+                    <!--<div class="row tick">-->
+
+                    <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+
+                    <!--<div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>-->
+
+                    <!--</div>-->
+                    <!--</div>-->
+                    <div class="recaptcha-holder"></div>
+                    <input type="hidden" value="Project Enquiry" name="formname">
+                    <div class="row tick">
+                        <div class="col-md-8 col-xs-12 input-label-wrapper">
+                            <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit"
+                                   value="Send message"/>
+
+                        </div>
+                    </div>
+                    <div id="prog1" class="progress" style="display: none;"></div>
+                </form>
+            </div>
+        </div>
+
+        <p class="strong"><strong>What do the standards cover and how can we help you meet them?</strong></p>
+        <ul>
+            <li><span class="heading">Heating</span><a class="more" href="">Learn more<img class="more"
+                                                                                           src="/svg/arrow_down.svg"
+                                                                                           alt=""></a>
+                <p class="content">To meet the Healthy Homes’ heating standards, you must have a fixed device in the
+                    home’s main living area that reaches at least 18 degrees C</p></li>
+            <li><span class="heading">Insulation</span><a class="more" href=""><img src="/svg/arrow_down.svg"
+                                                                                    alt=""></a>
+                <p class="content">Your rental property’s ceiling and underfloor insulation must be up to the
+                    standards of the 2008 New Zealand Building Code.</p></li>
+            <li><span class="heading">Ventilation</span><a class="more" href=""><img src="/svg/arrow_down.svg"
+                                                                                     alt=""></a>
+                <p class="content">When it comes to meeting the Healthy Homes’ ventilation standards, there are a
+                    few things to check for. Firstly, there must be windows which can open to the equivalent of 5%
+                    of the floor area. </p></li>
+            <li><span class="heading">Moisture ingress and drainage</span><a class="more" href=""><img
+                    src="/svg/arrow_down.svg" alt=""></a>
+                <p class="content">The moisture ingress and drainage standards cover efficient drainage, roof water
+                    removal and ground moisture barriers. </p></li>
+            <li><span class="heading">Draught Stopping</span><a class="more" href=""><img src="/svg/arrow_down.svg"
+                                                                                          alt=""></a>
+                <p class="content">The main goals behind the draught stopping standard are to ensure your tenants
+                    stay warm and comfortable year round, in an energy efficient manner. </p></li>
+        </ul>
+        <span class="disclaimer">To meet these standards, you must meet the regulations set out below. Guides and tools will be available online from July 1st 2019 onward to assist landlords in understanding their obligations.  </span>
+        <p class="bottom">Who do these standards impact?</p>
+        <span class="content">The healthy homes standards affect landlords and their tenants. Landlords will be required by law to meet the minimum housing requirements set out in the Healthy Homes Standards.</span>
+        <p class="bottom">When do the property fixes need to be in place by?</p>
+        <span class="content">Landlords will be required to meet the standards by 1st July, 2021. This excludes tenancies under Housing New Zealand and registered community housing providers, who must meet the standards by 1st July 2023.</span>
+    </div>
+</div>
+
+<div class="white-container inner inner-box">
+    <h2 class="heading">Why choose Oncore</h2>
+    <div class="process">
+        <div class="col-md-4 col-sm-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">Proven Process</span>
+            <p>Oncore’s unique process ensures our customer’s properties exceed the national standards. We can provide
+                you with a property inspection and make any necessary improvements. </p></div>
+        <div class="col-md-4 col-sm-4 project"><img src="/svg/project-management.svg" alt=""><span class="title">Project management</span>
+            <p>With Oncore, you don’t need to worry about following up with contractors and keeping projects on track.
+                Tell us what you need and we’ll take care of it!</p></div>
+        <div class="col-md-4 col-sm-4 response"><img src="/svg/fast-response.svg" alt=""><span class="title">Fast response times</span>
+            <p>We understand the importance of a fast and reliable service. Call or message us and we’ll get back to you
+                within 48 hours. </p></div>
+    </div>
+    <h2 class="heading">Learn more about the requirements to meet the standards</h2>
+    <div class="box-content" id="box-content">
+
+        <div class="col-md-6 col-sm-6 healthy-box">
+            <div class="container"><span class="heading">Heating</span>
+                <p class="summary">To meet the Healthy Homes’ heating standards, you must have a fixed device in your
+                    home’s main living area that reaches at least 18 degrees Celsius. </p>
+                <p class="text-content">Certain heating devices will not meet requirements. This includes open fires,
+                    Unflued combustion heaters and electric heaters (excluding heat pumps). If your home’s living area
+                    currently doesn’t meet these standards, Oncore can advise you on the best product for your home and
+                    will provide a high-quality installation.</p>
+                {% set entry = craft.entries.section('healthyHome').slug('heating').first() %}
+                {% if entry | length %}
+                <a href="{{entry.url}}">Learn more about heating</a>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 healthy-box">
+            <div class="container"><span class="heading">Insulation</span>
+                <p class="summary">Your rental property’s ceiling and underfloor insulation must be up to the standards
+                    of the 2008 New Zealand Building Code, and ceiling insulation needs to be at least 120mm in
+                    thickness. </p>
+                <p class="text-content">Additionally, your insulation needs to meet the Healthy Homes Standards’
+                    definition of being in “reasonable condition”. If you’re not sure if your insulation currently meets
+                    these standards, Oncore can help. We’ll inspect your insulation and upgrade it as needed.</p>
+                {% set entry = craft.entries.section('healthyHome').slug('insulation').first() %}
+                {% if entry | length %}
+                <a class="learn-more" href="{{entry.url}}">Learn more about insulation</a>
+                {% endif %}</div>
+        </div>
+        <div class="col-md-6 col-sm-6 healthy-box">
+            <div class="container"><span class="heading">Ventilation</span>
+                <p class="summary">When it comes to meeting the Healthy Homes’ ventilation standards, there are a few
+                    things to check for. </p>
+                <p class="text-content">Firstly, there must be windows which can open to the equivalent of 5% of the
+                    floor area in your property’s bedrooms, dining rooms, living rooms, lounges, open plan rooms and
+                    kitchens. Secondly, bathrooms and kitchens (or rooms containing a bath, shower or cooktop) must
+                    contain a sufficiently sized extractor fan which provides external ventilation. If you’re unsure of
+                    whether or not your extractor fan meets these standards, or if you require window installations, get
+                    in touch with Oncore to arrange a consultation.</p>
+                {% set entry = craft.entries.section('healthyHome').slug('ventilation').first() %}
+                {% if entry | length %}
+                <a href="{{entry.url}}">Learn more about ventilation</a>
+                {% endif %}</div>
+        </div>
+        <div class="col-md-6 col-sm-6 healthy-box">
+            <div class="container"><span class="heading">Moisture ingress and drainage</span>
+                <p class="summary">The moisture ingress and drainage standards cover efficient drainage, roof water
+                    removal and ground moisture barriers. </p>
+                <p class="text-content">Firstly, you will be required to ensure there are sufficient drainage systems in
+                    place at your rental property, which will remove surface, storm and groundwater. Secondly, efficient
+                    gutters, downpipes and drains must be installed. Thirdly, if you have an enclosed subfloor cavity,
+                    it must be with a ground moisture barrier that meets New Zealand standards. Oncore can provide you
+                    with a moisture ingress and drainage inspection and take the necessary steps to prevent any future
+                    water damage to your property.</p>
+                {% set entry = craft.entries.section('healthyHome').slug('moisture').first() %}
+                {% if entry | length %}
+                <a style="font-weight: bold" href="{{entry.url}}">Learn more about moisture ingress and drainage</a>
+                {% endif %}</div>
+        </div>
+        <div class="col-md-6 col-sm-6 healthy-box">
+            <div class="container"><span class="heading">Draught Stopping</span>
+                <p class="summary">The main goals behind the draught stopping standard are to ensure your tenants stay
+                    warm and comfortable year round, in an energy efficient manner. Keep a lookout for any significant
+                    gaps under doors, around windows, within the walls or in the floors. </p>
+                <p class="text-content">If your property includes an unused fireplace or chimney, these will need to be
+                    blocked in order to reduce any unnecessary draughts. If any areas of your property require draught
+                    stopping, Oncore can make the necessary repairs; ensuring your property is healthy, comfortable and
+                    meets national regulations. </p>
+                {% set entry = craft.entries.section('healthyHome').slug('draught').first() %}
+                {% if entry | length %}
+                <a href="{{entry.url}}">Learn more about draught</a>
+                {% endif %}</div>
+        </div>
+        <div class="col-md-6 col-sm-6 healthy-box contact">
+            <div class="container">
+                <span class="heading">Get in touch</span>
+                <p class="summary">Are you unsure of whether or not your property will meet the Healthy Homes
+                    Standards? </p>
+                <p class="text-content">Give Oncore a call, or make on online enquiry, to arrange a free consultation.
+                    We’ll manage any necessary inspections and upgrades for you, with minimal disruption to your
+                    day-to-day life.</p>
+                <a href="tel:0800 33 66 55" class="phone">0800 33 66 55</a>
+                <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get in touch</button>
             </div>
         </div>
     </div>
-    <div class="green-container">
-        <div class="full-width-text-left inner text-container" style="position: relative">
-            <div class="form-banner">
-                <div class="container">
-                    <span class="title">Get in touch</span>
-                    <span class="helper">Hire Oncore to bring your rental up to meet the standards</span>
-                    <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
-                        <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
-                        <div class="row">
-                            <div class="col-md-12 input-label-wrapper">
-                                <label class="labelname" for="formf-firstname">First Name</label>
-                                <input type="text" class="form-control home-form"
-                                       aria-label="First name" name="firstname" id="formf-firstname"
-                                       data-prefix="formf"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 input-label-wrapper">
-                                <label class="labelname">Last Name</label>
-                                <input type="text" class="form-control home-form"
-                                       aria-label="Last name" name="lastname"
-                                       id="formf-lastname" data-prefix="formf"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 input-label-wrapper">
-                                <label class="labelname">Email Address</label>
-                                <input type="text" class="form-control home-form"
-                                       name="email"
-                                       id="formf-email" data-prefix="formf"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 input-label-wrapper">
-                                <label class="labelname">Property Location</label>
-                                <select name="location" id="" class="form-control home-form" required>
-                                    <option value="" disabled selected hidden>Select location</option>
-                                    <option value="AKL - Rodney">AKL - Rodney</option>
-                                    <option value="AKL - North Shore">AKL - North Shore</option>
-                                    <option value="AKL - Waitakere">AKL - Waitakere</option>
-                                    <option value="AKL - Auckland Central">AKL - Auckland Central</option>
-                                    <option value="AKL - East Auckland">AKL - East Auckland</option>
-                                    <option value="AKL - Manukau">AKL - Manukau</option>
-                                    <option value="AKL - Franklin">AKL - Franklin</option>
-                                    <option value="BHE - Blenheim">BHE - Blenheim</option>
-                                    <option value="CHC - Christchurch">CHC - Christchurch</option>
-                                    <option value="DUD - Dunedin">DUD - Dunedin</option>
-                                    <option value="GIS - Gisborne">GIS - Gisborne</option>
-                                    <option value="HLZ - Hamilton">HLZ - Hamilton</option>
-                                    <option value="IVC - Invecargill">IVC - Invecargill</option>
-                                    <option value="KAT - Kaitai">KAT - Kaitai</option>
-                                    <option value="KKE - KeriKeri">KKE - KeriKeri</option>
-                                    <option value="NPE - Napier">NPE - Napier</option>
-                                    <option value="NSN - Nelson">NSN - Nelson</option>
-                                    <option value="PMR - Palmerston North">PMR - Palmerston North</option>
-                                    <option value="QTN - Queenstown">QTN - Queenstown</option>
-                                    <option value="ROT - Rotorua">ROT - Rotorua</option>
-                                    <option value="TUO - Taupo">TUO - Taupo</option>
-                                    <option value="TRG - Tauranga">TRG - Tauranga</option>
-                                    <option value="TIU - Timaru">TIU - Timaru</option>
-                                    <option value="WAG - Whanganui">WAG - Whanganui</option>
-                                    <option value="WLG - Wellington">WLG - Wellington</option>
-                                    <option value="WSZ - Westport">WSZ - Westport</option>
-                                    <option value="WHK - Whakatane">WHK - Whakatane</option>
-                                    <option value="WRE - Whangarei">WRE - Whangarei</option>
-                                    <option value="Rather not say">Rather not say</option>
-                                </select>
-                                <span class="location-des">We ask for property location to enable us to seamlessly connect you with a maintenance specialist in your area. </span>
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 input-label-wrapper">
-                                <label class="labelname">Phone</label>
-                                <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
-                                <!--placeholder="Enter phone number" aria-label="Phone number"-->
-                                <!--data-prefix="c-car"/>-->
-
-                                <input type="tel" class="form-control home-form phone-input"
-                                       name="tel" id="formf-tel"
-                                       data-prefix="formf" data-phoneformat="yes">
-                            </div>
-                        </div>
-
-                        <div class="row tick">
-                            <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                                <input type="checkbox" class="uniform-styles" name="privacy"
-                                       id="formf-privacy" checked="checked" data-prefix="formf"/>
-                                <label for="formf-privacy"> I have read, understood and accepted the <a
-                                            href="/privacy-statement/" target="_blank">Privacy Policy</a>.</label>
-                            </div>
-                        </div>
-                        <div class="row tick">
-                            <div class="col-sm-12 col-xs-12 input-label-wrapper">
-                                <input type="checkbox" class="uniform-styles" name="subscribe" id="formf-subscribe"
-                                       checked="checked"/>
-                                <label for="formf-subscribe"> Sign me up to receive home maintance advice and inspiration.
-                                    (Don’t worry - if you change your mind you can unsubscribe at anytime)</label>
-                            </div>
-                        </div>
-                        <!--<div class="row tick">-->
-
-                        <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
-
-                        <!--<div class="g-recaptcha" data-sitekey="6LcttIoUAAAAAF_p6R9ImzklFK80LCC72PsjbTvb"></div>-->
-
-                        <!--</div>-->
-                        <!--</div>-->
-                        <div class="recaptcha-holder"></div>
-                        <input type="hidden" value="Project Enquiry" name="formname">
-                        <div class="row tick">
-                            <div class="col-md-8 col-xs-12 input-label-wrapper">
-                                <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit"
-                                       value="Send message"/>
-
-                            </div>
-                        </div>
-                        <div id="prog1" class="progress" style="display: none;"></div>
-                    </form>
-                </div>
-            </div>
-
-            <p class="strong"><strong>What do the standards cover and how can we help you meet them?</strong></p>
-            <ul>
-                <li><span class="heading">Heating</span><a class="more" href="">Learn more<img class="more" src="/svg/arrow_down.svg" alt=""></a>
-                    <p class="content">To meet the Healthy Homes’ heating standards, you must have a fixed device in the
-                        home’s main living area that reaches at least 18 degrees C</p></li>
-                <li><span class="heading">Insulation</span><a class="more" href=""><img src="/svg/arrow_down.svg" alt=""></a>
-                    <p class="content">Your rental property’s ceiling and underfloor insulation must be up to the
-                        standards of the 2008 New Zealand Building Code.</p></li>
-                <li><span class="heading">Ventilation</span><a class="more" href=""><img src="/svg/arrow_down.svg" alt=""></a>
-                    <p class="content">When it comes to meeting the Healthy Homes’ ventilation standards, there are a
-                        few things to check for. Firstly, there must be windows which can open to the equivalent of 5%
-                        of the floor area. </p></li>
-                <li><span class="heading">Moisture ingress and drainage</span><a class="more" href=""><img src="/svg/arrow_down.svg" alt=""></a>
-                    <p class="content">The moisture ingress and drainage standards cover efficient drainage, roof water
-                        removal and ground moisture barriers. </p></li>
-                <li><span class="heading">Draught Stopping</span><a class="more" href=""><img src="/svg/arrow_down.svg" alt=""></a>
-                    <p class="content">The main goals behind the draught stopping standard are to ensure your tenants
-                        stay warm and comfortable year round, in an energy efficient manner. </p></li>
-            </ul>
-            <span class="disclaimer">To meet these standards, you must meet the regulations set out below. Guides and tools will be available online from July 1st 2019 onward to assist landlords in understanding their obligations.  </span>
-            <p class="bottom">Who do these standards impact?</p>
-            <span class="content">The healthy homes standards affect landlords and their tenants. Landlords will be required by law to meet the minimum housing requirements set out in the Healthy Homes Standards.</span>
-            <p class="bottom">When do the property fixes need to be in place by?</p>
-            <span class="content">Landlords will be required to meet the standards by 1st July, 2021. This excludes tenancies under Housing New Zealand and registered community housing providers, who must meet the standards by 1st July 2023.</span>
-        </div>
-    </div>
-
-    <div class="white-container inner inner-box">
-        <h2 class="heading">Why choose Oncore</h2>
-        <div class="process">
-            <div class="col-md-4 col-sm-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">Proven Process</span><p>Oncore’s unique process ensures our customer’s properties exceed the national standards. We can provide you with a property inspection and make any necessary improvements. </p></div>
-            <div class="col-md-4 col-sm-4 project"><img src="/svg/project-management.svg" alt=""><span class="title">Project management</span><p>With Oncore, you don’t need to worry about following up with contractors and keeping projects on track. Tell us what you need and we’ll take care of it!</p></div>
-            <div class="col-md-4 col-sm-4 response"><img src="/svg/fast-response.svg" alt=""><span class="title">Fast response times</span><p>We understand the importance of a fast and reliable service. Call or message us and we’ll get back to you within 48 hours. </p></div>
-        </div>
-        <h2 class="heading">Learn more about the requirements to meet the standards</h2>
-        <div class="box-content" id="box-content">
-            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Heating</span><p class="summary">To meet the Healthy Homes’ heating standards, you must have a fixed device in your home’s main living area that reaches at least 18 degrees Celsius. </p><p class="text-content">Certain heating devices will not meet requirements. This includes open fires, Unflued combustion heaters and electric heaters (excluding heat pumps). If your home’s living area currently doesn’t meet these standards, Oncore can advise you on the best product for your home and will provide a high-quality installation.</p></div></div>
-            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Insulation</span><p class="summary">Your rental property’s ceiling and underfloor insulation must be up to the standards of the 2008 New Zealand Building Code, and ceiling insulation needs to be at least 120mm in thickness. </p><p class="text-content">Additionally, your insulation needs to meet the Healthy Homes Standards’ definition of being in “reasonable condition”. If you’re not sure if your insulation currently meets these standards, Oncore can help. We’ll inspect your insulation and upgrade it as needed.</p></div></div>
-            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Ventilation</span><p class="summary">When it comes to meeting the Healthy Homes’ ventilation standards, there are a few things to check for. </p><p class="text-content">Firstly, there must be windows which can open to the equivalent of  5% of the floor area in your property’s bedrooms, dining rooms, living rooms, lounges, open plan rooms and kitchens. Secondly, bathrooms and kitchens (or rooms containing a bath, shower or cooktop) must contain a sufficiently sized extractor fan which provides external ventilation. If you’re unsure of whether or not your extractor fan meets these standards, or if you require window installations, get in touch with Oncore to arrange a consultation.</p></div></div>
-            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Moisture ingress and drainage</span><p class="summary">The moisture ingress and drainage standards cover efficient drainage, roof water removal and ground moisture barriers. </p><p class="text-content">Firstly, you will be required to ensure there are sufficient drainage systems in place at your rental property, which will remove surface, storm and groundwater. Secondly, efficient gutters, downpipes and drains must be installed. Thirdly, if you have an enclosed subfloor cavity, it must be with a ground moisture barrier that meets New Zealand standards. Oncore can provide you with a moisture ingress and drainage inspection and take the necessary steps to prevent any future water damage to your property.</p></div></div>
-            <div class="col-md-6 col-sm-6 healthy-box"><div class="container"><span class="heading">Draught Stopping</span><p class="summary">The main goals behind the draught stopping standard are to ensure your tenants stay warm and comfortable year round, in an energy efficient manner. Keep a lookout for any significant gaps under doors, around windows, within the walls or in the floors. </p><p class="text-content">If your property includes an unused fireplace or chimney, these will need to be blocked in order to reduce any unnecessary draughts. If any areas of your property require draught stopping, Oncore can make the necessary repairs; ensuring your property is healthy, comfortable and meets national regulations.  </p></div></div>
-            <div class="col-md-6 col-sm-6 healthy-box contact">
-                <div class="container">
-                    <span class="heading">Get in touch</span>
-                    <p class="summary">Are you unsure of whether or not your property will meet the Healthy Homes Standards?  </p>
-                    <p class="text-content">Give Oncore a call, or make on online enquiry, to arrange a free consultation. We’ll manage any necessary inspections and upgrades for you, with minimal disruption to your day-to-day life.</p>
-                    <a href="tel:0800 33 66 55" class="phone">0800 33 66 55</a>
-                    <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get in touch</button>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 
 
 {% endblock content %}
