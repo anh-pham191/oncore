@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
+{% block snippet %}
+
 {% block seocontent %}
 <title>Have repairman at your door in minutes | Oncore NZ</title>
 <meta name="description" content="Oncore provides fast, simple and professional installation, repair and maintenance services. Call now and have one of our people at your door in minutes!">
@@ -9,6 +11,7 @@ Locks and handles, Furniture assembly, Appliance fitting, Appliance installation
 Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car park maintenance, Gutter cleaning, Paving, Bricklaying, Concreting, Fence and gate repairs, Garden maintenance, Pergola assembly, Garden shed assembly">
 {% endblock seocontent %}
 
+{% endblock snippet %}
 
 {% block content %}
 
@@ -68,6 +71,44 @@ Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car p
                                 <label class="labelname">Email Address</label>
                                 <input type="text" name="email" class="form-control" aria-label="Email address" id="formf-email"
                                        data-prefix="formf"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Property Location</label>
+                                <select name="location" id="" class="form-control home-form" required>
+                                    <option value="" disabled selected hidden>Select location</option>
+                                    <option value="AKL - Rodney">AKL - Rodney</option>
+                                    <option value="AKL - North Shore">AKL - North Shore</option>
+                                    <option value="AKL - Waitakere">AKL - Waitakere</option>
+                                    <option value="AKL - Auckland Central">AKL - Auckland Central</option>
+                                    <option value="AKL - East Auckland">AKL - East Auckland</option>
+                                    <option value="AKL - Manukau">AKL - Manukau</option>
+                                    <option value="AKL - Franklin">AKL - Franklin</option>
+                                    <option value="BHE - Blenheim">BHE - Blenheim</option>
+                                    <option value="CHC - Christchurch">CHC - Christchurch</option>
+                                    <option value="DUD - Dunedin">DUD - Dunedin</option>
+                                    <option value="GIS - Gisborne">GIS - Gisborne</option>
+                                    <option value="HLZ - Hamilton">HLZ - Hamilton</option>
+                                    <option value="IVC - Invecargill">IVC - Invecargill</option>
+                                    <option value="KAT - Kaitai">KAT - Kaitai</option>
+                                    <option value="KKE - KeriKeri">KKE - KeriKeri</option>
+                                    <option value="NPE - Napier">NPE - Napier</option>
+                                    <option value="NSN - Nelson">NSN - Nelson</option>
+                                    <option value="PMR - Palmerston North">PMR - Palmerston North</option>
+                                    <option value="QTN - Queenstown">QTN - Queenstown</option>
+                                    <option value="ROT - Rotorua">ROT - Rotorua</option>
+                                    <option value="TUO - Taupo">TUO - Taupo</option>
+                                    <option value="TRG - Tauranga">TRG - Tauranga</option>
+                                    <option value="TIU - Timaru">TIU - Timaru</option>
+                                    <option value="WAG - Whanganui">WAG - Whanganui</option>
+                                    <option value="WLG - Wellington">WLG - Wellington</option>
+                                    <option value="WSZ - Westport">WSZ - Westport</option>
+                                    <option value="WHK - Whakatane">WHK - Whakatane</option>
+                                    <option value="WRE - Whangarei">WRE - Whangarei</option>
+                                    <option value="Rather not say">Rather not say</option>
+                                </select>
+                                <span class="location-des">We ask for property location to enable us to seamlessly connect you with a maintenance specialist in your area. </span>
                             </div>
                         </div>
                         <div class="row">

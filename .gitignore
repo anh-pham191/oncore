@@ -5,3 +5,9 @@
 /config/project.yaml
 web/articleBanner/*
 web/robots.txt
+web/personImage/
+web/personImage/*
+web/panorama/
+web/panorama/*
+web/panoramaImage/
+web/panoramaImage/*

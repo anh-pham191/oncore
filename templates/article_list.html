@@ -108,15 +108,6 @@
         }
         trimText(titleLength, $(".article-box .title"));
         trimText(descriptionLength, $(".article-box .description p"));
-        function trimText(count, object){
-            object.each(function () {
-                var content = $(this).text();
-                if (content.length > count) {
 
-                    var c = content.substr(0, count);
-                    $(this).html(c + "...");
-                }
-            })
-        }
     </script>
 {% endblock scripts %}

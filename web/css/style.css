@@ -15,7 +15,7 @@ body {
     font-size: 1rem;
     font-style: normal;
     background-color: #fff;
-    line-height: 1.25;
+    line-height: 1.5;
 
 }
 
@@ -2901,7 +2901,7 @@ ul {
     }
 
     #wrapper {
-        margin-top: 65px;
+        margin-top: 60px;
     }
 
     #sitebanner .mobile-nav .col-xs-2 {
@@ -2939,6 +2939,11 @@ ul {
     .full-width-text-left.list-page {
         margin: 0 auto !important;
     }
+    .person {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
 }
 
 @media only all and (min-width: 64em) {
@@ -3020,6 +3025,10 @@ ul {
 
     #footer section.form li {
         margin: 0 15px 8px 0;
+    }
+    .person {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -3418,13 +3427,14 @@ div#wideslideshow.overlay.banner .intro-bottom {
 
 .form-banner {
     position: absolute;
-    top: -100%;
+    top: -119%;
     right: 0;
     border-radius: 20px;
     width: 368px;
-    height: 620px;
+    height: auto;
     box-shadow: 0 2px 50px 0 rgba(76, 76, 76, 0.3);
     background-color: #ffffff;
+    padding-bottom: 25px;
 }
 
 .g-recaptcha {
@@ -3447,7 +3457,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 }
 
 .form-control.home-form {
-    width: 276px;
+    width: 100%;
     height: 48px;
     border-radius: 10px;
     border: solid 1px #979797;
@@ -3485,7 +3495,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 }
 
 #home-form-submit {
-    width: 274px;
+    width: 100%;
     height: 48px;
     border-radius: 3px;
     background-color: #4fae47;
@@ -4005,7 +4015,7 @@ li.help {
 
     .form-banner {
         position: absolute;
-        top: -100%;
+        top: -350px;
         right: 0;
         width: 320px;
     }
@@ -4171,7 +4181,7 @@ li.help {
 
     .form-banner {
         width: 100%;
-        height: 600px;
+        height: auto;
         background-color: #ffffff;
     }
 
@@ -4296,7 +4306,7 @@ li.help {
         padding-right: 9px;
     }
 
-    .full-width-text-left p:first-of-type {
+    .full-width-text-left p:first-of-type, .full-width-text-left.text-container p.strong {
         padding-top: 40px;
         padding-bottom: 13px;
     }
@@ -6763,7 +6773,7 @@ form .tips {
     width: 100%;
 }
 
-.full-width-text-left.list-page button.cta-button {
+.full-width-text-left.list-page button.cta-button, #wrapper .white-container .healthy-box .container .cta-button {
     width: 274px;
     height: 48px;
     border-radius: 3px;
@@ -7295,6 +7305,34 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     .article-page .fright img, .article-page .fleft img {
         padding-top: 60px;
     }
+    #wrapper .green-container div.inner.text-container span.heading, #wrapper .white-container .healthy-box .container .summary {
+        font-size: 20px !important;
+        background-size: 19px auto !important;
+
+    }
+    #wrapper div.inner.text-container p.bottom {
+        font-weight: bold;
+    }
+    #wrapper .white-container h2.heading {
+        font-size: 24px !important;
+    }
+    #wrapper .white-container .healthy-box .container .heading {
+        font-size: 24px !important;
+        background-size: 18px auto!important;
+        background-position-y: 5px!important;
+    }
+    #wrapper .white-container .healthy-box .container .text-content {
+        font-size: 16px !important;
+    }
+    #wrapper .white-container .healthy-box .container .heading {
+        margin-bottom: 10px !important;
+    }
+    #wrapper .white-container .healthy-box .container .summary {
+        margin-bottom: 5px !important;
+    }
+    #wrapper .white-container .healthy-box .container {
+        min-height: 704px !important;
+    }
 
 }
 .formholder .progress, .theformarea .progress, .form-banner .progress {
@@ -7305,4 +7343,471 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     top: 0;
     left: 0;
     z-index: 4;
+}
+
+.person .person-image{
+    height: auto;
+    width: 100%
+}
+
+.person .name {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.person {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.person .person-block {
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    margin: 0 auto
+}
+
+.person .person-block .text-block {
+    padding: 20px;
+    min-height: 267px;
+}
+.person .job  {
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 1.57;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+.person .description {
+    font-size: 16px;
+    line-height: 1.7;
+}
+div#wideslideshow.overlay .overlay-container div.inner.relative-inner {
+    position: relative;
+    margin-top: 0px;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box {
+    border-radius: 9px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.27);
+    background-color: rgba(255, 255, 255, 0.93);
+    width: 624px;
+    position: absolute;
+    top: 50px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 30px;
+    margin-top: 0px;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box h1, div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
+    color: #2f3132;
+    width: 100%;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
+    padding-top: 50px;
+    font-size: 48px;
+    line-height: 1.2;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
+    padding-top: 13px;
+    font-size: 25px;
+    margin-top: 0px;
+}
+div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
+    width: 205px;
+    margin-top: 20px;
+    margin-right: 32px;
+}
+#wrapper div#wideslideshow.overlay .overlay-container div.inner.container-box .learn-more {
+    color: #4fae47;
+}
+#wrapper .green-container {
+    background-color: #eaf5e9;
+}
+#wrapper .full-width-text-left.text-container {
+    margin: 0px auto !important;
+    padding: 45px 0px;
+}
+#wrapper .full-width-text-left.text-container .form-banner {
+    top: 0;
+    width: 475px;
+    border-radius: 7px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.27);
+    background-color: #ffffff;
+}
+#wrapper .full-width-text-left.text-container .form-banner span.helper {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.5;
+    color: #2f3132;
+    display: block;
+}
+#wrapper div.inner.text-container span.heading {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 500;
+    color: #2f3132;
+    background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
+    padding-left: 33px;
+    padding-top: 0;
+    background-size: 24px auto;
+    background-position-y: 5px;
+}
+#wrapper div.inner.text-container p.content {
+    padding-left: 33px;
+}
+#wrapper div.inner.text-container .content{
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.5;
+    color: #2f3132;
+}
+#wrapper div.inner.text-container .disclaimer {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.63;
+    color: #2f3132;
+}
+#wrapper .white-container h2, #wrapper .white-container .process {
+    margin: 0 auto;
+    text-align: center;
+}
+#wrapper .white-container h2.heading {
+    font-size: 32px;
+    margin-top: 50px;
+    max-width: 60%;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+#wrapper .white-container .process {
+    min-height: 100px;
+    overflow: hidden;
+    margin-top: 30px
+}
+#wrapper .white-container .process img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 80px;
+    margin-bottom: 10px;
+}
+#wrapper .white-container .process .title {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 600;
+}
+#wrapper .white-container .process .proven .title {
+    color: #d37f04;
+}#wrapper .white-container .process .project .title {
+    color: #4c983b;
+}#wrapper .white-container .process .response .title {
+    color: #0079bb;
+}
+
+#wrapper .white-container .process p {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2f3132;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.form-banner .title {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 600;
+    color: #2f3132;
+    display: block;
+    margin-top: 35px
+}
+.form-banner .container {
+    padding-left: 42px;
+    padding-right: 42px;
+}
+@media only all and (max-width: 64em) {
+    .form-banner .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media only all and (max-width: 48em) {
+    #home-form-submit {
+        margin-top: 15px;
+    }
+}
+.form-banner .container .row{
+    margin-left: 0px;
+    margin-right: 0px;
+    height: auto;
+}
+.form-banner .container .row .input-label-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.form-banner .container .row.tick {
+    margin: 0;
+}
+.form-banner form {
+    margin-top: 0.67em;
+}
+.article-section a, .article-section span.back-to-top{
+    position:sticky;
+    z-index:2
+}
+
+#wrapper .white-container .healthy-box {
+    min-height: 530px;
+    margin-bottom: 42px;
+}
+#wrapper .white-container .healthy-box .container {
+    padding: 42px;
+    background-color: #f5f5f5;
+    min-height: 530px;
+}
+
+#wrapper .green-container div.inner.text-container span.heading {
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: bold;
+    background: none;
+    padding-left: 0px;
+}
+#wrapper .green-container div.inner.text-container p.content {
+    padding-left: 0px;
+}
+
+#wrapper .white-container .healthy-box .container .heading {
+    font-family: "Poppins";
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #2f3132;
+    background: url(/svg/tick.svg) no-repeat;
+    padding-left: 33px;
+    padding-top: 0;
+    background-size: 24px auto;
+    background-position-y: 8px;
+    margin-bottom: 32px;
+    display: block;
+}
+
+#wrapper .white-container .healthy-box .container .summary {
+    font-family: "Poppins";
+    font-size: 25px;
+    font-weight: 500;
+    color: #2f3132;
+    margin-bottom: 15px;
+}
+#wrapper .white-container .healthy-box .container .text-content {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.5;
+    color: #2f3132;
+}
+#wrapper .white-container .box-content {
+    margin-top: 50px;
+}
+
+#wrapper .white-container .healthy-box.contact .container {
+    background-color: #eaf5e9;
+}
+#wrapper .white-container .healthy-box.contact .container .heading {
+    background: none;
+    padding-left: 0px;
+}
+
+#wrapper .white-container .healthy-box .container .phone {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #4fae47;
+    display: block;
+    text-align: left;
+}
+#wrapper .white-container .healthy-box .container .cta-button {
+    width: 205px;
+}
+#wrapper .full-width-text-left.text-container .form-banner {
+    position: static;
+    float: right;
+    margin-top: -79px;
+    margin-left: 42px;
+}
+#wrapper .full-width-text-left.text-container p {
+    width: 100%
+}
+#wrapper .full-width-text-left.text-container p:first-of-type {
+    padding-bottom: 25px;
+}
+#wrapper .full-width-text-left.text-container p.bottom {
+    margin-top: 30px;
+    margin-bottom: 2px;
+}
+@media only all and (max-width: 47.937em){
+    div#wideslideshow.overlay .overlay-container div.inner.container-box {
+        position: static;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        padding: 0px;
+    }
+    div#wideslideshow.overlay .overlay-container .relative-inner div.inner.container-box h1, div#wideslideshow.overlay .overlay-container .relative-inner .intro-bottom {
+        padding: 0px;
+    }
+    div#wideslideshow.overlay .overlay-container .relative-inner div.inner.container-box h1, #wrapper .white-container h2.heading, #wrapper .white-container .healthy-box .container .heading {
+        font-size: 24px;
+    }
+    div#wideslideshow.overlay .overlay-container .relative-inner div.inner.container-box .intro-bottom {
+        font-size: 18px;
+        font-weight: normal;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.relative-inner {
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+    #wrapper .full-width-text-left.text-container .form-banner {
+        float: none;
+        margin: 0px;
+        width: 100%;
+        border: none;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
+        margin-right: 10px;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button, #wrapper #wideslideshow.overlay.white .learn-more {
+        font-size: 16px;
+        width: 50%;
+    }
+    #wrapper .green-container div.inner.text-container p.content, #wrapper .green-container div.inner.text-container span.heading {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+    }
+    #wrapper .white-container .healthy-box .container .heading {
+        padding-left: 28px;
+        background-size: 18px auto;
+        background-position-y: 6px;
+    }
+    #wrapper .white-container .healthy-box {
+        padding-left: 0px;
+        padding-right: 0px;
+        min-height: inherit;
+        margin-bottom: 42px;
+        height: auto;
+    }
+    div#wideslideshow.overlay {
+        max-height: initial;
+    }
+    #wrapper .white-container .process .title {
+        font-size: 20px;
+    }
+    #wrapper .white-container .process img {
+        height: 60px;
+    }
+    #wrapper .white-container .healthy-box .container .summary {
+        font-size: 20px;
+    }
+    #wrapper .white-container .healthy-box .container .text-content {
+        font-size: 18px;
+    }
+    #wrapper .inner.inner-box {
+        padding-left: 0px;
+        padding-right: 0px
+    }
+    #wrapper .white-container .healthy-box .container {
+        padding: 30px 20px;
+        min-height: initial;
+        height: auto;
+    }
+    #wrapper .white-container h2.heading, #wrapper .white-container .process {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #wrapper .white-container .process .project {
+        margin: 40px auto;
+    }
+    #wrapper .full-width-text-left.text-container p.strong {
+        padding-bottom: 0px;
+    }
+    .form-banner .container .row.tick .col-md-8.input-label-wrapper {
+        position: static;
+    }
+}
+@media only all and (min-width: 48em) and (max-width: 64em){
+    div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
+        font-size: 24px;
+        padding-top: 18px
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
+        font-size: 18px;
+        padding-top: 10px;
+        margin-top: 0px;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box {
+        width: 55% !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+        top: 50px;
+    }
+    #wideslideshow .overlay-container .cta-button, #wrapper #wideslideshow.overlay.white .learn-more {
+        font-size: 16px;
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
+        width: 149px
+    }
+    #wrapper .green-container .full-width-text-left.text-container .form-banner {
+        width: 45%;
+    }
+    #wrapper .green-container .full-width-text-left.text-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #wrapper .white-container .healthy-box .container {
+        min-height: 620px;
+    }
+    .form-banner .container .row.tick .col-md-8.input-label-wrapper {
+        position: static;
+    }
+}
+@media only all and (min-width: 64em) and (max-width: 78em){
+    div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
+        font-size: 32px;
+        padding-top: 18px
+    }
+    div#wideslideshow.overlay .overlay-container div.inner.container-box {
+        width: 450px !important;
+        top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+    }
+}
+#wrapper div.inner.text-container p {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 1.5;
+    color: #2f3132;
+}
+#wrapper div.inner.text-container ul {
+    margin-top: 20px;
+}
+
+#wrapper div.inner.text-container p.bottom {
+    font-weight: bold;
+}
+#wrapper .green-container div.inner.text-container .more {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+span.location-des {
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.36;
+    color: #8e8e8e;
 }

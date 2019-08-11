@@ -1,449 +1,504 @@
 {% extends "layout.html" %}
 {% block snippet %}
-    {% block seocontent %}
-        <title>{{ entry.seoPageTitle }} | Oncore</title>
-        <meta name="description"
-              content="{{ entry.seoMetaDescription }}">
-        <meta name="keywords" content="{{ entry.seoMetaKeywords }}">
-    {% endblock seocontent %}
-    <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
-    <style>
-        #map-section {
-            height: 411px;
-            /*margin-top: 30px !important;*/
-            /*margin-bottom: 30px !important*/
-        }
+{% block seocontent %}
+<title>{{ entry.seoPageTitle }} | Oncore</title>
+<meta name="description"
+      content="{{ entry.seoMetaDescription }}">
+<meta name="keywords" content="{{ entry.seoMetaKeywords }}">
+{% endblock seocontent %}
+<!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+<style>
+    #map-section {
+        height: 411px;
+        /*margin-top: 30px !important;*/
+        /*margin-bottom: 30px !important*/
+    }
 
-        .map-title {
-            font-weight: bold;
-            color: #0079bb
-        }
-        .inner.location, .inner.individual, .inner.people {
-            height: auto;
-            overflow: auto;
-        }
-        .inner.location {
-            padding: 60px 0;
-        }
+    .map-title {
+        font-weight: bold;
+        color: #0079bb
+    }
 
+    .inner.location, .inner.individual, .inner.people {
+        height: auto;
+        overflow: auto;
+    }
+
+    .inner.location {
+        padding: 60px 0;
+    }
+
+    .inner.location .text-intro {
+        background-color: #f1f1f1;
+        height: 411px;
+    }
+
+    .inner.location .col-md-6 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .inner.location .text-intro .container {
+        width: 85%;
+        margin: 0 auto;
+        padding-top: 36px;
+    }
+
+    .inner.location .text-intro .container .phone-number {
+        margin-top: 9px;
+        margin-bottom: 21px;
+        display: block;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: bold;
+        color: #4fae47;
+    }
+
+    .inner.location .text-intro .container .title {
+        font-family: "Poppins";
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .inner.location .text-intro .container .content {
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.63;
+    }
+
+    .inner.individual .col-md-4 {
+        position: relative;
+        padding-left: 39px
+    }
+
+    .inner .suburbs {
+        font-family: "Poppins";
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        margin-top: 20px;
+        display: block;
+    }
+
+    .inner.individual .fa {
+        position: absolute;
+        top: 11%;
+        left: 0;
+        font-size: 28px;
+        color: #4fae47;
+    }
+
+    .inner .line-address {
+        font-family: "Open Sans";
+        font-size: 16px;
+        line-height: 1.63;
+    }
+
+    .inner .directions {
+        font-family: "Open Sans";
+        font-size: 16px;
+        line-height: 1.38;
+        margin-top: 15px;
+        display: block;
+        text-decoration: underline;
+    }
+
+    .inner.people {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    .inner.people h2 {
+        margin-bottom: 35px;
+    }
+
+    @media only all and (max-width: 47.937em) {
         .inner.location .text-intro {
-            background-color: #f1f1f1;
-            height: 411px;
-        }
-
-        .inner.location .col-md-6 {
-            padding-left: 0px;
-            padding-right: 0px;
+            height: auto;
         }
 
         .inner.location .text-intro .container {
-            width: 85%;
-            margin: 0 auto;
-            padding-top: 36px;
+            padding-bottom: 36px;
         }
-        .inner.location .text-intro .container .phone-number {
-            margin-top: 9px;
-            margin-bottom: 21px;
-            display: block;
-            font-family: "Open Sans";
-            font-size: 18px;
-            font-weight: bold;
-            color: #4fae47;
-        }
-        .inner.location .text-intro .container .title {
-            font-family: "Poppins";
-            font-size: 25px;
-            font-weight: 500;
-        }
-        .inner.location .text-intro .container .content {
-            font-family: "Open Sans";
-            font-size: 16px;
-            font-weight: normal;
-            line-height: 1.63;
-        }
-        .inner.individual .col-md-4 {
-            position: relative;
-            padding-left: 39px
-        }
-        .inner .suburbs {
-            font-family: "Poppins";
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 8px;
-            margin-top: 20px;
-            display: block;
-        }
+    }
 
-        .inner.individual .fa {
-            position: absolute;
-            top: 11%;
-            left: 0;
-            font-size: 28px;
-            color: #4fae47;
-        }
+    @media only all and (min-width: 48em) and (max-width: 64em) {
+        .inner.location .text-intro, #map-section {
+            height: 550px;
 
-        .inner .line-address {
-            font-family: "Open Sans";
-            font-size: 16px;
-            line-height: 1.63;
         }
-        .inner .directions {
-            font-family: "Open Sans";
-            font-size: 16px;
-            line-height: 1.38;
-            margin-top: 15px;
-            display: block;
-            text-decoration: underline;
-        }
+    }
 
-        .inner.people {
-            padding-top: 60px ;
-            padding-bottom: 70px;
-        }
-    </style>
+</style>
 {% endblock snippet %}
 {% block content %}
-    <div id="list-page">
-        {% include 'includes/header-banner.html'  with { "image" : entry.bannerimage.first().Filename, "h1": entry.title, "breadcrumb": "<a
-        href='/' >Home</a> / <a href='/locations/'> Our Locations</a> / <a class='bold' href='"~entry.url~"'>"~entry.title~"</a>" } %}
-            {% for contact in entry.contactAddress %}
-                <input type="hidden"
-                       value="{{ contact.address }}|{{ entry.uri }}|{{ entry.h1heading }}|{{ contact.coveredAreas }}|{{ entry.title }}"
-                       class="address"/>
-            {% endfor %}
-        <input type="hidden" value="{{ entry.title }}" id="current-location"/>
-        <div class="inner location">
-            <div class="col-md-6 col-sm-6 text-intro">
-                <div class="container">
-                    <h2 class="title">{{ entry.title }}</h2>
-                    <span class="phone-number">{{ entry.regionalPhoneNumber }}</span>
-                    <p class="content">{{ entry.pageContent }}</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-                <div id="map-section"></div>
+<div id="list-page">
+    {% include 'includes/header-banner.html' with { "image" : entry.bannerimage.first().Filename, "h1": entry.title,
+    "breadcrumb": "<a
+        href='/'>Home</a> / <a href='/locations/'> Our Locations</a> / <a class='bold' href='"~entry.url~"'>"~entry.title~"</a>"
+    } %}
+    {% for contact in entry.contactAddress %}
+    <input type="hidden"
+           value="{{ contact.address }}|{{ entry.uri }}|{{ entry.h1heading }}|{{ contact.coveredAreas }}|{{ entry.title }} | {{contact.latitude}} | {{contact.longitude}}"
+           class="address"/>
+    {% endfor %}
+    <input type="hidden" value="{{ entry.title }}" id="current-location"/>
+    <div class="inner location">
+        <div class="col-md-6 col-sm-6 text-intro">
+            <div class="container">
+                <h2 class="title">{{ entry.title }}</h2>
+                <span class="phone-number">{{ entry.regionalPhoneNumber }}</span>
+                <p class="content">{{ entry.pageContent }}</p>
             </div>
         </div>
-
-        <div class="inner individual">
-            <h2>Individual locations</h2>
-            {% for contact in entry.contactAddress %}
-                <div class="col-md-4 col-sm-4">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    {#<img src="/svg/map-marker.svg" alt="">#}
-                    <span class="suburbs">{{ contact.suburbs }}</span>
-                    {% set address = contact.address | split(',') %}
-                    {% for a in address %}
-                        <p class="line-address">{{ address[loop.index0] }}</p>
-                    {% endfor %}
-                    <a href="" class="directions">Directions and map</a>
-                </div>
-            {% endfor %}
+        <div class="col-md-6 col-sm-6">
+            <div id="map-section"></div>
         </div>
-
-        <div class="inner people">
-            <h2>Meet the {{ entry.title }} team</h2>
-        </div>
-        {% include 'includes/footer-banner.html' %}
     </div>
+
+    <div class="inner individual">
+        <h2>Individual locations</h2>
+        {% for contact in entry.contactAddress %}
+        <div class="col-md-4 col-sm-4">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            {#<img src="/svg/map-marker.svg" alt="">#}
+            <span class="suburbs">{{ contact.suburbs }}</span>
+            {% set address = contact.address | split(',') %}
+            {% for a in address %}
+            <p class="line-address">{{ address[loop.index0] }}</p>
+            {% endfor %}
+            <a href="https://www.google.com/maps/search/?api=1&query={{contact.address}}" class="directions"
+               target="_blank">Directions and map</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="inner people">
+        {#get region category of this location#}
+        {% set category = craft.categories.group('region').relatedTo(entry).first() %}
+        {#get all person in this region category#}
+        {% set e = craft.entries.section('person').relatedTo(category) %}
+        {% if e|length %}
+        <h2>Meet the {{ entry.title }} team</h2>
+
+        {% for person in e %}
+        <div class="col-md-4 col-sm-4 person">
+            <div class="person-block">
+                <img class="person-image" src="{{ siteUrl }}personImage/{{ person.personImage.first().Filename }}"
+                     alt="">
+                <div class="text-block">
+                    <p class="name">{{ person.personName }}</p>
+                    <p class="job">{{ person.jobTitle }}</p>
+                    <p class="description">{{ person.personDescription }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    {% include 'includes/footer-banner.html' %}
+</div>
 {% endblock content %}
 {% block scripts %}
-    <script>
-        var map;
-        var markerList = [];
-        function initMap() {
+<script>
 
-            var address = $("#current-location").val() + ", New Zealand";
-            var geocoder = new google.maps.Geocoder();
+    var descriptionLength = 220;
+    if ($(window).width() >= 768 && $(window).width() < 1024) {
+        descriptionLength = 120;
+    } else if ($(window).width() >= 1024 && $(window).width() < 1249) {
+        descriptionLength = 170;
+    }
+    trimText(descriptionLength, $(".person .description"));
 
-            var center = {lat:-41.838875, lng:  171.7799};
-            var zoom = 12;
 
-            var mapOptions = {
-                zoom: zoom,
-                center: center,
-                zoomControl: true,
-                scaleControl: true,
-                styles: [
-                    {
-                        "featureType": "all",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "weight": "2.00"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "all",
-                        "elementType": "geometry.stroke",
-                        "stylers": [
-                            {
-                                "color": "#9c9c9c"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "all",
-                        "elementType": "labels.text",
-                        "stylers": [
-                            {
-                                "visibility": "on"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "color": "#f2f2f2"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape.man_made",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "saturation": -100
-                            },
-                            {
-                                "lightness": 45
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "color": "#eeeeee"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#7b7b7b"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "labels.text.stroke",
-                        "stylers": [
-                            {
-                                "color": "#ffffff"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "visibility": "simplified"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "elementType": "labels.icon",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "color": "#46bcec"
-                            },
-                            {
-                                "visibility": "on"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "color": "#e8e8e8"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#070707"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "labels.text.stroke",
-                        "stylers": [
-                            {
-                                "color": "#ffffff"
-                            }
-                        ]
-                    }
-                ]
+    var map;
+    var markerList = [];
 
-            };
-            map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
-            var lis = $('.address');
-            geocoder.geocode({
-                    'address': address
+    function initMap() {
+
+        var address = $("#current-location").val() + ", New Zealand";
+        var center = {lat: -41.838875, lng: 171.7799};
+        var zoom = 12;
+        var mapOptions = {
+            zoom: zoom,
+            center: center,
+            zoomControl: true,
+            scaleControl: true,
+            styles: [
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "weight": "2.00"
+                        }
+                    ]
                 },
-                function(results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-
-                        map.setCenter(results[0].geometry.location);
-                    }
-                });
-            for (var i = 0; i < lis.length; i++) {
-                mapAddress(map, lis[i].value);
-            }
-
-        }
-
-
-        function mapAddress(map, address) {
-            var geocoder = new google.maps.Geocoder();
-            var arr = address.split("|");
-            if (arr[3] == "") {
-                if (arr[1] == "locations/auckland-central") {
-                    var coveredAreas = "Parnell, Newmarket, Remuera, Grey Lynn, Onehunga";
-                } else if (arr[1] == "locations/west-auckland") {
-                    var coveredAreas = "Waitakere, Henderson, Glen Eden, New Lynn, Te Atatu";
-                } else if (arr[1] == "locations/north-shore") {
-                    var coveredAreas = "Takapuna, Devonport, Northcote, Albany, Glenfield";
-                } else if (arr[1] == "locations/franklin") {
-                    var coveredAreas = "Pukekohe, Waiuku, Wairoa";
-                } else if (arr[1] == "locations/rodney") {
-                    var coveredAreas = "Wellsford, Warkworth, Helensville, Kumeu, sMuriwai";
-                } else if (arr[1] == "locations/manukau") {
-                    var coveredAreas = "Manukau, East Tamaki, Otahuhu";
-                } else if (arr[1] == "locations/manawatu") {
-                    var coveredAreas = "Palmerston North, Feilding, Whanganui, Manawatu, Tangimoana, Kimbolton, Rongotea, Rangiwahia";
-                } else if (arr[1] == "locations/invercargill") {
-                    var coveredAreas = "Invercargill, Gore, Bluff, Fiordland, Riverton, Edendale, Lumsden, Winton";
-                } else if (arr[1] == "locations/tauranga") {
-                    var coveredAreas = "Tauranga, Mount Maunganui, Papamoa, Bethlehem, Te Puke, Te Puna, Omokoroa, Waihi";
-                } else if (arr[1] == "locations/whangarei") {
-                    var coveredAreas = "Whangarei, Dargaville, Kerikeri, Paihia, Waipu, Kaitaia, Opononi, Kaikohe";
-                } else if (arr[1] == "locations/waikato") {
-                    var coveredAreas = "Hamilton, Huntly, Raglan, Tokoroa, Cambridge, Tu Kuiti, Matamata, Tirau";
-                } else if (arr[1] == "locations/hawkes-bay") {
-                    var coveredAreas = "Napier, Hastings, Waipawa, Eskdale, Taradale, Havelock North, Ahuriri";
-                } else if (arr[1] == "locations/queenstown-wanaka") {
-                    var coveredAreas = "Queenstown, Wanaka";
-                } else if (arr[1] == "locations/wellington") {
-                    var coveredAreas = "Wellington Central, Porirua, Upper Hutt, Lower Hutt, Kapiti, Petone, Otaki, Miramar, Lyall Bay";
-                } else if (arr[1] == "locations/thames-coromandel") {
-                    var coveredAreas = "Thames, Whangamata, Tairua, Pauanui, Waihi, Paeroa, Whitianga, Coromandel Town";
-                } else if (arr[1] == "locations/cambridge-surrounding-areas") {
-                    var coveredAreas = "Cambridge, Ely, Bury St Edmunds, Duxford, Cambourne, Newmarket";
-                } else if (arr[1] == "locations/surrey-hampshire") {
-                    var coveredAreas = "Esher, Woking, Weybridge, Virginia Water, Chobham, Farnborough, Guildford, Aldershot, Farnham, Godalming, Haslemere, Cranleigh";
-                } else if (arr[1] == "locations/north-nottinghamshire") {
-                    var coveredAreas = "Chesterfield, Mansfield, Newark, Nottingham, Rufford, Southwell, Worksop";
-                } else if (arr[1] == "locations/bristol") {
-                    var coveredAreas = "Bristol, North Somerset, South Gloucestershire, Bath, North East Somerset";
-                } else if (arr[1] == "locations/south-west-london") {
-                    var coveredAreas = "Balham, Brixton, Chessington, Clapham, Hampton, Kew, Kingston Upon thames, Lambeth, Merton, Mitchamv, Morden, New Malden, Putney, Richmond Upon Thames, Roehampton, Streatham Common, Tooting, Wansworth, Surbiton, Teddington, Tolworth, Twickenham, Vauxhall, West Norwood";
-                } else if (arr[1] == "locations/greater-london-south") {
-                    var coveredAreas = "Addington, Beckenham, Biggin Hill, Bromley, Chislehurst, Croydon, Orpington, Selsdon, Sutton, Thornton Heath";
-                } else if (arr[1] == "locations/pensacola") {
-                    var coveredAreas = "Pensacola, Escambia, Santa Rosa Counties";
-                } else if (arr[1] == "locations/gold-coast") {
-                    var coveredAreas = "Gold Coast";
-                } else if (arr[1] == "locations/sydney") {
-                    var coveredAreas = "Inner West, Inner South West, Sutherland, South West, Outer West, Blue Mountains";
-                } else if (arr[1] == "locations/Illawarra") {
-                    var coveredAreas = "Illawarra";
-                } else if (arr[1] == "locations/central-coast") {
-                    var coveredAreas = "Central Coast";
-                } else if (arr[1] == "locations/melbourne") {
-                    var coveredAreas = "Inner East, South East, Mornington Peninsula, North East, Outer East, Inner, Inner South";
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#9c9c9c"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#f2f2f2"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "lightness": 45
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#eeeeee"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#7b7b7b"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#46bcec"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#e8e8e8"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#070707"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
                 }
+            ]
+
+        };
+        map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
+        var lis = $('.address');
+
+        for (var i = 0; i < lis.length; i++) {
+            if (lis.length == 1) {
+                mapAddress(map, lis[i].value, true);
             } else {
-                var coveredAreas = arr[3];
+                mapAddress(map, lis[i].value, false);
             }
-
-            geocoder.geocode({'address': arr[0]}, function (results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-
-                    var infowindow = new google.maps.InfoWindow();
-                    var contentString = "<a href='" + arr[1] + "'><div class='map-title'>" + arr[2] + "</div><div class='map-address'><i class='fa fa-map-marker'></i> " + arr[0] + "</div><div>Covers the following areas:<br/><b>" + coveredAreas + "</b></div><br/><a class='map-link' href='" + arr[1] + "'>View location</a></a>";
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        title: arr[4],
-                        url: arr[1],
-                        icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
-                        position: results[0].geometry.location
-                    });
-
-                    marker.addListener('click', function () {
-                        map.setZoom(15);
-                        map.setCenter(marker.getPosition());
-                        infowindow.setContent(contentString);
-                        infowindow.open(map, marker);
-                    });
-                    markerList.push(marker);
-                } else {
-                    console.log("Geocode was not successful for the following reason: " + status);
-                }
-            });
         }
+
+    }
+
+
+    function mapAddress(map, address, one_marker) {
+        var arr = address.split("|");
+        console.log(arr[6]);
+        if (arr[3] == "") {
+            if (arr[1] == "locations/auckland-central") {
+                var coveredAreas = "Parnell, Newmarket, Remuera, Grey Lynn, Onehunga";
+            } else if (arr[1] == "locations/west-auckland") {
+                var coveredAreas = "Waitakere, Henderson, Glen Eden, New Lynn, Te Atatu";
+            } else if (arr[1] == "locations/north-shore") {
+                var coveredAreas = "Takapuna, Devonport, Northcote, Albany, Glenfield";
+            } else if (arr[1] == "locations/franklin") {
+                var coveredAreas = "Pukekohe, Waiuku, Wairoa";
+            } else if (arr[1] == "locations/rodney") {
+                var coveredAreas = "Wellsford, Warkworth, Helensville, Kumeu, sMuriwai";
+            } else if (arr[1] == "locations/manukau") {
+                var coveredAreas = "Manukau, East Tamaki, Otahuhu";
+            } else if (arr[1] == "locations/manawatu") {
+                var coveredAreas = "Palmerston North, Feilding, Whanganui, Manawatu, Tangimoana, Kimbolton, Rongotea, Rangiwahia";
+            } else if (arr[1] == "locations/invercargill") {
+                var coveredAreas = "Invercargill, Gore, Bluff, Fiordland, Riverton, Edendale, Lumsden, Winton";
+            } else if (arr[1] == "locations/tauranga") {
+                var coveredAreas = "Tauranga, Mount Maunganui, Papamoa, Bethlehem, Te Puke, Te Puna, Omokoroa, Waihi";
+            } else if (arr[1] == "locations/whangarei") {
+                var coveredAreas = "Whangarei, Dargaville, Kerikeri, Paihia, Waipu, Kaitaia, Opononi, Kaikohe";
+            } else if (arr[1] == "locations/waikato") {
+                var coveredAreas = "Hamilton, Huntly, Raglan, Tokoroa, Cambridge, Tu Kuiti, Matamata, Tirau";
+            } else if (arr[1] == "locations/hawkes-bay") {
+                var coveredAreas = "Napier, Hastings, Waipawa, Eskdale, Taradale, Havelock North, Ahuriri";
+            } else if (arr[1] == "locations/queenstown-wanaka") {
+                var coveredAreas = "Queenstown, Wanaka";
+            } else if (arr[1] == "locations/wellington") {
+                var coveredAreas = "Wellington Central, Porirua, Upper Hutt, Lower Hutt, Kapiti, Petone, Otaki, Miramar, Lyall Bay";
+            } else if (arr[1] == "locations/thames-coromandel") {
+                var coveredAreas = "Thames, Whangamata, Tairua, Pauanui, Waihi, Paeroa, Whitianga, Coromandel Town";
+            } else if (arr[1] == "locations/cambridge-surrounding-areas") {
+                var coveredAreas = "Cambridge, Ely, Bury St Edmunds, Duxford, Cambourne, Newmarket";
+            } else if (arr[1] == "locations/surrey-hampshire") {
+                var coveredAreas = "Esher, Woking, Weybridge, Virginia Water, Chobham, Farnborough, Guildford, Aldershot, Farnham, Godalming, Haslemere, Cranleigh";
+            } else if (arr[1] == "locations/north-nottinghamshire") {
+                var coveredAreas = "Chesterfield, Mansfield, Newark, Nottingham, Rufford, Southwell, Worksop";
+            } else if (arr[1] == "locations/bristol") {
+                var coveredAreas = "Bristol, North Somerset, South Gloucestershire, Bath, North East Somerset";
+            } else if (arr[1] == "locations/south-west-london") {
+                var coveredAreas = "Balham, Brixton, Chessington, Clapham, Hampton, Kew, Kingston Upon thames, Lambeth, Merton, Mitchamv, Morden, New Malden, Putney, Richmond Upon Thames, Roehampton, Streatham Common, Tooting, Wansworth, Surbiton, Teddington, Tolworth, Twickenham, Vauxhall, West Norwood";
+            } else if (arr[1] == "locations/greater-london-south") {
+                var coveredAreas = "Addington, Beckenham, Biggin Hill, Bromley, Chislehurst, Croydon, Orpington, Selsdon, Sutton, Thornton Heath";
+            } else if (arr[1] == "locations/pensacola") {
+                var coveredAreas = "Pensacola, Escambia, Santa Rosa Counties";
+            } else if (arr[1] == "locations/gold-coast") {
+                var coveredAreas = "Gold Coast";
+            } else if (arr[1] == "locations/sydney") {
+                var coveredAreas = "Inner West, Inner South West, Sutherland, South West, Outer West, Blue Mountains";
+            } else if (arr[1] == "locations/Illawarra") {
+                var coveredAreas = "Illawarra";
+            } else if (arr[1] == "locations/central-coast") {
+                var coveredAreas = "Central Coast";
+            } else if (arr[1] == "locations/melbourne") {
+                var coveredAreas = "Inner East, South East, Mornington Peninsula, North East, Outer East, Inner, Inner South";
+            }
+        } else {
+            var coveredAreas = arr[3];
+        }
+        var infowindow = new google.maps.InfoWindow();
+        var contentString = "<a href='" + arr[1] + "'><div class='map-title'>" + arr[2] + "</div><div class='map-address'><i class='fa fa-map-marker'></i> " + arr[0] + "</div><div>Covers the following areas:<br/><b>" + coveredAreas + "</b></div><br/><a class='map-link' href='" + arr[1] + "'>View location</a></a>";
+        var marker = new google.maps.Marker({
+            map: map,
+            title: arr[4],
+            url: arr[1],
+            // icon: "https://mt.google.com/vt/icon?color=ff004C13&name=icons/spotlight/spotlight-waypoint-blue.png",
+            icon: "https://maps.google.com/mapfiles/ms/micons/blue-dot.png",
+            position: {
+                lat: parseFloat(arr[5]),
+                lng: parseFloat(arr[6])
+            }
+        });
+        map.setCenter(marker.getPosition());
+        map.setZoom(11);
+
+        marker.addListener('click', function () {
+            map.setZoom(15);
+            map.setCenter(marker.getPosition());
+            infowindow.setContent(contentString);
+            infowindow.open(map, marker);
+        });
+        markerList.push(marker);
+    }
 
 </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg29UmrclswAOYDBkWeztNZbR45gLlz1w&callback=initMap&libraries=geometry"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuHcqN5QvGKS2Jq7Q44V_jiohv9MxJQZM&callback=initMap&libraries=geometry"></script>
 
 {% endblock scripts %}

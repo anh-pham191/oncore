@@ -49,8 +49,9 @@ Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car p
         </div>
         <div class="full-width-text-left inner" style="position: relative">
             <div class="form-banner">
-                <h1>Get in touch</h1>
-                <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
+                <div class="container">
+                    <span class="title">Get in touch</span>
+                    <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
                     <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
                     <div class="row">
                         <div class="col-md-12 input-label-wrapper">
@@ -74,6 +75,43 @@ Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car p
                             <input type="text" class="form-control home-form"
                                    name="email"
                                    id="formf-email" data-prefix="formf"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Property Location</label>
+                            <select name="location" id="" class="form-control home-form" required>
+                                <option value="" disabled selected hidden>Select location</option>
+                                <option value="AKL - Rodney">AKL - Rodney</option>
+                                <option value="AKL - North Shore">AKL - North Shore</option>
+                                <option value="AKL - Waitakere">AKL - Waitakere</option>
+                                <option value="AKL - Auckland Central">AKL - Auckland Central</option>
+                                <option value="AKL - East Auckland">AKL - East Auckland</option>
+                                <option value="AKL - Manukau">AKL - Manukau</option>
+                                <option value="AKL - Franklin">AKL - Franklin</option>
+                                <option value="BHE - Blenheim">BHE - Blenheim</option>
+                                <option value="CHC - Christchurch">CHC - Christchurch</option>
+                                <option value="DUD - Dunedin">DUD - Dunedin</option>
+                                <option value="GIS - Gisborne">GIS - Gisborne</option>
+                                <option value="HLZ - Hamilton">HLZ - Hamilton</option>
+                                <option value="IVC - Invecargill">IVC - Invecargill</option>
+                                <option value="KAT - Kaitai">KAT - Kaitai</option>
+                                <option value="KKE - KeriKeri">KKE - KeriKeri</option>
+                                <option value="NPE - Napier">NPE - Napier</option>
+                                <option value="NSN - Nelson">NSN - Nelson</option>
+                                <option value="PMR - Palmerston North">PMR - Palmerston North</option>
+                                <option value="QTN - Queenstown">QTN - Queenstown</option>
+                                <option value="ROT - Rotorua">ROT - Rotorua</option>
+                                <option value="TUO - Taupo">TUO - Taupo</option>
+                                <option value="TRG - Tauranga">TRG - Tauranga</option>
+                                <option value="TIU - Timaru">TIU - Timaru</option>
+                                <option value="WAG - Whanganui">WAG - Whanganui</option>
+                                <option value="WLG - Wellington">WLG - Wellington</option>
+                                <option value="WSZ - Westport">WSZ - Westport</option>
+                                <option value="WHK - Whakatane">WHK - Whakatane</option>
+                                <option value="WRE - Whangarei">WRE - Whangarei</option>
+                                <option value="Rather not say">Rather not say</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
@@ -115,7 +153,7 @@ Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car p
                     <div class="recaptcha-holder"></div>
                     <input type="hidden" value="Project Enquiry" name="formname">
                     <div class="row tick">
-                        <div class="col-md-6 col-xs-12 input-label-wrapper">
+                        <div class="col-md-12 col-xs-12 input-label-wrapper">
                             <input type="submit" class="btn btn-primary btn-block submitbutton" id="home-form-submit"
                                    value="Get in touch"/>
 
@@ -123,6 +161,7 @@ Water blasting, Building cleaning, Roof cleaning, Path, driveway cleaning, Car p
                     </div>
                     <div id="prog1" class="progress" style="display: none;"></div>
                 </form>
+                </div>
             </div>
 
             <p><strong>The Oncore process ensures your project is delivered to a high standard, on time and within your
