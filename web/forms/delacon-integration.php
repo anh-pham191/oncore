@@ -22,10 +22,19 @@ $campaign = "Delacon call tracking";
 $country = "New Zealand";
 if($source == "google" && $medium == "paid"){
     $source = "Google AdWords";
-}
-if($source == "facebook"){
-    $source = "Facebook";
-}else if($source == "direct"){
+}else if($source == "facebook"){
+    if($medium == "paid"){
+        $source = "Facebook";
+    }else{
+        $source = "Social Media Post";
+    }
+}else if($source == "bing" && $medium == "paid"){
+    $source = "Bing";
+}else if($source == "internal" || $source == "free"){
+    $source = "Call Centre";
+}else if($source == "mailout"){
+    $source = "Mailout";
+}else{
     $source = "Oncore Consumer Website";
 }
 
