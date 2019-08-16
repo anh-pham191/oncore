@@ -31,9 +31,7 @@
                 <h1>{{ entry.h1heading }}</h1>
                 <div class="intro-bottom">{{entry.containerBoxDescription}}
                 </div>
-                <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get
-                    in touch
-                </button>
+                <button onclick="location.href='{{entry.bannerButton.first.buttonLink}}'" class="cta-button"> {{entry.bannerButton.first.buttonText}}</button>
                 <span class="learn-more">Learn more</span>
             </div>
         </div>
@@ -43,8 +41,8 @@
     <div class="full-width-text-left inner text-container" style="position: relative">
         <div class="form-banner">
             <div class="container">
-                <span class="title">Get in touch</span>
-                <span class="helper">Hire Oncore to bring your rental up to meet the standards</span>
+                <span class="title">{{entry.formHeading.first.heading}}</span>
+                <span class="helper">{{entry.formHeading.first.description}}</span>
                 <form action="/forms/general-enquiry.php" method="post" id="general-enquiry">
                     <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
                     <div class="row">
@@ -190,15 +188,17 @@
             </div>
         </div>
         {% endfor %}
+        {% if entry.greenBlock.first | length %}
         <div class="col-md-6 col-sm-6 healthy-box contact">
             <div class="container">
-                <span class="heading">Get in touch</span>
-                <p class="summary">Are you unsure of whether or not your property will meet the Healthy Homes Standards?  </p>
-                <p class="text-content">Give Oncore a call, or make on online enquiry, to arrange a free consultation. We’ll manage any necessary inspections and upgrades for you, with minimal disruption to your day-to-day life.</p>
+                <span class="heading">{{ entry.greenBlock.first.heading }}</span>
+                <p class="summary">{{ entry.greenBlock.first.smallerHeading }}</p>
+                <p class="text-content">{{ entry.greenBlock.first.description }}</p>
                 <a href="tel:0800 33 66 55" class="phone">0800 33 66 55</a>
-                <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">Get in touch</button>
+                <button onclick="location.href='{{ entry.greenBlock.first.buttonLink }}'" class="cta-button">{{ entry.greenBlock.first.buttonText }}</button>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
 
@@ -207,6 +207,6 @@
 {% block scripts %}
 <script>
     scrollDown($(".more"), $(".box-content"));
-    scrollDown($(".learn-more"), $(".box-content"));
+    scrollDown($(".learn-more"), $(".text-container"));
 </script>
 {% endblock scripts %}
