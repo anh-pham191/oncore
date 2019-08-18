@@ -39,7 +39,12 @@
 </div>
 <div class="green-container">
     <div class="full-width-text-left inner text-container" style="position: relative">
-        <div class="form-banner">
+        {% if entry.formHeading.first.heading | length %}
+        <div class="form-banner" >
+
+        {% endif %}
+        <div class="form-banner" style="display: none;">
+
             <div class="container">
                 <span class="title">{{entry.formHeading.first.heading}}</span>
                 <span class="helper">{{entry.formHeading.first.description}}</span>
