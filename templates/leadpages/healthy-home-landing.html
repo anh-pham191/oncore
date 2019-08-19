@@ -41,9 +41,9 @@
     <div class="full-width-text-left inner text-container" style="position: relative">
         {% if entry.formHeading.first.heading | length %}
         <div class="form-banner" >
-
-        {% endif %}
-        <div class="form-banner" style="display: none;">
+        {% else %}
+            <div class="form-banner" style="display: none;">
+            {% endif %}
 
             <div class="container">
                 <span class="title">{{entry.formHeading.first.heading}}</span>
