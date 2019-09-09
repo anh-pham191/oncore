@@ -36,12 +36,15 @@
     .inner.location .col-md-6 {
         padding-left: 0px;
         padding-right: 0px;
+        display: table;
     }
 
     .inner.location .text-intro .container {
-        width: 85%;
         margin: 0 auto;
-        padding-top: 36px;
+        display: table-cell;
+        padding-left: 60px;
+        padding-right: 60px;
+        vertical-align: middle;
     }
 
     .inner.location .text-intro .container .phone-number {
@@ -113,22 +116,37 @@
         margin-bottom: 35px;
     }
 
+    .page-content {
+        padding: 0px 60px 60px 60px;
+    }
+
     @media only all and (max-width: 47.937em) {
         .inner.location .text-intro {
             height: auto;
         }
-
         .inner.location .text-intro .container {
+            padding-top: 36px;
             padding-bottom: 36px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .page-content {
+            padding: 0px 20px 60px 20px;
+        }
+        .inner.location .col-md-6 {
+            width: 100%;
         }
     }
 
     @media only all and (min-width: 48em) and (max-width: 64em) {
         .inner.location .text-intro, #map-section {
-            height: 550px;
-
+            height: 650px;
+        }
+        #wrapper .inner.page-content {
+            padding: 0px 60px 60px 60px;
         }
     }
+
 
 </style>
 {% endblock snippet %}
@@ -149,7 +167,7 @@
             <div class="container">
                 <h2 class="title">{{ entry.title }}</h2>
                 <span class="phone-number">{{ entry.regionalPhoneNumber }}</span>
-                <p class="content">{{ entry.pageContent }}</p>
+                <p class="content">{{ entry.summaryText }}</p>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
@@ -157,8 +175,12 @@
         </div>
     </div>
 
+    <div class="inner page-content">
+        <p>{{ entry.pageContent }}</p>
+    </div>
+
     <div class="inner individual">
-        <h2>Individual locations</h2>
+        <h2>Locations</h2>
         {% for contact in entry.contactAddress %}
         <div class="col-md-4 col-sm-4">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -202,14 +224,55 @@
 {% endblock content %}
 {% block scripts %}
 <script>
+    var showChar = 220;  // How many characters are shown by default
 
-    var descriptionLength = 220;
     if ($(window).width() >= 768 && $(window).width() < 1024) {
-        descriptionLength = 120;
+        showChar = 120;
     } else if ($(window).width() >= 1024 && $(window).width() < 1249) {
-        descriptionLength = 170;
+        showChar = 170;
     }
-    trimText(descriptionLength, $(".person .description"));
+    var ellipsestext = "...";
+    var moretext = "Read more";
+    var lesstext = "Read less";
+
+    $('.person .description').each(function () {
+        var content = $(this).html();
+
+        if (content.length > showChar) {
+
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+
+            var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+            $(this).html(html);
+        }
+
+    });
+    $(".morelink").click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        // $(this).parent().prev().toggle();
+        $(this).parent('span').prev('.moreellipses').toggle(500);
+        console.log( $(this).prev().children('.morecontent').children('span'));
+        $(this).prev('span').toggle(500);
+        return false;
+    });
+
+
+    // var descriptionLength = 220;
+    // if ($(window).width() >= 768 && $(window).width() < 1024) {
+    //     descriptionLength = 120;
+    // } else if ($(window).width() >= 1024 && $(window).width() < 1249) {
+    //     descriptionLength = 170;
+    // }
+    // trimText(descriptionLength, $(".person .description"));
 
 
     var map;

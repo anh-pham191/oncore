@@ -7369,7 +7369,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
 
 .person .person-block .text-block {
     padding: 20px;
-    min-height: 267px;
+    min-height: 273px;
 }
 .person .job  {
     font-family: "Open Sans";
@@ -7810,4 +7810,7 @@ span.location-des {
     font-style: italic;
     line-height: 1.36;
     color: #8e8e8e;
+}
+.morecontent span {
+    display: none;
 }
