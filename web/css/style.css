@@ -4246,9 +4246,9 @@ li.help {
         font-size: 2em;
         color: #333333;
     }
-
     div#wideslideshow.overlay.header-banner .overlay-container h1 {
         color: #ffffff;
+        font-size: 2em;
     }
 
     div#wideslideshow.overlay.franchise .overlay-container h1 {
