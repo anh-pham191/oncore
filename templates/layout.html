@@ -9,18 +9,13 @@
         <meta name="googlebot" content="noindex">
     {% endif %}
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    {% block seocontent %}
-    {# SEO FIELDS - DEFAULT BELOW #}
-    <title>Oncore</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    {% endblock seocontent %}
+
     <link rel="stylesheet" href="{{ siteUrl}}css/font-awesome.min.css" media="all">
-    <link href='https://fonts.googleapis.com/css?family=Poppins:300,500,600,700' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.google.com/specimen/Libre+Baskerville:300,400,500,600,700" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.google.com/specimen/Libre+Baskerville:300,400,500,600,700,800" />
     <!--need update from here-->
     <link href="{{ siteUrl}}images/favicon-96x96.png" rel="shortcut icon" type="image/x-icon"/>
     <!--<link href="images/favicon.png" rel="apple-touch-icon" type="image/png"/>-->
@@ -30,6 +25,12 @@
     {% endblock css %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" media="all">
     <link rel="stylesheet" href="{{ siteUrl}}css/normalize.min.css" media="all">
+    {% block seocontent %}
+        {# SEO FIELDS - DEFAULT BELOW #}
+        <title>Oncore</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+    {% endblock seocontent %}
     <!---->
     {% if (currentSite.name == 'oncore.local') or (currentSite.name =='Oncore Dev') %}
         <!-- Global site tag (gtag.js) - Google Analytics -->

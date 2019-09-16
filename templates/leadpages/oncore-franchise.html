@@ -1,0 +1,1712 @@
+{% extends "layout.html" %}
+{% block seocontent %}
+<title>Franchise Enquiry</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+    * {
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+
+    #topnav #sitebanner:after {
+        background: transparent !important;
+    }
+
+    @media only all and (min-width: 64em) {
+        #wrapper {
+            min-width: 992px;
+        }
+
+        #top-hero {
+            min-height: 590px;
+        }
+    }
+
+    #top-hero {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #top-hero .hero-image-container {
+        width: 50%;
+        height: 100%;
+        overflow: auto;
+        position: absolute;
+        right: 0;
+    }
+
+    #top-hero .hero-image {
+        width: auto;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #top-hero .text-content {
+        background-color: #f1f1f1;
+        padding-top: 100px;
+        padding-left: 80px;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+    }
+
+    #top-hero .text-content h1, #top-hero .text-content span.description {
+        max-width: 500px;
+    }
+
+    #top-hero .text-content h1 {
+        font-family: Poppins;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1.29;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    #top-hero .text-content span.description {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        color: #333333;
+        display: block;
+        width: 100%;
+    }
+
+    @media only all and (min-width: 1440px) {
+        #top-hero .hero-image {
+            width: 100%;
+            height: auto
+        }
+
+        #top-hero .hero-image-container {
+            overflow: hidden;
+        }
+
+        #top-hero .text-content {
+            background-color: #f1f1f1;
+            padding-top: 84px;
+        }
+    }
+
+    .inner span.heading, span.heading {
+        font-family: Poppins;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1.29;
+        text-align: center;
+        color: #333333;
+        display: block;
+        margin: 50px auto 10px auto;
+    }
+
+    .inner p.description, p.description {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 60px;
+    }
+
+    .blog-image-block img.fleft, .blog-image-block img.fright {
+        width: 48%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .blog-image-block img.fright {
+        margin-left: auto;
+        order: 2
+    }
+
+    .blog-image-block .content-box .title {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.4;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    .blog-image-block.clearfix.inner {
+        display: flex;
+        align-items: center;
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .flex-background {
+        display: flex;
+        align-items: center;
+        margin-top: 40px !important;
+    }
+
+    .blog-image-block .content-box .content p, .blog-image-block .content-box .content ul, .blog-image-block .content-box .content ul li {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.63;
+        color: #333333;
+    }
+
+    .blog-image-block .content-box a {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.63;
+        color: #4daf47;
+    }
+
+    .blog-image-block.grey-background p.description {
+        margin-bottom: 40px;
+    }
+
+    .blog-image-block div.fleft {
+        width: 48%;
+        position: relative;
+    }
+
+    .quote {
+        width: 100%;
+        height: 386px;
+        background-color: #f1f1f1;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+    }
+
+    #wrapper {
+        width: 100% !important;
+    }
+
+    #wrapper .quote span {
+        font-family: Poppins;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1.29;
+        text-align: center;
+        color: #4daf47;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 0px
+    }
+
+    div.formholder p.instructions {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        margin-top: 6px;
+        color: #333333;
+    }
+
+    .grey-background {
+        background-color: #ffffff;
+    }
+
+    @media only all and (min-width: 78em) {
+        .blog-image-block .content-box {
+            padding: 40px;
+        }
+
+        .blog-image-block img.fleft ~ .fleft .content-box {
+            padding-left: 40px;
+            padding-right: 0px;
+        }
+
+        .blog-image-block img.fright ~ .fleft .content-box {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .inner span.heading, span.heading {
+            width: 100%;
+            margin: 40px auto 10px auto;
+        }
+    }
+
+    .grey-background .money {
+        font-family: Poppins;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1.29;
+        text-align: center;
+        margin-top: 28px;
+        margin-bottom: 5px;
+        display: block;
+        width: 100%;
+    }
+
+    .grey-background .fee, .grey-background .range, .grey-background .capital, .grey-background .fee img, .grey-background .range img, .grey-background .capital img {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .grey-background .fee, .grey-background .range, .grey-background .capital {
+        margin-top: 40px
+    }
+
+    .grey-background .fee .money {
+        color: #e73039;
+    }
+
+    .grey-background .range .money {
+        color: #00440a;
+    }
+
+    .grey-background .capital .money {
+        color: #4daf47;
+    }
+
+    .grey-background .franchise-fee {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        text-align: center;
+        color: #333333;
+    }
+
+    .grey-background .inner {
+        height: auto;
+        overflow: auto;
+        padding-top: 10px;
+        padding-bottom: 60px;
+    }
+
+    .blog-enquiry {
+        padding: 110px 0;
+        background-image: url(/images/franchise-landing/form-background.jpg);
+        background-size: cover;
+    }
+
+    .blog-enquiry a.back-to-top {
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.86;
+        color: #4daf47;
+        display: inline-block;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    .blog-enquiry a.back-to-top img {
+        display: inline-block;
+        width: 24px;
+    }
+
+    .blog-enquiry .form, .step2 .form {
+        border-radius: 18px;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        width: 470px;
+    }
+
+    #top-hero.step2-form .text-content {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    #top-hero.step2-form .form {
+        background-color: #f1f1f1;
+    }
+
+    #top-hero.step2-form .form p.enquiry-ins {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        color: #333333;
+        margin: 5px 0px;
+    }
+
+    #top-hero.step2-form .form .enquiry-title, #top-hero.step2-form .form .instructions {
+        padding-left: 0px;
+    }
+
+    #top-hero.step2-form .form .instructions {
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.63;
+        color: #333333;
+    }
+
+    #top-hero.step2-form #submit {
+        height: 48px;
+        border-radius: 6px;
+        background-color: #4daf47;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.63;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    div.formholder label {
+        font-size: 16px;
+    }
+
+    .form .enquiry-title {
+        font-family: Poppins;
+        margin-top: 10px;
+        color: #333333;
+        padding-left: 10px;
+        padding-right: 15px;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1.29;
+    }
+
+    .form .instructions {
+        padding-left: 10px;
+        padding-right: 15px;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        margin: 15px 0;
+    }
+
+    .area-section .row, .blog-enquiry .row {
+        margin: 0;
+    }
+
+    .blog-enquiry .step2 {
+        display: none;
+    }
+
+    .input-label-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .labelname {
+        color: #333333;
+        font-weight: 600;
+        font-size: 16px;
+        display: block;
+        line-height: 26px;
+    }
+
+    .contact .form-control, .form .form-control {
+        display: block;
+        width: 100%;
+        height: 47px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fafafa;
+        background-image: none;
+        border: 1px solid #707070;
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    #privacy label, #subscribe label {
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    div.checker, div.radio {
+        width: 22px;
+        height: 22px;
+        margin-right: 3px;
+        position: relative;
+    }
+
+    .blog-image-block .content-box a.btn, .blog-enquiry button {
+        width: 200px;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.63;
+        cursor: pointer;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        border-radius: 24px;
+    }
+
+    .blog-enquiry a.btn, .blog-enquiry button#submit {
+        width: 233px;
+        height: 48px;
+        border-radius: 6px;
+        background-color: #4daf47;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.63;
+        text-align: center;
+        color: #ffffff;
+        padding: 10px;
+    }
+
+    .franchise-opp {
+        height: auto;
+        overflow: auto;
+        padding-bottom: 70px;
+    }
+
+    .franchise-opp img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .franchise-opp .img-holder {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .franchise-fee {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        text-align: center;
+        color: #333333;
+    }
+
+    .customer-experience {
+        background-color: #e7f5e8;
+    }
+
+    #wrapper .infographic {
+        background-color: #ffffff;
+    }
+
+    #wrapper .franchise-form {
+        background-image: none;
+        padding-bottom: 60px;
+    }
+
+    .customer-experience h2, .franchise-form .inner h2.title, .infographic .growth-text h2 {
+        font-family: Poppins;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1.29;
+        color: #00440a;
+    }
+
+    .customer-experience h2 {
+        padding-top: 20px;
+    }
+
+    .customer-experience {
+        padding-bottom: 25px;
+    }
+
+    .customer-experience p {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        color: #00440a;
+    }
+
+    .customer-experience span {
+        font-size: 25px;
+        font-weight: bold;
+        color: #00440a;
+    }
+
+    .customer-experience ul li {
+        font-family: Open Sans;
+        font-size: 18px;
+        line-height: 2.11;
+        color: #00440a;
+    }
+
+    .infographic .growth-text h2 {
+        color: #333333;
+        line-height: 1.37;
+    }
+
+    .infographic .growth-text p {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.45;
+        color: #333333;
+        max-width: 400px;
+    }
+
+    .infographic .growth-text {
+        width: 468px;
+    }
+
+    .franchise-form .inner .three-cols .heading {
+        font-family: Poppins;
+        font-size: 25px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #00440a;
+
+    }
+
+    .franchise-form .inner .three-cols ul li {
+        color: #00440a;
+    }
+
+    .franchise-form .inner h2.title {
+        padding-top: 50px;
+    }
+
+    .franchise-form .inner .three-cols .heading {
+        padding-top: 40px;
+    }
+
+    .infographic p {
+        padding-top: 25px;
+        padding-bottom: 60px;
+    }
+
+    #top-hero a.btn-blue {
+        margin: 0 auto;
+        display: inline-block;
+        float: none;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+        margin-top: 20px;
+    }
+
+    #top-hero a.btn-blue {
+        min-width: 190px;
+        height: 48px;
+        border-radius: 6px;
+        font-family: Poppins;
+        background-color: #4daf47;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.63;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 15px;
+        float: left;
+        padding: 11px 35px !important;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.07);
+    }
+
+    #top-hero a.btn-blue.white {
+        background-color: #ffffff;
+        color: #4daf47;
+    }
+
+    div.formholder label input, div.formholder label textarea {
+        border: none;
+        background-color: transparent;
+    }
+
+    div.checker span.checked, div.radio span.checked {
+        background-position: 0px 0px;
+    }
+
+    #top-hero.step2-form {
+        background-image: linear-gradient(115deg, #f1f1f1, #f1f1f1 54%, #e7e8ec);
+    }
+
+    #top-hero.step2-form .text-content {
+        position: static
+    }
+
+    .labelname {
+        font-family: Poppins;
+    }
+
+    @media only all and (min-width: 769px) and (max-width: 64em) {
+        .blog-image-block .content-box {
+            padding: 20px;
+        }
+
+        #wrapper {
+            width: 100% !important;
+            margin-top: 91px !important;
+        }
+
+        #wrapper .inner {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #top-hero {
+            min-height: 500px
+        }
+
+        #top-hero .text-content h1, .inner span.heading, span.heading {
+            font-size: 28px;
+        }
+
+        #top-hero .text-content span.description, .inner p.description, p.description {
+            font-size: 18px;
+        }
+
+    }
+
+    @media only all and (max-width: 768px) {
+        #wrapper {
+            width: 100%;
+        }
+
+        #wrapper .inner, .grey-background .content-box {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #top-hero {
+            min-height: 500px
+        }
+
+        #top-hero .text-content {
+            width: 100%;
+            position: static;
+            height: auto;
+        }
+
+        #top-hero .hero-image-container {
+            width: 100%;
+            position: static;
+            height: auto;
+        }
+
+        #top-hero .text-content h1, #top-hero .text-content span.description {
+            max-width: 100%;
+        }
+
+        #top-hero .hero-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-image-block.clearfix.inner, .flex-background {
+            display: block;
+        }
+
+        .blog-enquiry .form {
+            width: 100%;
+        }
+
+        div.formholder {
+            padding: 0px;
+            background: none;
+        }
+
+        #top-hero .text-content {
+            padding-top: 60px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 60px;
+        }
+
+        #top-hero .text-content h1, .inner span.heading, span.heading, #wrapper .quote span, .grey-background .money, .customer-experience h2, .infographic .growth-text h2, .franchise-form .inner h2.title, .form .enquiry-title {
+            font-size: 28px;
+        }
+
+        #top-hero .text-content span.description, .inner p.description, p.description, .grey-background .franchise-fee, .infographic .growth-text p, div.formholder p.instructions, .franchise-fee, .customer-experience p {
+            font-size: 18px;
+        }
+
+        .blog-image-block img.fleft, .blog-image-block img.fright, .blog-image-block div.fleft {
+            width: 100%;
+        }
+
+        .blog-image-block .content-box {
+            margin-top: 15px;
+        }
+
+        .grey-background.blog-image-block .content-box {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .grey-background .col-sm-4 {
+            width: 100%;
+        }
+
+        .inner p.description, p.description {
+            margin-bottom: 0px;
+        }
+
+        .franchise-opp .col-sm-3 {
+            margin-top: 50px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+    }
+
+    @media only all and (width: 768px) {
+        .blog-enquiry .form {
+            width: 470px;
+            float: none;
+            margin: 0 auto;
+            height: auto;
+            overflow: auto;
+        }
+
+        .customer-experience {
+            padding-bottom: 50px;
+        }
+    }
+
+    @media only all and (max-width: 767px) {
+        #wrapper .quote span {
+            font-size: 16px;
+            padding-top: 0px;
+        }
+
+        #top-hero .text-content {
+            padding-top: 30px;
+        }
+
+        .quote {
+            height: 275px;
+            display: flex;
+            vertical-align: middle;
+            align-items: center;
+        }
+
+        #top-hero a.btn-blue, .blog-enquiry a.btn {
+            padding: 11px 20px !important;
+            width: 100%;
+        }
+
+        .blog-enquiry {
+            padding: 0px;
+        }
+
+        .blog-enquiry .inner {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            margin: 0px !important;
+        }
+
+        .blog-enquiry .inner .form {
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            padding: 30px 20px;
+        }
+
+        #top-hero.step2-form .form .formholder a.btn-primary.thanks {
+            width: 100%;
+            border-color: transparent;
+
+        }
+
+        .blog-enquiry, .blog-enquiry .form, .form .form-control {
+            background-image: none;
+            background-color: #eaf5e9;
+        }
+
+        .step2 .blog-enquiry, .step2 .blog-enquiry .form, .step2 .form .form-control {
+            background-color: #ffffff;
+
+        }
+
+        .infographic .growth-text {
+            width: 100%;
+        }
+    }
+
+    @media only all and (min-width: 769px) and (max-width: 1440px) {
+        #top-hero .hero-image-container {
+            overflow: hidden;
+        }
+
+        #top-hero.step2-form .text-content, #top-hero.step2-form .hero-image-container {
+            width: 50%;
+        }
+
+        #top-hero.step2-form .hero-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media only all and (max-width: 1440px) {
+        #top-hero.step2-form .form {
+            width: 100%
+        }
+
+    }
+
+    .invalid-tooltip {
+        z-index: 5;
+        max-width: 100%;
+        padding: .5rem;
+        margin-top: 0.1rem;
+        font-size: 1rem;
+        font-style: italic;
+        line-height: 1;
+        color: #b00220;
+        padding-bottom: 0rem;
+        position: static;
+        background-color: transparent;
+        font-weight: 400;
+    }
+
+    .error-msg {
+        border: solid 1.5px red !important;
+    }
+
+    @media only all and (width: 768px) {
+
+        .svg #topnav p img {
+            width: 170px !important;
+        }
+    }
+
+    @media only all and (min-width: 769px) {
+        .text-container {
+            width: 384px;
+            float: right;
+        }
+
+    }
+
+    @media only all and (min-width: 64em) {
+        .text-container {
+            width: 496px;
+            float: right;
+        }
+    }
+
+    @media only all and (min-width: 78em) {
+        .text-container {
+            width: 600px;
+            float: right;
+        }
+    }
+
+    body.showcookie #topnav {
+        margin-top: 0px !important;
+    }
+
+    @media only all and (max-width: 768px) {
+        #top-hero .form {
+            padding: 0px;
+        }
+
+        #top-hero.step2-form .text-content {
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 60px;
+        }
+
+        .franchise-form {
+            margin-top: 0px;
+        }
+    }
+
+    #top-hero.step2-form .form a.btn-primary.thanks {
+        width: 317px;
+        height: 48px;
+        border-radius: 6px;
+        background-color: #4daf47;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.63;
+        text-align: center;
+        color: #ffffff;
+        padding: 10px
+    }
+
+    .svg #topnav p img {
+        margin: 0 auto 10px auto;
+        background: none;
+        width: 268px;
+        height: 65px;
+        background-size: 594.672px 468.792px;
+        padding-top: 10px;
+    }
+
+    .btn-primary {
+        border-color: transparent;
+    }
+
+    .form-control {
+        font-family: "Open Sans";
+        font-weight: 500;
+    }
+
+    @media only all and (min-width: 48em) and (max-width: 68em) {
+        #wrapper .inner {
+            width: 100%;
+        }
+    }
+
+    @media only all and (max-width: 1023px) {
+        .info-image-mobile {
+            display: block !important;
+        }
+
+        .info-image-desktop {
+            display: none !important;
+        }
+    }
+
+    @media only all and (min-width: 1024px) {
+        .info-image-mobile {
+            display: none !important;
+        }
+
+        .info-image-desktop {
+            display: block !important;
+            width: 100%;
+        }
+    }
+
+    @media only all and (width: 1024px) {
+        .infographic .growth-text p {
+            font-size: 18px;
+        }
+
+        .infographic .growth-text h2 {
+            font-size: 28px;
+        }
+    }
+</style>
+
+{% endblock seocontent %}
+
+{% block content %}
+{% if craft.app.request.getSegment(2) == 'step2' %}
+<div id="top-hero" class="step2-form step2">
+    <div class="fleft text-content inner">
+        <div class="text-container">
+
+            <div class="fleft form ">
+                <div class="theformarea-c formholder">
+                    <p class="enquiry-title">Almost there!</p>
+                    <p class="enquiry-ins">Provide a few more details and your copy will be on it’s way.</p>
+                    <p class="instructions">Then we’ll be in touch within 3 business days to answer any questions you
+                        may have.</p>
+                    <form action="/forms/franchise-landingpage-enquiry.php" method="post" id="enquiry-s1">
+                        <!--first+last name-->
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 input-label-wrapper">
+                                <label class="labelname">Name</label>
+                                <input type="text" class="form-control" aria-label="Name" name="firstName"
+                                       id="s1-firstname" data-prefix="s1">
+                            </div>
+                        </div>
+
+                        <!--/first+last name-->
+
+                        <!--email #-->
+                        <div class="row step1">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Email</label>
+                                <input type="text" class="form-control" aria-label="Email address" name="email"
+                                       id="s1-email" data-prefix="s1">
+                            </div>
+                        </div>
+                        <!--/email #-->
+
+                        <!--phone # -->
+                        <div class="row step1">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Phone</label>
+                                <input type="text" class="form-control" aria-label="Phone number" name="mobile"
+                                       id="s1-mobile" data-prefix="s1" data-phoneformat="yes">
+                            </div>
+                        </div>
+                        <!--/phone # -->
+                        <!--enquiry-->
+                        <div class="row step2">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">Where would you like to open your Oncore Franchise?</label>
+                                <input type="text" class="form-control" name="where" id="s1-where" data-prefix="s1">
+                            </div>
+                        </div>
+
+                        <div class="row step2">
+                            <div class="col-md-12 input-label-wrapper">
+                                <label class="labelname">How soon would you like to open your Oncore Franchise?</label>
+                                <select id="s1-how" data-prefix="s1" name="how" class="form-control">
+                                    <option value="0 Month - 3 Months">0 Month - 3 Months</option>
+                                    <option value="3 Months - 6 Months">3 Months - 6 Months</option>
+                                    <option value="6 Months - 9 Months">6 Months - 9 Months</option>
+                                    <option value="9 Months - 12 Months">9 Months - 12 Months</option>
+                                    <option value="More than 12 Months">More than 12 Months</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!--/enquiry-->
+
+
+                        <div class="row step1">
+                            <div class="col-sm-12 col-xs-12 input-label-wrapper" id="privacy">
+                                <p class="clearfix"><label><input type="checkbox" class="uniform-styles"
+                                                                  name="formf-privacy"
+                                                                  id="formf-privacy" {% if craft.locale !='en_gb' %}
+                                                                  checked="checked" {% endif %} data-prefix="formf"/>
+                                    <span class="note"><strong>I have read, understood and accepted the <a
+                                            href="https://www.refreshfranchiseopportunities.com.au/privacy-policy/"
+                                            target="_blank">Privacy Policy.</a></strong></span></label></p></div>
+                        </div>
+                        <div class="row step2">
+                            <div class="col-sm-12 col-xs-12 input-label-wrapper" id="subscribe">
+                                <p class="clearfix"><label><input type="checkbox" class="uniform-styles"
+                                                                  name="form-subscribe"
+                                                                  {% if craft.locale !='en_gb' %} checked="checked" {%
+                                                                  endif %}/> <span class="note"><strong>Sign me up to receive news about franchising with Oncore. </strong> <br><span
+                                        style="font-size: 14px">(Don’t worry - if you change your mind you can unsubscribe at anytime)</span></span></label>
+                                </p>
+                            </div>
+                        </div>
+                        <fieldset class="clearfix form-website" style="display: none;">
+                            <legend></legend>
+                            <label id="c-enq-website" class="input fullwidth"><span>Prove you are human by leaving this field blank</span>
+                                <input type="text" name="website" autocomplete="off"/></label>
+                        </fieldset>
+                        <input type="hidden" name="formpage" id="formpage-s1"/>
+                        <input type="hidden" name="formname" value="Franchise landing page"/>
+                        <div class="recaptcha-holder"></div>
+
+                        <!-- Country -->
+                        {#{exp:switchee variable = "{site_version}" parse="inward"}#}
+                        {#{case value="version-nz"}#}
+                        {#<input type="hidden" name="country" value="New Zealand" id="country-s1"/>#}
+                        {#<input type="hidden" id="countrycode-s1" name="countrycode" value="64"/>#}
+                        {#{/case}#}
+                        {#{case value="version-us"}#}
+                        {#<input type="hidden" name="country" value="United States" id="country-s1"/>#}
+                        {#<input type="hidden" id="countrycode-s1" name="countrycode" value="1"/>#}
+                        {#{/case}#}
+                        {#{/exp:switchee}#}
+
+                        <!--submit buttons-->
+                        <div class="row step2">
+                            <div class="col-md-10 col-xs-12 input-label-wrapper">
+                                <button type="submit" class="btn btn-primary btn-block" id="submit">Get FREE franchising
+                                    guide
+                                </button>
+                            </div>
+                        </div>
+                        <!--submit buttons-->
+                    </form>
+                    <div id="prog1" class="progress" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image-container fright">
+        <img src="/images/franchise-landing/oncore-landing.png" alt="" class="hero-image">
+    </div>
+</div>
+{% elseif craft.request.getSegment(2) == 'step3'%}
+<div id="top-hero" class="step2-form step2">
+    <div class="fleft text-content inner">
+        <div class="text-container">
+
+            <div class="fleft form ">
+                <div class="theformarea-c formholder">
+                    <p class="enquiry-title">Thank you!</p>
+                    <p class="enquiry-ins">You can now download your free franchising guide below!</p>
+                    <p class="instructions">We’ll be in touch within 3 business days to answer any questions you may
+                        have.</p>
+                    <a class='btn btn-primary btn-block thanks'
+                       href='https://www.yumpu.com/en/document/read/62807798/oncore-franchise-guide-new-zealand'
+                       target=_blank>Download franchising guide</a>
+
+                    <div id="prog1" class="progress" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image-container fright">
+        <img src="/images/franchise-landing/oncore-landing.png" alt="" class="hero-image">
+    </div>
+</div>
+{% else %}
+
+<div id="top-hero">
+    <div class="fleft text-content">
+        <div class="text-container">
+            <h1>Unique franchise opportunity with Oncore</h1>
+            <span class="description">Oncore is looking for natural leaders to manage teams of maintenance, repair & installation professionals. <strong>Low upfront cost with guaranteed leads.</strong></span>
+            <a class="btn-blue" role="button" href="/oncore-franchise/step2" style="margin-right: 12px;">Get FREE
+                franchising guide</a>
+            <a class="btn-blue enquiry-link start-project white" role="button">Contact Us</a>
+        </div>
+    </div>
+    <div class="hero-image-container fright">
+        <img src="/images/franchise-landing/oncore-landing.png" alt="Oncore franchise" class="hero-image">
+    </div>
+</div>
+<div class="inner franchise-opp">
+    <span class="heading">Franchise Opportunities Around New Zealand</span>
+    <p class="description">Low upfront cost with guaranteed leads</p>
+    <div class="col-md-3 col-sm-3">
+        <div class="img-holder">
+            <img src="/images/franchise-landing/amazing-opportunities.svg" alt="Oncore opportunity">
+        </div>
+        <p class="franchise-fee">Amazing opportunities around New Zealand</p>
+    </div>
+    <div class="col-md-3 col-sm-3">
+        <div class="img-holder">
+            <img src="/images/franchise-landing/fantastic-potential.svg" alt="Oncore opportunity">
+        </div>
+        <p class="franchise-fee">Enter a $2.6 billion market with fantastic potential</p>
+    </div>
+    <div class="col-md-3 col-sm-3">
+        <div class="img-holder">
+            <img src="/images/franchise-landing/upfront-cost.svg" alt="Oncore opportunity">
+        </div>
+        <p class="franchise-fee">A small upfront cost of $50,000 </p>
+    </div>
+    <div class="col-md-3 col-sm-3">
+        <div class="img-holder">
+            <img src="/images/franchise-landing/full-training.svg" alt="Oncore opportunity">
+        </div>
+        <p class="franchise-fee">Full training, support and coaching given </p>
+    </div>
+</div>
+
+<div class="customer-experience">
+    <div class="inner spacing">
+        <h2>Oncore provides a high quality, reliable service</h2>
+        <p>Our nationwide network of franchise businesses ensure customers receive a consistent and professional
+            service.</p>
+        <div class="col-md-5 col-sm-5 spacing">
+            <span>Problems Oncore solves</span>
+            <ul>
+                <li class="unsolve">Unreliability</li>
+                <li class="unsolve">Homeowners managing tradespeople</li>
+                <li class="unsolve">Disappointing work quality</li>
+                <li class="unsolve">Poor customer service</li>
+                <li class="unsolve">Over time and over budget</li>
+            </ul>
+        </div>
+        <div class=" col-md-7 col-sm-7">
+            <span>How Oncore solves them</span>
+            <ul>
+                <li class="solve">Oncore responds quickly and completes jobs on time and on budget</li>
+                <li class="solve">Our professional business managers act as your single point of contact</li>
+                <li class="solve">Experienced project managers ensure excellent results every time</li>
+                <li class="solve">Oncore specialists provide customers with a professional and reliable service</li>
+                <li class="solve">Our systems, processes and people deliver jobs on time and on budget</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="infographic">
+    <div class="inner">
+        <div class="growth-text">
+            <h2>Exciting growth potential</h2>
+            <p>We aim for each Oncore franchise to achieve a turnover between $1.5 to $2.0m within the first 5 years of
+                operating. This is an example of the planned growth path as the business matures.</p>
+        </div>
+        <img class="info-image-desktop" src="{{ siteUrl}}svg/fw-infographic.svg"/>
+        <img class="info-image-mobile" src="{{ siteUrl}}svg/fw-infographic-tablet.svg"/>
+        <div class="disclaimer-text"><p>*Please note: This chart is based on assumption and is in no way guaranteed by
+            Maintenance Franchise New Zealand Limited. We recommend discussing the growth potential of an Oncore
+            franchise with an
+            independent advisor. </p></div>
+    </div>
+</div>
+
+
+<div class="franchise-form">
+    <div class="inner">
+        <div style="overflow: auto">
+            <h2 class="title">Is an Oncore Franchise right for you?</h2>
+            <div class="three-cols">
+                <div class="heading">Benefits
+                </div>
+                <ul>
+                    <li>Build a significant business asset</li>
+                    <li>Join a company with an established client base within a growing market</li>
+                    <li>Receive ongoing business growth and marketing support from a large team of
+                        specialists
+                    </li>
+                    <li>No experience necessary</li>
+                    <li>Receive full initial training and ongoing coaching and support</li>
+                    <li>Control your income</li>
+
+                </ul>
+            </div>
+            <div class="three-cols">
+                <div class="heading">Required skills
+                </div>
+                <ul>
+                    <li>No industry experience necessary - just a friendly personality and the desire to
+                        build a successful business
+                    </li>
+                    <li>Great customer service skills and experience</li>
+                    <li>Strong ability to manage people and projects</li>
+                    <li>Sales and marketing focused</li>
+                    <li>Professional and well presented
+                    </li>
+                    <li>Business driven</li>
+
+                </ul>
+            </div>
+            <div class="three-cols">
+                <div class="heading">What’s involved?
+                </div>
+                <ul>
+                    <li>Initial meeting and Oncore presentation
+                    </li>
+                    <li>Sign a confidentiality agreement & submit an information request</li>
+                    <li>Complete your commercial due diligence
+                    </li>
+                    <li>Be offered a franchise territory, following a 2nd meeting
+                    </li>
+                    <li>Finalise your legal due diligence & sign contracts</li>
+                    <li>Receive world class training & support in establishing your business!
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="grey-background clearfix">
+    <div class="inner">
+        <span class="heading">Financial requirements</span>
+
+        <div class="col-md-4 col-sm-4 fee">
+            <img src="/images/franchise-landing/franchise-fee.svg" alt="Oncore opportunity">
+            <span class="money">$50,000</span>
+            <p class="franchise-fee">Franchise fee</p>
+        </div>
+        <div class="col-md-4 col-sm-4 range">
+            <img src="/images/franchise-landing/total-investment.svg" alt="Oncore opportunity">
+            <span class="money">$100,000</span>
+            <p class="franchise-fee">Total investment range</p>
+        </div>
+        <div class="col-md-4 col-sm-4 capital">
+            <img src="/images/franchise-landing/networth.svg" alt="Oncore opportunity">
+            <span class="money">$100,000</span>
+            <p class="franchise-fee">Required Liquid Capital </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="blog-enquiry clearfix">
+    <div class="inner">
+        <div class="fleft form">
+            <div class="theformarea-c formholder">
+                <a href="#" class="back-to-top"> Back to page top <img src="/images/franchise-landing/arrow-up.svg"
+                                                                       alt=""></a>
+                <p class="enquiry-title">Enquire now</p>
+                <p class="instructions">Are you ready to start your own maintenance business?</p>
+                <form action="/forms/franchise-landingpage-enquiry.php" method="post" id="enquiry-s1">
+                    <!--first+last name-->
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 input-label-wrapper">
+                            <label class="labelname">Name</label>
+                            <input type="text" class="form-control" aria-label="Name" name="firstName" id="s1-firstname"
+                                   data-prefix="s1">
+                        </div>
+                    </div>
+                    <!--/first+last name-->
+
+                    <!--email #-->
+                    <div class="row step1">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Email</label>
+                            <input type="text" class="form-control" aria-label="Email address" name="email"
+                                   id="s1-email" data-prefix="s1">
+                        </div>
+                    </div>
+                    <!--/email #-->
+
+                    <!--phone # -->
+                    <div class="row step1">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Phone</label>
+                            <input type="text" class="form-control" aria-label="Phone number" name="mobile"
+                                   id="s1-mobile" data-prefix="s1" data-phoneformat="yes">
+                        </div>
+                    </div>
+                    <!--/phone # -->
+                    <!--enquiry-->
+                    <div class="row step2">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">Where would you like to open your Oncore Franchise?</label>
+                            <input type="text" class="form-control" name="where" id="s1-where" data-prefix="s1">
+                        </div>
+                    </div>
+
+                    <div class="row step2">
+                        <div class="col-md-12 input-label-wrapper">
+                            <label class="labelname">How soon would you like to open your Oncore Franchise?</label>
+                            <select id="s1-how" data-prefix="s1" name="how" class="form-control">
+                                <option value="0 Month - 3 Months">0 Month - 3 Months</option>
+                                <option value="3 Months - 6 Months">3 Months - 6 Months</option>
+                                <option value="6 Months - 9 Months">6 Months - 9 Months</option>
+                                <option value="9 Months - 12 Months">9 Months - 12 Months</option>
+                                <option value="More than 12 Months">More than 12 Months</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--/enquiry-->
+                    <div class="recaptcha-holder"></div>
+
+                    <div class="row step1">
+                        <div class="col-sm-12 col-xs-12 input-label-wrapper" id="privacy">
+                            <p class="clearfix"><label><input type="checkbox" class="uniform-styles"
+                                                              name="formf-privacy"
+                                                              id="formf-privacy" {% if craft.locale !='en_gb' %}
+                                                              checked="checked" {% endif %} data-prefix="formf"/>
+                                <span class="note"><strong>I have read, understood and accepted the <a
+                                        href="https://www.refreshfranchiseopportunities.com.au/privacy-policy/"
+                                        target="_blank">Privacy Policy.</a></strong></span></label></p></div>
+                    </div>
+                    <div class="row step2">
+                        <div class="col-sm-12 col-xs-12 input-label-wrapper" id="subscribe">
+                            <p class="clearfix"><label><input type="checkbox" class="uniform-styles"
+                                                              name="form-subscribe"
+                                                              {% if craft.locale !='en_gb' %} checked="checked" {% endif
+                                                              %}/> <span class="note"><strong>Sign me up to receive news about franchising with Oncore. </strong> <br><span
+                                    style="font-size: 14px">(Don’t worry - if you change your mind you can unsubscribe at anytime)</span></label>
+                            </p>
+                        </div>
+                    </div>
+                    <fieldset class="clearfix form-website" style="display: none;">
+                        <legend></legend>
+                        <label id="c-enq-website" class="input fullwidth"><span>Prove you are human by leaving this field blank</span>
+                            <input type="text" name="website" autocomplete="off"/></label>
+                    </fieldset>
+                    <input type="hidden" name="formpage" id="formpage-s1"/>
+                    <input type="hidden" name="formname" value="Franchise Landing Page"/>
+                    <div class="recaptcha-holder"></div>
+
+
+                    <div class="row step1">
+                        <div class="col-md-7 col-xs-12 input-label-wrapper">
+                            <a class="btn btn-primary btn-block" id="go-to-step2" href="javascript:void(0);">Get
+                                started</a>
+                        </div>
+                    </div>
+                    <!--submit buttons-->
+                    <div class="row step2">
+                        <div class="col-md-7 col-xs-12 input-label-wrapper">
+                            <button type="submit" class="btn btn-primary btn-block" id="submit">Send message</button>
+                        </div>
+                    </div>
+                    <!--submit buttons-->
+                </form>
+                <div id="prog1" class="progress" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock content %}
+
+{% block scripts %}
+
+<script>
+    $(document).ready(function () {
+        $(":input").off('input propertychange focus');
+
+        $(":input").on('input propertychange', function () {
+            console.log(1);
+            if (this.dataset.prefix != undefined && this.dataset.prefix != null) {
+                eachValidation(this.dataset.prefix, this.id);
+            }
+        });
+        $(":input").focusout(function () {
+            if (this.dataset.prefix != undefined && this.dataset.prefix != null) {
+                eachValidation(this.dataset.prefix, this.id);
+            }
+        });
+
+    });
+
+    $(".enquiry-link, .enquiry-button").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: $(".blog-enquiry").offset().top - 100}, 500);
+    });
+
+    $(".back-to-top").click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: $("#top-hero").offset().top - 100}, 500);
+    });
+
+    $("#go-to-step2").click(function () {
+        var valifirstname = eachValidation('s1', 's1-firstname');
+        var valiphone = eachValidation('s1', 's1-mobile');
+        var valiemail = eachValidation('s1', 's1-email');
+        var valiprivacy = eachValidation('formf', 'formf-privacy');
+        if (valifirstname === "valid" && valiemail === "valid" && valiprivacy === "valid" && valiphone === "valid") {
+            $(".blog-enquiry p.enquiry-title").text("Almost there, " + $("#s1-firstname").val());
+            $(".blog-enquiry p.instructions").text("Tell us more about your vision for your potential business");
+            $(".step1").hide(400);
+            $(".step2").show(400);
+        }
+
+    });
+
+
+    navigator.sayswho = (function () {
+        var ua = navigator.userAgent, tem,
+            M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+        if (/trident/i.test(M[1])) {
+            tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+            return 'IE ' + (tem[1] || '');
+        }
+        if (M[1] === 'Chrome') {
+            tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+            if (tem != null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+        }
+        M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+        if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
+        return M.join(' ');
+    })();
+
+    var str = navigator.sayswho;
+    var browser = str.substring(0, str.indexOf(" "));
+    var version = str.substring(str.indexOf(" "));
+    version = version.trim();
+    version = parseInt(version);
+    if ($.cookie('browserCheck') != '1' && ((browser == "Chrome" && version < 40) || (browser == "Safari" && version < 9) || (browser == "Edge" && version < 15) || (browser == "Firefox" && version < 40) || (browser == "Opera" && version < 40) || browser == "IE")) {
+        var mnow = new Date();
+        var mtime = mnow.getTime();
+        mtime += 3600 * 1000;
+        mnow.setTime(mtime);
+        $.cookie('browserCheck', '1', {expires: mnow, path: '/'});
+        window.location.href = "/out-of-date-browser/";
+    }
+
+
+    function eachValidation(prefix, id) {
+        if (id == "s1-firstname") {
+            if ($("#" + id).val() === "") {
+                if (!$("#invalid-" + id).length) {
+                    $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>Name is required.</div>");
+                }
+                $("#invalid-" + id).css({display: "block"});
+                $("#" + id).addClass("error-msg");
+                return "invalid";
+            } else {
+                if ($("#invalid-" + id).length) {
+                    $("#invalid-" + id).css({display: "none"});
+                }
+                $("#" + id).removeClass("error-msg");
+                return "valid";
+            }
+        } else if (id == "s1-lastname") {
+            if ($("#" + id).val() === "") {
+                if (!$("#invalid-" + id).length) {
+                    $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>Last name is required.</div>");
+                }
+                $("#invalid-" + id).css({display: "block"});
+                $("#" + id).addClass("error-msg");
+                return "invalid";
+            } else {
+                if ($("#invalid-" + id).length) {
+                    $("#invalid-" + id).css({display: "none"});
+                }
+                $("#" + id).removeClass("error-msg");
+                return "valid";
+            }
+        } else if (id == "s1-email") {
+            if (!$("#" + id).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                if (!$("#invalid-" + id).length) {
+                    $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>Valid email address required.</div>")
+                }
+                $("#invalid-" + id).css({display: "block"});
+                $("#" + id).addClass("error-msg");
+                return "invalid";
+            } else {
+                if ($("#invalid-" + id).length) {
+                    $("#invalid-" + id).css({display: "none"});
+                }
+                $("#" + id).removeClass("error-msg");
+                return "valid";
+            }
+        } else if (id == "formf-privacy") {
+            if ($("#" + id).length) {
+                if ($("#" + id).prop("checked") == false) {
+                    if (!$("#invalid-" + id).length) {
+                        $("#" + id).parent().parent().next().append("<div class='invalid-tooltip' id='invalid-" + id + "'>Please read and accept the Privacy Policy.</div>");
+                    }
+                    $("#invalid-" + id).css({display: "block"});
+                    $("#" + id).parent().parent().addClass("error-msg");
+                    return "invalid";
+                } else {
+                    $("#invalid-" + id).css({display: "none"});
+                    $("#" + id).parent().parent().removeClass("error-msg");
+                    return "valid";
+                }
+            }
+        } else if (id == "s1-where") {
+            if ($("#" + id).val() === "") {
+                if (!$("#invalid-" + id).length) {
+                    $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>This field is required.</div>");
+                }
+                $("#invalid-" + id).css({display: "block"});
+                $("#" + id).addClass("error-msg");
+                return "invalid";
+            } else {
+                if ($("#invalid-" + id).length) {
+                    $("#invalid-" + id).css({display: "none"});
+                }
+                $("#" + id).removeClass("error-msg");
+                return "valid";
+            }
+        } else if (id == "s1-how") {
+            if ($("#" + id).val() === "") {
+                if (!$("#invalid-" + id).length) {
+                    $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>This field is required.</div>");
+                }
+                $("#invalid-" + id).css({display: "block"});
+                $("#" + id).addClass("error-msg");
+                return "invalid";
+            } else {
+                if ($("#invalid-" + id).length) {
+                    $("#invalid-" + id).css({display: "none"});
+                }
+                $("#" + id).removeClass("error-msg");
+                return "valid";
+            }
+        } else if (id == "s1-mobile") {
+            if ($("#" + id).val() === "") {
+                if (!$("#invalid-" + id).length) {
+                    $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>Phone number is required.</div>");
+                }
+                $("#invalid-" + id).css({display: "block"});
+                $("#" + id).addClass("error-msg");
+                return "invalid";
+            } else {
+                if ($("#invalid-" + id).length) {
+                    $("#invalid-" + id).css({display: "none"});
+                }
+                $("#" + id).removeClass("error-msg");
+                return "valid";
+            }
+        }
+    }
+
+    function submitEnquirePart1(form) {
+        $('#enquiry-s1').append('<input type="text" name="frompage" style="display:none;" value="' + window.location.href + '" />');
+        $('#prog1').fadeIn(100);
+
+        var valifirstname = eachValidation('s1', 's1-firstname');
+        var valiemail = eachValidation('s1', 's1-email');
+        var valiphone = eachValidation('s1', 's1-mobile');
+        var valiprivacy = eachValidation('formf', 'formf-privacy');
+        var valiwhere = eachValidation('s1', 's1-where');
+        var valihow = eachValidation('s1', 's1-how');
+
+        if (valifirstname === "invalid" || valiemail === "invalid" || valiprivacy === "invalid" || valiwhere === "invalid" || valihow === "invalid" || valiphone === "invalid") {
+            $('#prog1').fadeOut(200);
+            if ($layoutStyle == "mobile") {
+                $('html, body').animate({scrollTop: $("#enquiry-s1").offset().top}, 150, 'swing');
+            }
+            return false;
+        }
+
+        $.ajax({
+            url: $(form).attr("action"),
+            type: "POST",
+            data: $(form).serialize(),
+            success: function (response) {
+                if (response.match(/ContainsLink/i)) {
+                    //Display error message above form
+                    $('#prog1').fadeOut(200);
+                    $('.instructions').html('You cannot enter a link for these fields.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else if (response.match(/NoPrivacy/i)) {
+                    //Display try again message above form
+                    $('#prog1').fadeOut(200);
+                    $('.instructions').html('You must read and accept the Privacy Policy in order to continue.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else if (response.match(/Invalid/i)) {
+                    //Display try again message above form
+                    $('#prog1').fadeOut(200);
+                    $('.instructions').html('There was an error, please try again.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else if (response.match(/Unsuccessful/i)) {
+                    //Display failure message above form
+                    $('#prog1').fadeOut(200);
+                    $('.instructions').html('Your form could not be submitted. Please try again later or call us on 0800 33 60 33.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else if (response.match(/EnquirySent/i)) {
+                    //Display success message in place of form for spammer but dont track submission
+                    $('#prog1').fadeOut(200);
+                    $('.formholder').html('<h2>Thank you for your enquiry, we will be in touch soon.</h2>');
+                }
+                else if (response.match(/NoCaptcha/i)) {
+                    //Display try again message above form
+                    $('#prog1').fadeOut(200);
+                    $('.instructions').html('Please confirm you are not a robot.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else {
+                    ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', '0003 Oncore Contact - Business Opportunity - used for Franchise Enquiry');
+                    //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Business Opportunity - used for Franchise Enquiry'});
+                    //fbq('track', 'Lead');
+                    // window.location.href="/thank-you?adwords=tracking";
+                    $('#prog1').fadeOut(200);
+                    $(".blog-enquiry p.enquiry-title").text("Thank you!");
+                    $(".blog-enquiry p.instructions").text("Thanks for contacting us - we’ll be in touch within 3 business days.");
+                    $(".blog-enquiry form").hide(400);
+
+
+                    var path = window.location.pathname;
+                    if (path.indexOf("step2") >= 0) {
+                        window.location.href = "/oncore-franchise/step3";
+                    }
+                }
+            },
+            error: function () {
+                //Display failure message above form
+                $('#prog1').fadeOut(200);
+                $('.instructions').html('Your form could not be submitted. Please try again later.').css({
+                    'color': 'red',
+                    'display': 'block'
+                });
+                //if ($layoutStyle != null) { if ($layoutStyle == "mobile") {var formPos = $(window).scrollTop() - 180;$("html, body").animate({ scrollTop: formPos }, "slow");}}
+            }
+        });
+    }
+</script>
+
+{% endblock scripts%}

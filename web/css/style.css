@@ -2869,13 +2869,13 @@ a, a:active, a:focus, a:hover {
 }
 
 #form-call-centre input.form-control {
-    color: #000;
+    color: #33333333;
     height: 40px;
     font-size: 1em
 }
 
 #form-call-centre input.form-control:focus {
-    color: #000
+    color: #333333;
 }
 
 @media (min-width: 978px) {
@@ -3138,7 +3138,7 @@ p, ul, ol, li, dl, table, img, input, textarea, legend {
     font-weight: normal;
     font-size: 1rem;
     font-style: normal;
-    color: #000;
+    color: #333;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -3663,7 +3663,7 @@ ul {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
+    color: #333333;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -6684,7 +6684,7 @@ form .tips {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #333333;
     text-decoration: none;
     cursor: pointer;
 }
