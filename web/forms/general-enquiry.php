@@ -264,6 +264,10 @@ if ($probSpam != "yes") {
 		  \"fieldID\": \"BHG8rCE1zEupWgjWT4YxEQ\",
 		  \"value\": \"$subscribe\"
 		},
+		{
+		  \"fieldID\": \"YP7yRZqzekWW7wjXPai3kQ\",
+		  \"value\": \"$subscribe\"
+		},
         {
 		  \"fieldID\": \"fRAJ4A8sY0CqQwjWTv4m_Q\",
 		  \"value\": \"$medium\"
