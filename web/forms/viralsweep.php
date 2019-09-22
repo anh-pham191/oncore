@@ -15,8 +15,97 @@ $frompage = $data['entry_source']; //full site URL
 //parse_str($query_str, $query_params);
 preg_match("/&?utm_source=([^&]+)/", $frompage, $matchSource);
 $source = urldecode($matchSource[1]);
+if (isset($_COOKIE['fromsource'])){
+    if ($_COOKIE['fromsource']=="google") {
+        $source = "Google AdWords";
+    } else if ($_COOKIE['fromsource']=="bing") {
+        $source = "Bing";
+    } else if ($_COOKIE['fromsource']=="facebook") {
+        $source = "Facebook";
+    } else if ($_COOKIE['fromsource']=="LinkedIn") {
+        $source = "LinkedIn";
+    } else if ($_COOKIE['fromsource']=="Social Media Post") {
+        $source = "Social Media";
+    } else if ($_COOKIE['fromsource']=="Mailout") {
+        $source = "Mailout";
+    } else if ($_COOKIE['fromsource']=="Social Media Post") {
+        $source = "Social Media";
+    } else if ($_COOKIE['fromsource']=="Harmoney") {
+        $source = "Harmoney";
+    } else if ($_COOKIE['fromsource']=="referral") {
+        $source = "Referral";
+    } else if ($_COOKIE['fromsource']=="Local Print Media") {
+        $source = "Local Print Media";
+    } else if ($_COOKIE['fromsource']=="banner") {
+        $source = "Banner";
+    } else if ($_COOKIE['fromsource']=="local digital") {
+        $source = "Local Digital Campaign";
+    } else if ($_COOKIE['fromsource']=="instagram") {
+        $source = "Instagram";
+    } else if ($_COOKIE['fromsource']=="twitter") {
+        $source = "Twitter";
+    } else if ($_COOKIE['fromsource']=="pinterest") {
+        $source = "Pinterest";
+    } else if ($_COOKIE['fromsource']=="renovate") {
+        $source = "Renovate Website";
+    } else if ($_COOKIE['fromsource']=="promotions") {
+        $source = "Competitions";
+    } else if ($_COOKIE['fromsource']=="Friend") {
+        $source = "Friend Referral";
+    } else if ($_COOKIE['fromsource']=="Customer") {
+        $source = "Customer Referral";
+    } else if ($_COOKIE['fromsource']=="Repeat") {
+        $source = "Customer repeat work";
+    } else if ($_COOKIE['fromsource']=="Trade") {
+        $source = "Trade Referral";
+    } else if ($_COOKIE['fromsource']=="Designer") {
+        $source = "Designer Referral";
+    } else if ($_COOKIE['fromsource']=="Distributor") {
+        $source = "Distributor Referral";
+    } else if ($_COOKIE['fromsource']=="site sign") {
+        $source = "Site Sign";
+    } else if ($_COOKIE['fromsource']=="tv") {
+        $source = "TV";
+    } else if ($_COOKIE['fromsource']=="radio") {
+        $source = "Radio";
+    } else if ($_COOKIE['fromsource']=="vehicle") {
+        $source = "Branded Vehicle";
+    } else if ($_COOKIE['fromsource']=="event") {
+        $source = "Local Event";
+    } else if ($_COOKIE['fromsource']=="network") {
+        $source = "Network";
+    } else if ($_COOKIE['fromsource']=="outdoor") {
+        $source = "Outdoor";
+    } else if ($_COOKIE['fromsource']=="sponsorship") {
+        $source = "Sponsorship";
+    } else if ($_COOKIE['fromsource']=="leaflet") {
+        $source = "Letter Box Drop";
+    } else if ($_COOKIE['fromsource']=="merchandise") {
+        $source = "Branded merchandise";
+    } else if ($_COOKIE['fromsource']=="walk in") {
+        $source = "Local Office";
+    } else if ($_COOKIE['fromsource']=="permanent expo") {
+        $source = "Permanent Exhibition Centre";
+    } else if ($_COOKIE['fromsource']=="home show") {
+        $source = "Home Show";
+    } else if ($_COOKIE['fromsource']=="seminar") {
+        $source = "Seminars";
+    } else if ($_COOKIE['fromsource']=="directory") {
+        $source = "Directory";
+    } else if ($_COOKIE['fromsource']=="cinema") {
+        $source = "Cinema";
+    } else if ($_COOKIE['fromsource']=="other") {
+        $source = "Other";
+    } else if ($_COOKIE['fromsource']=="Re-engagement") {
+        $source = "Re-engagement";
+    } else{
+        $source = "Oncore Consumer Website";
+    }
+}else{
+    $source = "Competitions";
+};
 if(empty($source)){
-    $source = "Oncore Consumer Website";
+    $source = "Competitions";
 }
 preg_match("/&?utm_campaign=([^&]+)/", $frompage, $matchCam);
 $campaign = urldecode($matchCam[1]);
@@ -77,7 +166,7 @@ if($data['newsletter_subscribe']=="yes") {
       },
       {
         \"fieldID\": \"OdiYtGs2VUyf9gjWvZIsdg\",
-        \"value\": \"$formpage\"
+        \"value\": \"$frompage\"
       }
     ],
     \"source\": \"ViralSweep Competition\"
