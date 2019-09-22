@@ -107,6 +107,7 @@ if (isset($_COOKIE['fromsource'])){
 if(empty($source)){
     $source = "Competitions";
 }
+$privacy = "TRUE";
 preg_match("/&?utm_campaign=([^&]+)/", $frompage, $matchCam);
 $campaign = urldecode($matchCam[1]);
 if(empty($campaign)){
