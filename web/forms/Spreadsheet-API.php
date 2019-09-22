@@ -12,8 +12,8 @@ $listFeed->insert([
     'message' => $enquiry,
     'privacypolicy' => $privacy,
     'optoutofnewslettter' => $subscribe,
-    'wheretolandscape' =>  $wheretoopen,
-    'howsoontolandscape' => $howsoon,
+    'wheretodoproject' =>  $wheretoopen,
+    'howsoontodoproject' => $howsoon,
     'utmsource' => $source,
     'utmcampaign' => $campaign,
     'utmmedium' => $medium,
@@ -21,6 +21,7 @@ $listFeed->insert([
     'utmkeyword' => "",
     'landingpageurl' => $formpage,
     'formidentifier' => $identifier,
-    'suburb' => $location
+    'suburb' => $location,
+    'country' => $country,
 ]);
 ?>
