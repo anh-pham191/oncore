@@ -159,6 +159,18 @@ if (empty($firstname) || $firstname == "") { //not a lead
       \"value\": \"$subscribe\"
     },
     {
+      \"fieldID\": \"TktuHUCoN0m9PAjWvZIKAA\",
+      \"value\": \"$source\"
+    },
+    {
+      \"fieldID\": \"RjD1DyFr7kibPgjWvZIQTA\",
+      \"value\": \"$medium\"
+    },
+    {
+      \"fieldID\": \"5-_-f7C3pU-QDQjWvZIUtg\",
+      \"value\": \"$campaign\"
+    },
+    {
         \"fieldID\": \"OdiYtGs2VUyf9gjWvZIsdg\",
         \"value\": \"$frompage\"
     }
