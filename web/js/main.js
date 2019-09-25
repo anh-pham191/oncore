@@ -3865,16 +3865,33 @@ if (($.cookie('sessioncurrent') != '1') || (thepageUrl.indexOf("utm_campaign") >
         });
     }
 
+    var existingcontent = $.cookie("fromcontent");
+    var mycontent = $.QueryString["utm_content"];
+    if (mycontent === undefined) {
+        mycontent = "";
+        var thecontent = ""
+    } else {
+        var thecontent = mycontent.replace(/[^a-zA-Z0-9\s]+/g, "")
+    }
+    if (existingcontent === thecontent) {} else {
+        $.cookie("fromcontent", thecontent, {
+            expires: 90,
+            path: "/",
+        });
+    }
     var existingkeyword = $.cookie("fromkeyword");
-    var mykeyword = $.QueryString["utm_keyword"];
+    if($.QueryString["utm_keyword"] !== undefined){
+        var mykeyword = $.QueryString["utm_keyword"];
+    } else {
+        var mykeyword = $.QueryString["utm_term"];
+    }
     if (mykeyword === undefined) {
         mykeyword = "";
-        var thekeyword = "Not set"
+        var thekeyword = ""
     } else {
         var thekeyword = mykeyword.replace(/[^a-zA-Z0-9\s]+/g, "")
     }
-    if (existingkeyword === thekeyword) {
-    } else {
+    if (existingkeyword === thekeyword) {} else {
         $.cookie("fromkeyword", thekeyword, {
             expires: 90,
             path: "/",
