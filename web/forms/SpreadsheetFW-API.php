@@ -17,5 +17,6 @@ $listFeed->insert([
     'utmcampaign' => $campaign,
     'utmmedium' => $medium,
     'landingpageurl' => $formpage,
+    'gclid' => $gclid,
 ]);
 ?>

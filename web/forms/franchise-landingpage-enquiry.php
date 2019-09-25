@@ -22,6 +22,7 @@ $country = cleanData($_POST['form-country']);
 $formpage = cleanData($_POST['frompage']);
 $contacttype = "Franchise Lead";
 $country = "New Zealand";
+$gclid = cleanData($_POST['gclid_field']);
 
 if (isset($_POST['formf-privacy'])) {
     $privacy = cleanData($_POST['formf-privacy']);
@@ -149,6 +150,13 @@ else {
 };
 if (isset($_COOKIE['frommedium'])) {
     $medium = cleanData($_COOKIE['frommedium']);
+}
+
+if (isset($_COOKIE['fromcontent'])) {
+    $content = cleanData($_COOKIE['fromcontent']);
+}
+if (isset($_COOKIE['fromkeyword'])) {
+    $keyword = cleanData($_COOKIE['fromkeyword']);
 }
 
 $businessunit = "Oncore NZ Franchise Lead";

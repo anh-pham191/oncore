@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% if (currentSite.name == 'oncore.local') or (currentSite.name=='Oncore Dev') %}
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex">
+    {% endif %}
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <link rel="stylesheet" href="{{ siteUrl}}css/font-awesome.min.css" media="all">
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.google.com/specimen/Libre+Baskerville:300,400,500,600,700,800" />
+    <!--need update from here-->
+    <link href="{{ siteUrl}}images/favicon-96x96.png" rel="shortcut icon" type="image/x-icon"/>
+    <!--<link href="images/favicon.png" rel="apple-touch-icon" type="image/png"/>-->
+    <!--to here-->
+    {% block css %}
+    <link rel="stylesheet" href="{{ siteUrl}}css/style.css" media="all">
+    {% endblock css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" media="all">
+    <link rel="stylesheet" href="{{ siteUrl}}css/normalize.min.css" media="all">
+    {% block seocontent %}
+    {# SEO FIELDS - DEFAULT BELOW #}
+    <title>Oncore</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    {% endblock seocontent %}
+    <!---->
+    {% if (currentSite.name == 'oncore.local') or (currentSite.name =='Oncore Dev') %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129576409-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129576409-2');
+    </script>
+    <!-- Delacon tracking -->
+    <script src="//vxml4.plavxml.com/sited/ref/ctrk/1004-62216" async></script>
+    <!-- end Delacon tracking -->
+
+
+    {% else %}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDTPNVS');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129576409-1"></script>
+    <!-- Global site tag (gtag.js) - Google Ads: 776863757 -->
+    <script> window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-129576409-1');
+    gtag('config', 'AW-776863757'); </script>
+    <script type="text/javascript">
+        var _ss = _ss || [];
+        _ss.push(['_setDomain', 'https://koi-3QNH83TKIO.marketingautomation.services/net']);
+        _ss.push(['_setAccount', 'KOI-42KWHN6X54']);
+        _ss.push(['_trackPageView']);
+        (function() {
+            var ss = document.createElement('script');
+            ss.type = 'text/javascript'; ss.async = true;
+            ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNH83TKIO.marketingautomation.services/client/ss.js?ver=1.1.1';
+            var scr = document.getElementsByTagName('script')[0];
+            scr.parentNode.insertBefore(ss, scr);
+        })();
+    </script>
+
+    <!-- Start Alexa Certify Javascript -->
+    <script type="text/javascript">
+        _atrk_opts = { atrk_acct:"4lALs1rcy520uW", domain:"oncoreservice.co.nz",dynamic: true};
+        (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+    </script>
+    <noscript><img src="https://certify.alexametrics.com/atrk.gif?account=4lALs1rcy520uW" style="display:none" height="1" width="1" alt="" /></noscript>
+    <!-- End Alexa Certify Javascript -->
+    <!-- Start SiteKit Popup -->
+    <script>
+        (function(d, id) {
+            if (d.getElementById(id)) return;
+            var sc, node = d.getElementsByTagName('script')[0];
+            sc = d.createElement('script'); sc.id = id;
+            sc.src = 'https://sdk.getsitekit.com/static/js/app.js#apiKey=7dcbe566d72af0afcfc0e6589069c0f3';
+            node.parentNode.insertBefore(sc, node);
+        }(document, 'sitekit-sdk'));
+    </script>
+    <!-- End SiteKit Popup -->
+    <!-- Delacon tracking -->
+    <script src="//vxml4.plavxml.com/sited/ref/ctrk/1004-62216" async></script>
+    <!-- end Delacon tracking -->
+    {% endif %}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    {% block snippet %}
+    {% endblock snippet %}
+</head>
+
+<body>
+{% if (currentSite.name == 'oncore.local') or (currentSite.name =='Oncore Dev') %}
+
+
+{% else %}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDTPNVS"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{% endif %}
+<!--<a href="#" id="back-to-top" title="Back to top">-->
+<!--<div class="icon-top"></div>-->
+<!--</a>-->
+{% block navigation %}
+
+<nav role="navigation" id="topnav">
+    <div id="sitebanner" class="clearfix landscaper">
+        <div class="notmobile phone-top fleft"><a href="tel:09 301 0209" type="tel"><span>09 301 0209</span></a></div>
+        <div class="justmobile fleft call-baseline"><a href="tel:09 301 0209"><img width="18px" height="18px" src="/images/franchise-landing/call.svg"></a></div>
+        <p><a href="/oncore-franchise"><img class="logo" src="{{ siteUrl}}images/Oncore-logo.png" alt="Oncore"></a></p>
+        <ul class="links-top fright">
+        </ul>
+    </div>
+
+</nav>
+
+{% endblock navigation %}
+<div id="wrapper" class="clearfix">
+    {% block content %}
+
+    {% endblock content%}
+
+</div>
+<!--</div>-->
+
+{% block footer %}
+{% endblock footer %}
+
+<script src="{{ siteUrl}}js/modernizr.js"></script>
+<script src="{{ siteUrl}}js/main.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
+
+
+<script>
+    var imgs = document.querySelectorAll('img');
+    var lazyload = function () {
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        var winTop = window.innerHeight;
+        for (var i = 0; i < imgs.length; i++) {
+            if (imgs[i].offsetTop < scrollTop + winTop && imgs[i].src == "") {
+                imgs[i].src = imgs[i].getAttribute('data-src');
+                imgs[i].classList.remove("lazy-load");
+            }
+        }
+    }
+
+    function throttle(method, delay) {
+        var timer = null;
+        return function () {
+            var context = this, args = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                method.apply(context, args);
+            }, delay);
+        }
+    }
+
+    window.onload = throttle(lazyload, 200);
+    window.onscroll = throttle(lazyload, 200);
+
+    $(document).ready(function () {
+
+        $(".mobile-boxes").slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+
+
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+
+    });
+
+
+    $(document).click(function (event) {
+        var _con = $('#country-box');
+        if (!_con.is(event.target) && _con.has(event.target).length === 0 && event.target != $("#country-top").get(0) && event.target != $("#country-top div").get(0) && event.target != $("#country-top .country-arrow").get(0)) {
+            $("#country-box").hide(500);
+        }
+    });
+    function sharePage(socialMedia){
+
+        if(socialMedia === "facebook"){
+            var url = "http://www.facebook.com/sharer.php?u=";
+        }else if(socialMedia === "twitter"){
+            var url = "https://twitter.com/share?url=";
+        }else if(socialMedia === "googleplus"){
+            var url = "https://plus.google.com/share?url=";
+        }else if(socialMedia === "linkedin"){
+            var url = "http://www.linkedin.com/shareArticle?mini=true&amp;url=";
+        }else if(socialMedia === "pinterest"){
+            var e=document.createElement('script');
+            e.setAttribute('type','text/javascript');
+            e.setAttribute('charset','UTF-8');
+            e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+            document.body.appendChild(e);
+        }
+
+
+        if($('#count').val() != null && $('#count').val() % 1 === 0){
+            var newcount = Number($('#count').val())+1;
+            $('#count').val(newcount);
+
+            $.ajax({
+                type: $('#sharingcount').attr('method'),
+                url: $('#sharingcount').attr('action'),
+                data: $('#sharingcount').serialize()
+            });
+
+            $("#shared-count").text(newcount);
+        }
+        if(socialMedia != "pinterest"){
+            window.open(url+window.location.href, '_blank', 'toolbar=0,location=0,menubar=0');
+        }
+    }
+
+    function scrollDown(button, destination) {
+        button.click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: destination.offset().top - 130}, 1000);
+        });
+    }
+
+    $(function () {
+        // $('.subscribe').click(function () {
+        //     $("#myModal").css("display", "block");
+        // })
+        $('#myModal .close').click(function () {
+            $("#myModal").css("display", "none");
+        })
+        $(document).on('click', function(e) {
+            if(e.target.className == "subscribe"){
+                $("#myModal").css("display", "block");
+            } else {
+                if (e.target.id == 'myModal') {
+                    $("#myModal").css("display", "none");
+                }
+                if (e.target.id == 'new-step2') {
+                    $("#new-step2").css("display", "none");
+                }
+            }
+
+        })
+
+    })
+
+    // recaptcha 3 for all site
+
+    var renderRecaptcha = function() {
+        for (var i = 0; i < document.forms.length; ++i) {
+
+            var form = document.forms[i];
+            var holder = form.querySelector('.recaptcha-holder');
+            if (null === holder){
+                continue;
+
+            }
+
+            (function(frm){
+                var holderId = grecaptcha.render(holder,{
+                    'sitekey': '6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH',
+                    'size': 'invisible',
+                    'badge' : 'bottomright', // possible values: bottomright, bottomleft, inline
+                    'callback' : function (recaptchaToken) {
+                        frm.elements['g-recaptcha-response'].innerHTML = recaptchaToken;
+                    }
+                });
+
+                frm.onsubmit = function (evt){
+                    evt.preventDefault();
+                    grecaptcha.execute(holderId).then(function(token) {
+                        if(typeof frm.elements['formname'] != "undefined" && frm.elements['formname'].value != ""){
+                            if(frm.elements['formname'].value == "Franchise Enquiry"){
+                                submitFranchiseEnquiry(frm);
+                            }else{
+                                submitEnquirePart1(frm);
+                            }
+                        }else{
+                            submitEnquirePart1(frm);
+                        }
+                    });
+                };
+            })(form);
+        }
+    };
+    var renderRecaptchaPopup = function() {
+        var form = document.forms.popup;
+        var holder = form.querySelector('.recaptcha-holder');
+
+        (function(frm){
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LdbAZkUAAAAAASwYCrJf97ls7NkQkYmpoDQUHVH',
+                'size': 'invisible',
+                'badge' : 'bottomright', // possible values: bottomright, bottomleft, inline
+                'callback' : function (recaptchaToken) {
+                    frm.elements['g-recaptcha-response'].innerHTML = recaptchaToken;
+                }
+            });
+
+            frm.onsubmit = function (evt){
+                evt.preventDefault();
+                grecaptcha.execute(holderId).then(function(token) {
+                    if(typeof frm.elements['formname'] != "undefined" && frm.elements['formname'].value != ""){
+                        if(frm.elements['formname'].value == "Franchise Enquiry"){
+                            submitFranchiseEnquiry(frm);
+                        }else{
+                            submitEnquirePart1(frm);
+                        }
+                    }else{
+                        submitEnquirePart1(frm);
+                    }
+                });
+            };
+        })(form);
+    };
+    function trimText(count, object){
+        object.each(function () {
+            var content = $(this).text();
+            if (content.length > count) {
+
+                var c = content.substr(0, count);
+                $(this).html(c + "...");
+            }
+        })
+    }
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
+
+{% block scripts %}
+
+{% endblock scripts%}
+</body>
+
+</html>
