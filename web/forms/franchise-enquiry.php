@@ -293,6 +293,7 @@ if ($probSpam != "yes") {
         $deal['8918c06b4712a1c50af08f1194dedc8f57b3f6c1'] = $wheretoopen; //Where to open franchise
         $deal['f7b5023db425ac0ce02237080f15523c98927559'] = $howsoontoopen; //how soon to open franchise
         include 'sync-pipedrive.php';
+        include 'SpreadsheetFW-API.php'; //need change to franchise sheet
 
 //add lead record to log
         include '../includes/log.php';
