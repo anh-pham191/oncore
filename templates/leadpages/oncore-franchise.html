@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "leadpages/layout-FW.html" %}
 {% block seocontent %}
 <title>Franchise Enquiry</title>
 <meta name="description" content="">
@@ -913,6 +913,7 @@
         .franchise-form {
             margin-top: 0px;
         }
+
     }
 
     #top-hero.step2-form .form a.btn-primary.thanks {
@@ -983,6 +984,53 @@
             font-size: 28px;
         }
     }
+
+    #topnav p {
+        width: 20%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #topnav #sitebanner .phone-top {
+        float: left;
+        margin-top: 16px;
+        margin-left: 20px;
+    }
+    #topnav {
+        display: flex;
+        align-items: center;
+    }
+
+    @media only all and (max-width: 767px) {
+        #topnav #sitebanner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        #sitebanner .fleft.call-baseline {
+            margin-left: 20px;
+        }
+        #topnav p {
+            width: 100%;
+        }
+        #sitebanner .fleft.call-baseline a img{
+            width: 18px;
+            height: 18px;
+        }
+        #topnav p {
+            width: 100%;
+            margin: 0 20px 0 auto;
+            text-align: center;
+        }
+
+    }
+    @media only all and (width: 768px) {
+        .svg #topnav p img {
+            width: auto !important;
+        }
+
+    }
+
 </style>
 
 {% endblock seocontent %}
