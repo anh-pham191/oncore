@@ -128,10 +128,6 @@ if ($data['newsletter_subscribe'] == "yes") {
     $jsonData = "{
     \"data\": [
       {
-        \"fieldID\": \"PflaaGlELU2CnQjWvY7bmQ\",
-        \"value\": \"$firstname\"
-      },
-      {
         \"fieldID\": \"WZbRLLRMhkGgdwjWvY8BWg\",
         \"value\": \"$lastname\"
       },
