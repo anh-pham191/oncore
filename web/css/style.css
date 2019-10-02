@@ -7073,6 +7073,14 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     .article-box .image-box {
         height: 150px;
     }
+    .article-box .title {
+        font-size: 18px;
+    }
+
+    .article-box .description p {
+        font-size: 14px;
+        line-height: 1.63;
+    }
 }
 
 @media only all and (max-width: 47.99em) {
