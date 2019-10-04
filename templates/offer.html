@@ -1,11 +1,17 @@
 {% extends "layout.html" %}
 {% block snippet %}
     {% block seocontent %}
+{% if entry.competitionEntry %}
+<h1>helo</h1>
+{% redirect entry.competitionEntry %}
+
+{% endif %}
         <title>Renovate Handbook Download | Oncore</title>
         <meta name="description"
               content="{{ entry.seoMetaDescription }}">
         <meta name="keywords" content="{{ entry.seoMetaKeywords }}">
     {% endblock seocontent %}
+
     <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
 
 {% endblock snippet %}
