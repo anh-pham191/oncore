@@ -1,5 +1,7 @@
 <?php
-require_once 'google-api-php-client-2.2.2/vendor/autoload.php';
+require 'google-api-php-client-2.2.2/vendor/autoload.php';
+require '../../vendor/autoload.php';
+
 
 putenv('GOOGLE_APPLICATION_CREDENTIALS='.__DIR__.'/client_secret.json');
 set_time_limit(0);
