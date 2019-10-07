@@ -14,46 +14,54 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace Google\Spreadsheet;
-
-use Google\Spreadsheet\Exception\Exception;
+namespace Google\Spreadsheet\Batch;
 
 /**
- * ServiceRequestFactory
+ * BatchResponse
  *
  * @package    Google
  * @subpackage Spreadsheet
  * @author     Asim Liaquat <asimlqt22@gmail.com>
  */
-class ServiceRequestFactory
+class BatchResponse
 {
     /**
-     * @var ServiceRequestInterface
-     */
-    private static $instance;
-
-    /**
-     * Set an instance of ServiceRequestInterface
      *
-     * @param ServiceRequestInterface $instance
+     * @var SimpleXMLElement
      */
-    public static function setInstance(ServiceRequestInterface $instance = null)
+    protected $xml;
+    
+    /**
+     * 
+     * @param \SimpleXMLElement $xml
+     */
+    public function __construct(\SimpleXMLElement $xml)
     {
-        self::$instance = $instance;
+        $this->xml = $xml;
     }
-
+    
     /**
-     * [getInstance description]
-     *
-     * @return ServiceRequestInterface
-     *
-     * @throws Exception
+     * 
+     * @return SimpleXMLElement
      */
-    public static function getInstance()
+    public function getXml()
     {
-        if(is_null(self::$instance)) {
-            throw new Exception();
+        return $this->xml;
+    }
+    
+    /**
+     * 
+     * @return boolean
+     */
+    public function hasErrors()
+    {
+        foreach ($this->xml->xpath("//batch:status/@code") as $el) {
+            if($el->__toString() !== "200") {
+                return true;
+            }
         }
-        return self::$instance;
+        
+        return false;
     }
+    
 }
