@@ -8,7 +8,7 @@ $client->useApplicationDefaultCredentials();
 
 $client->setApplicationName("Something to do with my representatives");
 
-$client->setScopes(['https://www.googleapis.com/auth/drive', 'https://spreadsheets.google.com/feeds']);
+$client->setScopes(['https://www.googleapis.com/auth/spreadsheets']);
 
 if ($client->isAccessTokenExpired()) {
     $client->refreshTokenWithAssertion();
