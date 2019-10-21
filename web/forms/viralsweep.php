@@ -5,7 +5,7 @@ include '../includes/emails.php';
 $firstname = $data['20944_1568340301'];
 $email = $data['email'];
 
-$phone = $data["phone"];
+$phone = $data["45591_1571695766"];
 $address = $data['address'];
 $city = $data['city'];
 $location = $address . ", " . $city;
