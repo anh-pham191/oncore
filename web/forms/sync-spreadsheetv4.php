@@ -45,19 +45,19 @@ foreach ($result as $key => $r) {
         break;
     }
 }
-//// WORKING APPEND NEW ROW
-//$rangeName = 'Test fu name!A2:AG';
-//$result = $service->spreadsheets_values->get($spreadsheetId, $rangeName);
-//echo var_export($result, true), "\n";
-//$options = array('valueInputOption' => 'RAW');
-//$values = [
-//   ["", "", date("Y-m-d H:i:s"), 'Anh', '', 'anhpt@traffic.net.nz', 1231233, 'none', 'message','policy', 'optout', '', '', 'source', '', '', '', '', 'url','form', '', '', 'auckland', '1025', '', '', '', '', '', '', 'types', 'seen']
-//];
-//
-//$body   = new Google_Service_Sheets_ValueRange(['values' => $values]);
-//
-//$result = $service->spreadsheets_values->append($spreadsheetId, 'Test fu name!A1:C1', $body, $options);
-//// END APPEND NEW ROW
+// WORKING APPEND NEW ROW
+$rangeName = 'Test fu name!A2:AG';
+$result = $service->spreadsheets_values->get($spreadsheetId, $rangeName);
+echo var_export($result, true), "\n";
+$options = array('valueInputOption' => 'RAW');
+$values = [
+   ["", "", date("Y-m-d H:i:s"), 'Anh', '', 'anhpt@traffic.net.nz', 1231233, 'none', 'message','policy', 'optout', '', '', 'source', '', '', '', '', 'url','form', '', '', 'auckland', '1025', '', '', '', '', '', '', 'types', 'seen']
+];
+
+$body   = new Google_Service_Sheets_ValueRange(['values' => $values]);
+
+$result = $service->spreadsheets_values->append($spreadsheetId, 'Test fu name!A1:C1', $body, $options);
+// END APPEND NEW ROW
 
 
 // WORKING UPDATE 1 ROW WITH KNOWN CELL VALUE
