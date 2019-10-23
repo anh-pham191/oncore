@@ -4,6 +4,19 @@ include 'sync-spreadsheet.php';
 date_default_timezone_set('Pacific/Auckland');
 $rangeName = 'Oncore NZ!A2:AG';
 $options = array('valueInputOption' => 'RAW');
+isset($firstname)? : $firstname="";
+isset($email)? : $email="";
+isset($phone)? : $phone="";
+isset($enquiry)? : $enquiry="";
+isset($privacy)? : $privacy="";
+isset($wheretoopen)? : $wheretoopen="";
+isset($howsoon)? : $howsoon="";
+isset($source)? : $source="";
+isset($campaign)? : $campaign="";
+isset($medium)? : $medium="";
+isset($formpage)? : $formpage="";
+isset($identifier)? : $identifier="";
+isset($country)? : $country="";
 $v = [
     [
         ROW['STATUS'] => '',
