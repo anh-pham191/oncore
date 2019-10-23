@@ -1,6 +1,6 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . 'vendor/autoload.php';
-
+require_once 'google-api-php-client-2.2.2/vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 putenv('GOOGLE_APPLICATION_CREDENTIALS='.__DIR__.'/client_secret.json');
 if (php_sapi_name() != 'cli') {
