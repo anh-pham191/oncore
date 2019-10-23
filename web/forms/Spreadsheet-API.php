@@ -2,27 +2,8 @@
 include 'sync-spreadsheet.php';
 /** @var ListEntry */
 date_default_timezone_set('Pacific/Auckland');
-$rangeName = 'Test fu name!A2:AG';
-//$result = $service->spreadsheets_values->get($spreadsheetId, $rangeName);
-//echo var_export($result, true), "\n";
-$firstname = "TEst";
-$email = 'test@gmia.col,';
-$phone = 1232132;
-$enquiry = '';
-$subscribe = TRUE;
-$wheretoopen = 'here';
-$howsoon = 'Now';
-$source = "test";
-$medium = "test";
-$campaign = "test";
-$formpage = "test";
-$identifier = "test";
-$location = "test";
-$country = "test";
+$rangeName = 'Oncore NZ!A2:AG';
 $options = array('valueInputOption' => 'RAW');
-$values = [
-    ["", "", date("Y-m-d H:i:s"), 'Anh', '', 'anhpt@traffic.net.nz', 1231233, 'none', 'message', 'policy', 'optout', '', '', 'source', '', '', '', '', 'url', 'form', '', '', 'auckland', '1025', '', '', '', '', '', '', 'types', 'seen']
-];
 $v = [
     [
         ROW['STATUS'] => '',
@@ -59,8 +40,6 @@ $v = [
         ROW['SEEN_HEARD'] => '',
     ]
 ];
-var_dump($v);
-//die;
 $body = new Google_Service_Sheets_ValueRange(['values' => $v]);
 
 $result = $service->spreadsheets_values->append($spreadsheetId, $rangeName, $body, $options);

@@ -26,7 +26,7 @@ $accessToken = $client->fetchAccessTokenWithAssertion()["access_token"];
     new \Google\Spreadsheet\DefaultServiceRequest($accessToken)
 );
 $service = new Google_Service_Sheets($client);
-$spreadsheetId = '1GkglwKt8c0_FKcyY2bUYCk1s5RxA5aD5fL7-lu3mkwA';  // TODO: Update zones spreadsheet id.
+$spreadsheetId = '1todvmVvg3h54Iog6pxm9GYeVDO8AEzCMHC4wTAdmBe0';  // Oncore spreadsheet id.
 if($privacy == "on" || $privacy == "1" || $privacy == 1 || $privacy == "True") {
     $privacy = "TRUE";
 } else {
