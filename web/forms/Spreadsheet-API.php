@@ -16,6 +16,7 @@ isset($campaign)? : $campaign="";
 isset($medium)? : $medium="";
 isset($formpage)? : $formpage="";
 isset($identifier)? : $identifier="";
+isset($location)? : $location="";
 isset($country)? : $country="";
 $v = [
     [
@@ -43,7 +44,7 @@ $v = [
         ROW['ADDRESS'] => '',
         ROW['CITY'] => '',
         ROW['POSTCODE'] => '',
-        ROW['SUBURB'] => '',
+        ROW['SUBURB'] => $location,
         ROW['COUNTRY'] => $country,
         ROW['BUDGET'] => '',
         ROW['DAY_START'] => '',

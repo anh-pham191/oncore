@@ -30,7 +30,6 @@ if($privacy == "on" || $privacy == "1" || $privacy == 1 || $privacy == "True") {
     $privacy = "FALSE";
 }
 $sheetInfo = $service->spreadsheets->get($spreadsheetId)->getProperties();
-print($sheetInfo['title']. PHP_EOL);
 const ROW = [
     'STATUS' => 0,
     'NOTES' => 1,
