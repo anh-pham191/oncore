@@ -24,10 +24,12 @@ $accessToken = $client->fetchAccessTokenWithAssertion()["access_token"];
 );
 $service = new Google_Service_Sheets($client);
 $spreadsheetId = '1todvmVvg3h54Iog6pxm9GYeVDO8AEzCMHC4wTAdmBe0';  // Oncore spreadsheet id.
-if($privacy !== "on" || $privacy !== "1" || $privacy !== 1 || $privacy !== "True" || !$privacy) {
+if($privacy == "on" || $privacy == "1" || $privacy == 1 || $privacy == "True" || $privacy == True) {
+    $privacy = "TRUE";
+} else if ($privacy == "off" || $privacy == "0" || $privacy == 0 || $privacy == "False" || $privacy == False) {
     $privacy = "FALSE";
 } else {
-    $privacy = "TRUE";
+    $privacy = "";
 }
 $sheetInfo = $service->spreadsheets->get($spreadsheetId)->getProperties();
 const ROW = [
