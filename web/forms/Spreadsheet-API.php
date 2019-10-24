@@ -5,6 +5,7 @@ date_default_timezone_set('Pacific/Auckland');
 $rangeName = 'Oncore NZ!A2:AG';
 $options = array('valueInputOption' => 'RAW');
 isset($firstname)? : $firstname="";
+isset($lastname)? : $lastname="";
 isset($email)? : $email="";
 isset($phone)? : $phone="";
 isset($enquiry)? : $enquiry="";
@@ -24,7 +25,7 @@ $v = [
         ROW['NOTES'] => '',
         ROW['DATE'] => date("Y-m-d H:i:s"),
         ROW['FIRST_NAME'] => $firstname,
-        ROW['LAST_NAME'] => '',
+        ROW['LAST_NAME'] => $lastname,
         ROW['EMAIL'] => $email,
         ROW['PHONE'] => $phone,
         ROW['PREFERRED_TIME'] => '',
