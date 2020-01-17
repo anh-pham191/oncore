@@ -142,6 +142,8 @@ if (isset($_COOKIE['fromsource']) && $_COOKIE['fromsource'] == "google") {
     $source = "Franchise Portal";
 } else if (isset($_COOKIE['fromsource']) && $_COOKIE['fromsource'] == "Franchise Magazine") {
     $source = "Franchise Magazine";
+} else if (isset($_COOKIE['fromsource']) && $_COOKIE['fromsource'] == "trademe") {
+    $source = "Trademe";
 }
 
 

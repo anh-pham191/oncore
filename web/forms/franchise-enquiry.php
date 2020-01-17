@@ -111,6 +111,8 @@ if (isset($_COOKIE['fromsource'])){
         $source = "Other";
     } else if ($_COOKIE['fromsource']=="Re-engagement") {
         $source = "Re-engagement";
+    } else if (isset($_COOKIE['fromsource']) && $_COOKIE['fromsource'] == "trademe") {
+        $source = "Trademe";
     } else{
         $source = "Oncore Consumer Website";
     }
