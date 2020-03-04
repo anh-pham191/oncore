@@ -7,6 +7,237 @@
 {% endblock seocontent %}
 <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
 <style>
+    #map-section {
+        height: 550px;
+        margin-top: 30px !important;
+        margin-bottom: 30px !important
+    }
+
+    .map-title {
+        font-weight: bold;
+        color: #0079bb
+    }
+
+    .inputBox {
+        width: 40%;
+        height: 48px;
+        float: left;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    #form {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border: solid 1px #4fae47;
+        color: #ffffff;
+        background-color: #4fae47;
+        width: 136px;
+        height: 48px;
+        font-size: 14px;
+        font-weight: bold;
+        float: left;
+    }
+
+    #current-location {
+        border-radius: 4px;
+        border: solid 1px #4fae47;
+        color: #ffffff;
+        background-color: #4fae47;
+        width: 267px;
+        height: 48px;
+        font-size: 14px;
+        font-weight: bold;
+        float: left;
+    }
+
+    .or {
+        float: left;
+        line-height: 48px;
+        margin: auto 20px;
+    }
+
+    #find-location {
+        display: inline;
+    }
+
+    .inner.location {
+        height: auto;
+        overflow: auto;
+    }
+
+    @media only all and (max-width: 48em) {
+        #current-location, .search-location {
+            width: 100%;
+        }
+
+        #form {
+            width: 30%;
+        }
+
+        #destination {
+            width: 70%;
+        }
+
+        .inner.location {
+            margin-bottom: .67em;
+        }
+
+        #list-view .col-md-4 {
+            padding-bottom: 0px;
+        }
+    }
+
+    @media only all and (min-width: 48em) and (max-width: 64em) {
+        #current-location {
+            width: 220px;
+        }
+
+        #form {
+            width: 116px;
+        }
+
+        #destination {
+            width: 40%;
+        }
+
+        .inner.location {
+            margin-bottom: .67em;
+        }
+    }
+
+    .full-width-text-left {
+        margin-bottom: 0px !important;
+    }
+
+    .help-text {
+        margin-top: 23px !important;
+    }
+
+    .help-text p {
+        font-size: 16px;
+    }
+
+    #nearby-location {
+        margin: 10px auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: auto;
+        height: 550px;
+    }
+
+    .nearby-list {
+        margin-top: 20px;
+        width: 100%;
+        height: 93px;
+        list-style-type: none;
+        border-radius: 6px;
+        box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+        font-family: "Poppins";
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 98px;
+        margin-bottom: 9px;
+        padding-left: 20px;
+        color: #4fae47
+    }
+
+    #map-view {
+        overflow: auto;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    #list-view .col-md-4 {
+        padding-left: 0px;
+        padding-bottom: 30px;
+    }
+
+    #list-view {
+        margin-top: 50px;
+    }
+
+    #list-view .back {
+        width: 100%;
+        float: left;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    #list-view h2 {
+        margin-bottom: 30px;
+        font-family: "Poppins";
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    #list-view a {
+        font-family: "Poppins";
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #list-view a:hover + .arrow {
+        display: inline !important;
+        opacity: 0.7;
+    }
+
+    #list-view .back a {
+        font-family: "Open Sans";
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+    .nearby-list:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    #number-location {
+        font-family: "Poppins";
+        font-size: 25px;
+        font-weight: 500;
+        margin-top: 50px;
+    }
+
+    @media only all and (max-width: 767px) {
+        #nearby-location {
+            overflow: auto;
+            height: auto;
+            padding-left: 2px;
+            padding-right: 2px;
+            margin-bottom: 30px;
+        }
+
+        .nearby-list {
+            font-size: 16px;
+        }
+
+        #list-view .col-md-4 {
+            margin-top: 30px;
+        }
+    }
+
+    @media only all and (min-width: 767px) and (max-width: 1024px) {
+        .nearby-list {
+            font-size: 20px;
+        }
+    }
+
+    #list-view .fa {
+        font-size: 20px;
+        color: #4fae47;
+    }
+
+    #nearby-location .fa {
+        font-size: 35px;
+        padding-right: 15px;
+        line-height: 93px;
+        color: #4fae47;
+
+    }
+    /*end map*/
 .white-container, .green-container {
     height: auto;
     overflow: auto;
