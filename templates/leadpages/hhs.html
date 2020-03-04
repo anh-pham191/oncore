@@ -252,12 +252,14 @@
         top: 0;
     }
 
-    .white-container h2, .grey-container h2  {
+    #wrapper .white-container h2.heading, #wrapper .grey-container-container h2  {
         font-family: Montserrat;
         font-size: 30px;
         line-height: 1.33;
         text-align: center;
         color: #000000;
+        font-weight: normal;
+        max-width: 800px;
     }
     .white-container p, .grey-container p  {
         font-family: Poppins;
@@ -265,6 +267,29 @@
         line-height: 1.4;
         text-align: center;
         color: #2f3132;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .services-image-block .content-box .title {
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+        color: #4c983b;
+    }
+    .services-image-block .content-box .content p {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: normal;
+        color: #2f3132;
+        text-align: left;
     }
 </style>
 {% endblock snippet %}
@@ -295,13 +320,12 @@
     <p>By working with Oncore, you avoid having to hire mutiple providers for different works. We'll act as your single point of contact, from conducting a thorough inspection
     to ensuring every aspect of your home is Healthy Homes compliant!</p>
     <div class="services-image-block">
-        <img class="fleft" src="https://www.dev.oncoreservice.co.nz/images/Traffic-Team-large.jpg">
+        <img class="fleft" src="{{ siteUrl }}images/hhs/before-whole-house_1.svg">
         <div class="fleft">
             <div class="content-box">
                 <div class="title">WHAT PARTS OF YOUR HOME NEED TO BE COMPLIANT</div>
                 <div class="content"><p>Oncore can conduct a thorough inspection to identify which aspects of your home fail to meet the Healthy Home Standards. If you choose us to help
                 you amend these issues, we'll fully refund the inspection fee!</p></div>
-                <a href="">BOOK A FREE INSPECTION</a>
             </div>
         </div>
     </div>
