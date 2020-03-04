@@ -453,9 +453,17 @@ function findNearby(address, marker, search) {
                 }
             }
         });
-        $("#nearby-location").html("");
+        $("#list-view").html("");
         $.each(title, function (i, k) {
-            $("#nearby-location").append('<li onclick="location.href=&quot;/' + in_area[i].url + '&quot;" class="nearby-list"> <i class="fa fa-map-marker" aria-hidden="true"></i>' + k + '</li>');
+            // $("#list-view").append('<li onclick="location.href=&quot;/' + in_area[i].url + '&quot;" class="nearby-list"> <i class="fa fa-map-marker" aria-hidden="true"></i>' + k + '</li>');
+        // <div class="col-md-12 col-sm-12 ">
+        //         <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="{{ entry.url }}">{{ entry.title }}</a> <img
+        // class="arrow" style="margin-top: -4px; display: none" src="/svg/arrow.svg" alt="Get in touch">
+        //         </div>
+            $("#list-view").append('<div class="col-md-12 col-sm-12">' +
+                '<i class="fa fa-map-marker" aria-hidden="true"></i><a href='+in_area[i].url+'>'+k+'</a>' +
+                '<img src="/svg/arrow.svg" class="arrow" style="margin-top: -4px; display: none;" alt="Get in touch">' +
+                '</div>');
         });
         if (search) {
             $("#number-location").html(title.length + " location(s) near " + document.querySelector("input#destination.inputBox").value);
