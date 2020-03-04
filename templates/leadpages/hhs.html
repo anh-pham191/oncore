@@ -123,10 +123,66 @@
 <div class="white-container inner">
     <h2>OUR LOCATIONS</h2>
     <p>We have specialists located throughout New Zealand. Enter your location below to find a maintenance specialist near you.</p>
+
+    <div id="list-page">
+        {% set myEntryQuery = craft.entries().section('location').all() %}
+        {% for entry in myEntryQuery %}
+        {% for contact in entry.contactAddress %}
+        <input type="hidden"
+               value="{{ contact.address }}|{{ entry.uri }}|{{ entry.h1heading }}|{{ contact.coveredAreas }}|{{ entry.title }}| {{contact.latitude}} | {{contact.longitude}}"
+               class="address"/>
+        {% endfor %}
+        {% endfor %}
+        <div class="inner location">
+            <div id="find-location">
+                <div class="search-location">
+                    <input class="inputBox form-control" type="text" name="destination" id="destination" maxlength="35">
+                    <input type="submit" class="form" id="form" value="Find">
+                </div>
+                <span class="or">or</span>
+                <button id="current-location">Use my current location</button>
+            </div>
+
+        </div>
+        <div class="help-text inner">
+            <p class="list-toggle">Can’t find what you’re looking for? <a href="#" class="toggle-list">Try view our full
+                list of locations.</a></p>
+            <p class="support">Your browser does not support location detection.</p>
+        </div>
+        <div class="inner">
+            <div id="map-view">
+                <p id="number-location"></p>
+                <div class="col-md-6 col-sm-6" id="map-section"></div>
+                <div class="col-md-6 col-sm-6" id="nearby-location"></div>
+            </div>
+            <div id="list-view">
+                <h2>Full list of locations</h2>
+                {% for entry in myEntryQuery %}
+                <div class="col-md-4 col-sm-4 ">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="{{ entry.url }}">{{ entry.title }}</a> <img
+                        class="arrow" style="margin-top: -4px; display: none" src="/svg/arrow.svg" alt="Get in touch">
+                </div>
+                {% endfor %}
+                <div class="back">
+                    <a href="#" class="back-link">Back to map view</a>
+                </div>
+            </div>
+        </div>
+
+
+        {#{contact_address_sera}#}
+        {#<input type="hidden" value="{address}|{url_title}|{page_h1_heading_sera}|{areas}" class="address"/>#}
+        {#{/contact_address_sera}#}
+
+        {# Create an entry query with the 'section' and 'limit' parameters #}
+        {# {% set myEntryQuery = craft.entries().section('articlePage').limit(4) %} #}
+
+
+    </div>
 </div>
 {% endblock content %}
 {% block scripts %}
-<script>
+<script src="{{ siteUrl}}js/map-location.js"></script>
 
-</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuHcqN5QvGKS2Jq7Q44V_jiohv9MxJQZM&callback=initMap&libraries=geometry"></script>
 {% endblock scripts %}
