@@ -360,6 +360,37 @@
         margin: 0 20px;
 
     }
+
+    /*start new location style*/
+    #form {
+        width: 40px;
+        height: 40px;
+
+    }
+    .inputBox {
+        height: 40px;
+        max-width: 250px;
+    }
+    #current-location {
+        max-width: 200px;
+        height: 40px;
+    }
+    .or {
+        line-height: 40px;
+        margin: auto 15px;
+    }
+    .help-text,  .white-container p.help-text, .white-container .help-text a, .white-container p.list-toggle{
+        width: 100%;
+        float: left;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.29;
+        letter-spacing: normal;
+        text-align: left;
+    }
 </style>
 {% endblock snippet %}
 
@@ -495,7 +526,7 @@
                class="address"/>
         {% endfor %}
         {% endfor %}
-        <div class="inner location">
+        <div class="location col-md-6">
             <div id="find-location">
                 <div class="search-location">
                     <input class="inputBox form-control" type="text" name="destination" id="destination" maxlength="35">
@@ -504,31 +535,28 @@
                 <span class="or">or</span>
                 <button id="current-location">Use my current location</button>
             </div>
-
-        </div>
-        <div class="help-text inner">
-            <p class="list-toggle">Can’t find what you’re looking for? <a href="#" class="toggle-list">Try view our full
-                list of locations.</a></p>
-            <p class="support">Your browser does not support location detection.</p>
-        </div>
-        <div class="inner">
-            <div id="map-view">
-                <p id="number-location"></p>
-                <div class="col-md-6 col-sm-6" id="map-section"></div>
-                <!--<div class="col-md-6 col-sm-6" id="nearby-location"></div>-->
+            <div class="help-text">
+                <p class="list-toggle">Can’t find what you’re looking for? <a href="#" class="toggle-list">Try view our full
+                    list of locations.</a></p>
+                <p class="support">Your browser does not support location detection.</p>
             </div>
             <div id="list-view">
-                <h2>Full list of locations</h2>
                 {% for entry in myEntryQuery %}
-                <div class="col-md-4 col-sm-4 ">
+                <div class="col-md-12 col-sm-12 ">
                     <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="{{ entry.url }}">{{ entry.title }}</a> <img
                         class="arrow" style="margin-top: -4px; display: none" src="/svg/arrow.svg" alt="Get in touch">
                 </div>
                 {% endfor %}
-                <div class="back">
-                    <a href="#" class="back-link">Back to map view</a>
-                </div>
             </div>
+        </div>
+
+        <div class="col-md-6">
+            <div id="map-view">
+                <p id="number-location"></p>
+                <div id="map-section"></div>
+                <!--<div class="col-md-6 col-sm-6" id="nearby-location"></div>-->
+            </div>
+
         </div>
 
 

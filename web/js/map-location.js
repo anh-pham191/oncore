@@ -396,8 +396,6 @@ $('#current-location').click(function () {
 
 function clearPrevious(userMarker, userCircle) {
     $("#nearby-location").html();
-    $("#map-view").show(500);
-    $("#list-view").hide(500);
     for (var i = 0; i < userMarker.length; i++) {
         if (userMarker[i].id == "searchID") {
             //Remove the marker from Map
