@@ -38,7 +38,6 @@ function trimText(count, object) {
     })
 }
 
-<script>
 var map;
 var markerList = [];
 
