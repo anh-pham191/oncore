@@ -11,8 +11,8 @@ $(".toggle-list").click(function (e) {
     e.preventDefault();
     // $(".help-text").hide(500);
     $("#nearby-location").html();
-    $(".full-location").each(function (e) {
-        var arr = e.val().split("|");
+    $(".full-location").each(function () {
+        var arr = this.val().split("|");
         $("#list-view").append('<div class="col-md-12 col-sm-12">' +
             '<i class="fa fa-map-marker" aria-hidden="true"></i><a href='+arr[0]+'>'+arr[1]+'</a>' +
             '<img src="/svg/arrow.svg" class="arrow" style="margin-top: -4px; display: none;" alt="Get in touch">' +
