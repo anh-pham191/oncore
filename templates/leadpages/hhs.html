@@ -520,6 +520,7 @@
     <div id="list-page">
         {% set myEntryQuery = craft.entries().section('location').all() %}
         {% for entry in myEntryQuery %}
+        <input type="hidden" class="full-location" value="{{entry.url}}|{{entry.title}}">
         {% for contact in entry.contactAddress %}
         <input type="hidden"
                value="{{ contact.address }}|{{ entry.uri }}|{{ entry.h1heading }}|{{ contact.coveredAreas }}|{{ entry.title }}| {{contact.latitude}} | {{contact.longitude}}"

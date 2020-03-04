@@ -9,8 +9,17 @@ $(".back-link").click(function (e) {
 
 $(".toggle-list").click(function (e) {
     e.preventDefault();
-    $(".help-text").hide(500);
-})
+    // $(".help-text").hide(500);
+    $("#nearby-location").html();
+    $(".full-location").each(function (e) {
+        var arr = e.split("|");
+        $("#list-view").append('<div class="col-md-12 col-sm-12">' +
+            '<i class="fa fa-map-marker" aria-hidden="true"></i><a href='+arr[0]+'>'+arr[1]+'</a>' +
+            '<img src="/svg/arrow.svg" class="arrow" style="margin-top: -4px; display: none;" alt="Get in touch">' +
+            '</div>');
+    })
+
+});
 var titleLength = 47;
 var descriptionLength = 180;
 if ($(window).width() >= 768 && $(window).width() < 1024) {
