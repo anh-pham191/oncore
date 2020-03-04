@@ -1,18 +1,14 @@
 $(function () {
-    $("#list-view").hide();
     $(".help-text p.support").hide()
 });
 $(".back-link").click(function (e) {
     e.preventDefault();
     $(".help-text").show(500);
-    $("#map-view").show(500);
-    $("#list-view").hide(500);
+
 })
 
 $(".toggle-list").click(function (e) {
     e.preventDefault();
-    $("#map-view").hide(500);
-    $("#list-view").show(500);
     $(".help-text").hide(500);
 })
 var titleLength = 47;

@@ -238,7 +238,7 @@
 
     }
     /*end map*/
-.white-container, .green-container {
+.white-container, .grey-container {
     height: auto;
     overflow: auto;
 }
@@ -252,12 +252,13 @@
         top: 0;
     }
 
-    #wrapper .white-container h2.heading, #wrapper .grey-container-container h2  {
+    #wrapper .white-container h2, #wrapper .grey-container h2  {
         font-family: Montserrat;
         font-size: 30px;
         line-height: 1.33;
         text-align: center;
         color: #000000;
+        margin: 0 auto;
         font-weight: normal;
         max-width: 800px;
     }
@@ -290,6 +291,74 @@
         letter-spacing: normal;
         color: #2f3132;
         text-align: left;
+    }
+    @media only all and (min-width: 1440px){
+        #wrapper .inner {
+            width: 1440px;
+        }
+    }
+    #wrapper .white-container h3 {
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2;
+        letter-spacing: normal;
+        color: #4c983b;
+    }
+    #wrapper .white-container p.after-text {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: normal;
+        color: #2f3132;
+        text-align: left;
+        max-width: 100%;
+    }
+    #wrapper .grey-container {
+        background-color: #e6e9ef;
+        padding: 60px 0;
+    } 
+    #wrapper .grey-container img{
+        display: block;
+
+    }
+    #wrapper .grey-container .process span.title{
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.9;
+        letter-spacing: normal;
+        color: #4c983b;
+    }
+    #wrapper .grey-container .process p{
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: normal;
+        color: #333333;
+    }
+    #wrapper .grey-container.three-boxes .process p{
+        text-align: left;
+
+    }
+
+    #wrapper .grey-container.three-boxes .box {
+        box-shadow: 20px 20px 40px 0 #dbdbdf, -20px -20px 40px 0 rgba(255, 255, 255, 0.76), -1px -1px 2px 0 #ffffff;
+        background-color: #e6e9ef;
+        min-height: 358px;
+        padding: 40px 30px;
+        margin: 0 20px;
+
     }
 </style>
 {% endblock snippet %}
@@ -348,15 +417,15 @@
             </div>
         </div>
         <h3>WHO DO THESE STANDARDS IMPACT?</h3>
-        <p>The Healthy Home Standards affect landlords and their tenants. Landlords will be required by law to meet the minimum housing requirements set out in the HHS</p>
+        <p class="after-text">The Healthy Home Standards affect landlords and their tenants. Landlords will be required by law to meet the minimum housing requirements set out in the HHS</p>
         <h3>WHEN DO PROPERTY FIXES NEED TO BE IN COMPLIANCE BY?</h3>
-        <p>Most private landlords and boarding houses must ensure their properties comply with the HHS by 1st July 2021. Kainga Ora Homes and Communities and registered
+        <p class="after-text">Most private landlords and boarding houses must ensure their properties comply with the HHS by 1st July 2021. Kainga Ora Homes and Communities and registered
         Community Housing Provider houses must comply by 1st July 2023.</p>
     </div>
 </div>
 
-<div class="grey-container inner">
-    <div class="process">
+<div class="grey-container">
+    <div class="process inner">
         <h2>THE ONCORE HHS PROCESS</h2>
         <div class="col-md-4 col-sm-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">INQUIRE</span>
             <p>Get in touch with us </p>
@@ -377,18 +446,33 @@
 </div>
 
 
-<div class="grey-container inner">
-    <div class="process">
+<div class="grey-container three-boxes">
+    <div class="process inner">
         <h2>WHY CHOOSE ONCORE</h2>
-        <div class="col-md-4 col-sm-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">PROVEN PROCESS</span>
-            <p>Oncore's streamlined process ensures your property exceeds the national standards. We can provide you with a property inspection and make
-            any necessary improvements.</p>
+        <div class="col-md-4 col-sm-4 proven">
+            <div class="box">
+                <img src="/svg/proven-process.svg" alt="">
+                <span class="title">PROVEN PROCESS</span>
+                <p>Oncore's streamlined process ensures your property exceeds the national standards. We can provide you with a property inspection and make
+                any necessary improvements.</p>
+            </div>
         </div>
-        <div class="col-md-4 col-sm-4 project"><img src="/svg/project-management.svg" alt=""><span class="title">PROJECT MANAGEMENT</span>
-            <p>With Oncore, you don't need to worry about following up with contractors and keeping projects on track. Tell us what you want and we'll take
-            care of it</p></div>
-        <div class="col-md-4 col-sm-4 response"><img src="/svg/fast-response.svg" alt=""><span class="title">FAST RESPONSE TIMES</span>
-            <p>We understand the importance of fast and reliable service. Call or message us and we'll get back to you within 48 hours-no exceptions!</p></div>
+        <div class="col-md-4 col-sm-4 project">
+            <div class="box">
+                <img src="/svg/project-management.svg" alt="">
+                <span class="title">PROJECT MANAGEMENT</span>
+                <p>With Oncore, you don't need to worry about following up with contractors and keeping projects on track. Tell us what you want and we'll take
+                    care of it</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 response">
+            <div class="box">
+                <img src="/svg/fast-response.svg" alt="">
+                <span class="title">FAST RESPONSE TIMES</span>
+                <p>We understand the importance of fast and reliable service. Call or message us and we'll get back to you within 48 hours-no exceptions!</p>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -431,7 +515,7 @@
             <div id="map-view">
                 <p id="number-location"></p>
                 <div class="col-md-6 col-sm-6" id="map-section"></div>
-                <div class="col-md-6 col-sm-6" id="nearby-location"></div>
+                <!--<div class="col-md-6 col-sm-6" id="nearby-location"></div>-->
             </div>
             <div id="list-view">
                 <h2>Full list of locations</h2>
