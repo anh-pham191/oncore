@@ -10,9 +10,10 @@ $(".back-link").click(function (e) {
 $(".toggle-list").click(function (e) {
     e.preventDefault();
     // $(".help-text").hide(500);
-    $("#nearby-location").html();
+    $("#list-view").html("");
     $(".full-location").each(function () {
-        var arr = this.val().split("|");
+        console.log(this.value);
+        var arr = this.value.split("|");
         $("#list-view").append('<div class="col-md-12 col-sm-12">' +
             '<i class="fa fa-map-marker" aria-hidden="true"></i><a href='+arr[0]+'>'+arr[1]+'</a>' +
             '<img src="/svg/arrow.svg" class="arrow" style="margin-top: -4px; display: none;" alt="Get in touch">' +
@@ -61,7 +62,8 @@ function initMap() {
                 "elementType": "geometry.fill",
                 "stylers": [
                     {
-                        "weight": "2.00"
+                        "weight": "2.00",
+                        "color" : "#baf4c4"
                     }
                 ]
             },
@@ -202,7 +204,7 @@ function initMap() {
                 "elementType": "geometry.fill",
                 "stylers": [
                     {
-                        "color": "#e8e8e8"
+                        "color": "#baf4c4"
                     }
                 ]
             },
@@ -404,7 +406,7 @@ $('#current-location').click(function () {
 })
 
 function clearPrevious(userMarker, userCircle) {
-    $("#nearby-location").html();
+    $("#list-view").html("");
     for (var i = 0; i < userMarker.length; i++) {
         if (userMarker[i].id == "searchID") {
             //Remove the marker from Map

@@ -6,392 +6,8 @@
 <meta name="keywords" content="{{ entry.seoMetaKeywords }}">
 {% endblock seocontent %}
 <!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
-<style>
-    #map-section {
-        height: 550px;
-        margin-top: 30px !important;
-        margin-bottom: 30px !important
-    }
+<link rel="stylesheet" href="{{ siteUrl}}css/hhs.css" media="all">
 
-    .map-title {
-        font-weight: bold;
-        color: #0079bb
-    }
-
-    .inputBox {
-        width: 40%;
-        height: 48px;
-        float: left;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
-
-    #form {
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-        border: solid 1px #4fae47;
-        color: #ffffff;
-        background-color: #4fae47;
-        width: 136px;
-        height: 48px;
-        font-size: 14px;
-        font-weight: bold;
-        float: left;
-    }
-
-    #current-location {
-        border-radius: 4px;
-        border: solid 1px #4fae47;
-        color: #ffffff;
-        background-color: #4fae47;
-        width: 267px;
-        height: 48px;
-        font-size: 14px;
-        font-weight: bold;
-        float: left;
-    }
-
-    .or {
-        float: left;
-        line-height: 48px;
-        margin: auto 20px;
-    }
-
-    #find-location {
-        display: inline;
-    }
-
-    .inner.location {
-        height: auto;
-        overflow: auto;
-    }
-
-    @media only all and (max-width: 48em) {
-        #current-location, .search-location {
-            width: 100%;
-        }
-
-        #form {
-            width: 30%;
-        }
-
-        #destination {
-            width: 70%;
-        }
-
-        .inner.location {
-            margin-bottom: .67em;
-        }
-
-        #list-view .col-md-4 {
-            padding-bottom: 0px;
-        }
-    }
-
-    @media only all and (min-width: 48em) and (max-width: 64em) {
-        #current-location {
-            width: 220px;
-        }
-
-        #form {
-            width: 116px;
-        }
-
-        #destination {
-            width: 40%;
-        }
-
-        .inner.location {
-            margin-bottom: .67em;
-        }
-    }
-
-    .full-width-text-left {
-        margin-bottom: 0px !important;
-    }
-
-    .help-text {
-        margin-top: 23px !important;
-    }
-
-    .help-text p {
-        font-size: 16px;
-    }
-
-    #nearby-location {
-        margin: 10px auto;
-        padding-left: 30px;
-        padding-right: 30px;
-        overflow: auto;
-        height: 550px;
-    }
-
-    .nearby-list {
-        margin-top: 20px;
-        width: 100%;
-        height: 93px;
-        list-style-type: none;
-        border-radius: 6px;
-        box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.08);
-        background-color: #ffffff;
-        font-family: "Poppins";
-        font-size: 25px;
-        font-weight: 500;
-        line-height: 98px;
-        margin-bottom: 9px;
-        padding-left: 20px;
-        color: #4fae47
-    }
-
-    #map-view {
-        overflow: auto;
-        height: auto;
-        margin-bottom: 50px;
-    }
-
-    #list-view .col-md-4 {
-        padding-left: 0px;
-        padding-bottom: 30px;
-    }
-
-    #list-view {
-        margin-top: 50px;
-    }
-
-    #list-view .back {
-        width: 100%;
-        float: left;
-        margin-top: 30px;
-        margin-bottom: 50px;
-    }
-
-    #list-view h2 {
-        margin-bottom: 30px;
-        font-family: "Poppins";
-        font-size: 25px;
-        font-weight: 500;
-    }
-
-    #list-view a {
-        font-family: "Poppins";
-        font-size: 20px;
-        font-weight: 500;
-    }
-
-    #list-view a:hover + .arrow {
-        display: inline !important;
-        opacity: 0.7;
-    }
-
-    #list-view .back a {
-        font-family: "Open Sans";
-        font-size: 16px;
-        text-decoration: underline;
-    }
-
-    .nearby-list:hover {
-        cursor: pointer;
-        opacity: 0.7;
-    }
-
-    #number-location {
-        font-family: "Poppins";
-        font-size: 25px;
-        font-weight: 500;
-        margin-top: 50px;
-    }
-
-    @media only all and (max-width: 767px) {
-        #nearby-location {
-            overflow: auto;
-            height: auto;
-            padding-left: 2px;
-            padding-right: 2px;
-            margin-bottom: 30px;
-        }
-
-        .nearby-list {
-            font-size: 16px;
-        }
-
-        #list-view .col-md-4 {
-            margin-top: 30px;
-        }
-    }
-
-    @media only all and (min-width: 767px) and (max-width: 1024px) {
-        .nearby-list {
-            font-size: 20px;
-        }
-    }
-
-    #list-view .fa {
-        font-size: 20px;
-        color: #4fae47;
-    }
-
-    #nearby-location .fa {
-        font-size: 35px;
-        padding-right: 15px;
-        line-height: 93px;
-        color: #4fae47;
-
-    }
-    /*end map*/
-.white-container, .grey-container {
-    height: auto;
-    overflow: auto;
-}
-    div#wideslideshow.overlay .overlay-container div.inner.relative-inner {
-        width: 100%;
-        height: 100%;
-    }
-    div#wideslideshow.overlay .overlay-container div.inner.container-box {
-        width: 40%;
-        height: 100%;
-        top: 0;
-    }
-
-    #wrapper .white-container h2, #wrapper .grey-container h2  {
-        font-family: Montserrat;
-        font-size: 30px;
-        line-height: 1.33;
-        text-align: center;
-        color: #000000;
-        margin: 0 auto;
-        font-weight: normal;
-        max-width: 800px;
-    }
-    .white-container p, .grey-container p  {
-        font-family: Poppins;
-        font-size: 20px;
-        line-height: 1.4;
-        text-align: center;
-        color: #2f3132;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    .services-image-block .content-box .title {
-        font-family: Montserrat;
-        font-size: 30px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.6;
-        letter-spacing: normal;
-        color: #4c983b;
-    }
-    .services-image-block .content-box .content p {
-        font-family: Poppins;
-        font-size: 18px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.44;
-        letter-spacing: normal;
-        color: #2f3132;
-        text-align: left;
-    }
-    @media only all and (min-width: 1440px){
-        #wrapper .inner {
-            width: 1440px;
-        }
-    }
-    #wrapper .white-container h3 {
-        font-family: Montserrat;
-        font-size: 20px;
-        font-weight: 800;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 2;
-        letter-spacing: normal;
-        color: #4c983b;
-    }
-    #wrapper .white-container p.after-text {
-        font-family: Poppins;
-        font-size: 18px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.44;
-        letter-spacing: normal;
-        color: #2f3132;
-        text-align: left;
-        max-width: 100%;
-    }
-    #wrapper .grey-container {
-        background-color: #e6e9ef;
-        padding: 60px 0;
-    } 
-    #wrapper .grey-container img{
-        display: block;
-
-    }
-    #wrapper .grey-container .process span.title{
-        font-family: Montserrat;
-        font-size: 20px;
-        font-weight: 800;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.9;
-        letter-spacing: normal;
-        color: #4c983b;
-    }
-    #wrapper .grey-container .process p{
-        font-family: Poppins;
-        font-size: 18px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.44;
-        letter-spacing: normal;
-        color: #333333;
-    }
-    #wrapper .grey-container.three-boxes .process p{
-        text-align: left;
-
-    }
-
-    #wrapper .grey-container.three-boxes .box {
-        box-shadow: 20px 20px 40px 0 #dbdbdf, -20px -20px 40px 0 rgba(255, 255, 255, 0.76), -1px -1px 2px 0 #ffffff;
-        background-color: #e6e9ef;
-        min-height: 358px;
-        padding: 40px 30px;
-        margin: 0 20px;
-
-    }
-
-    /*start new location style*/
-    #form {
-        width: 40px;
-        height: 40px;
-
-    }
-    .inputBox {
-        height: 40px;
-        max-width: 250px;
-    }
-    #current-location {
-        max-width: 200px;
-        height: 40px;
-    }
-    .or {
-        line-height: 40px;
-        margin: auto 15px;
-    }
-    .help-text,  .white-container p.help-text, .white-container .help-text a, .white-container p.list-toggle{
-        width: 100%;
-        float: left;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 2.29;
-        letter-spacing: normal;
-        text-align: left;
-    }
-</style>
 {% endblock snippet %}
 
 {% block content %}
@@ -420,38 +36,155 @@
     <p>By working with Oncore, you avoid having to hire mutiple providers for different works. We'll act as your single point of contact, from conducting a thorough inspection
     to ensuring every aspect of your home is Healthy Homes compliant!</p>
     <div class="services-image-block">
-        <img class="fleft" src="{{ siteUrl }}images/hhs/before-whole-house_1.svg">
+        <div class="fleft image-holder"></div>
+        <!--<img class="fleft" src="{{ siteUrl }}images/hhs/before-whole-house_1.svg">-->
         <div class="fleft">
             <div class="content-box">
                 <div class="title">WHAT PARTS OF YOUR HOME NEED TO BE COMPLIANT</div>
-                <div class="content"><p>Oncore can conduct a thorough inspection to identify which aspects of your home fail to meet the Healthy Home Standards. If you choose us to help
-                you amend these issues, we'll fully refund the inspection fee!</p></div>
+                <div class="content">
+                    <p>Oncore can conduct a thorough inspection to identify which aspects of your home fail to meet the Healthy Home Standards. If you choose us to help
+                    you amend these issues, we'll fully refund the inspection fee!</p>
+                    <div class="toggle-list">
+                        <li class="main-component">Whole house</li>
+                        <div class="detail">
+                            <div class="col-md-6">
+                                <li>- Ceiling Insulation</li>
+                                <li>- Underfloor Insulation</li>
+                                <li>- Subfloors</li>
+                            </div>
+                            <div class="col-md-6">
+                                <li>- Skylights</li>
+                                <li>- Unused Fireplaces/Chimneys</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-list">
+                        <li class="main-component">Kitchen</li>
+                        <div class="detail">
+                            <div class="col-md-6">
+                                <li>- Ceiling Insulation</li>
+                                <li>- Underfloor Insulation</li>
+                                <li>- Subfloors</li>
+                            </div>
+                            <div class="col-md-6">
+                                <li>- Skylights</li>
+                                <li>- Unused Fireplaces/Chimneys</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-list">
+                        <li class="main-component">Living room</li>
+                        <div class="detail">
+                            <div class="col-md-6">
+                                <li>- Ceiling Insulation</li>
+                                <li>- Underfloor Insulation</li>
+                                <li>- Subfloors</li>
+                            </div>
+                            <div class="col-md-6">
+                                <li>- Skylights</li>
+                                <li>- Unused Fireplaces/Chimneys</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-list">
+                        <li class="main-component">Bathroom</li>
+                        <div class="detail">
+                            <div class="col-md-6">
+                                <li>- Ceiling Insulation</li>
+                                <li>- Underfloor Insulation</li>
+                                <li>- Subfloors</li>
+                            </div>
+                            <div class="col-md-6">
+                                <li>- Skylights</li>
+                                <li>- Unused Fireplaces/Chimneys</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-list">
+                        <li class="main-component">Bedrooms</li>
+                        <div class="detail">
+                            <div class="col-md-6">
+                                <li>- Ceiling Insulation</li>
+                                <li>- Underfloor Insulation</li>
+                                <li>- Subfloors</li>
+                            </div>
+                            <div class="col-md-6">
+                                <li>- Skylights</li>
+                                <li>- Unused Fireplaces/Chimneys</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-list">
+                        <li class="main-component">Insulation</li>
+                        <div class="detail">
+                            <div class="col-md-6">
+                                <li>- Ceiling Insulation</li>
+                                <li>- Underfloor Insulation</li>
+                                <li>- Subfloors</li>
+                            </div>
+                            <div class="col-md-6">
+                                <li>- Skylights</li>
+                                <li>- Unused Fireplaces/Chimneys</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle-list">
+                        <li class="main-component">Gutters & Drainage</li>
+                        <div class="detail">
+                            <div class="col-md-6">
+                                <li>- Ceiling Insulation</li>
+                                <li>- Underfloor Insulation</li>
+                                <li>- Subfloors</li>
+                            </div>
+                            <div class="col-md-6">
+                                <li>- Skylights</li>
+                                <li>- Unused Fireplaces/Chimneys</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <h2 class="heading">WHAT ARE THE HEALTHY HOME STANDARDS AND HOW WE HELP YOU MEET THEM?</h2>
     <div class="inner">
-        <div class="services-image-block">
-            <img class="fleft" src="https://www.dev.oncoreservice.co.nz/images/Traffic-Team-large.jpg">
-            <div class="fleft">
-                <div class="content-box">
-                    <div class="title">INSULATION</div>
-                    <div class="content">
-                        <p>To meet the newly introduced HHS, existing ceiling insulation must be at least 120mm thick. Alternatively, ceiling and underfloor insulation must meet
-                        the Requirements set out in the 2008 Build Code</p>
-                        <p>Oncore can help you meet these standards. We can provide you with an insulation inspection. If we find your property is currently not up to standard, we'll update your
-                        insulation to meet the requirements.</p>
+        <div class="three-blocks">
+            <div class="col-md-2">
+                <li>Heating</li>
+                <li>Insulation</li>
+                <li>Ventilation</li>
+                <li>Draught Stopping</li>
+                <li>Moisture Ingress And Drainage</li>
+            </div>
+            <div class="col-md-5">
+                <img class="fleft" src="https://www.dev.oncoreservice.co.nz/images/Traffic-Team-large.jpg">
+            </div>
+            <div class="col-md-5">
+                <div class="fleft">
+                    <div class="content-box">
+                        <div class="title">INSULATION</div>
+                        <div class="content">
+                            <p>To meet the newly introduced HHS, existing ceiling insulation must be at least 120mm thick. Alternatively, ceiling and underfloor insulation must meet
+                                the Requirements set out in the 2008 Build Code</p>
+                            <p>Oncore can help you meet these standards. We can provide you with an insulation inspection. If we find your property is currently not up to standard, we'll update your
+                                insulation to meet the requirements.</p>
 
+                        </div>
+                        <a href="">BOOK A FREE INSPECTION</a>
                     </div>
-                    <a href="">BOOK A FREE INSPECTION</a>
                 </div>
             </div>
         </div>
-        <h3>WHO DO THESE STANDARDS IMPACT?</h3>
-        <p class="after-text">The Healthy Home Standards affect landlords and their tenants. Landlords will be required by law to meet the minimum housing requirements set out in the HHS</p>
-        <h3>WHEN DO PROPERTY FIXES NEED TO BE IN COMPLIANCE BY?</h3>
-        <p class="after-text">Most private landlords and boarding houses must ensure their properties comply with the HHS by 1st July 2021. Kainga Ora Homes and Communities and registered
-        Community Housing Provider houses must comply by 1st July 2023.</p>
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+            <h3>WHO DO THESE STANDARDS IMPACT?</h3>
+            <p class="after-text">The Healthy Home Standards affect landlords and their tenants. Landlords will be required by law to meet the minimum housing requirements set out in the HHS</p>
+            <h3>WHEN DO PROPERTY FIXES NEED TO BE IN COMPLIANCE BY?</h3>
+            <p class="after-text">Most private landlords and boarding houses must ensure their properties comply with the HHS by 1st July 2021. Kainga Ora Homes and Communities and registered
+                Community Housing Provider houses must comply by 1st July 2023.</p>
+        </div>
+
     </div>
 </div>
 
@@ -460,7 +193,8 @@
         <h2>THE ONCORE HHS PROCESS</h2>
         <div class="col-md-4 col-sm-4 proven"><img src="/svg/proven-process.svg" alt=""><span class="title">INQUIRE</span>
             <p>Get in touch with us </p>
-            <a href="">START HERE NOW</a>
+            <div class="cta"><a href="">START HERE NOW</a></div>
+
         </div>
         <div class="col-md-4 col-sm-4 project"><img src="/svg/project-management.svg" alt=""><span class="title">INSPECT</span>
             <p>We'll conduct a refundable inspection</p></div>
