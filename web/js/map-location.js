@@ -1,5 +1,26 @@
 $(function () {
-    $(".help-text p.support").hide()
+    $(".help-text p.support").hide();
+
+    $(".main-component").click(function () {
+        var that =  $("div.services-image-block div.fleft.image-holder");
+        var text = $(this).text();
+        that.removeClass("whole kitchen bathroom insulation roof");
+        if(text == "Whole house"){
+            that.addClass("whole");
+        } else if (text == "Kitchen"){
+            that.addClass("kitchen");
+        } else if (text == "Living room"){
+            that.addClass("kitchen");
+        } else if (text == "Bathroom"){
+            that.addClass("bathroom");
+        } else if (text == "Bedrooms"){
+            that.addClass("kitchen");
+        } else if (text == "Insulation"){
+            that.addClass("insulation");
+        } else if (text == "Gutters & Drainage"){
+            that.addClass("roof");
+        }
+    });
 });
 $(".back-link").click(function (e) {
     e.preventDefault();
@@ -7,7 +28,7 @@ $(".back-link").click(function (e) {
 
 })
 
-$(".toggle-list").click(function (e) {
+$(".list-toggl").click(function (e) {
     e.preventDefault();
     // $(".help-text").hide(500);
     $("#list-view").html("");

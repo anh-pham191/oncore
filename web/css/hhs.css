@@ -276,6 +276,11 @@
     overflow: auto;
     list-style-type: none;
 }
+.list-toggl {
+    height: 100%;
+    overflow: auto;
+    list-style-type: none;
+}
 
 /*end new location*/
 .white-container, .grey-container {
@@ -408,9 +413,23 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     div.services-image-block div.fleft.image-holder {
         width: 49%;
         height: 800px;
-        background: url("/images/hhs/before-whole-house_1.svg") no-repeat;
+        background: url("/images/hhs/old house.svg") no-repeat;
         background-position: center;
     }
+    div.services-image-block div.fleft.image-holder.whole {
+        background: url("/images/hhs/whole-house.svg") no-repeat;
+    }
+    div.services-image-block div.fleft.image-holder.kitchen {
+        background: url("/images/hhs/kitchen.svg") no-repeat;
+    }
+    div.services-image-block div.fleft.image-holder.bathroom {
+        background: url("/images/hhs/bathroom.svg") no-repeat;
+    }
+    div.services-image-block div.fleft.image-holder.insulation {
+        background: url("/images/hhs/insulation.svg") no-repeat;
+    }div.services-image-block div.fleft.image-holder.roof {
+         background: url("/images/hhs/roof-01.svg") no-repeat;
+     }
 }
 
 
