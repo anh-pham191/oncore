@@ -13,7 +13,7 @@
 {% block content %}
 
 <div id="wideslideshow" class="overlay white">
-    <img src="{{ siteUrl }}images/homepage-banner.jpg"
+    <img src="{{ siteUrl }}images/hhs/HeroBanner.jpg"
          alt="Oncore - The key to faster, smoother jobs"/>
 
     <div class=" overlay-container white">
@@ -158,7 +158,7 @@
                 <li>Moisture Ingress And Drainage</li>
             </div>
             <div class="col-md-5">
-                <img class="fleft" src="https://www.dev.oncoreservice.co.nz/images/Traffic-Team-large.jpg">
+                <img class="fleft" src="{{ siteUrl }}images/hhs/Insulation.jpg">
             </div>
             <div class="col-md-5">
                 <div class="fleft">
@@ -241,10 +241,14 @@
     </div>
 </div>
 
-<div class="cta-block inner">
-    <h2>GET IN TOUCH</h2>
-    <p>Are you unsure wheather or not your property will meet the Healthy Home Standards? Contact us now for a fully refundable inspection!</p>
-    <a href="">BOOK NOW</a>
+<div class="cta-block">
+    <div class="inner">
+        <h2>GET IN TOUCH</h2>
+        <p>Are you unsure wheather or not your property will meet the Healthy Home Standards? Contact us now for a fully refundable inspection!</p>
+        <div class="cta">
+        <a href="">BOOK NOW</a>
+        </div>
+    </div>
 </div>
 
 <div class="white-container inner">
@@ -287,7 +291,6 @@
 
         <div class="col-md-6">
             <div id="map-view">
-                <p id="number-location"></p>
                 <div id="map-section"></div>
                 <!--<div class="col-md-6 col-sm-6" id="nearby-location"></div>-->
             </div>
@@ -302,6 +305,11 @@
         {# Create an entry query with the 'section' and 'limit' parameters #}
         {# {% set myEntryQuery = craft.entries().section('articlePage').limit(4) %} #}
 
+
+    </div>
+</div>
+<div class="sticky-green">
+    <div class="fleft">
 
     </div>
 </div>
