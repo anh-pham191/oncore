@@ -430,6 +430,12 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     }div.services-image-block div.fleft.image-holder.roof {
          background: url("/images/hhs/roof-01.svg") no-repeat;
      }
+    div.services-image-block div.fleft.image-holder.bedroom {
+        background: url("/images/hhs/bedroom.svg") no-repeat;
+    }
+    div.services-image-block div.fleft.image-holder.living {
+        background: url("/images/hhs/living.svg") no-repeat;
+    }
 }
 
 
@@ -674,4 +680,11 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     font-family: Open Sans;
     font-weight: bold;
     font-size: 1.143rem;
+}
+.timeline {
+    background: url("/images/hhs/timeline.svg") no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 700px;
 }

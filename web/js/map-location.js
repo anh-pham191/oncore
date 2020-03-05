@@ -10,11 +10,11 @@ $(function () {
         } else if (text == "Kitchen"){
             that.addClass("kitchen");
         } else if (text == "Living room"){
-            that.addClass("kitchen");
+            that.addClass("living");
         } else if (text == "Bathroom"){
             that.addClass("bathroom");
         } else if (text == "Bedrooms"){
-            that.addClass("kitchen");
+            that.addClass("bedroom");
         } else if (text == "Insulation"){
             that.addClass("insulation");
         } else if (text == "Gutters & Drainage"){
