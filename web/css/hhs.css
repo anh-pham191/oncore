@@ -626,3 +626,33 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     font-size: 1.143rem;
     margin-top: 20px;
 }
+#sticky-green {
+    height: 110px;
+    background-color: #4fae47;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    position:static;
+    bottom: 0;
+    width:100%;
+    z-index:100;
+}
+#sticky-green .inner {
+    display: flex;
+    align-items: center;
+}
+#sticky-green span {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Open Sans";
+}
+#sticky-green a {
+    background-color: #e6e9ef;
+    color: #333333;
+    width: auto;
+    border-radius: 24px;
+    padding: 11px 20px;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 1.143rem;
+}
