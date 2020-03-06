@@ -31,7 +31,7 @@ $(function () {
         $(".detail").hide(400);
         $(".pre").remove();
         $(this).parent(".toggle-list").css("margin-left", "20px");
-        $(this).prepend('<img class="pre" src="/images/hhs/arrow-right.svg" />');
+        $(this).prepend('<img class="pre" src="/images/hhs/purple-arrow.svg" />');
         $(this).css("color", "#594fcc");
         that.removeClass("whole kitchen bathroom insulation roof living bedroom");
         if(text == "Whole house"){
