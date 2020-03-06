@@ -493,6 +493,13 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     height: 100px;
     width: auto;
 }
+#wrapper .grey-container .arrow {
+    margin-top: 50px
+}
+#wrapper .grey-container .arrow img {
+    width: 100%;
+    height: auto;
+}
 #wrapper .grey-container .process span.title{
     font-family: Montserrat;
     font-size: 20px;
