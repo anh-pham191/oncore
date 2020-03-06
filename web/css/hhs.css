@@ -388,6 +388,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     letter-spacing: normal;
     color: #2f3132;
     text-align: left;
+    margin-bottom: 30px;
 }
 .services-image-block .content-box .main-component {
     font-family: Poppins;
@@ -398,6 +399,11 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     line-height: normal;
     letter-spacing: normal;
     color: #333333;
+    margin: 8px auto;
+    cursor: pointer;
+}
+.services-image-block .content-box .detail {
+    display: none;
 }
 .services-image-block .content-box .detail li {
     font-family: Poppins;
@@ -415,6 +421,8 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
         height: 800px;
         background: url("/images/hhs/old house.svg") no-repeat;
         background-position: center;
+        -webkit-background-size: cover;
+        background-size: cover;
     }
     div.services-image-block div.fleft.image-holder.whole {
         background: url("/images/hhs/whole-house.svg") no-repeat;
@@ -434,10 +442,18 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
         background: url("/images/hhs/bedroom.svg") no-repeat;
     }
     div.services-image-block div.fleft.image-holder.living {
-        background: url("/images/hhs/living.svg") no-repeat;
+        background: url("/images/hhs/livingroom.svg") no-repeat;
     }
 }
 
+.three-blocks .image-holder {
+    width: 100%;
+    height: 400px;
+    background: url("/images/hhs/Insulation.jpg") no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 
 
 @media only all and (min-width: 1440px){
@@ -684,7 +700,78 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 .timeline {
     background: url("/images/hhs/timeline.svg") no-repeat;
     background-position: center;
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    background-size: contain;
     min-height: 700px;
+}
+.timeline .col-md-3 {
+    position: relative;
+    min-height: 700px;
+}
+.timeline .first {
+    top: 12%;
+    left: 24%;
+}.timeline .second {
+     bottom:10%;
+     left: 16%;
+}.timeline .third {
+      top: 12%;
+      left: 7%;
+}.timeline .forth {
+       bottom: 22%;
+       left: -2%;
+}
+
+.timeline .date {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #4c983b;
+}
+.timeline .text-container {
+    position: absolute;
+    max-width: 95%;
+}
+.timeline p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #333333;
+    text-align: left;
+    margin-bottom: 0px;
+}
+.timeline .note {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #29245e;
+}
+.white-container .cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 80px auto;
+}
+.white-container .cta a {
+    background-color: #7fca70;
+    color: #333333;
+    width: auto;
+    border-radius: 24px;
+    padding: 11px 20px;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 1.143rem;
+    margin-top: 20px;
 }

@@ -1,10 +1,37 @@
 $(function () {
-    $(".help-text p.support").hide();
+    var timeouts = [];
 
-    $(".main-component").click(function () {
+    $(".help-text p.support").hide();
+    $(".main-component").each(function (i) {
+        // setTimeout($(this).trigger('click'), 2000);
+        var btn = $(this);
+        timeouts.push(setTimeout(btn.trigger.bind(btn, "click"), i * 3000));
+    });
+    var auto = setInterval( function () {
+        $(".main-component").each(function (i) {
+            // setTimeout($(this).trigger('click'), 2000);
+            var btn = $(this);
+            timeouts.push(setTimeout(btn.trigger.bind(btn, "click"), i * 3000));
+        });
+    }, 21000);
+
+    $(".main-component").click(function (e) {
+        if(e.originalEvent !== undefined){
+            clearInterval(auto);
+            for (var i = 0; i < timeouts.length; i++) {
+                clearTimeout(timeouts[i]);
+            }
+        }
+        $(".toggle-list").each(function (i) {
+            $(this).css("margin-left", "0px");
+            $(this).find('.main-component').css("color", "#333333");
+        });
         var that =  $("div.services-image-block div.fleft.image-holder");
         var text = $(this).text();
-        that.removeClass("whole kitchen bathroom insulation roof");
+        $(".detail").hide(400);
+        $(this).parent(".toggle-list").css("margin-left", "20px");
+        $(this).css("color", "#594fcc");
+        that.removeClass("whole kitchen bathroom insulation roof living bedroom");
         if(text == "Whole house"){
             that.addClass("whole");
         } else if (text == "Kitchen"){
@@ -20,6 +47,7 @@ $(function () {
         } else if (text == "Gutters & Drainage"){
             that.addClass("roof");
         }
+        $(this).siblings().show(400);
     });
 });
 $(".back-link").click(function (e) {
