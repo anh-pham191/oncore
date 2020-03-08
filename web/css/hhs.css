@@ -490,7 +490,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper .grey-container img{
     display: block;
     margin: 0 auto;
-    height: 140px;
+    height: 160px;
     width: auto;
 }
 #wrapper .grey-container .arrow {
@@ -511,7 +511,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     color: #4c983b;
     display: block;
     text-align: center;
-    margin: 10px auto;
+    margin: 10px auto 0 auto;
 }
 #wrapper .grey-container .process p{
     font-family: Poppins;
