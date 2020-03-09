@@ -13,15 +13,15 @@
 {% block content %}
 
 <div id="wideslideshow" class="overlay white">
-    <img src="{{ siteUrl }}images/hhs/HeroBanner.jpg"
+    <img class="notmobile" src="{{ siteUrl }}images/hhs/HeroBanner.jpg"
          alt="Oncore - The key to faster, smoother jobs"/>
-
+    <img class="justmobile" src="{{ siteUrl }}images/hhs/Hero-mobile.jpg"
+         alt="Oncore - The key to faster, smoother jobs"/>
     <div class=" overlay-container white">
         <div class="inner relative-inner">
             <div class="inner container-box">
-                <h1>ONCORE CAN HELP YOU WITH YOUR HEALTHY HOME STANDARDS COMPLIANCE</h1>
-                <div class="intro-bottom">From July 2020 onwards, most landlords are legally required to include a statement of the current level of compliance with the
-                    Healthy Home Standards in all new or varied tenancy agreements.
+                <h1>Oncore can help you with your Healthy Home Standards compliance</h1>
+                <div class="intro-bottom">From July 2020 onwards, most landlords are legally required to include a statement of the current level of compliance with the Healthy Home Standards in all new or varied tenancy agreements.
                 </div>
                 <button onclick="location.href='/contact-us/project-enquiry'" class="cta-button">BOOK A FREE INSPECTION
                 </button>
@@ -33,8 +33,9 @@
 
 <div class="white-container">
     <h2 class="heading">WE'LL TAKE CARE OF EVERYTHING</h2>
-    <p>By working with Oncore, you avoid having to hire mutiple providers for different works. We'll act as your single point of contact, from conducting a thorough inspection
-    to ensuring every aspect of your home is Healthy Homes compliant!</p>
+    <p>By working with Oncore, you avoid having to hire multiple providers for different works. We’ll act as your single point of contact, from conducting a thorough
+        inspection to ensuring every aspect of your home is Healthy Homes compliant!
+    </p>
 
     <div class="services-image-block">
         <div class="fleft image-holder"></div>
@@ -51,11 +52,8 @@
                             <div class="col-md-6">
                                 <li>- Ceiling Insulation</li>
                                 <li>- Underfloor Insulation</li>
-                                <li>- Subfloors</li>
-                            </div>
-                            <div class="col-md-6">
-                                <li>- Skylights</li>
-                                <li>- Unused Fireplaces/Chimneys</li>
+                                <li>- Enclosed Subfloor Moisture Barriers</li>
+                                <li>- Unused Fireplaces/Chimneys Close Offs</li>
                             </div>
                         </div>
                     </div>
@@ -148,29 +146,33 @@
             </div>
         </div>
     </div>
-    <h2 class="heading">WHAT ARE THE HEALTHY HOME STANDARDS AND HOW WE HELP YOU MEET THEM?</h2>
+    <h2 class="heading">WHAT ARE THE HEALTHY HOME STANDARDS AND HOW CAN WE HELP YOU MEET THEM?</h2>
     <div class="inner">
         <div class="three-blocks">
-            <div class="col-md-2">
+            <div class="col-md-2  col-sm-12">
                 <li>Heating</li>
                 <li>Insulation</li>
                 <li>Ventilation</li>
                 <li>Draught Stopping</li>
                 <li>Moisture Ingress And Drainage</li>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 col-sm-12">
                 <div class="fleft image-holder"></div>
                 <!--<img class="fleft" src="{{ siteUrl }}images/hhs/Insulation.jpg">-->
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 col-sm-12">
                 <div class="fleft">
                     <div class="content-box">
                         <div class="title">INSULATION</div>
                         <div class="content">
-                            <p>To meet the newly introduced HHS, existing ceiling insulation must be at least 120mm thick. Alternatively, ceiling and underfloor insulation must meet
-                                the Requirements set out in the 2008 Build Code</p>
-                            <p>Oncore can help you meet these standards. We can provide you with an insulation inspection. If we find your property is currently not up to standard, we'll update your
-                                insulation to meet the requirements.</p>
+                            <p>
+                            To meet the Healthy Home Standards, existing ceiling insulation must be at least 120mm thick, be in reasonable condition (no dampness, mould, or gaps),
+                                and meet the 2008 Building Code minimum r-value for your zone. Also, underfloor insulation must meet a minimum r-value of 1.3.
+                            </p>
+                            <p>
+                            Oncore can help you meet these standards quickly. We can provide you with an insulation inspection. If we find your property is currently not up to standard,
+                                we’ll update your insulation to meet the requirements.
+                            </p>
 
                         </div>
                         <a href="">BOOK A FREE INSPECTION</a>
@@ -181,10 +183,11 @@
         <div class="col-md-2"></div>
         <div class="col-md-10">
             <h3>WHO DO THESE STANDARDS IMPACT?</h3>
-            <p class="after-text">The Healthy Home Standards affect landlords and their tenants. Landlords will be required by law to meet the minimum housing requirements set out in the HHS</p>
-            <h3>WHEN DO PROPERTY FIXES NEED TO BE IN COMPLIANCE BY?</h3>
-            <p class="after-text">Most private landlords and boarding houses must ensure their properties comply with the HHS by 1st July 2021. Kainga Ora Homes and Communities and registered
-                Community Housing Provider houses must comply by 1st July 2023.</p>
+            <p class="after-text">The Healthy Home Standards affect landlords and their tenants. Landlords are required by law to meet the minimum housing requirements set out in the Healthy Home Standards. If a landlord is non-compliant,
+                a tenant can apply to the Tenancy Tribunal for a monetary order and/or a work order. The Tribunal may award a financial penalty of up to $4,000 against the landlord, which is usually paid to the tenant.</p>
+            <h3>WHEN DO PROPERTY FIXES NEED TO BE COMPLETED?</h3>
+            <p class="after-text">From 1st July 2021, landlords must ensure that all rental homes comply with the Standards within 90 days of any new or renewed tenancy.
+                By 1st July 2024, all rental homes must comply with the Standards, regardless of when the tenancy began. </p>
         </div>
 
     </div>
@@ -193,25 +196,35 @@
 <div class="grey-container">
     <div class="process inner">
         <h2>THE ONCORE HHS PROCESS</h2>
-        <div class="col-md-3 col-sm-3 proven">
+        <div class="col-md-2 col-sm-2 proven">
             <img src="/images/hhs/step1.svg" alt="">
-            <span class="title">INQUIRE</span>
+            <span class="title">ENQUIRE</span>
             <p>Get in touch with us </p>
             <div class="cta"><a href="">START HERE NOW</a></div>
         </div>
         <div class="col-md-1 col-sm-1 arrow">
-            <img src="/images/hhs/arrow-right.svg" alt="">
+            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="">
+            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="">
         </div>
 
-        <div class="col-md-3 col-sm-3 project">
+        <div class="col-md-2 col-sm-2 project">
             <img src="/images/hhs/step2.svg" alt="">
             <span class="title">INSPECT</span>
             <p>We'll conduct a refundable inspection</p></div>
         <div class="col-md-1 col-sm-1 arrow">
-            <img src="/images/hhs/arrow-right.svg" alt="">
+            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="">
+            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="">
         </div>
-        <div class="col-md-3 col-sm-3 response"><img src="/images/hhs/step3.svg" alt=""><span class="title">IMPROVE</span>
-            <p>We'll make your home HHS Compliant </p></div>
+        <div class="col-md-2 col-sm-2 response"><img src="/images/hhs/step3.svg" alt=""><span class="title">Report & Quote</span>
+            <p>We'll make your home HHS Compliant </p>
+        </div>
+        <div class="col-md-1 col-sm-1 arrow">
+            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="">
+            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="">
+        </div>
+        <div class="col-md-2 col-sm-2 response"><img src="/images/hhs/step4.svg" alt=""><span class="title">IMPROVE</span>
+            <p>We'll make your home HHS Compliant </p>
+        </div>
     </div>
 </div>
 
@@ -219,29 +232,29 @@
     <h2>COMPLIANCE TIMEFRAMES</h2>
     <p>Most private rental properties must comply with the Healthy Home Standards within 90 days of a tenancy. Follow the chart below to see the date that applies to your property.</p>
     <div class="timeline">
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-12">
             <div class="text-container first">
                 <span class="date">1st July 2020</span>
-                <p>New, varied, and renewed tenancy agreements must include specific information regarding the property's current level of HHS compliance.</p>
-                <span class="note">Note that this is not required if the tenancy is a fixed term that ends before the HHS compliance date.</span>
+                <p>New, varied, and renewed tenancy agreements must include specific information regarding the property's current level of Healthy Homes compliance.</p>
+                <span class="note">Note that this is not required if the tenancy is a fixed term agreement that ends prior to 1st July 2021.</span>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-12">
             <div class="text-container second">
                 <span class="date">1st July 2021</span>
-                <p>Private rental properties must comply with the HHS within 90 days of a tenancy. The same applies to boarding houses, except Housing New Zealand and registered Community Housing Providers.</p>
+                <p>Landlords must ensure that all rental homes comply with the Standards within 90 days of any new or renewed tenancy.</p>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-12">
             <div class="text-container third">
                 <span class="date">1st July 2023</span>
-                <p>All Kainga Ora Homes and houses rented out by Housing New Zealand and Community Housing Providers must meet the HHS</p>
+                <p>All Kainga Ora Homes and houses rented out by Housing New Zealand and Community Housing Providers must meet the Standards.</p>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-12">
             <div class="text-container forth">
                 <span class="date">1st July 2024</span>
-                <p>Every single rental home and property must comply with all Healthy Home Standards! For more information on these deadlines and required standards, check the official website.</p>
+                <p>All rental homes must comply with the Standards regardless of when the tenancy began.</p>
             </div>
         </div>
 
@@ -258,24 +271,25 @@
         <div class="col-md-4 col-sm-4 proven">
             <div class="box">
                 <img src="/images/hhs/proven-process.svg" alt="">
-                <span class="title">PROVEN PROCESS</span>
-                <p>Oncore's streamlined process ensures your property exceeds the national standards. We can provide you with a property inspection and make
-                any necessary improvements.</p>
+                <span class="title">SIMPLE</span>
+                <p>Oncore’s streamlined process ensures your property exceeds the national standards. We can provide you with a property inspection and report,
+                    get you a free quote, and then make any necessary improvements.
+                </p>
             </div>
         </div>
         <div class="col-md-4 col-sm-4 project">
             <div class="box">
                 <img src="/images/hhs/project-management.svg" alt="">
-                <span class="title">PROJECT MANAGEMENT</span>
-                <p>With Oncore, you don't need to worry about following up with contractors and keeping projects on track. Tell us what you want and we'll take
-                    care of it</p>
+                <span class="title">EASY</span>
+                <p>With Oncore, you don’t need to worry about following up with contractors and keeping projects on track. Tell us what you want and we’ll take care of it.
+                </p>
             </div>
         </div>
         <div class="col-md-4 col-sm-4 response">
             <div class="box">
                 <img src="/images/hhs/fast-time.svg" alt="">
-                <span class="title">FAST RESPONSE TIMES</span>
-                <p>We understand the importance of fast and reliable service. Call or message us and we'll get back to you within 48 hours-no exceptions!</p>
+                <span class="title">FAST</span>
+                <p>We understand the importance of fast and reliable service. Call or message us and we’ll get back to you within 48 hours—no exceptions! </p>
             </div>
         </div>
 
@@ -285,7 +299,8 @@
 <div class="cta-block">
     <div class="inner">
         <h2>GET IN TOUCH</h2>
-        <p>Are you unsure wheather or not your property will meet the Healthy Home Standards? Contact us now for a fully refundable inspection!</p>
+        <p>Are you unsure whether or not your property will meet the Healthy Home Standards? Contact us now for a fully refundable inspection!
+        </p>
         <div class="cta">
         <a href="">BOOK NOW</a>
         </div>
@@ -306,7 +321,7 @@
                class="address"/>
         {% endfor %}
         {% endfor %}
-        <div class="location col-md-6">
+        <div class="location col-md-6 col-sm-12">
             <div id="find-location">
                 <div class="search-location">
                     <input class="inputBox form-control" type="text" name="destination" id="destination" maxlength="35">
@@ -330,7 +345,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
             <div id="map-view">
                 <div id="map-section"></div>
                 <!--<div class="col-md-6 col-sm-6" id="nearby-location"></div>-->
