@@ -802,6 +802,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     position: static;
 }
 
+
 @media only all and (max-width: 767px) {
     div#wideslideshow.overlay .overlay-container {
         position: absolute;
