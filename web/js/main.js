@@ -5283,7 +5283,7 @@ function submitEnquirePart1(form) {
 //
 //
 // }
-function formValidation(id,field){
+function formValidation(id,field){ // id = prefix, field = id //
     if(field == "mobile-s1"){
         var mobile = "mobile-s1";
         if ($("#mobile-s1").val() === ""){
@@ -5304,7 +5304,7 @@ function formValidation(id,field){
             $("#"+mobile).prev().removeClass("error").removeClass('label-red');
             $("#"+mobile).siblings('label').removeClass('label-red')
         }
-    }
+    } else if (field == "")
     if(id === "s1" || id === "s2" || id === "sidey" || id === "ce" || id === "pop" || id === "rh" || id === "comp"){
         var firstnameid = "firstName-"+id;
         var lastnameid = "lastName-"+id;

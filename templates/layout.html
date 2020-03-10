@@ -435,7 +435,10 @@
                         if(typeof frm.elements['formname'] != "undefined" && frm.elements['formname'].value != ""){
                             if(frm.elements['formname'].value == "Franchise Enquiry"){
                                 submitFranchiseEnquiry(frm);
-                            }else{
+                            } else if (frm.elements['formname'].value == "HHS Enquiry"){
+                                submitHHSEnquiry(frm);
+                            }
+                            else{
                                 submitEnquirePart1(frm);
                             }
                         }else{

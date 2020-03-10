@@ -58,11 +58,6 @@
         min-width: 211px;
         margin: 0 10px;
         align-items: center;
-        /*padding: 24px 0px;*/
-    }
-
-    .radio-toolbar label:hover {
-        background-color: #dfd;
     }
 
     .radio-toolbar input[type="radio"]:checked + label {
@@ -134,9 +129,40 @@
         width: 73%;
         border-radius: 24px;
         padding: 11px 20px;
-        font-family: Open Sans;
+        font-family: Montserrat;
+        font-size: 16px;
         font-weight: bold;
-        font-size: 1.143rem;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: normal;
+        text-align: center;
+    }
+    
+    .radio-toolbar label {
+        cursor: pointer;
+    }
+    .input-label-wrapper label {
+        font-family: Montserrat;
+        font-size: 16px;
+    }
+    @media only all and (max-width: 768px) {
+        .radio-toolbar label {
+            margin: 10px auto;
+        }
+        .labelclass, .grey-container .row p {
+            width: 100%;
+        }
+
+        .radio-toolbar label.long {
+            width: 211px;
+        }
+    }
+    @media only all and (max-width: 767px) {
+        .radio-toolbar.second {
+            display: block;
+            margin-top: 0;
+        }
     }
 </style>
 {% endblock snippet %}
@@ -151,13 +177,13 @@
         <p>Give Oncore a call, or make an online enquiry, to arrange a free consultation. We’ll conduct a thorough HHS inspection and make any necessary repairs or upgrades as needed, with minimal disruption to your day-to-day life.
         </p>
         <div class="enquiry-form">
-            <form action="/forms/franchise-enquiry.php" method="post" id="franchise-enquiry">
+            <form action="/forms/hhs-enquiry.php" method="post" id="hhs-enquiry">
                 <!--<input type="hidden" name="g-recaptcha-response" id="captcha"/>-->
                 <div class="row">
                     <div class="col-md-12">
                         <label class="labelclass">How Can We Help You?</label>
                         <div class="radio-toolbar">
-                            <input type="radio" id="inspection" name="how" value="inspection" checked>
+                            <input type="radio" id="inspection" name="how" value="inspection">
                             <label for="inspection">Inspection</label>
 
                             <input type="radio" id="repair" name="how" value="repair">
@@ -173,7 +199,7 @@
                     <label class="labelclass">		Which aspect of your property needs to meet compliance?</label>
                     <div class="col-md-12">
                         <div class="radio-toolbar">
-                            <input type="radio" id="heating" name="which" value="heating" checked>
+                            <input type="radio" id="heating" name="which" value="heating">
                             <label for="heating">Heating</label>
 
                             <input type="radio" id="insulation" name="which" value="insulation">
@@ -284,7 +310,7 @@
                     </div>
                 </div>
                 <div class="recaptcha-holder"></div>
-                <input type="hidden" value="Franchise Enquiry" name="formname">
+                <input type="hidden" value="HHS Enquiry" name="formname">
 
                 <div class="row tick">
                     <div class="col-md-6 col-xs-12 input-label-wrapper">
@@ -320,5 +346,98 @@
 
 {% endblock content %}
 {% block scripts %}
+<script>
 
+    function submitHHSEnquiry(form) {
+        if (!$("input[name='how']:checked").val()) {
+            alert('Nothing is checked!');
+        }
+        else {
+            alert('One of the radio buttons is checked!');
+        }
+        $(form).append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
+
+        var valifirstname = submitValidation('formf-firstname', 'required', 'firstname');
+        var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
+        var valiemail = submitValidation('formf-email', 'email');
+        var valitel = submitValidation('formf-tel', 'required');
+        var valiprivacy = submitValidation('formf-privacy', 'privacy');
+        if (valifirstname === "invalid" || valilastname === "invalid" || valiemail === "invalid" || valitel === "invalid" || valiprivacy === "invalid") {
+            $('.pageform #prog1').fadeOut(200);
+            if ($layoutStyle == "mobile") {
+                $('html, body').animate({scrollTop: $("#hhs-enquiry").offset().top}, 150, 'swing');
+            }
+            return false;
+        }
+
+        $.ajax({
+            url: $(form).attr("action"),
+            type: "POST",
+            data: $(form).serialize(),
+            success: function (response) {
+
+                if (response.match(/ContainsLink/i)) {
+                    //Display error message above form
+                    $('.pageform #prog1').fadeOut(200);
+                    $('.pageform .instructions').html('You cannot enter a link for these fields.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else if (response.match(/NoPrivacy/i)) {
+                    //Display try again message above form
+                    $('.pageform #prog1').fadeOut(200);
+                    $('.pageform .instructions').html('You must read and accept the Privacy Policy in order to continue.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else if (response.match(/Invalid/i)) {
+                    //Display try again message above form
+                    $('.pageform #prog1').fadeOut(200);
+                    $('.pageform .instructions').html('There was an error, please try again.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else if (response.match(/Unsuccessful/i)) {
+                    //Display failure message above form
+                    $('.pageform #prog1').fadeOut(200);
+                    $('.pageform .instructions').html('Your form could not be submitted. Please try again later or call us on 0800 33 60 33.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else if (response.match(/EnquirySent/i)) {
+                    //Display success message in place of form for spammer but dont track submission
+                    $('.pageform #prog1').fadeOut(200);
+                    $('.pageform.formholder').html('<h2>Thank you for your enquiry, we will be in touch soon.</h2>');
+                }
+                else if (response.match(/NoCaptcha/i)) {
+                    //Display try again message above form
+                    $('.pageform #prog1').fadeOut(200);
+                    $('.pageform .instructions').html('Please confirm you are not a robot.').css({
+                        'color': 'red',
+                        'display': 'block'
+                    });
+                }
+                else {
+                    ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Oncore Contact - General Enquiry');
+                    //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
+                    //fbq('track', 'Lead');
+                    window.location.href = "/thank-you";
+                }
+            },
+            error: function () {
+                //Display failure message above form
+                $('.pageform #prog1').fadeOut(200);
+                $('.pageform .instructions').html('Your form could not be submitted. Please try again later.').css({
+                    'color': 'red',
+                    'display': 'block'
+                });
+                //if ($layoutStyle != null) { if ($layoutStyle == "mobile") {var formPos = $(window).scrollTop() - 180;$("html, body").animate({ scrollTop: formPos }, "slow");}}
+            }
+        });
+    }
+</script>
 {% endblock scripts %}
