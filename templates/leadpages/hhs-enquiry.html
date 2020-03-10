@@ -183,13 +183,13 @@
                     <div class="col-md-12">
                         <label class="labelclass">How Can We Help You?</label>
                         <div class="radio-toolbar">
-                            <input type="radio" id="inspection" name="how" value="inspection">
+                            <input type="radio" id="inspection" name="how" value="Inspection">
                             <label for="inspection">Inspection</label>
 
-                            <input type="radio" id="repair" name="how" value="repair">
+                            <input type="radio" id="repair" name="how" value="Repair/Maintenance">
                             <label for="repair">Repair/Maintenance</label>
 
-                            <input type="radio" id="both" name="how" value="both">
+                            <input type="radio" id="both" name="how" value="Both">
                             <label for="both">Both</label>
                         </div>
                     </div>
@@ -199,23 +199,23 @@
                     <label class="labelclass">		Which aspect of your property needs to meet compliance?</label>
                     <div class="col-md-12">
                         <div class="radio-toolbar">
-                            <input type="radio" id="heating" name="which" value="heating">
+                            <input type="radio" id="heating" name="which" value="Heating">
                             <label for="heating">Heating</label>
 
-                            <input type="radio" id="insulation" name="which" value="insulation">
+                            <input type="radio" id="insulation" name="which" value="Insulation">
                             <label for="insulation">Insulation</label>
 
-                            <input type="radio" id="ventilation" name="which" value="ventilation">
+                            <input type="radio" id="ventilation" name="which" value="Ventilation">
                             <label for="ventilation">Ventilation</label>
                         </div>
                         <div class="radio-toolbar second">
-                            <input type="radio" id="moisture" name="which" value="moisture" checked>
+                            <input type="radio" id="moisture" name="which" value="Moisture ingress and drainage" checked>
                             <label for="moisture" class="long moist">Moisture ingress and drainage</label>
 
-                            <input type="radio" id="draught" name="which" value="draught">
+                            <input type="radio" id="draught" name="which" value="Draught Stopping">
                             <label for="draught">Draught Stopping</label>
 
-                            <input type="radio" id="multiple" name="which" value="multiple">
+                            <input type="radio" id="multiple" name="which" value="Multiple Aspects">
                             <label for="multiple" class="long">Multiple Aspects</label>
                         </div>
                     </div>
@@ -425,7 +425,7 @@
                     ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Oncore Contact - General Enquiry');
                     //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
                     //fbq('track', 'Lead');
-                    window.location.href = "/thank-you";
+                    // window.location.href = "/thank-you";
                 }
             },
             error: function () {
