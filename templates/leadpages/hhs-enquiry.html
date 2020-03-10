@@ -26,7 +26,7 @@
         margin: 10px;
         text-align: center;
     }
-    .radio-toolbar.second {
+    .radio-toolbar {
         position: relative;
         display: flex;
         align-items: center;
@@ -55,7 +55,7 @@
         letter-spacing: normal;
         justify-content: center;
         color: #29245e;
-        min-width: 211px;
+        width: 211px;
         margin: 0 10px;
         align-items: center;
     }
@@ -159,7 +159,7 @@
         }
     }
     @media only all and (max-width: 767px) {
-        .radio-toolbar.second {
+        .radio-toolbar {
             display: block;
             margin-top: 0;
         }
@@ -194,6 +194,31 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <label class="labelclass">Which aspect of your property needs to meet compliance?</label>
+                    <div class="col-md-12">
+                        <div class="radio-toolbar">
+                            <input type="radio" id="heating" name="which" value="Heating">
+                            <label for="heating">Heating</label>
+
+                            <input type="radio" id="insulation" name="which" value="Insulation">
+                            <label for="insulation">Insulation</label>
+
+                            <input type="radio" id="ventilation" name="which" value="Ventilation">
+                            <label for="ventilation">Ventilation</label>
+                        </div>
+                        <div class="radio-toolbar second">
+                            <input type="radio" id="moisture" name="which" value="Moisture ingress and drainage">
+                            <label for="moisture" class="long moist">Moisture ingress and drainage</label>
+
+                            <input type="radio" id="draught" name="which" value="Draught Stopping">
+                            <label for="draught">Draught Stopping</label>
+
+                            <input type="radio" id="multiple" name="which" value="Multiple Aspects">
+                            <label for="multiple" class="long">Multiple Aspects</label>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <label class="labelclass">Where is your rental property located?</label>
                     <p>Providing us with your property’s location enables us to quickly connect you with an available inspector or repair and maintenance specialist in your area. </p>
