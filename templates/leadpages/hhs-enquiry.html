@@ -349,14 +349,14 @@
 <script>
 
     function submitHHSEnquiry(form) {
+
+        $(form).append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
         if (!$("input[name='how']:checked").val()) {
             alert('Nothing is checked!');
         }
         else {
             alert('One of the radio buttons is checked!');
         }
-        $(form).append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
-
         var valifirstname = submitValidation('formf-firstname', 'required', 'firstname');
         var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
         var valiemail = submitValidation('formf-email', 'email');
