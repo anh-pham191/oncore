@@ -15,7 +15,6 @@ $lastname = cleanData($_POST['lastname']);
 $email = cleanData($_POST['email']);
 $phone = cleanData($_POST['tel']);
 $how = cleanData($_POST['how']);
-$which = cleanData($_POST['which']);
 if (isset($_POST['location'])) {
     $location = cleanData($_POST['location']);
 } else {
@@ -293,10 +292,6 @@ if ($probSpam != "yes") {
 		{
 		  \"fieldID\": \"T2vQuHnaJ0KUzQjXxZkd2A\",
 		  \"value\": \"$how\"
-		},
-		{
-		  \"fieldID\": \"C4bSbGXfpkG_EgjXxZkhNQ\",
-		  \"value\": \"$which\"
 		}
 	  ],
 	  \"source\": \"Oncore Contact - HHS Landing Page\"  
