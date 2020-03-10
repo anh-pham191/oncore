@@ -795,6 +795,13 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     margin-top: 20px;
 }
 
+.invalid-tooltip {
+    background-color: unset;
+    color: #b00321;
+    font-weight: 600;
+    position: static;
+}
+
 @media only all and (max-width: 767px) {
     div#wideslideshow.overlay .overlay-container {
         position: absolute;

@@ -14,6 +14,8 @@ $firstname = cleanData($_POST['firstname']);
 $lastname = cleanData($_POST['lastname']);
 $email = cleanData($_POST['email']);
 $phone = cleanData($_POST['tel']);
+$how = cleanData($_POST['how']);
+$which = cleanData($_POST['which']);
 if (isset($_POST['location'])) {
     $location = cleanData($_POST['location']);
 } else {
@@ -224,76 +226,80 @@ if ($probSpam != "yes") {
             $subscribe = "True";
         }
 
-        $url = "https://api.ubiquity.co.nz/forms/jJLy6C19Z0aQsAjWTu9vMg/submit?apiToken=vaxIncJDcdcyEaK6KaIUV8uAtJOKR5uCB2HJhWtd4LGbeh7KORxzeqQNjPIaOREIrsK7he-3zjY8zoG4OJwIQk7ORyCuHgQA4BwqSK2V-2IH3mwvH0rMzrqQscjMLW5rOXUQXgksMjs";
+        $url = "https://api.ubiquity.co.nz/forms/6Mue3RXyd0mE8AjXxZij2A/submit?apiToken=vaxIncJDcdcyEaK6KaIUV8uAtJOKR5uCB2HJhWtd4LGbeh7KORxzeqQNjPIaOREIrsK7he-3zjY8zoG4OJwIQk7ORyCuHgQA4BwqSK2V-2IH3mwvH0rMzrqQscjMLW5rOXUQXgksMjs";
 
         $jsonData = "{
 	  \"data\": [
 		{
-		  \"fieldID\": \"qia5LPwUi0m26AjWTu-llg\",
+		  \"fieldID\": \"WT-0cDOj00mNZQjXxZikIA\",
 		  \"value\": \"$firstname\"
 		},
 		{
-		  \"fieldID\": \"PN7jdhtLoEegewjWTu-nJA\",
+		  \"fieldID\": \"V4spa65R7EGKhAjXxZikIA\",
 		  \"value\": \"$lastname\"
 		},
 		{
-		  \"fieldID\": \"xNVraxYEnUyiWQjWTu-olQ\",
+		  \"fieldID\": \"0_0xKNqpF0atWgjXxZikIA\",
 		  \"value\": \"$email\"
 		},
 		{
-		  \"fieldID\": \"qpXhTbPKXkqJnAjWwnniVg\",
+		  \"fieldID\": \"V8vkipiz1UeGoAjXxZikIA\",
 		  \"value\": \"$phone\"
 		},
 		{
-		  \"fieldID\": \"x9oxG3B8XkWeTwjWTvBXsg\",
+		  \"fieldID\": \"JufKx-3H80CP-wjXxZikIA\",
 		  \"value\": \"$country\"
 		},
 		{
-		  \"fieldID\": \"0UAa1jAy2Uy62AjWs3PiKA\",
+		  \"fieldID\": \"V-5qIqA7MESoPQjXxZikIA\",
 		  \"value\": \"$enquiry\"
 		},
 		{
-		  \"fieldID\": \"Grq2IcN1mEGVzAjWTvBr0Q\",
+		  \"fieldID\": \"EKsNvqqgUky-mwjXxZikIA\",
 		  \"value\": \"$source\"
 		},
 		{
-		  \"fieldID\": \"2E_-RIEMFk2KiwjWTv5Lrw\",
+		  \"fieldID\": \"lA7sehgYrE-LWQjXxZikIA\",
 		  \"value\": \"$privacy\"
 		},
 		{
-		  \"fieldID\": \"BHG8rCE1zEupWgjWT4YxEQ\",
-		  \"value\": \"$subscribe\"
-		},
-		{
-		  \"fieldID\": \"YP7yRZqzekWW7wjXPai3kQ\",
+		  \"fieldID\": \"ZmS1W17qSE-VlAjXxZikIA\",
 		  \"value\": \"$subscribe\"
 		},
         {
-		  \"fieldID\": \"fRAJ4A8sY0CqQwjWTv4m_Q\",
+		  \"fieldID\": \"fSxKNjK8ZEmXiQjXxZikIA\",
 		  \"value\": \"$medium\"
 		},
 		{
-		  \"fieldID\": \"znq2Qp_sQ0SlTwjWTwUmrg\",
+		  \"fieldID\": \"WIDAYzj4TkqXuAjXxZikIA\",
 		  \"value\": \"$campaign\"
         },
         {
-		  \"fieldID\": \"BuUlbKKqn0ioaQjWUFgRXA\",
+		  \"fieldID\": \"FFHVdmo8gUq2pwjXxZikIA\",
 		  \"value\": \"$keyword\"
 		},
 		{
-		  \"fieldID\": \"2UkdM00uzES_tgjWUFgihQ\",
+		  \"fieldID\": \"9JXvCImBBUKVigjXxZikIA\",
 		  \"value\": \"$creative\"
         },
         {
-		  \"fieldID\": \"JN7dg42xtUuI8gjXCpVHvA\",
+		  \"fieldID\": \"QMOWd1LoPk-HuwjXxZikIA\",
 		  \"value\": \"$location\"
         },
 		{
-		  \"fieldID\": \"kVxA-ShxDUqmBgjWTwUSGA\",
+		  \"fieldID\": \"On60nEvnEEqevQjXxZikIA\",
 		  \"value\": \"$frompage\"
+		},
+		{
+		  \"fieldID\": \"T2vQuHnaJ0KUzQjXxZkd2A\",
+		  \"value\": \"$how\"
+		},
+		{
+		  \"fieldID\": \"C4bSbGXfpkG_EgjXxZkhNQ\",
+		  \"value\": \"$which\"
 		}
 	  ],
-	  \"source\": \"Oncore Contact - General Enquiry - used for Consumer Enquiry\"  
+	  \"source\": \"Oncore Contact - HHS Landing Page\"  
 	}";
 
         if ($goodtogo != "no" && !preg_match('/\d+/',$firstname) && !preg_match('/\d+/',$lastname)) {
@@ -344,7 +350,7 @@ if ($probSpam != "yes") {
 
                 //add lead record to log
                 include '../includes/log.php';
-                include "Spreadsheet-API.php";
+//                include "Spreadsheet-API.php";
 
             } else {
                 // Info was not sent to Ubiquity - send the info in an email to be manually entered
