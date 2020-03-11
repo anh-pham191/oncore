@@ -230,9 +230,7 @@
     #sticky-green {
         display: none !important;
     }
-    #wrapper .grey-container .contact .col-md-4.col-xs-4.col-xs-12 {
-        margin-bottom: 30px;
-    }
+
 }
 
 @media only all and (min-width: 767px) and (max-width: 1024px) {
