@@ -210,6 +210,7 @@
     margin-top: 50px;
 }
 
+
 @media only all and (max-width: 767px) {
     #nearby-location {
         overflow: auto;
@@ -453,6 +454,21 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     }
     div.services-image-block div.fleft.image-holder.living {
         background: url("/images/hhs/livingroom.svg") no-repeat;
+    }
+
+}
+@media only screen and (min-width: 769px) {
+    .grey-container .col-md-2.col-sm-2 {
+        width: 21.25%
+    }
+    .grey-container .col-md-1.col-sm-1 {
+        width: 5%;
+    }
+    #wrapper .grey-container .arrow img {
+        width: 100% !important;
+    }
+    #wrapper .grey-container .col-md-2 img {
+        height: 140px !important;
     }
 }
 
