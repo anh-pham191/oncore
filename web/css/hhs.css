@@ -1056,6 +1056,32 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     #sticky-green span {
         font-size: 16px;
     }
+    .timeline p {
+        font-size: 14px
+    }
+    .timeline .note {
+        font-size: 12px
+    }
+    .timeline .date {
+        font-size: 16px;
+    }
+    .timeline .forth {
+        bottom: 32%;
+        left: 4%;
+    }
+    .timeline .third {
+        top: 25%;
+        left: 12%;
+    }
+    .timeline .first {
+        top: 16%;
+        left: 23%;
+    }
+    .timeline .second {
+        bottom: 20%;
+        left: 14%;
+    }
+
 }
 @media only all and (min-width: 768px) and (max-width: 1023px) {
     #sticky-green a {
