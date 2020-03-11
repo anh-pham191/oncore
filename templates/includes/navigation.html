@@ -8,7 +8,8 @@
         <!--<div class="col-xs-2"></div>-->
         <!--</div>-->
         <div id="mobile-menu-link" class="col-xs-2 col-sm-2 "></div>
-        <div class="fleft logo"><a href="/"><img src="{{ siteUrl}}images/Oncore-logo.png"
+        <div class="fleft logo">
+            <a href="{% if craft.request.getSegment(1) == 'healthy-home-standard' %}/healthy-home-standard{% else %}/{% endif %}"><img src="{{ siteUrl}}images/Oncore-logo.png"
                                                  alt="Oncore"/></a></div>
 
 
