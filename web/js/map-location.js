@@ -578,7 +578,7 @@ function findNearby(address, marker, search) {
         // class="arrow" style="margin-top: -4px; display: none" src="/svg/arrow.svg" alt="Get in touch">
         //         </div>
             $("#list-view").append('<div class="col-md-12 col-sm-12">' +
-                '<img src="/images/hhs/location.svg" alt="marker"><a href='+in_area[i].url+'>'+k+'</a>' +
+                '<img src="/images/hhs/location.svg" alt="marker"><a href="/'+in_area[i].url+'">'+k+'</a>' +
                 '<img src="/svg/arrow.svg" class="arrow" style="margin-top: -4px; display: none;" alt="Get in touch">' +
                 '</div>');
         });
