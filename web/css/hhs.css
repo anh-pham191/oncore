@@ -983,6 +983,8 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     }
     .grey-container .arrow {
         width: 100%;
+        height: auto;
+        overflow: auto;
     }
     .grey-container .arrow .notmobile {
         display: none !important;
@@ -993,7 +995,26 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     .three-blocks {
         display: block;
     }
-    
+    /*#wrapper .grey-container.three-boxes .process img {*/
+        /*display: block;*/
+        /*float: none;*/
+    /*}*/
+    /*#wrapper .grey-container .process img {*/
+        /*display: inline;*/
+        /*float: left;*/
+    /*}*/
+    /*#wrapper .grey-container .process span.title, #wrapper .grey-container .process p, #wrapper .grey-container .process .cta {*/
+        /*text-align: left;*/
+    /*}*/
+    /*#wrapper .grey-container .process .arrow img{*/
+        /*float: left;*/
+        /*width: 32%;*/
+        /*overflow: auto;*/
+    /*}*/
+    /*.grey-container .col-sm-2:first-of-type{*/
+        /*margin-top: 50px;*/
+    /*}*/
+
 }
 @media only all and (min-width: 1024px) and (max-width: 1400px) {
     div#wideslideshow.overlay .overlay-container div.inner.relative-inner {
