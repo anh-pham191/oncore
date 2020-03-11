@@ -1091,7 +1091,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
         width: 0;
     }
     #sticky-green .col-md-3.col-sm-5 {
-        width: 16.66666667%;
+        width: 40%;
     }
 
 }
@@ -1108,9 +1108,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     #sticky-green .col-md-4.col-sm-1 {
         width: 0;
     }
-    #sticky-green .col-md-3.col-sm-5 {
-        width: 16.66666667%;
-    }
+
     div#wideslideshow.overlay .overlay-container div.inner.relative-inner {
         padding: 0;
         margin-left: 0;
