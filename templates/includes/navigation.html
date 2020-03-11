@@ -41,7 +41,7 @@
             {% if craft.request.getSegment(1) == "locations" %}
                 <li class="dropdown"><a href="{{ siteUrl}}locations" class="current dropbtn">Our Locations</a></li>
             {% else %}
-                <li class="dropdown"><a href="{{ siteUrl}}locations" class="dropbtn">Our Locations</a></li>
+                <li class="dropdown"><a href="{% if craft.request.getSegment(1) == 'healthy-home-standard' %}{{ siteUrl}}healthy-home-standard#location{% else %}{{ siteUrl}}locations{% endif %}" class="dropbtn">Our Locations</a></li>
             {% endif %}
             {% if craft.request.getSegment(2) == "franchise-opportunities" %}
             <li class="dropdown"><a href="{{ siteUrl}}contact-us/franchise-opportunities/" class="current dropbtn">Franchise Opportunities</a></li>
@@ -54,7 +54,7 @@
                 {% if craft.request.getSegment(2) == "project-enquiry" %}
                 <a href="{{ siteUrl}}contact-us/project-enquiry/" class="current dropbtn">Get In Touch</a>
                 {% else %}
-                <a href="{{ siteUrl}}contact-us/project-enquiry/" class="dropbtn">Get In Touch</a>
+                <a href="{% if craft.request.getSegment(1) == 'healthy-home-standard' %}{{ siteUrl}}healthy-home-standard/get-in-touch{% else %}{{ siteUrl}}contact-us/project-enquiry/{% endif %}" class="dropbtn">Get In Touch</a>
                 {% endif %}
                 <!--<div class="dropdown-btn"></div>-->
                 <!--<div class="dropdown-content">-->
