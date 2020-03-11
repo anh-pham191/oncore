@@ -177,7 +177,14 @@
     font-style: normal;
     line-height: 1.78;
     letter-spacing: normal;
+    margin-left: 10px;
     color: #4fae47;
+}
+#form {
+    background: url(/images/hhs/SearchLocation.svg);
+    background-color: #4fae47;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #list-view a:hover + .arrow {

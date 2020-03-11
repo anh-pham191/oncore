@@ -181,33 +181,33 @@
     <div class="process inner">
         <h2>THE ONCORE HHS PROCESS</h2>
         <div class="col-md-2 col-sm-2 proven">
-            <img src="/images/hhs/step1.svg" alt="">
+            <img src="/images/hhs/step1.svg" alt="enquiry">
             <span class="title">ENQUIRE</span>
             <p>Get in touch with us </p>
             <div class="cta"><a href="/healthy-home-standard/get-in-touch">START HERE NOW</a></div>
         </div>
         <div class="col-md-1 col-sm-1 arrow">
-            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="">
-            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="">
+            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="arrow">
+            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="arrow">
         </div>
 
         <div class="col-md-2 col-sm-2 project">
-            <img src="/images/hhs/step2.svg" alt="">
+            <img src="/images/hhs/step2.svg" alt="inspect">
             <span class="title">INSPECT</span>
             <p>We’ll conduct
                 a FREE inspection</p></div>
         <div class="col-md-1 col-sm-1 arrow">
-            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="">
-            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="">
+            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="arrow">
+            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="arrow">
         </div>
-        <div class="col-md-2 col-sm-2 response"><img src="/images/hhs/step3.svg" alt=""><span class="title">Report & Quote</span>
+        <div class="col-md-2 col-sm-2 response"><img src="/images/hhs/step3.svg" alt="report"><span class="title">Report & Quote</span>
             <p>We'll make your home HHS Compliant </p>
         </div>
         <div class="col-md-1 col-sm-1 arrow">
-            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="">
-            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="">
+            <img class="notmobile" src="/images/hhs/arrow-right.svg" alt="arrow">
+            <img class="justmobile" src="/images/hhs/arrow-down.svg" alt="arrow">
         </div>
-        <div class="col-md-2 col-sm-2 response"><img src="/images/hhs/step4.svg" alt=""><span class="title">IMPROVE</span>
+        <div class="col-md-2 col-sm-2 response"><img src="/images/hhs/step4.svg" alt="improve"><span class="title">IMPROVE</span>
             <p>We'll make your home HHS Compliant </p>
         </div>
     </div>
@@ -255,7 +255,7 @@
         <h2>WHY CHOOSE ONCORE</h2>
         <div class="col-md-4 col-sm-4 proven">
             <div class="box">
-                <img src="/images/hhs/proven-process.svg" alt="">
+                <img src="/images/hhs/proven-process.svg" alt="simple">
                 <span class="title">SIMPLE</span>
                 <p>Oncore’s streamlined process ensures your property exceeds the national standards. We can provide you with a property inspection and report,
                     get you a free quote, and then make any necessary improvements.
@@ -264,7 +264,7 @@
         </div>
         <div class="col-md-4 col-sm-4 project">
             <div class="box">
-                <img src="/images/hhs/project-management.svg" alt="">
+                <img src="/images/hhs/project-management.svg" alt="easy">
                 <span class="title">EASY</span>
                 <p>With Oncore, you don’t need to worry about following up with contractors and keeping projects on track. Tell us what you want and we’ll take care of it.
                 </p>
@@ -272,7 +272,7 @@
         </div>
         <div class="col-md-4 col-sm-4 response">
             <div class="box">
-                <img src="/images/hhs/fast-time.svg" alt="">
+                <img src="/images/hhs/fast-time.svg" alt="fast">
                 <span class="title">FAST</span>
                 <p>We understand the importance of fast and reliable service. Call or message us and we’ll get back to you within 48 hours—no exceptions! </p>
             </div>
@@ -310,7 +310,7 @@
             <div id="find-location">
                 <div class="search-location">
                     <input class="inputBox form-control" type="text" name="destination" id="destination" maxlength="35">
-                    <input type="submit" class="form" id="form" value="Find">
+                    <input type="submit" class="form" id="form" value="">
                 </div>
                 <span class="or">or</span>
                 <button id="current-location">Use my current location</button>
@@ -323,7 +323,7 @@
             <div id="list-view">
                 {% for entry in myEntryQuery %}
                 <div class="col-md-12 col-sm-12 ">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="{{ entry.url }}">{{ entry.title }}</a> <img
+                    <img src="/images/hhs/location.svg" alt="marker"><a href="{{ entry.url }}">{{ entry.title }}</a> <img
                         class="arrow" style="margin-top: -4px; display: none" src="/svg/arrow.svg" alt="Get in touch">
                 </div>
                 {% endfor %}

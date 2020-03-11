@@ -121,7 +121,7 @@ $(".list-toggl").click(function (e) {
         console.log(this.value);
         var arr = this.value.split("|");
         $("#list-view").append('<div class="col-md-12 col-sm-12">' +
-            '<i class="fa fa-map-marker" aria-hidden="true"></i><a href='+arr[0]+'>'+arr[1]+'</a>' +
+            '<img src="/images/hhs/location.svg" alt="marker"><a href='+arr[0]+'>'+arr[1]+'</a>' +
             '<img src="/svg/arrow.svg" class="arrow" style="margin-top: -4px; display: none;" alt="Get in touch">' +
             '</div>');
     })
@@ -578,7 +578,7 @@ function findNearby(address, marker, search) {
         // class="arrow" style="margin-top: -4px; display: none" src="/svg/arrow.svg" alt="Get in touch">
         //         </div>
             $("#list-view").append('<div class="col-md-12 col-sm-12">' +
-                '<i class="fa fa-map-marker" aria-hidden="true"></i><a href='+in_area[i].url+'>'+k+'</a>' +
+                '<img src="/images/hhs/location.svg" alt="marker"><a href='+in_area[i].url+'>'+k+'</a>' +
                 '<img src="/svg/arrow.svg" class="arrow" style="margin-top: -4px; display: none;" alt="Get in touch">' +
                 '</div>');
         });
