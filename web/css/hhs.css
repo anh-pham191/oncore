@@ -998,6 +998,14 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     .three-blocks {
         display: block;
     }
+    #find-location {
+        display: block;
+        height: auto;
+        overflow: auto;
+    }
+    #current-location {
+        margin-top: 20px;
+    }
     /*#wrapper .grey-container.three-boxes .process img {*/
         /*display: block;*/
         /*float: none;*/
