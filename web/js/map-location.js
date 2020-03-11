@@ -78,20 +78,20 @@ $(function () {
                 title.text("Insulation");
                 content.html("<p>To meet the Healthy Home Standards, existing ceiling insulation must be at least 120mm thick, be in reasonable condition (no dampness, mould, or gaps), and meet the 2008 Building Code minimum r-value for your zone. Also, underfloor insulation must meet a minimum r-value of 1.3.</p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with an insulation inspection. If we find your property is currently not up to standard, we’ll update your insulation to meet the requirements.</p>");
-                image.css('background', 'url("images/hhs/Insulation.jpg") center center / cover no-repeat');
+                image.css('background', 'url("/images/hhs/Insulation.jpg") center center / cover no-repeat');
                 break;
             case "Ventilation":
                 title.text("Ventilation");
                 content.html("<p>Your living room, dining room, kitchen, and bedrooms, must have an opening window, door, or skylight that opens to the outdoors and can be fixed open. The openable area must be at least 5% of the floor area of the room. </p>" +
                     "<p>All kitchen and bathrooms must have extractor fans that are vented to the outside. The kitchen must have exhaust ducts of at least 150mm in diameter or a capacity of at least 50 litres per second. Ones in bathrooms must be 12mm or 25 litres per second.</p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with a ventilation inspection. If we find your property is currently not up to standard, we’ll update your ventilation to meet the requirements.</p>");
-                image.css('background', 'url("images/hhs/ventilation.jpg") center center / cover no-repeat');
+                image.css('background', 'url("/images/hhs/ventilation.jpg") center center / cover no-repeat');
                 break;
             case "Draught Stopping":
                 title.text("Draught Stopping");
                 content.html("<p>There must not be any unreasonable gaps or holes in the walls, ceiling, windows, skylights, floors, and doors which causes noticeable draughts. All unused fireplaces must be closed off and chimneys must be blocked to prevent draughts. </p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with a draught inspection. If we find your property is currently not up to standard, we’ll update your draught stopping to meet the requirements.</p>");
-                image.css('background', 'url("images/hhs/draught.jpg") center center / cover no-repeat');
+                image.css('background', 'url("/images/hhs/draught.jpg") center center / cover no-repeat');
                 break;
             case "Moisture Ingress And Drainage":
                 title.text("MOISTURE INGRESS & DRAINAGE");
@@ -100,7 +100,7 @@ $(function () {
                     "<p>DRAINAGE: \n" +
                     "There must be efficient drainage for the removal of storm, surface, and groundwater. Gutters must be present and not blocked or broken spouting, downpipes, and drains need to be in good condition and working effectively.  </p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with a moisture ingress and/or drainage inspection. If we find your property is currently not up to standard, we’ll update it to meet the requirements.\n</p>");
-                image.css('background', 'url("images/hhs/moist.jpg") center center / cover no-repeat');
+                image.css('background', 'url("/images/hhs/moist.jpg") center center / cover no-repeat');
                 break;
             default:
             // code block
