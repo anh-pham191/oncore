@@ -537,7 +537,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     color: #4c983b;
     display: block;
     text-align: center;
-    margin: 10px auto 0 auto;
+    margin: 0 auto;
 }
 #wrapper .grey-container .process p{
     font-family: Poppins;
