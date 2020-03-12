@@ -35,7 +35,7 @@ $(function () {
         $(this).prepend('<img class="pre" src="/images/hhs/purple-arrow.svg" />');
         $(this).css("color", "#594fcc");
         that.removeClass("whole kitchen bathroom insulation roof living bedroom");
-        if(text == "Whole house"){
+        if(text == "Whole House"){
             that.addClass("whole");
         } else if (text == "Kitchen"){
             that.addClass("kitchen");
