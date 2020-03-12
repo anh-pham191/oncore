@@ -19,6 +19,7 @@ isset($formpage)? : $formpage="";
 isset($identifier)? : $identifier="";
 isset($location)? : $location="";
 isset($country)? : $country="";
+isset($how)? : $how="";
 $v = [
     [
         ROW['STATUS'] => '',
@@ -53,6 +54,7 @@ $v = [
         ROW['YEAR_START'] => '',
         ROW['TYPE'] => '',
         ROW['SEEN_HEARD'] => '',
+        ROW['HOW_CAN_WE_HELP'] => $how,
     ]
 ];
 $body = new Google_Service_Sheets_ValueRange(['values' => $v]);

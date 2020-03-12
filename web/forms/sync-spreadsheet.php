@@ -65,4 +65,5 @@ const ROW = [
     'YEAR_START' => 29,
     'TYPE' => 30,
     'SEEN_HEARD' => 31,
+    'HOW_CAN_WE_HELP' => 32,
 ];
