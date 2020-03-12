@@ -1,4 +1,5 @@
 $(function () {
+    scrollDown($(".learn-more"), $("#insulation-block"))
     var timeouts = [];
 
     $(".help-text p.support").hide();
@@ -310,7 +311,7 @@ function initMap() {
                 "elementType": "geometry.fill",
                 "stylers": [
                     {
-                        "color": "#baf4c4"
+                        "color": "#D6EAE5"
                     }
                 ]
             },
