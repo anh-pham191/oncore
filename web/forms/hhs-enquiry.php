@@ -345,7 +345,7 @@ if ($probSpam != "yes") {
 
                 //add lead record to log
                 include '../includes/log.php';
-//                include "Spreadsheet-API.php";
+                include "Spreadsheet-API.php";
 
             } else {
                 // Info was not sent to Ubiquity - send the info in an email to be manually entered
