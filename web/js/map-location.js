@@ -47,7 +47,7 @@ $(function () {
             that.addClass("bedroom");
         } else if (text == "Insulation"){
             that.addClass("insulation");
-        } else if (text == "Gutters, Downpipes & Drainage"){
+        } else if (text == "Gutters, Downpipes, & Drainage"){
             that.addClass("roof");
         }
         $(this).siblings().show(400);
@@ -96,10 +96,10 @@ $(function () {
                 break;
             case "Moisture Ingress And Drainage":
                 title.text("MOISTURE INGRESS & DRAINAGE");
-                content.html("<p>MOISTURE INGRESS:\n" +
-                    "Rental homes with “enclosed” subfloor spaces must have a ground moisture barrier. A subfloor space is considered enclosed if 50% or more is enclosed by anything that redirects airflow under the property. </p>" +
-                    "<p>DRAINAGE: \n" +
-                    "There must be efficient drainage for the removal of storm, surface, and groundwater. Gutters must be present and not blocked or broken spouting, downpipes, and drains need to be in good condition and working effectively.  </p>" +
+                content.html("<p>MOISTURE INGRESS:</p>" +
+                    "<p>Rental homes with “enclosed” subfloor spaces must have a ground moisture barrier. A subfloor space is considered enclosed if 50% or more is enclosed by anything that redirects airflow under the property. </p>" +
+                    "<p>DRAINAGE: </p>" +
+                    "<p>There must be efficient drainage for the removal of storm, surface, and groundwater. Gutters must be present and not blocked or broken spouting, downpipes, and drains need to be in good condition and working effectively.  </p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with a moisture ingress and/or drainage inspection. If we find your property is currently not up to standard, we’ll update it to meet the requirements.\n</p>");
                 image.css('background', 'url("/images/hhs/moist.jpg") center center / cover no-repeat');
                 break;
