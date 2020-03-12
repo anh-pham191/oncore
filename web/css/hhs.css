@@ -864,6 +864,9 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     div#wideslideshow.overlay {
         max-height: 601px;
     }
+    #current-location {
+        margin-top: 20px;
+    }
 }
 @media only all and (max-width: 768px) {
 
@@ -1004,9 +1007,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
         height: auto;
         overflow: auto;
     }
-    #current-location {
-        margin-top: 20px;
-    }
+
     /*#wrapper .grey-container.three-boxes .process img {*/
         /*display: block;*/
         /*float: none;*/
