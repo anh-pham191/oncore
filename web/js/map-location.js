@@ -14,7 +14,7 @@ $(function () {
             var btn = $(this);
             timeouts.push(setTimeout(btn.trigger.bind(btn, "click"), i * 5000));
         });
-    }, 35000);
+    }, 30000);
 
     $(".main-component").click(function (e) {
         if(e.originalEvent !== undefined){
