@@ -1113,7 +1113,12 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     .services-image-block .content-box {
         padding: 0 40px;
     }
-
+    .services-image-block .content-box .title {
+        font-size: 25px;
+    }
+    .services-image-block .content-box .content p {
+        font-size: 16px;
+    }
 }
 @media only all and (min-width: 768px) and (max-width: 1023px) {
     #sticky-green a {
