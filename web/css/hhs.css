@@ -434,7 +434,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 @media only screen and (min-width: 48em){
     div.services-image-block div.fleft.image-holder {
         width: 49%;
-        height: 800px;
+        height: 750px;
         background: url("/images/hhs/old house.svg") no-repeat;
         background-position: center;
         -webkit-background-size: cover;
@@ -595,7 +595,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     width: 100%;
     height: auto;
     display: flex;
-    align-items: end;
+    align-items: initial;
 }
 .three-blocks img {
     width: 100%;
