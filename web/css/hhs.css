@@ -420,6 +420,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 .services-image-block .content-box .detail ul {
     list-style-type: '- ';
     list-style-position: outside;
+    margin-bottom: 30px;
 }
 .services-image-block .content-box .detail li {
     font-family: Poppins;
@@ -636,7 +637,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     margin-bottom: 15px;
 }
 .three-blocks .content-box .content p{
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 18px;
     font-weight: normal;
     font-stretch: normal;

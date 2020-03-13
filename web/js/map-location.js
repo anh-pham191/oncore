@@ -6,15 +6,15 @@ $(function () {
     $(".main-component").each(function (i) {
         // setTimeout($(this).trigger('click'), 2000);
         var btn = $(this);
-        timeouts.push(setTimeout(btn.trigger.bind(btn, "click"), i * 3000));
+        timeouts.push(setTimeout(btn.trigger.bind(btn, "click"), i * 5000));
     });
     var auto = setInterval( function () {
         $(".main-component").each(function (i) {
             // setTimeout($(this).trigger('click'), 2000);
             var btn = $(this);
-            timeouts.push(setTimeout(btn.trigger.bind(btn, "click"), i * 3000));
+            timeouts.push(setTimeout(btn.trigger.bind(btn, "click"), i * 5000));
         });
-    }, 21000);
+    }, 35000);
 
     $(".main-component").click(function (e) {
         if(e.originalEvent !== undefined){
