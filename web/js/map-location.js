@@ -95,10 +95,9 @@ $(function () {
                 image.css('background', 'url("/images/hhs/draught.jpg") center center / cover no-repeat');
                 break;
             case "Moisture Ingress And Drainage":
-                title.text("MOISTURE INGRESS & DRAINAGE");
-                content.html("<p>MOISTURE INGRESS:</p>" +
-                    "<p>Rental homes with “enclosed” subfloor spaces must have a ground moisture barrier. A subfloor space is considered enclosed if 50% or more is enclosed by anything that redirects airflow under the property. </p>" +
-                    "<p>DRAINAGE: </p>" +
+                title.text("MOISTURE INGRESS");
+                content.html("<p>Rental homes with “enclosed” subfloor spaces must have a ground moisture barrier. A subfloor space is considered enclosed if 50% or more is enclosed by anything that redirects airflow under the property. </p>" +
+                    "<div class='title'>DRAINAGE </div>" +
                     "<p>There must be efficient drainage for the removal of storm, surface, and groundwater. Gutters must be present and not blocked or broken. Spouting, downpipes, and drains need to be in good condition and working effectively.  </p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with a moisture ingress and/or drainage inspection. If we find your property is currently not up to standard, we’ll update it to meet the requirements.\n</p>");
                 image.css('background', 'url("/images/hhs/moist.jpg") center center / cover no-repeat');
