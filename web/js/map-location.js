@@ -39,7 +39,7 @@ $(function () {
             that.addClass("whole");
         } else if (text == "Kitchen"){
             that.addClass("kitchen");
-        } else if (text == "Living room"){
+        } else if (text == "Living Room"){
             that.addClass("living");
         } else if (text == "Bathroom"){
             that.addClass("bathroom");
