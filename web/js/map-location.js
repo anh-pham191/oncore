@@ -84,13 +84,13 @@ $(function () {
             case "Ventilation":
                 title.text("Ventilation");
                 content.html("<p>Your living room, dining room, kitchen, and bedrooms, must have an opening window, door, or skylight that opens to the outdoors and can be fixed open. The openable area must be at least 5% of the floor area of the room. </p>" +
-                    "<p>All kitchen and bathrooms must have extractor fans that are vented to the outside. The kitchen must have exhaust ducts of at least 150mm in diameter or a capacity of at least 50 litres per second. Ones in bathrooms must be 12mm or 25 litres per second.</p>" +
+                    "<p>All kitchens and bathrooms must have extractor fans that are vented to the outside. The kitchen must have exhaust ducts of at least 150mm in diameter or a capacity of at least 50 litres per second. Ones in bathrooms must be 120mm or 25 litres per second.</p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with a ventilation inspection. If we find your property is currently not up to standard, we’ll update your ventilation to meet the requirements.</p>");
                 image.css('background', 'url("/images/hhs/ventilation.jpg") center center / cover no-repeat');
                 break;
             case "Draught Stopping":
                 title.text("Draught Stopping");
-                content.html("<p>There must not be any unreasonable gaps or holes in the walls, ceiling, windows, skylights, floors, and doors which causes noticeable draughts. All unused fireplaces must be closed off and chimneys must be blocked to prevent draughts. </p>" +
+                content.html("<p>There must not be any unreasonable gaps or holes in the walls, ceiling, windows, skylights, floors, and doors which cause noticeable draughts. All unused fireplaces must be closed off and chimneys must be blocked to prevent draughts. </p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with a draught inspection. If we find your property is currently not up to standard, we’ll update your draught stopping to meet the requirements.</p>");
                 image.css('background', 'url("/images/hhs/draught.jpg") center center / cover no-repeat');
                 break;
@@ -99,7 +99,7 @@ $(function () {
                 content.html("<p>MOISTURE INGRESS:</p>" +
                     "<p>Rental homes with “enclosed” subfloor spaces must have a ground moisture barrier. A subfloor space is considered enclosed if 50% or more is enclosed by anything that redirects airflow under the property. </p>" +
                     "<p>DRAINAGE: </p>" +
-                    "<p>There must be efficient drainage for the removal of storm, surface, and groundwater. Gutters must be present and not blocked or broken spouting, downpipes, and drains need to be in good condition and working effectively.  </p>" +
+                    "<p>There must be efficient drainage for the removal of storm, surface, and groundwater. Gutters must be present and not blocked or broken. Spouting, downpipes, and drains need to be in good condition and working effectively.  </p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with a moisture ingress and/or drainage inspection. If we find your property is currently not up to standard, we’ll update it to meet the requirements.\n</p>");
                 image.css('background', 'url("/images/hhs/moist.jpg") center center / cover no-repeat');
                 break;
