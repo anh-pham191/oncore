@@ -87,6 +87,7 @@
 
     #home-form-submit:hover {
         color: #fff;
+        opacity: 1;
     }
 
     #home-form-submit::before {
@@ -388,8 +389,7 @@
         // else {
         //     alert('One of the radio buttons is checked!');
         // }
-        $submit.addClass('submitted');
-        $submit.html("");
+
         var valifirstname = submitValidation('formf-firstname', 'required', 'firstname');
         var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
         var valiemail = submitValidation('formf-email', 'email');
@@ -402,6 +402,8 @@
             }
             return false;
         }
+        $submit.addClass('submitted');
+        $submit.html("");
 
         $.ajax({
             url: $(form).attr("action"),
@@ -409,6 +411,8 @@
             data: $(form).serialize(),
             success: function (response) {
                 $submit.removeClass('submitted');
+                $submit.html("SUBMIT");
+
                 if (response.match(/ContainsLink/i)) {
                     //Display error message above form
                     $('.pageform #prog1').fadeOut(200);
@@ -463,6 +467,7 @@
             },
             error: function () {
                 $submit.removeClass('submitted');
+                $submit.html("SUBMIT");
                 //Display failure message above form
                 $('.pageform #prog1').fadeOut(200);
                 $('.pageform .instructions').html('Your form could not be submitted. Please try again later.').css({
