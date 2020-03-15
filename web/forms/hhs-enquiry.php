@@ -48,7 +48,7 @@ if (isset($_POST['frompage'])) {
     $frompage = "";
 }
 $formpage = $frompage;
-$identifier = "Oncore Contact - General Enquiry";
+$identifier = "Oncore Contact - Healthy Home Landing Page";
 if (isset($_COOKIE['fromcampaign'])) {
     $campaign = cleanData($_COOKIE['fromcampaign']);
 } else {
@@ -349,7 +349,7 @@ if ($probSpam != "yes") {
 
             } else {
                 // Info was not sent to Ubiquity - send the info in an email to be manually entered
-                $emailsubject = "Submission from Oncore Services website - General Enquiry - Ubiquity down";
+                $emailsubject = "Submission from Oncore Services website - Healthy Home Landing Page - Ubiquity down";
                 $emailmessage = "First name: " . $firstname . "\n\n" . "Last name: " . $lastname . "\n\n" . "Email: " . $email . "\n\n" . "Phone: " . $phone . "\n\n" . "Country: " . $country . "\n\n" . "Read and accepted Privacy Policy : " . $privacy . "\n\n" . "Opted out setting: " . $subscribe . "\n\n" . "Page Enquiry Made On: " . $frompage;
                 mail($emailtoaddress, $emailsubject, $emailmessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
                 echo "Successful"; // So that user sees their info has been collected.
