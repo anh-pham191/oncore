@@ -378,7 +378,7 @@
 {% endblock content %}
 {% block scripts %}
 <script>
-
+    var $submit = $("#home-form-submit");
     function submitHHSEnquiry(form) {
 
         $(form).append('<input type="text" name="frompage" style="display:none;" value="' + window.location.hostname + window.location.pathname + '" />');
@@ -388,6 +388,8 @@
         // else {
         //     alert('One of the radio buttons is checked!');
         // }
+        $submit.addClass('submitted');
+        $submit.html("");
         var valifirstname = submitValidation('formf-firstname', 'required', 'firstname');
         var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
         var valiemail = submitValidation('formf-email', 'email');
@@ -406,7 +408,7 @@
             type: "POST",
             data: $(form).serialize(),
             success: function (response) {
-
+                $submit.removeClass('submitted');
                 if (response.match(/ContainsLink/i)) {
                     //Display error message above form
                     $('.pageform #prog1').fadeOut(200);
@@ -460,6 +462,7 @@
                 }
             },
             error: function () {
+                $submit.removeClass('submitted');
                 //Display failure message above form
                 $('.pageform #prog1').fadeOut(200);
                 $('.pageform .instructions').html('Your form could not be submitted. Please try again later.').css({
