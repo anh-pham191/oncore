@@ -201,7 +201,7 @@ if ($probSpam != "yes") {
         $honeypot = substr($honeypot, 0, 5000);
         $frompage = substr($frompage, 0, 100);
 
-        $spamsubject = "SPAM from Oncore Services website - General Enquiry";
+        $spamsubject = "SPAM from Oncore Services website - Healthy Home Landing Page";
         $spammessage = "First name: " . $firstname . "\n\n" . "Last name: " . $lastname . "\n\n" . "Email: " . $email . "\n\n" . "Phone: " . $phone . "\n\n" . "Country: " . $country . "\n\n" . "Read and accepted Privacy Policy : " . $privacy . "\n\n" . "Opted out setting: " . $subscribe . "\n\n" . "Page Enquiry Made On: " . $frompage . "\n\n" . "Spam field contents: " . $honeypot;
         mail($emailtoaddress, $spamsubject, $spammessage, "From: " . $emailfromaddress . "\r\n" . "Content-type: text/plain; charset=utf-8\r\n"); // If any headers come via form input ensure this is sanitised
         $goodtogo = "no"; // Do not post to Ubiquity
