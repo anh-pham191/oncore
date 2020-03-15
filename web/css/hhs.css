@@ -298,6 +298,7 @@
 .white-container, .grey-container {
     height: auto;
     overflow: auto;
+    padding-bottom: 50px;
 }
 div#wideslideshow.overlay .overlay-container div.inner.relative-inner {
     width: 100%;
