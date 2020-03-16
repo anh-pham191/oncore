@@ -1228,3 +1228,10 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     }
 
 }
+@media only screen and (min-width: 768px){
+    .grey-container .arrow .notmobile {
+        display: block !important;
+    }
+
+}
+
