@@ -1008,9 +1008,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     .grey-container .arrow .notmobile {
         display: none !important;
     }
-    .grey-container .arrow .justmobile {
-        display: block !important;
-    }
+
     .three-blocks {
         display: block;
     }
@@ -1224,5 +1222,8 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     }
     #wrapper .white-container h2.heading, #wrapper .white-container h2#insulation-block {
         margin: 80px auto 50px auto;
+    }
+    .grey-container .arrow .justmobile {
+        display: block !important;
     }
 }
