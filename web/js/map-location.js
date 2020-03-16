@@ -72,7 +72,7 @@ $(function () {
                 title.text("Heating");
                 content.html("<p>The main or largest living room must have an approved fixed wall heater capable of heating the room to a minimum of 18 degrees celsius. " +
                     "In most cases this will be a larger fixed heating device like an electric heater, heat pump, wood burner, or fuel gas heater. Open fires or unfueled combustion heaters don’t count. </p>" +
-                    "<p>Oncore can help you meet these standards quickly. We can provide you with an heating inspection. If we find your property is currently not up to standard, we’ll update your heating to meet the requirements.</p>");
+                    "<p>Oncore can help you meet these standards quickly. We can provide you with a heating inspection. If we find your property is currently not up to standard, we’ll update your heating to meet the requirements.</p>");
                 break;
             case "Insulation":
                 // code block

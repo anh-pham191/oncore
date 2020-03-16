@@ -257,38 +257,40 @@
                     <label class="labelclass">Where is your rental property located?</label>
                     <p>Providing us with your property’s location enables us to quickly connect you with an available inspector or repair and maintenance specialist in your area. </p>
                     <div class="col-md-12 input-label-wrapper">
-                        <select name="location" id="" class="form-control home-form" required>
-                            <option value="" disabled selected hidden>Select location</option>
-                            <option value="AKL - Rodney">AKL - Rodney</option>
-                            <option value="AKL - North Shore">AKL - North Shore</option>
-                            <option value="AKL - Waitakere">AKL - Waitakere</option>
-                            <option value="AKL - Auckland Central">AKL - Auckland Central</option>
-                            <option value="AKL - East Auckland">AKL - East Auckland</option>
-                            <option value="AKL - Manukau">AKL - Manukau</option>
-                            <option value="AKL - Franklin">AKL - Franklin</option>
-                            <!--<option value="BHE - Blenheim">BHE - Blenheim</option>-->
-                            <!--<option value="CHC - Christchurch">CHC - Christchurch</option>-->
-                            <!--<option value="DUD - Dunedin">DUD - Dunedin</option>-->
-                            <!--<option value="GIS - Gisborne">GIS - Gisborne</option>-->
-                            <option value="HLZ - Hamilton">HLZ - Hamilton</option>
-                            <!--<option value="IVC - Invecargill">IVC - Invecargill</option>-->
-                            <!--<option value="KAT - Kaitai">KAT - Kaitai</option>-->
-                            <!--<option value="KKE - KeriKeri">KKE - KeriKeri</option>-->
-                            <!--<option value="NPE - Napier">NPE - Napier</option>-->
-                            <!--<option value="NSN - Nelson">NSN - Nelson</option>-->
-                            <option value="PMR - Palmerston North">PMR - Palmerston North</option>
-                            <!--<option value="QTN - Queenstown">QTN - Queenstown</option>-->
-                            <!--<option value="ROT - Rotorua">ROT - Rotorua</option>-->
-                            <!--<option value="TUO - Taupo">TUO - Taupo</option>-->
-                            <!--<option value="TRG - Tauranga">TRG - Tauranga</option>-->
-                            <!--<option value="TIU - Timaru">TIU - Timaru</option>-->
-                            <!--<option value="WAG - Whanganui">WAG - Whanganui</option>-->
-                            <option value="WLG - Wellington">WLG - Wellington</option>
-                            <!--<option value="WSZ - Westport">WSZ - Westport</option>-->
-                            <!--<option value="WHK - Whakatane">WHK - Whakatane</option>-->
-                            <!--<option value="WRE - Whangarei">WRE - Whangarei</option>-->
-                            <option value="Rather not say">Rather not say</option>
-                        </select>
+                        <input type="text" class="form-control" name="geocomplete-s2" id="geocomplete-s2" placeholder="Search for address" aria-label="Address" onFocus="geolocate()">
+                        <!--<select name="location" id="" class="form-control home-form" required>-->
+                            <!--&lt;!&ndash;// change to address finder&ndash;&gt;-->
+                            <!--<option value="" disabled selected hidden>Select location</option>-->
+                            <!--<option value="AKL - Rodney">AKL - Rodney</option>-->
+                            <!--<option value="AKL - North Shore">AKL - North Shore</option>-->
+                            <!--<option value="AKL - Waitakere">AKL - Waitakere</option>-->
+                            <!--<option value="AKL - Auckland Central">AKL - Auckland Central</option>-->
+                            <!--<option value="AKL - East Auckland">AKL - East Auckland</option>-->
+                            <!--<option value="AKL - Manukau">AKL - Manukau</option>-->
+                            <!--<option value="AKL - Franklin">AKL - Franklin</option>-->
+                            <!--&lt;!&ndash;<option value="BHE - Blenheim">BHE - Blenheim</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="CHC - Christchurch">CHC - Christchurch</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="DUD - Dunedin">DUD - Dunedin</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="GIS - Gisborne">GIS - Gisborne</option>&ndash;&gt;-->
+                            <!--<option value="HLZ - Hamilton">HLZ - Hamilton</option>-->
+                            <!--&lt;!&ndash;<option value="IVC - Invecargill">IVC - Invecargill</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="KAT - Kaitai">KAT - Kaitai</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="KKE - KeriKeri">KKE - KeriKeri</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="NPE - Napier">NPE - Napier</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="NSN - Nelson">NSN - Nelson</option>&ndash;&gt;-->
+                            <!--<option value="PMR - Palmerston North">PMR - Palmerston North</option>-->
+                            <!--&lt;!&ndash;<option value="QTN - Queenstown">QTN - Queenstown</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="ROT - Rotorua">ROT - Rotorua</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="TUO - Taupo">TUO - Taupo</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="TRG - Tauranga">TRG - Tauranga</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="TIU - Timaru">TIU - Timaru</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="WAG - Whanganui">WAG - Whanganui</option>&ndash;&gt;-->
+                            <!--<option value="WLG - Wellington">WLG - Wellington</option>-->
+                            <!--&lt;!&ndash;<option value="WSZ - Westport">WSZ - Westport</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="WHK - Whakatane">WHK - Whakatane</option>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<option value="WRE - Whangarei">WRE - Whangarei</option>&ndash;&gt;-->
+                            <!--<option value="Rather not say">Rather not say</option>-->
+                        <!--</select>-->
                     </div>
                 </div>
                 <label class="labelclass">Finally, we just need the following information to contact you with your estimate and get started on getting your property Healthy Homes compliant! </label>
@@ -315,6 +317,8 @@
                                name="email" id="formf-email" data-prefix="formf"/>
                     </div>
                 </div>
+
+                <!--address -->
                 <div class="row">
                     <div class="col-md-12 input-label-wrapper">
                         <!--<input type="tel" name="p-car-tel" class="form-control home-form"-->
@@ -478,5 +482,65 @@
             }
         });
     }
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('geocomplete-s2')),
+            {types: ['geocode']});
+        // Set initial restrict to the greater list of countries.
+        autocomplete.setComponentRestrictions(
+            {'country': ['nz']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+    }
+
+    function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+        console.log(place);
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        var addressArray = new Array();
+        for (var i = 0; i < place.address_components.length; i++) {
+            var addressType = place.address_components[i].types[0];
+            if (componentForm[addressType]) {
+                var val = place.address_components[i][componentForm[addressType]];
+                // console.log(addressType, val);
+                addressArray[addressType] = val;
+            }
+        }
+
+        $('#city-s2').val(city);
+        $('#stateprovince-s2').val(stateprovince);
+        $('#country-s2').val(addressArray['country']);
+        $('#country-s2').trigger('update.fs');
+        $('#postcode-s2').val(addressArray['postal_code']);
+        $('#latitude-s2').val(place.geometry.location.lat());
+        $('#longitude-s2').val(place.geometry.location.lng());
+    }
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuHcqN5QvGKS2Jq7Q44V_jiohv9MxJQZM&libraries=places&callback=initAutocomplete" async defer></script>
+
 {% endblock scripts %}
