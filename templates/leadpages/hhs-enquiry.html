@@ -71,7 +71,7 @@
     }
     .input-label-wrapper {
         max-width: 528px;
-        margin: 5px auto;
+        margin: 10px auto;
         float:none
     }
     .grey-container p {
@@ -257,7 +257,7 @@
                     <label class="labelclass">Where is your rental property located?</label>
                     <p>Providing us with your property’s location enables us to quickly connect you with an available inspector or repair and maintenance specialist in your area. </p>
                     <div class="col-md-12 input-label-wrapper">
-                        <input type="text" class="form-control" name="geocomplete-s2" id="geocomplete-s2" placeholder="Search for address" aria-label="Address" onFocus="geolocate()">
+                        <input type="text" class="form-control home-form" name="location" id="geocomplete-s2" placeholder="Search for address" aria-label="Address" onFocus="geolocate()">
                         <!--<select name="location" id="" class="form-control home-form" required>-->
                             <!--&lt;!&ndash;// change to address finder&ndash;&gt;-->
                             <!--<option value="" disabled selected hidden>Select location</option>-->
@@ -331,6 +331,14 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-md-12 input-label-wrapper">
+                        <label for="formf-email">Your Physical Address</label>
+                        <input type="text" class="form-control home-form"
+                               name="address" id="formf-address" data-prefix="formf"/>
+                    </div>
+                </div>
+
                 <div class="row tick">
                     <div class="col-sm-12 col-xs-12 input-label-wrapper">
                         <input type="checkbox" class="uniform-styles" name="privacy"
@@ -398,6 +406,8 @@
         var valilastname = submitValidation('formf-lastname', 'required', 'lastname');
         var valiemail = submitValidation('formf-email', 'email');
         var valitel = submitValidation('formf-tel', 'required');
+        var valilocation = submitValidation('geocomplete-s2', 'required', 'location');
+        var valiaddress = submitValidation('formf-address', 'required', 'address');
         var valiprivacy = submitValidation('formf-privacy', 'privacy');
         if (valifirstname === "invalid" || valilastname === "invalid" || valiemail === "invalid" || valitel === "invalid" || valiprivacy === "invalid") {
             $('.pageform #prog1').fadeOut(200);
@@ -495,33 +505,9 @@
 
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
-        autocomplete.addListener('place_changed', fillInAddress);
+        // autocomplete.addListener('place_changed', fillInAddress);
     }
 
-    function fillInAddress() {
-        // Get the place details from the autocomplete object.
-        var place = autocomplete.getPlace();
-        console.log(place);
-        // Get each component of the address from the place details
-        // and fill the corresponding field on the form.
-        var addressArray = new Array();
-        for (var i = 0; i < place.address_components.length; i++) {
-            var addressType = place.address_components[i].types[0];
-            if (componentForm[addressType]) {
-                var val = place.address_components[i][componentForm[addressType]];
-                // console.log(addressType, val);
-                addressArray[addressType] = val;
-            }
-        }
-
-        $('#city-s2').val(city);
-        $('#stateprovince-s2').val(stateprovince);
-        $('#country-s2').val(addressArray['country']);
-        $('#country-s2').trigger('update.fs');
-        $('#postcode-s2').val(addressArray['postal_code']);
-        $('#latitude-s2').val(place.geometry.location.lat());
-        $('#longitude-s2').val(place.geometry.location.lng());
-    }
 
     // Bias the autocomplete object to the user's geographical location,
     // as supplied by the browser's 'navigator.geolocation' object.
@@ -541,6 +527,6 @@
         }
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuHcqN5QvGKS2Jq7Q44V_jiohv9MxJQZM&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTEHgtybheiHQDKtSYECAdxV0YJvtfPqE&libraries=places&callback=initAutocomplete" async defer></script>
 
 {% endblock scripts %}

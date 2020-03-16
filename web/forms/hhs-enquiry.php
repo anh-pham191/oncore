@@ -19,7 +19,13 @@ if (isset($_POST['location'])) {
     $location = cleanData($_POST['location']);
 } else {
     $location = "";
-};$country = "New Zealand";
+};
+if (isset($_POST['address'])) {
+    $address = cleanData($_POST['address']);
+} else {
+    $address = "";
+};
+$country = "New Zealand";
 if (isset($_POST['privacy'])) {
     $privacy = cleanData($_POST['privacy']);
 } else {
@@ -284,6 +290,10 @@ if ($probSpam != "yes") {
         {
 		  \"fieldID\": \"QMOWd1LoPk-HuwjXxZikIA\",
 		  \"value\": \"$location\"
+        }, 
+        {
+		  \"fieldID\": \"Z0AfSHo9r0mjmAjXxZikIA\",
+		  \"value\": \"$address\"
         },
 		{
 		  \"fieldID\": \"On60nEvnEEqevQjXxZikIA\",

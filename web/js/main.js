@@ -4968,6 +4968,10 @@ function submitValidation(id, type, para) {
                         $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>First name is required.</div>");
                     } else if (para === "lastname") {
                         $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>Last name is required.</div>");
+                    } else if (para === "location") {
+                        $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>Property's location is required.</div>");
+                    } else if (para === "address") {
+                        $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>Physical address is required.</div>");
                     } else {
                         $("#" + id).after("<div class='invalid-tooltip' id='invalid-" + id + "'>Phone number is required.</div>");
                     }
