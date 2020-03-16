@@ -879,7 +879,9 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 }
 /*change back to max width 768px*/
 @media only all and (max-width: 1023px) {
-
+    div.services-image-block div.fleft.image-holder {
+        height: 0;
+    }
     .white-container {
         padding: 0 20px;
     }
