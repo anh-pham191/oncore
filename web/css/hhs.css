@@ -877,7 +877,8 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
         margin-left: 20px;
     }
 }
-@media only all and (max-width: 768px) {
+/*change back to max width 768px*/
+@media only all and (max-width: 1023px) {
 
     .white-container {
         padding: 0 20px;
