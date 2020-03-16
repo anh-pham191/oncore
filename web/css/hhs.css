@@ -1218,6 +1218,9 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     .not768 {
         display: none;
     }
+    .grey-container .arrow .justmobile {
+        display: block !important;
+    }
 }
 @media only screen and (min-width: 48em){
     .services-image-block .content-box {
