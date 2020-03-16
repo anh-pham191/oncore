@@ -876,6 +876,9 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     .services-image-block .content-box .detail ul {
         margin-left: 20px;
     }
+    .grey-container .arrow .justmobile {
+        display: block !important;
+    }
 }
 /*change back to max width 768px*/
 @media only all and (max-width: 1023px) {
@@ -1006,7 +1009,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
         overflow: auto;
     }
     .grey-container .arrow .notmobile {
-        display: none !important;
+        display: block !important;
     }
 
     .three-blocks {
@@ -1223,7 +1226,5 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     #wrapper .white-container h2.heading, #wrapper .white-container h2#insulation-block {
         margin: 80px auto 50px auto;
     }
-    .grey-container .arrow .justmobile {
-        display: block !important;
-    }
+
 }
