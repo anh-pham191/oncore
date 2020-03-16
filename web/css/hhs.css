@@ -1049,15 +1049,17 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     div#wideslideshow.overlay .overlay-container div.inner.container-box h1 {
         margin-top: 277px;
         font-size: 25px;
-        width: 100%;
+        width: 450px;
         padding-left: 20px;
     }
     div#wideslideshow.overlay .overlay-container div.inner.container-box .intro-bottom {
         padding-left: 20px;
         font-size: 18px;
+        width: 450px
     }
     div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button {
         margin-left: 20px;
+        display: block;
     }
     #wrapper div#wideslideshow.overlay .overlay-container div.inner.container-box .learn-more {
         margin-left: 20px;
