@@ -334,8 +334,8 @@
                 <div class="row">
                     <div class="col-md-12 input-label-wrapper">
                         <label for="formf-email">Your Physical Address</label>
-                        <input type="text" class="form-control home-form"
-                               name="address" id="formf-address" data-prefix="formf"/>
+                        <input type="text" class="form-control home-form" placeholder=""
+                               name="address" id="formf-address" data-prefix="formf" onFocus="geolocate()"/>
                     </div>
                 </div>
 
@@ -506,6 +506,13 @@
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
         // autocomplete.addListener('place_changed', fillInAddress);
+
+        auto = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('formf-address')),
+            {types: ['geocode']});
+        // Set initial restrict to the greater list of countries.
+        auto.setComponentRestrictions(
+            {'country': ['nz']});
     }
 
 
@@ -523,6 +530,7 @@
                     radius: position.coords.accuracy
                 });
                 autocomplete.setBounds(circle.getBounds());
+                auto.setBounds(circle.getBounds());
             });
         }
     }
