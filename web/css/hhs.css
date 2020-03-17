@@ -1020,7 +1020,9 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
         height: auto;
         overflow: auto;
     }
-
+    .services-image-block .content-box .detail ul {
+        margin-left: 10px;
+    }
     /*#wrapper .grey-container.three-boxes .process img {*/
         /*display: block;*/
         /*float: none;*/
