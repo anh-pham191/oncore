@@ -77,7 +77,7 @@ $(function () {
             case "Insulation":
                 // code block
                 title.text("Insulation");
-                content.html("<p>To meet the Healthy Home Standards, existing ceiling insulation must be at least 120mm thick, be in reasonable condition (no dampness, mould, or gaps), and meet the 2008 Building Code minimum r-value for your zone. Also, underfloor insulation must meet a minimum r-value of 1.3.</p>" +
+                content.html("<p>To meet the Healthy Homes Standards, existing ceiling insulation must be at least 120mm thick, be in reasonable condition (no dampness, mould, or gaps), and meet the 2008 Building Code minimum r-value for your zone. Also, underfloor insulation must meet a minimum r-value of 1.3.</p>" +
                     "<p>Oncore can help you meet these standards quickly. We can provide you with an insulation inspection. If we find your property is currently not up to standard, we’ll update your insulation to meet the requirements.</p>");
                 image.css('background', 'url("/images/hhs/Insulation.jpg") center center / cover no-repeat');
                 break;
