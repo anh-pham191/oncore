@@ -48,7 +48,7 @@
 
 
             <li class="dropdown">
-                <a href="{% if craft.request.getSegment(1) == 'healthy-homes-standard' %}{{ siteUrl}}healthy-homes-standard/get-in-touch{% else %}{{ siteUrl}}contact-us/project-enquiry/{% endif %}" class="{% if craft.request.getSegment(2) == 'project-enquiry' %}current {% endif %}dropbtn">Get In Touch</a>
+                <a href="{% if craft.request.getSegment(1) == 'healthy-homes-standard' %}{{ siteUrl}}healthy-homes-standard/get-in-touch{% else %}{{ siteUrl}}contact-us/project-enquiry/{% endif %}" class="{% if craft.request.getSegment(1) == 'contact-us' %}current {% endif %}dropbtn">Get In Touch</a>
                 
                 <div class="dropdown-btn"></div>
                     <div class="dropdown-content">
@@ -72,7 +72,7 @@
                     <!--</ul>-->
 
                 <!--</li>-->
-                <!--<li>-->
+                <!--<li>--> 
                     <!--<h2><a>Work We’ve Done</a></h2><div class="dropdown-btn workwedone"></div>-->
                     <!--<ul>-->
                         <!--<li><a class="dropdown-links" href="/">Our Projects</a></li>-->
@@ -80,30 +80,36 @@
                     <!--</ul>-->
                 <!--</li>-->
 
-                {% if craft.request.getSegment(1) == "locations" %}
-                    <li><h2><a class="current" href="{{ siteUrl}}locations">Our Locations</a></h2></li>
-                {% else %}
-                    <li><h2><a href="{{ siteUrl}}locations">Our Locations</a></h2></li>
-                {% endif %}
+                <li>
+                    <h2>
+                        <a 
+                {% if craft.request.getSegment(1) == "locations" %} class="current" {% endif %} href="{{ siteUrl}}locations">Our Locations</a>
+                    </h2>
+                </li>
+            
 
-                {% if craft.request.getSegment(2) == "franchise-opportunities" %}
-                <li><h2><a class="current" href="{{ siteUrl}}contact-us/franchise-opportunities/">Franchise Opportunities</a></h2></li>
-                {% else %}
-                <li><h2><a href="{{ siteUrl}}contact-us/franchise-opportunities/">Franchise Opportunities</a></h2></li>
-                {% endif %}
-                {% if craft.request.getSegment(2) == "project-enquiry" %}
-                <li><h2><a class="current" href="{{ siteUrl}}contact-us/project-enquiry/">Get In Touch</a></h2></li>
-                {% else %}
-                <li><h2><a href="{{ siteUrl}}contact-us/project-enquiry/">Get In Touch</a></h2></li>
-                {% endif %}
-                <!--<li>-->
-                    <!--<h2><a>Get In Touch</a></h2><div class="dropdown-btn"></div>-->
-                    <!--<ul>-->
-                        <!--<li><a class="dropdown-links" href="/contact-us/project-enquiry/">Project Enquiry</a></li>-->
-                        <!--<li><a class="dropdown-links" href="/contact-us/franchise-opportunities/">Franchising Enquiry</a></li>-->
-                        <!--&lt;!&ndash;<li><a class="dropdown-links" href="/">Career Enquiry</a></li>&ndash;&gt;-->
-                    <!--</ul>-->
-                <!--</li>-->
+                
+                <li>
+                    <h2>
+                        <a {% if craft.request.getSegment(2) == "franchise-opportunities" %} class="current" {% endif %} href="{{ siteUrl}}contact-us/franchise-opportunities/">
+                            Franchise Opportunities
+                        </a>
+                    </h2>
+                </li>
+               
+                <li><h2><a 
+                {% if craft.request.getSegment(1) == "contact-us" %} class="current" {% endif %} href="{{ siteUrl}}contact-us/project-enquiry/">Get In Touch</a></h2></li>
+               
+                <li>
+                    <h2><a>Get In Touch</a></h2><div class="dropdown-btn"></div>
+                    <ul>
+                        <li><a class="dropdown-links" href="/contact-us/project-enquiry/">Project Enquiry</a>
+                        </li>
+                        <li><a class="dropdown-links" href="/contact-us/franchise-opportunities/">Franchising Enquiry</a>
+                        </li>
+                    
+                    </ul>
+                </li>
                 <li class="phone-mobile"><h2><a href="#" type="tel">0800 33 66 55</a></h2></li>
 
             </ul>
