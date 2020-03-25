@@ -35,26 +35,26 @@
 
             <!--<li class="dropdown"><a href="" class="dropbtn">Our-->
                 <!--Locations</a></li>-->
-
-
+            <li class="dropdown"><a href="{{ siteUrl}}/" class="
+                {% if craft.request.getSegment(1) == '' %}current {% endif %}dropbtn">Our Services</a></li>
+ 
+            <li class="dropdown"><a href="{{ siteUrl}}healthy-homes-standard/" class="
+                {% if craft.request.getSegment(1) == 'healthy-homes-standard' %}current {% endif %}dropbtn">Healthy Homes Solutions</a></li>
             
             <li class="dropdown"><a href="{% if craft.request.getSegment(1) == 'healthy-homes-standard' %}{{ siteUrl}}healthy-homes-standard#location{% else %}{{ siteUrl}}locations{% endif %}" class="
             {% if craft.request.getSegment(1) == 'locations' %}current {% endif %}dropbtn">Our Locations</a></li>
             
-            
-            <li class="dropdown"><a href="{{ siteUrl}}contact-us/franchise-opportunities/" class="
-                {% if craft.request.getSegment(2) == 'franchise-opportunities' %}current {% endif %}dropbtn">Franchise Opportunities</a></li>
+           
 
 
             <li class="dropdown">
                 <a href="{% if craft.request.getSegment(1) == 'healthy-homes-standard' %}{{ siteUrl}}healthy-homes-standard/get-in-touch{% else %}{{ siteUrl}}contact-us/project-enquiry/{% endif %}" class="{% if craft.request.getSegment(2) == 'project-enquiry' %}current {% endif %}dropbtn">Get In Touch</a>
                 
-                <!--<div class="dropdown-btn"></div>-->
-                <!--<div class="dropdown-content">-->
-                    <!--<a class="dropdown-links" href="/contact-us/project-enquiry/">Project Enquiry</a>-->
-                    <!--<a class="dropdown-links" href="/contact-us/franchise-opportunities/">Franchising Enquiry</a>-->
-                    <!--<a class="dropdown-links" href="/contact-us/trade-jobs/">Career Enquiry</a>-->
-                <!--</div>-->
+                <div class="dropdown-btn"></div>
+                    <div class="dropdown-content">
+                        <a class="dropdown-links" href="/contact-us/project-enquiry/">General Enquiry</a>
+                        <a class="dropdown-links" href="/contact-us/franchise-opportunities/">Business Opportunities</a>
+                </div>
             </li>
         </ul>
         <div class="phone-top">
