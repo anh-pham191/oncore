@@ -37,25 +37,18 @@
                 <!--Locations</a></li>-->
 
 
-
-            {% if craft.request.getSegment(1) == "locations" %}
-                <li class="dropdown"><a href="{{ siteUrl}}locations" class="current dropbtn">Our Locations</a></li>
-            {% else %}
-                <li class="dropdown"><a href="{% if craft.request.getSegment(1) == 'healthy-homes-standard' %}{{ siteUrl}}healthy-homes-standard#location{% else %}{{ siteUrl}}locations{% endif %}" class="dropbtn">Our Locations</a></li>
-            {% endif %}
-            {% if craft.request.getSegment(2) == "franchise-opportunities" %}
-            <li class="dropdown"><a href="{{ siteUrl}}contact-us/franchise-opportunities/" class="current dropbtn">Franchise Opportunities</a></li>
-            {% else %}
-            <li class="dropdown"><a href="{{ siteUrl}}contact-us/franchise-opportunities/" class="dropbtn">Franchise Opportunities</a></li>
-            {% endif %}
+            
+            <li class="dropdown"><a href="{% if craft.request.getSegment(1) == 'healthy-homes-standard' %}{{ siteUrl}}healthy-homes-standard#location{% else %}{{ siteUrl}}locations{% endif %}" class="
+            {% if craft.request.getSegment(1) == 'locations' %}current {% endif %}dropbtn">Our Locations</a></li>
+            
+            
+            <li class="dropdown"><a href="{{ siteUrl}}contact-us/franchise-opportunities/" class="
+                {% if craft.request.getSegment(2) == 'franchise-opportunities' %}current {% endif %}dropbtn">Franchise Opportunities</a></li>
 
 
             <li class="dropdown">
-                {% if craft.request.getSegment(2) == "project-enquiry" %}
-                <a href="{{ siteUrl}}contact-us/project-enquiry/" class="current dropbtn">Get In Touch</a>
-                {% else %}
-                <a href="{% if craft.request.getSegment(1) == 'healthy-homes-standard' %}{{ siteUrl}}healthy-homes-standard/get-in-touch{% else %}{{ siteUrl}}contact-us/project-enquiry/{% endif %}" class="dropbtn">Get In Touch</a>
-                {% endif %}
+                <a href="{% if craft.request.getSegment(1) == 'healthy-homes-standard' %}{{ siteUrl}}healthy-homes-standard/get-in-touch{% else %}{{ siteUrl}}contact-us/project-enquiry/{% endif %}" class="{% if craft.request.getSegment(2) == 'project-enquiry' %}current {% endif %}dropbtn">Get In Touch</a>
+                
                 <!--<div class="dropdown-btn"></div>-->
                 <!--<div class="dropdown-content">-->
                     <!--<a class="dropdown-links" href="/contact-us/project-enquiry/">Project Enquiry</a>-->
