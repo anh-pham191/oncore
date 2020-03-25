@@ -83,25 +83,30 @@
                 <li>
                     <h2>
                         <a 
-                {% if craft.request.getSegment(1) == "locations" %} class="current" {% endif %} href="{{ siteUrl}}locations">Our Locations</a>
-                    </h2>
-                </li>
-            
-
-                
-                <li>
-                    <h2>
-                        <a {% if craft.request.getSegment(2) == "franchise-opportunities" %} class="current" {% endif %} href="{{ siteUrl}}contact-us/franchise-opportunities/">
-                            Franchise Opportunities
+                {% if craft.request.getSegment(1) == "" %} class="current" {% endif %} href="{{ siteUrl}}/">Our Services
                         </a>
                     </h2>
                 </li>
-               
-                <li><h2><a 
-                {% if craft.request.getSegment(1) == "contact-us" %} class="current" {% endif %} href="{{ siteUrl}}contact-us/project-enquiry/">Get In Touch</a></h2></li>
+
+                  <li>
+                    <h2>
+                        <a 
+                {% if craft.request.getSegment(1) == "healthy-homes-standard" %} class="current" {% endif %} href="{{ siteUrl}}healthy-homes-standard/">Healthy Homes Solutions
+                        </a>
+                    </h2>
+                </li>
+
+
+                <li>
+                    <h2>
+                        <a 
+                {% if craft.request.getSegment(1) == "locations" %} class="current" {% endif %} href="{{ siteUrl}}locations">Our Locations</a>
+                    </h2>
+                </li>
+        
                
                 <li>
-                    <h2><a>Get In Touch</a></h2><div class="dropdown-btn"></div>
+                    <h2><a {% if craft.request.getSegment(1) == "contact-us" %} class="current" {% endif %}>Get In Touch</a></h2><div class="dropdown-btn"></div>
                     <ul>
                         <li><a class="dropdown-links" href="/contact-us/project-enquiry/">Project Enquiry</a>
                         </li>
