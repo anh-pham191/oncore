@@ -5870,13 +5870,15 @@ a:hover, button:hover {
 #content.contact #content-right #project-job #c-car-submit, #handbook-form button#submit {
     width: 269px;
     height: 48px;
-    border-radius: 3px;
-    background-color: #4fae47;
-    font-family: "Open Sans";
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff;
     border: none;
+    background-color: #7FCA70;
+    font-family: Montserrat;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #171431;
+    border-radius: 24px;
 }
 
 #news-form-submit, #news2-form-submit {
