@@ -3132,7 +3132,7 @@ body {
 }
 
 p, ul, ol, li, dl, table, img, input, textarea, legend {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 1rem;
     font-style: normal;
@@ -3366,7 +3366,9 @@ div#wideslideshow.overlay .overlay-container h1, div#wideslideshow.overlay .over
     margin: 0px;
     font-size: 3.75rem;
     color: #ffffff;
-    font-family: "Poppins";
+    font-family: "Montserrat";
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 div#wideslideshow.overlay.franchise .overlay-container h1 {
@@ -3399,7 +3401,7 @@ div#wideslideshow.overlay .intro-bottom {
 }
 
 div#wideslideshow.overlay.banner .intro-bottom {
-    font-size: 1.5625rem;;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -3409,7 +3411,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 }
 
 .full-width-text-left strong {
-    font-family: Poppins;
+    font-family: Montserrat;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.25;
@@ -3419,7 +3421,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 
 .full-width-text-left p {
     font-family: Poppins;
-    font-size: 1.5625rem;
+    font-size: 20px;
     font-weight: 500;
     color: #2f3132;
     width: 55%;
@@ -3793,7 +3795,7 @@ li.help {
     margin-top: 25px;
     font-size: 1em;
     line-height: 1.2;
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     margin-bottom: 25px;
     background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
     padding-left: 34px;
@@ -3803,7 +3805,8 @@ li.help {
 }
 
 #wrapper .inner .full-width-text .title {
-    font-family: Poppins;
+    font-family: Montserrat;
+    text-transform: uppercase;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.25;
@@ -6996,7 +6999,8 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
 .home-standard .col-md-4.col-sm-4 span.title {
     font-family: "Poppins";
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 800;
+    text-transform: uppercase;
     line-height: 1.5;
     color: #333333;
     background: url(../svg/baseline-check_circle_outline-24px.svg) no-repeat;
@@ -7008,7 +7012,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
 
 .home-standard .col-md-4.col-sm-4 p {
     padding: 7px 0px;
-    font-family: "Open Sans";
+    font-family: "Poppins";
     font-size: 16px;
     line-height: 1.63;
     color: #333333;
