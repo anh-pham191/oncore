@@ -2959,7 +2959,7 @@ ul {
     }
 
     #sitebanner, ul#site-main li {
-        font-family: "Open Sans", sans-serif !important;
+        font-family: "Montserrat", sans-serif !important;
         transition: .3s;
         height: 65px;
         width: 1440px;
@@ -2986,7 +2986,7 @@ ul {
 
     #sitebanner .phone-top {
         display: block;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 700;
         margin-top: 40px;
     }
@@ -2996,7 +2996,7 @@ ul {
     }
 
     #sitebanner, ul#site-main li {
-        font-family: Open Sans, sans-serif !important;
+        font-family: Montserrat, sans-serif !important;
         transition: .3s;
         height: 65px;
     }
@@ -3012,7 +3012,7 @@ ul {
     }
 
     #sitebanner .phone-top a span {
-        font-family: 'Open Sans';
+        font-family: 'Montserrat';
         font-size: 1.25em;
         font-weight: 600;
         color: #4fae47;
@@ -3491,7 +3491,7 @@ div#wideslideshow.overlay.banner .intro-bottom {
 }
 
 .form-banner .row.tick label {
-    font-family: Open Sans;
+    font-family: Montserrat;
     font-size: 14px;
     font-weight: 400;
     color: #2f3132;
@@ -3501,7 +3501,6 @@ div#wideslideshow.overlay.banner .intro-bottom {
     width: 100%;
     height: 48px;
     border-radius: 24px;
-    font-family: Open Sans;
     font-weight: bold;
     border: none;
 
@@ -3530,7 +3529,7 @@ ul {
 }
 
 #footer h2, #footer h4, #footer-tools p, #footer a.subscribe, #footer div.sitemap section, #footer #footer-tools section, #footer-tools section ul li, #footer span a, #footer span.f-by, #footer ul li a {
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     transition: 0.3s;
 }
 
@@ -3540,7 +3539,7 @@ ul {
 
 #footer ul li a {
     font-size: 0.875rem;
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     color: #cacaca;
     font-weight: 400;
 }
@@ -3850,7 +3849,7 @@ li.help {
 #wideslideshow .overlay-container .find-out-more {
     vertical-align: middle;
     color: #FFFFFF;
-    font-family: Open Sans;
+    font-family: Montserrat;
     font-size: 16px;
     font-weight: bold;
     font-size: 1.143rem;
@@ -3918,7 +3917,7 @@ li.help {
 
 #footer #footer-tools div.wrapper p {
     font-size: 14px;
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-weight: 400;
     color: #ffffff;
     line-height: 1.63;
@@ -3938,7 +3937,7 @@ li.help {
 }
 
 #wrapper .inner .see-more span {
-    font-family: Open Sans;
+    font-family: Montserrat;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
@@ -4130,7 +4129,7 @@ li.help {
     }
 
     #topnav #sitebanner .phone-top span {
-        font-family: 'Open Sans';
+        font-family: 'Montserrat';
         font-size: 20px;
         font-weight: 600;
         color: #4fae47;
@@ -4600,7 +4599,7 @@ a:hover, button:hover {
     }
 
     #menu-mobile #menu-footer h2, #menu-mobile #menu-footer p {
-        font-family: Open Sans, sans-serif;
+        font-family: Montserrat, sans-serif;
         color: #fff
     }
 
@@ -4653,7 +4652,7 @@ a:hover, button:hover {
         color: #333;
         width: 100%;
         height: 100%;
-        font-family: Open Sans, sans-serif;
+        font-family: Montserrat, sans-serif;
         font-size: 1.2em
     }
 
@@ -4892,7 +4891,7 @@ a:hover, button:hover {
         color: #333;
         width: 100%;
         height: 100%;
-        font-family: Open Sans, sans-serif;
+        font-family: Montserrat, sans-serif;
     }
 
     #sitebanner #menu-mobile #menu-main li h2 a[type='tel'] {
@@ -4955,7 +4954,7 @@ a:hover, button:hover {
         padding: 10px 0 10px 20%;
         font-weight: 500;
         color: #333;
-        font-family: Open Sans, sans-serif;
+        font-family: Montserrat, sans-serif;
 
     }
 
@@ -5015,7 +5014,7 @@ a:hover, button:hover {
 }
 
 .customer-experience p {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 1.125em;
     line-height: 1.67;
     color: #2f3132;
@@ -5077,7 +5076,7 @@ a:hover, button:hover {
 }
 
 .three-boxes .three-cols p {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 1.125em;
     font-weight: 400;
     color: #2f3132;
@@ -5105,7 +5104,7 @@ a:hover, button:hover {
 }
 
 .infographic .growth-text p {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 1.125em;
     line-height: 1.67;
     color: #184414;
@@ -5117,7 +5116,7 @@ a:hover, button:hover {
 }
 
 .infographic p {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 0.875em;
     line-height: 2.14;
     color: #184414;
@@ -5277,7 +5276,7 @@ a:hover, button:hover {
     }
 
     .services-image-block .content-box .content p {
-        font-family: "Open Sans";
+        font-family: "Montserrat";
         font-size: 1em;
         font-weight: 400;
         line-height: 1.63;
@@ -5294,7 +5293,7 @@ a:hover, button:hover {
     }
 
     .franchise-block .franchise-opp ul li {
-        font-family: "Open Sans";
+        font-family: "Montserrat";
         font-size: 1em;
         font-weight: bold;
         line-height: 1.63;
@@ -5310,7 +5309,7 @@ a:hover, button:hover {
     }
 
     .track-record .description {
-        font-family: "Open Sans";
+        font-family: "Montserrat";
         font-size: 1em;
         font-weight: 400;
         line-height: 1.63;
@@ -5434,7 +5433,7 @@ a:hover, button:hover {
         width: 70%;
         margin: 5% auto 30px;
         padding: 20px;
-        font-family: Open Sans, sans-serif;
+        font-family: Montserrat, sans-serif;
     }
 
     .services-image-block .content-box .title {
@@ -5445,7 +5444,7 @@ a:hover, button:hover {
     }
 
     .services-image-block .content-box .content p {
-        font-family: "Open Sans";
+        font-family: "Montserrat";
         font-size: 1.125em;
         line-height: 1.67;
         color: #2f3132;
@@ -5511,7 +5510,7 @@ a:hover, button:hover {
     }
 
     .track-record .description {
-        font-family: "Open Sans";
+        font-family: "Montserrat";
         font-size: 1.125em;
         font-weight: 400;
         line-height: 1.67;
@@ -5562,7 +5561,7 @@ a:hover, button:hover {
     }
 
     .franchise-form .inner .three-cols ul li {
-        font-family: "Open Sans";
+        font-family: "Montserrat";
         font-size: 1.125em;
         line-height: 1.44;
         color: #184414;
@@ -5736,7 +5735,7 @@ a:hover, button:hover {
     }
 
     .franchise-form .inner .three-cols ul li {
-        font-family: "Open Sans";
+        font-family: "Montserrat";
         font-size: 1em;
         font-weight: 400;
         line-height: 2.38;
@@ -5889,7 +5888,7 @@ a:hover, button:hover {
     height: 48px;
     border-radius: 3px;
     background-color: #4fae47;
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
@@ -6075,7 +6074,7 @@ a:hover, button:hover {
     }
 
     #content.contact #content-body h3 {
-        font-family: Open Sans;
+        font-family: Montserrat;
         font-size: 20px;
         font-weight: 700;
         line-height: 1.4;
@@ -6092,7 +6091,7 @@ a:hover, button:hover {
     }
 
     #content.contact #content-body p span a span {
-        font-family: Open Sans;
+        font-family: Montserrat;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.63;
@@ -6100,7 +6099,7 @@ a:hover, button:hover {
     }
 
     #content.contact #content-body p {
-        font-family: Open Sans;
+        font-family: Montserrat;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.63;
@@ -6108,7 +6107,7 @@ a:hover, button:hover {
     }
 
     #content.contact #content-body li a {
-        font-family: Open Sans;
+        font-family: Montserrat;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.63;
@@ -6790,7 +6789,7 @@ form .tips {
     height: 48px;
     border-radius: 3px;
     background-color: #4fae47;
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -6824,7 +6823,7 @@ form .tips {
 .full-width-text-left.list-page .cta-text {
     font-size: 18px;
     font-weight: normal;
-    font-family: "Open Sans";
+    font-family: "Montserrat";
 }
 
 .article-box .content-box {
@@ -6852,7 +6851,7 @@ form .tips {
 }
 
 .article-box .description p {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 16px;
     line-height: 1.63;
     color: #333333;
@@ -6922,7 +6921,7 @@ form .tips {
     line-height: 1.25;
 }
 .article-page .comment-with-image .content-author {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 16px;
     line-height: 1.63;
     color: #333333;
@@ -6960,7 +6959,7 @@ div#wideslideshow.overlay.article-page .overlay-container div.inner .title-box {
     }
 }
 div#wideslideshow.overlay.article-page .overlay-container p {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 22px;
     line-height: 1.45;
     color: #ffffff;
@@ -6969,7 +6968,7 @@ div#wideslideshow.overlay.article-page .overlay-container p {
 }
 
 div#wideslideshow.overlay.article-page .overlay-container span {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 16px;
     line-height: 1.38;
     color: #ffffff;
@@ -7019,7 +7018,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
 }
 
 .home-standard .col-md-4.col-sm-4 .get-in-touch {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 18px;
     font-weight: bold;
     color: #4fae47;
@@ -7128,7 +7127,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
 }
 
 .back-to-top {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 16px;
     line-height: 1.38;
     color: #bcbcbc;
@@ -7219,7 +7218,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     padding-bottom: 60px;
 }
 .image-caption{
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 14px;
     line-height: 1.57;
     color: #333333;
@@ -7293,7 +7292,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
         margin-left: 14px;
         vertical-align: middle;
         color: #FFFFFF;
-        font-family: "Open Sans";
+        font-family: "Montserrat";
         font-weight: bold;
         font-size: 1.143rem;
         margin-bottom: 20px;
@@ -7393,7 +7392,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
     min-height: 273px;
 }
 .person .job  {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 14px;
     line-height: 1.57;
     margin-top: 3px;
@@ -7401,7 +7400,7 @@ div#wideslideshow.overlay.article-page .overlay-container .minute {
 }
 
 .person .legal  {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 12px;
     font-style: italic;
     line-height: 1.33;
@@ -7466,7 +7465,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     background-color: #ffffff;
 }
 #wrapper .full-width-text-left.text-container .form-banner span.helper {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 18px;
     line-height: 1.5;
     color: #2f3132;
@@ -7487,13 +7486,13 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     padding-left: 33px;
 }
 #wrapper div.inner.text-container .content{
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 18px;
     line-height: 1.5;
     color: #2f3132;
 }
 #wrapper div.inner.text-container .disclaimer {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 16px;
     line-height: 1.63;
     color: #2f3132;
@@ -7535,7 +7534,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 }
 
 #wrapper .white-container .process p {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 16px;
     line-height: 1.5;
     color: #2f3132;
@@ -7597,7 +7596,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 }
 
 #wrapper .green-container div.inner.text-container span.heading {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 18px;
     font-weight: bold;
     background: none;
@@ -7630,7 +7629,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     margin-bottom: 15px;
 }
 #wrapper .white-container .healthy-box .container .text-content {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 18px;
     line-height: 1.5;
     color: #2f3132;
@@ -7650,7 +7649,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 #wrapper .white-container .healthy-box .container .phone {
     margin-top: 30px;
     margin-bottom: 30px;
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -7818,7 +7817,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     }
 }
 #wrapper div.inner.text-container p {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 18px;
     line-height: 1.5;
     color: #2f3132;
@@ -7836,7 +7835,7 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
     font-weight: bold;
 }
 span.location-des {
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     font-size: 14px;
     font-style: italic;
     line-height: 1.36;
