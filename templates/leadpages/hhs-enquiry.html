@@ -265,6 +265,7 @@
         </p>
         <div class="enquiry-form">
             <form action="/forms/hhs-enquiry-stage2.php" method="post" id="hhs-stage2">
+                {{ getCsrfInput() }}
                 <input type="hidden" name="tenant-email" id="tenant-email"/>
                 <input type="hidden" name="tenant-name" id="tenant-name"/>
                 <input type="hidden" name="tenant-phone" id="tenant-phone"/>
