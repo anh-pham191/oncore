@@ -250,6 +250,14 @@
             margin-bottom: 30px;
         }
     }
+    .disclaimer {
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.33;
+        color: #959595;
+        margin-bottom: 15px;
+    }
 </style>
 {% endblock snippet %}
 
@@ -453,6 +461,8 @@
             </div>
         </div>
     </div>
+    <span class="disclaimer">*Only property owners can invite someone to the property for the healthy homes report
+</span>
     {% if (currentSite.name == 'oncore.local') or (currentSite.name=='Oncore Dev') %}
     <input type="hidden" id="dev-site" value="1">
 
