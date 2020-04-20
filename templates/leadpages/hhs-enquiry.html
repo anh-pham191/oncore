@@ -461,6 +461,10 @@
 
 {% endblock content %}
 {% block scripts %}
+<script type="text/javascript">
+    window.csrfTokenName = "{{ craft.app.config.general.csrfTokenName }}";
+    window.csrfTokenValue = "{{ craft.app.request.csrfToken }}";
+</script>
 <script>
     $('input[type=radio][name=how]').change(function() {
         $('html, body').animate({scrollTop: $('#scroll-to').offset().top - 130}, 1000);
