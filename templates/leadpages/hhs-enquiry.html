@@ -483,7 +483,7 @@
         var valitel = submitValidation('formf-tel', 'required');
         var valilocation = submitValidation('geocomplete-s2', 'required', 'location');
         var valiprivacy = submitValidation('formf-privacy', 'privacy');
-        if (valifirstname === "invalid" || valilastname === "invalid" || valiemail === "invalid" || valitel === "invalid" || valiprivacy === "invalid" || valilocation === "invalid" || valiaddress === "invalid") {
+        if (valifirstname === "invalid" || valilastname === "invalid" || valiemail === "invalid" || valitel === "invalid" || valiprivacy === "invalid" || valilocation === "invalid") {
             $('.pageform #prog1').fadeOut(200);
             if ($layoutStyle == "mobile") {
                 $('html, body').animate({scrollTop: $("#hhs-enquiry").offset().top}, 150, 'swing');
