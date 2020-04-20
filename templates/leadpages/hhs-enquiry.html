@@ -251,6 +251,10 @@
         }
     }
     .disclaimer {
+        background-color: #e6e9ef;
+        margin-bottom: 20px;
+    }
+    .disclaimer span {
         font-family: "Montserrat";
         font-size: 12px;
         font-style: italic;
@@ -469,7 +473,11 @@
     {% endif %}
 </div>
 
-<div style="background-color: #e6e9ef;"><span class="disclaimer">*Only property owners can invite someone to the property for the healthy homes report</span></div>
+<div class="disclaimer">
+    <div class="inner">
+        <span>*Only property owners can invite someone to the property for the healthy homes report</span>
+    </div>
+</div>
 
 {% endblock content %}
 {% block scripts %}
