@@ -20,11 +20,13 @@ if (isset($_POST['location'])) {
 } else {
     $location = "";
 };
-if (isset($_POST['address'])) {
-    $address = cleanData($_POST['address']);
-} else {
-    $address = "";
-};
+//if (isset($_POST['address'])) {
+//    $address = cleanData($_POST['address']);
+//} else {
+//    $address = "";
+//};
+$which = cleanData($_POST['which']);
+
 $country = "New Zealand";
 if (isset($_POST['privacy'])) {
     $privacy = cleanData($_POST['privacy']);
@@ -302,6 +304,10 @@ if ($probSpam != "yes") {
 		{
 		  \"fieldID\": \"T2vQuHnaJ0KUzQjXxZkd2A\",
 		  \"value\": \"$how\"
+		},
+		{
+		  \"fieldID\": \"EbuujZ_MT0-3aQjX5Qef0A\",
+		  \"value\": \"$which\"
 		}
 	  ],
 	  \"source\": \"Oncore Contact - HHS Landing Page\"  
@@ -329,7 +335,15 @@ if ($probSpam != "yes") {
                 ob_start();
 
                 // Send response.
-                echo "Successful";
+                if($which === "Tenant") {
+                    setcookie("tenant-email", "$email", $date_of_expiry, "/");
+                    setcookie("tenant-name", "$firstname", $date_of_expiry, "/");
+                    setcookie("tenant-phone", "$phone", $date_of_expiry, "/");
+                    setcookie("tenant-address", "$location", $date_of_expiry, "/");
+                    echo "Tenant";
+                } else {
+                    echo "Successful";
+                }
 
                 // Get the size of the output.
                 $size = ob_get_length();

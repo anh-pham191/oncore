@@ -437,6 +437,8 @@
                                 submitFranchiseEnquiry(frm);
                             } else if (frm.elements['formname'].value == "HHS Enquiry"){
                                 submitHHSEnquiry(frm);
+                            } else if (frm.elements['formname'].value == "HHS Enquiry - Stage 2"){
+                                submitHHSStage2(frm);
                             }
                             else{
                                 submitEnquirePart1(frm);
