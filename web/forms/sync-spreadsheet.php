@@ -71,3 +71,5 @@ const ROW = [
     'OWNER_EMAIL' => 35,
     'OWNER_PHONE' => 36
 ];
+    $workSheet = 'Oncore NZ!';
+    $rangeName = 'Zones US!A2:AK';
