@@ -10,8 +10,9 @@ const EMAIL = 5;
 const UPDATE_FROM_COL = 'AI';
 
 $result = $service->spreadsheets_values->get($spreadsheetId, $rangeName);
+echo 'Unsucsss';
 
-//var_dump($result); die; //
+var_dump($result); die; //
 foreach ($result as $key => $r) {
     if($r[EMAIL] == $tenant_email) {
         $row = $key + ROW_DIFF;
