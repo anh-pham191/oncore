@@ -72,4 +72,4 @@ const ROW = [
     'OWNER_PHONE' => 36
 ];
     $workSheet = 'Oncore NZ!';
-    $rangeName = 'Zones US!A2:AK';
+    $rangeName = 'Oncore NZ!A2:AK';
