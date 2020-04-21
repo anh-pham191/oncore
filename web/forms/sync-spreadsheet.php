@@ -66,4 +66,8 @@ const ROW = [
     'TYPE' => 30,
     'SEEN_HEARD' => 31,
     'HOW_CAN_WE_HELP' => 32,
+    'CONNECTION_TO_PROPERTY' => 33,
+    'OWNER_NAME' => 34,
+    'OWNER_EMAIL' => 35,
+    'OWNER_PHONE' => 36
 ];

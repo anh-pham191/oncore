@@ -21,6 +21,8 @@ isset($location)? : $location="";
 isset($country)? : $country="";
 isset($how)? : $how="";
 isset($address)? : $address="";
+isset($which)? : $which="";
+
 $v = [
     [
         ROW['STATUS'] => '',
@@ -56,6 +58,7 @@ $v = [
         ROW['TYPE'] => '',
         ROW['SEEN_HEARD'] => '',
         ROW['HOW_CAN_WE_HELP'] => $how,
+        ROW['CONNECTION_TO_PROPERTY'] => $which,
     ]
 ];
 $body = new Google_Service_Sheets_ValueRange(['values' => $v]);
