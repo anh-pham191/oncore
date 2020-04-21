@@ -17,6 +17,7 @@ foreach ($result as $key => $r) {
         $row = $key + ROW_DIFF;
     }
 }
+//var_dump($result); die; //
 
 $options = array('valueInputOption' => 'RAW');
 $values = [
