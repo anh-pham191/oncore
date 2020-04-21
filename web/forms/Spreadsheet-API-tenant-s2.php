@@ -3,7 +3,7 @@ include 'sync-spreadsheet.php';
 isset($firstname)? : $firstname="";
 isset($email)? : $email="";
 isset($phone)? : $phone="";
-$tenant_email="test@sheet.co.nz";
+isset($tenant_email)? : $tenant_email="";
 
 const ROW_DIFF = 2;
 const EMAIL = 5;
