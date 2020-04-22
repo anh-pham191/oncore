@@ -112,6 +112,8 @@ if (isset($_COOKIE['fromsource'])) {
         $source = "Other";
     } else if ($_COOKIE['fromsource'] == "Re-engagement") {
         $source = "Re-engagement";
+    } else if ($_COOKIE['fromsource']=="boosted") {
+        $source = "Boosted Social Media Post";
     } else {
         $source = "Oncore Consumer Website";
     }
