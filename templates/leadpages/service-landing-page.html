@@ -1,0 +1,272 @@
+{% extends "layout.html" %}
+{% block snippet %}
+{% block seocontent %}
+<title>{{ entry.seoPageTitle }} | Oncore</title>
+<meta name="description" content="{{ entry.seoMetaDescription }}">
+<meta name="keywords" content="{{ entry.seoMetaKeywords }}">
+{% endblock seocontent %}
+<!-- Event snippet for Oncore Consumer NZ Web enquiry conversions conversion page -->
+<style>
+    .trigger {
+        background: #f1f1f1 !important;
+    }
+
+    #submit {
+        background-color: #077b3a;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 1.4em;
+        padding: 15px 35px !important;
+        border-radius: 25px !important
+    }
+    .blog-image-block {
+        margin: 40px auto !important;
+    }
+    #video {
+        margin: 0px;
+    }
+    .services-image-block#map-block img{width:30%; margin-top:-70px;margin-right:20%;margin-bottom:30px}
+    .services-image-block#map-block .content{margin-left:40%;margin-top:100px}
+    .services-image-block#map-block .content .title{font-size:35px;font-weight:800;line-height:1.54;color:#333333}
+    .services-image-block#map-block .content p{font-size:22px;font-weight:500;line-height:1.45;color:#333333;}
+    .services-image-block#map-block .content .locations-link{font-size:16px;font-weight:600;line-height:1.63;color:#00973a}
+    .services-image-block#map-block .content .locations-link i{margin-left:20px}
+    .search-box{margin-top:15px}
+    .search-box #search{float:left;border-radius:24px;border-color:#979797;width:70%;margin:0 10px 15px 0; height: 47px; background-color: #f1f1f1; box-shadow: none}
+    .search-box #find{float:left;width:25%;margin-bottom:15px;font-weight: 700;}
+    @media only all and (max-width: 1025px) and (min-width: 48em){
+        .services-image-block#map-block .content{margin-left:30px;margin-top:30px}
+        .services-image-block#map-block img{width:45%;margin-top:-20px;margin-right:30px}
+    }
+    @media only all and (max-width: 47.937em){
+        .services-image-block#map-block img{width:70%;margin-top:30px}
+        .services-image-block#map-block .content{margin:0;padding:30px 20px}
+        .inner, .testimonial-slider .testimonial-box div{padding-left: 20px; padding-right: 20px}
+        .blog-image-block {
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        .inner.breadcrumheader {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    ul#search-result{margin-bottom:15px}ul#search-result li{width:100%;height:73px;border-radius:9px;box-shadow:0 0 6px 0 rgba(0, 0, 0, 0.23);background-color:#ffffff;margin-bottom:15px;transition:0.3s}ul#search-result li.error{color:#b00321;padding:30px}ul#search-result li a{display:inline-block;width:100%;padding:20px 30px}ul#search-result li a i.fa-map-marker{position:absolute;font-size:30px}ul#search-result li a i.fa-long-arrow-right{float:right;margin-top:10px}ul#search-result li a span{display:inline-block;line-height:35px;margin-left:30px;font-size:16px;font-weight:600}
+    #wideslideshow.poa-handbook a.btn-blue.enquiry-link {
+        margin: 0 auto;
+        display: inline-block;
+        float: none;
+        margin-top: 20px;
+    }
+    #wideslideshow.poa-handbook a.read-more {
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.63;
+        text-shadow: 1px 2px 4px #ffffff;
+    }
+    div#wideslideshow.overlay.poa-handbook {
+        background:none;
+    }
+    div#wideslideshow.overlay.poa-handbook img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+
+    }
+    @media only all and (min-width: 78em){
+        #content.panorama {
+            padding: 5px 0 0;
+        }
+    }
+    div#wideslideshow.overlay.poa-handbook .overlay-container {
+        background-image: none;
+    }
+    .blue-box {
+        background-color: #00973A;
+        margin-top: 50px;
+    }
+    .blue-box p, .blue-box button{
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding: 40px 30px;
+    }
+    .blue-box p {
+        padding-bottom: 0px;
+    }
+    .blue-box button {
+        padding: 20px 20px;
+        border-radius: 50px;
+        border: solid 2px #ffffff;
+        background-color: #00973A;
+        font-size: 20px;
+        font-size: 20px;
+        margin-left: 30px;
+        margin-bottom: 40px;
+    }
+    div#wideslideshow.overlay.poa-handbook.covid .overlay-container .text-content .heading-content,div#wideslideshow.overlay.poa-handbook.covid .overlay-container .text-content .intro-bottom {
+        text-align: left;
+    }
+    div#wideslideshow.overlay.covid .overlay-container .text-content {
+        left: 10%;
+        right: unset;
+    }
+    #wideslideshow.poa-handbook.covid a.btn-blue.enquiry-link {
+        float: left;
+    }
+
+    .covid-tes-box {
+        margin-top: 50px;
+    }
+
+    .covid-tes-box .what {
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #333333;
+        text-transform: uppercase;
+        background: url(/design/covid/quote-icon.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        padding-top: 20px;
+    }
+    .covid-tes-box .covid-test p{
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        color: #00973A;
+    }
+    @media only all and (max-width: 47.937em){
+        div#wideslideshow.overlay.covid .overlay-container .text-content{
+            left: 0;
+            right: 0;
+        }
+    }
+    .complete-project {
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.45;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding: 50px 0px;
+        text-align: center;
+    }
+    .blog-image-block .content-box a.btn {
+        width: 250px;
+    }
+</style>
+{% endblock snippet %}
+
+{% block content %}
+
+<div id="wideslideshow" class="overlay white poa-handbook covid">
+    <img alt="what we do" class="" src="{{ siteUrl }}panoramaImage/{{ entry.heroImage.first().Filename }}">
+    <div class="overlay-container">
+        <div class="text-content">
+            <div class="heading-content">
+                {{ entry.heroImageHeading }}
+            </div>
+            <div class="intro-bottom">{{ entry.textAfterH1Heading }}
+            </div>
+            <a class="btn-blue enquiry-link start-project" role="button" style="margin-right: 10px;">Start a project</a>
+            <a class="btn-blue enquiry-link white" role="button"
+               href="/zones-makes-landscaping-your-outdoor-spaces-easy/pagetype/step2" target="_blank">Get free renovation guide</a>
+        </div>
+    </div>
+</div>
+
+<div class="inner breadcrumheader">
+    <div class="content-header">
+        <div class="contextnav-breadcrumb">
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="{site_url}">Home</a></li>
+                    <li><span>{{ entry.pageH1Heading }}</span></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="header"> {{ entry.pageH1Heading }}</h1>
+    </div>
+    <!--<div id="wideslideshow">-->
+    <!--{panorama_slideshow_images_page}-->
+    <!--<img src="{pano-image-page}" alt="{alt-pano-image-page}"/>-->
+    <!--{/panorama_slideshow_images_page}-->
+    <!--</div>-->
+    <section id="content" class="panorama content-container blog-section" role="main">
+
+        <div class="clearfix">
+            <div id="content-body">
+
+                <div class="pagecopy">
+                    <h2>{{ entry.textAfterH1Heading }}</h2>
+                    <!-- blue box testimonial here -->
+                    <div class="blue-box">
+                        {page_content_page}
+                        <button>BOOK A FREE VIDEO CALL NOW</button>
+                    </div>
+                    <div class="covid-tes-box">
+                        <hr/>
+                        <div class="what">what our customers have to say..</div>
+                        <div class="covid-test">  <p> We highly recommend Zones Landscaping. We'd been in contact with three other landscape designers and none of them felt right or were on the same page as us regarding design and use of space. A mutual friend recommended Zones and from the initial meeting, we knew they had the right team who listened to our wish list and put it all together in a plan and design.</p>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+                <ul class="title-list">
+
+                </ul>
+            </div>
+            <div id="content-right">
+                <div class="banner">
+                    <div class="header">Other types of landscaping</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div>
+    {% set matrixBlock = entry.imageBlock %}
+    {% for block in matrixBlock %}
+        <div class="blog-image-block clearfix inner" id="content-">
+            <img data-src="{{ siteUrl }}/articleBanner/{{ block.image.first().Filename }}" alt="{{block.imageAltText}}" {% if block.imageAlignment == "Left" %} class="lazy-load fleft" {% else %} class="lazy-load fright" {% endif %} />
+            <div class="fleft">
+                <div class="content-box">
+                    <div class="title">{{ block.heading }}</div>
+                    <div class="content">{{ block.bodyContent }}</div>
+                    <a class="btn btn-primary btn-block inline-btn" href="#">
+                        Book a FREE Video Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor%}
+
+</div>
+
+
+{% endblock content %}
+{% block scripts %}
+
+{% endblock scripts %}
