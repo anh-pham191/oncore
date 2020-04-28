@@ -257,7 +257,6 @@ div#wideslideshow.overlay .overlay-container {
     width: 100%;
     transition: all .8s;
     background-color: rgba(0, 0, 0, .4);
-    z-index: 999;
     text-align: center
 }
 

@@ -245,7 +245,7 @@
     {% set matrixBlock = entry.imageBlock %}
     {% for block in matrixBlock %}
         <div class="blog-image-block clearfix inner" id="content-">
-            <img data-src="{{ siteUrl }}articleBanner/{{ block.image.first().Filename }}" alt="{{block.imageAltText}}" {% if block.imageAlignment == "left" %} class="lazy-load fleft" {% else %} class="lazy-load fright" {% endif %} />
+            <img src="{{ siteUrl }}articleBanner/{{ block.image.first().Filename }}" alt="{{block.imageAltText}}" {% if block.imageAlignment == "left" %} class=" fleft" {% else %} class=" fright" {% endif %} />
             <div class="fleft">
                 <div class="content-box">
                     <div class="title">{{ block.heading }}</div>
