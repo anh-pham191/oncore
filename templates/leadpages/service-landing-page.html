@@ -178,6 +178,17 @@
     div#wideslideshow.overlay .intro-bottom {
         width:100%;
     }
+
+    #content-body .pagecopy p {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+        color: #333333;
+    }
 </style>
 {% endblock snippet %}
 
@@ -215,7 +226,7 @@
             <div id="content-body">
 
                 <div class="pagecopy">
-                    <h2>{{ entry.textAfterH1HeadingBottom }}</h2>
+                    <p>{{ entry.textAfterH1HeadingBottom }}</p>
                     <!-- blue box testimonial here -->
                     <div class="blue-box">
                         {{ entry.pageContent }}
