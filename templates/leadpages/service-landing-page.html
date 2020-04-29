@@ -175,6 +175,9 @@
     .blog-image-block .content-box a.btn {
         width: 250px;
     }
+    div#wideslideshow.overlay .intro-bottom {
+        width:100%;
+    }
 </style>
 {% endblock snippet %}
 
@@ -189,7 +192,7 @@
             </div>
             <div class="intro-bottom">{{ entry.textAfterH1Heading }}
             </div>
-            <a class="btn-blue enquiry-link start-project" role="button" style="margin-right: 10px;">Start a project</a>
+            <a class="btn-blue enquiry-link start-project" role="button" style="margin-right: 10px;">Contact Us</a>
             <a class="btn-blue enquiry-link white" role="button"
                href="/zones-makes-landscaping-your-outdoor-spaces-easy/pagetype/step2" target="_blank">Get free renovation guide</a>
         </div>
@@ -215,7 +218,7 @@
                     <h2>{{ entry.textAfterH1Heading }}</h2>
                     <!-- blue box testimonial here -->
                     <div class="blue-box">
-                        {page_content_page}
+                        {{ entry.pageContent }}
                         <button>BOOK A FREE VIDEO CALL NOW</button>
                     </div>
                     <div class="covid-tes-box">
