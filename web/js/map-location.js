@@ -589,28 +589,28 @@ function findNearby(address, marker, search) {
         }
     });
 }
-
-$(document).scroll(function() {
-    checkOffset();
-});
-
-function checkOffset() {
-    var currentScroll = $(window).scrollTop();
-    var fixmeTop = $('.services-image-block').offset().top;       // get initial position of the element
-    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
-        $('#sticky-green').css({                      // scroll to that element or below it
-            position: 'fixed',
-            bottom: '0',
-        });
-    } else {                                   // apply position: static
-        $('#sticky-green').css({                      // if you scroll above it
-            position: 'static'
-        });
-    }
-
-    if($('#sticky-green').offset().top + $('#sticky-green').height()
-        >= $('#footer').offset().top - 10)
-        $('#sticky-green').css('position', 'static');
-    if($(document).scrollTop() + window.innerHeight < $('#footer').offset().top)
-        $('#sticky-green').css('position', 'fixed'); // restore when you scroll up
-}
+//
+// $(document).scroll(function() {
+//     checkOffset();
+// });
+//
+// function checkOffset() {
+//     var currentScroll = $(window).scrollTop();
+//     var fixmeTop = $('.services-image-block').offset().top;       // get initial position of the element
+//     if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+//         $('#sticky-green').css({                      // scroll to that element or below it
+//             position: 'fixed',
+//             bottom: '0',
+//         });
+//     } else {                                   // apply position: static
+//         $('#sticky-green').css({                      // if you scroll above it
+//             position: 'static'
+//         });
+//     }
+//
+//     if($('#sticky-green').offset().top + $('#sticky-green').height()
+//         >= $('#footer').offset().top - 10)
+//         $('#sticky-green').css('position', 'static');
+//     if($(document).scrollTop() + window.innerHeight < $('#footer').offset().top)
+//         $('#sticky-green').css('position', 'fixed'); // restore when you scroll up
+// }
