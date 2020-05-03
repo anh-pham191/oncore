@@ -274,7 +274,7 @@
 
 <div>
     {% set matrixBlock = entry.imageBlock %}
-    {% for block in matrixBlock %}
+    {% for key,block in matrixBlock %}
         <div class="blog-image-block clearfix inner" id="content-">
             <img src="{{ siteUrl }}articleBanner/{{ block.image.first().Filename }}" alt="{{block.imageAltText}}" {% if block.imageAlignment == "left" %} class=" fleft" {% else %} class=" fright" {% endif %} />
             <div class="fleft">
@@ -287,6 +287,7 @@
                 </div>
             </div>
         </div>
+    {% if key == 1 %}
     <div style="background-color: #004220; padding-bottom: 20px; height: 100%; background:url('/images/service-page/oncore-bg.jpg');">
         <p class="complete-project">
             ONCORE CAN HELP YOU WITH YOUR HEALTHY HOMES COMPLIANCE
@@ -296,6 +297,7 @@
             LEARN MORE
         </a>
     </div>
+    {% endif %}
     {% endfor%}
 
 </div>
