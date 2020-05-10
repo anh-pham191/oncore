@@ -4651,9 +4651,7 @@ $(function () {
                         ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Oncore Contact - Newsletter Subscribe');
                         //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
                         //fbq('track', 'Lead');
-                        $("#myModal").css("display", "none");
-                        $("#new-step2").css("display", "block");
-                        $("#newf2-email").val($("#newf-email").val());
+                        window.location.href = "/thank-you";
                     }
                 },
                 error: function () {
