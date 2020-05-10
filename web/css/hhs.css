@@ -1240,3 +1240,11 @@ div#wideslideshow.overlay .overlay-container div.inner.container-box .cta-button
 
 }
 
+.t-c {
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.33;
+    color: #959595;
+    margin-bottom: 15px;
+}
