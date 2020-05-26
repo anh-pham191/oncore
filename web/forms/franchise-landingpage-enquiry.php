@@ -51,6 +51,8 @@ if (isset($_COOKIE['viewedopp'])) {
 $honeypot = cleanData($_POST['form-website']);
 $frompage = cleanData($_POST['frompage']);
 $region = cleanData($_POST['form-region']);
+$type = "franchise";
+
 if (isset($_COOKIE['fromcampaign'])) {
     $campaign = cleanData($_COOKIE['fromcampaign']);
 } else {
@@ -279,7 +281,7 @@ if ($probSpam != "yes") {
 		},
 		{
 		  \"fieldID\": \"MKWehdtk4kK2zAjXN47n8w\",
-		  \"value\": \"$contacttype\"
+		  \"value\": \"$type\"
 		},
 		
 		{

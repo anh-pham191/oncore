@@ -15,6 +15,8 @@ $lastname = cleanData($_POST['form-lastname']);
 $email = cleanData($_POST['form-email']);
 $phone = cleanData($_POST['form-tel']);
 $country = cleanData($_POST['form-country']);
+$type = "franchise";
+
 if (isset($_POST['form-privacy'])) {
     $privacy = cleanData($_POST['form-privacy']);
 } else {
@@ -146,6 +148,10 @@ if ($probSpam != "yes") {
 		{
 		  \"fieldID\": \"IdTPoOPn8EqimAjW1VGBcw\",
 		  \"value\": \"$email\"
+		},
+		{
+		  \"fieldID\": \"H9WBiITOCUecHQjYAhVFkA\",
+		  \"value\": \"$type\"
 		},
 		{
 		  \"fieldID\": \"7e-Wei6rKkOepQjW1VGDaA\",

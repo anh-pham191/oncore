@@ -28,6 +28,7 @@ if (isset($_POST['subscribe'])) {
 $country = "New Zealand";
 $frompage = cleanData($_POST['frompage']);
 $honeypot = cleanData($_POST['form-website']);
+$type = "franchise";
 if (isset($_COOKIE['fromsource'])){
     if ($_COOKIE['fromsource']=="google") {
         $source = "Google AdWords";
@@ -229,6 +230,10 @@ if ($probSpam != "yes") {
 		{
 		  \"fieldID\": \"GN0RWb8sTEatowjW2RCrtQ\",
 		  \"value\": \"$email\"
+		},
+		{
+		  \"fieldID\": \"KewE4AgN006kTgjYAhTVUw\",
+		  \"value\": \"$type\"
 		},
 		{
 		  \"fieldID\": \"MAjytDbyoESAaQjW2RCuOQ\",
