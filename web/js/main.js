@@ -5119,7 +5119,7 @@ function submitFranchiseEnquiry(form) {
                 ga('send', 'event', 'Enquiry submitted', 'Submit enquiry', 'Oncore Contact - General Enquiry');
                 //fbq('track', 'ENQUIRY_SUBMITTED', {action: 'submit_enquiry', label: 'Encore Contact - General Enquiry'});
                 //fbq('track', 'Lead');
-                window.location.href = "/thank-you";
+                window.location.href = "/thank-you/franchise";
             }
         },
         error: function () {
