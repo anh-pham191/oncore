@@ -164,7 +164,7 @@
 {% endblock footer %}
 
 <script src="{{ siteUrl}}js/modernizr.js"></script>
-<script src="{{ siteUrl}}js/main.js"></script>
+<script src="{{ siteUrl}}js/main.js?v=5"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 
 
@@ -248,7 +248,7 @@
         }else if(socialMedia === "googleplus"){
             var url = "https://plus.google.com/share?url=";
         }else if(socialMedia === "linkedin"){
-            var url = "http://www.linkedin.com/shareArticle?mini=true&amp;url=";
+            var url = "https://www.linkedin.com/company/oncore-service/";
         }else if(socialMedia === "pinterest"){
             var e=document.createElement('script');
             e.setAttribute('type','text/javascript');
@@ -271,7 +271,11 @@
             $("#shared-count").text(newcount);
         }
         if(socialMedia != "pinterest"){
-            window.open(url+window.location.href, '_blank', 'toolbar=0,location=0,menubar=0');
+            if(socialMedia == 'linkedin') {
+                window.open(url);
+            } else {
+                window.open(url+window.location.href, '_blank', 'toolbar=0,location=0,menubar=0');
+            }
         }
     }
 
