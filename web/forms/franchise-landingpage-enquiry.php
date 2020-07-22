@@ -339,6 +339,7 @@ if ($probSpam != "yes") {
                     if ($cityinterest != "") {
                         $deal['685a0f82690ad447fd1d72a67b0eb2329cd26cac'] = $cityinterest; //Region interested in
                     }
+                    $deal['0c6b81c4f28d707c80ab5ba9ae24676817b8f66f'] = $source;
                     include 'sync-pipedrive.php';
                     include 'SpreadsheetFW-API.php'; //need change to franchise sheet
 

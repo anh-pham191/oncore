@@ -299,6 +299,7 @@ if ($probSpam != "yes") {
         $deal['b02f1fdf1d4985094631af3a6a4dea9d3acb99f2'] = $leadsource." Enquiry Page"; //Form used
         $deal['8918c06b4712a1c50af08f1194dedc8f57b3f6c1'] = $wheretoopen; //Where to open franchise
         $deal['f7b5023db425ac0ce02237080f15523c98927559'] = $howsoontoopen; //how soon to open franchise
+        $deal['0c6b81c4f28d707c80ab5ba9ae24676817b8f66f'] = $source;
         include 'sync-pipedrive.php';
         include 'SpreadsheetFW-API.php'; //need change to franchise sheet
 
