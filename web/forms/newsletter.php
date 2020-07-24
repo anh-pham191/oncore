@@ -115,10 +115,10 @@ if (isset($_COOKIE['fromsource'])) {
     } else if ($_COOKIE['fromsource']=="boosted") {
         $source = "Boosted Social Media Post";
     } else {
-        $source = "Oncore Consumer Website";
+        $source = "Organic Consumer Website";
     }
 } else {
-    $source = "Oncore Consumer Website";
+    $source = "Organic Consumer Website";
 };
 
 

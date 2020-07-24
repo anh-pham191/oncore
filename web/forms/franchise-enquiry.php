@@ -115,10 +115,10 @@ if (isset($_COOKIE['fromsource'])){
     } else if (isset($_COOKIE['fromsource']) && $_COOKIE['fromsource'] == "trademe") {
         $source = "Trademe";
     } else{
-        $source = "Oncore Consumer Website";
+        $source = "Organic Consumer Website";
     }
 }else{
-    $source = "Oncore Consumer Website";
+    $source = "Organic Consumer Website";
 };
 if (isset($_COOKIE['frommedium'])) {
     $medium = cleanData($_COOKIE['frommedium']);

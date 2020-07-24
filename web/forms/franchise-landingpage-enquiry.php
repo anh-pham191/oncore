@@ -150,7 +150,7 @@ if (isset($_COOKIE['fromsource']) && $_COOKIE['fromsource'] == "google") {
 
 
 else {
-    $source = "Oncore " . $country . " Website";
+    $source = "Organic Consumer Website";
 };
 if (isset($_COOKIE['frommedium'])) {
     $medium = cleanData($_COOKIE['frommedium']);
