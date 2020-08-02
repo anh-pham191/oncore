@@ -47,4 +47,8 @@ const ROW = [
     'UTM_KEYWORD' => 13,
     'GCLID' => 14,
     'LANDING_PAGE' => 15,
+    'PIPELINE' => 16,
+    'TERRITORY' => 17,
+    'COMMENTS' => 18,
+    'LINKEDIN_PROFILE' => 19
 ];

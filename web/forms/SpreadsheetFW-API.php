@@ -14,6 +14,10 @@ isset($campaign)? : $campaign="";
 isset($medium)? : $medium="";
 isset($formpage)? : $formpage="";
 isset($gclid)? : $gclid="";
+isset($pipeline)? : $pipeline="";
+isset($territory)? : $territory="";
+isset($comments)? : $comments="";
+isset($LinkedIn)? : $LinkedIn="";
 $v = [
     [
         ROW['STATUS'] => '',
@@ -32,6 +36,10 @@ $v = [
         ROW['UTM_KEYWORD'] => '',
         ROW['GCLID'] => $gclid,
         ROW['LANDING_PAGE'] => $formpage,
+        ROW['PIPELINE'] => $pipeline,
+        ROW['TERRITORY'] => $territory,
+        ROW['COMMENTS'] => $comments,
+        ROW['LINKEDIN_PROFILE'] => $LinkedIn,
     ]
 ];
 $body = new Google_Service_Sheets_ValueRange(['values' => $v]);
